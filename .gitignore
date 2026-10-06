@@ -12,3 +12,13 @@ next-env.d.ts
 # capture hook working state (logs themselves live in .agent-logs/ and ARE committed)
 .claude/hooks/.state/
 .claude/settings.local.json
+
+# from create-next-app
+/node_modules
+/coverage
+*.pem
+npm-debug.log*
+.pnpm-debug.log*
+
+# supabase cli local state
+supabase/.temp/

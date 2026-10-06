@@ -26,3 +26,5 @@ Due 2026-10-07 06:58 UTC. Full brief: `docs/BRIEF.md`. Build plan and priorities
 ## Writing
 
 Plain English in the README, UI copy and commit messages.
+
+@AGENTS.md
