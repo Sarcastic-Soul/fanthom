@@ -1,0 +1,14 @@
+node_modules/
+.next/
+out/
+build/
+.env
+.env*.local
+.vercel
+*.tsbuildinfo
+next-env.d.ts
+.DS_Store
+
+# capture hook working state (logs themselves live in .agent-logs/ and ARE committed)
+.claude/hooks/.state/
+.claude/settings.local.json
