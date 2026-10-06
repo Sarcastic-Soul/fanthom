@@ -75,6 +75,7 @@ export type Highlight = {
 
 export type MeetingListItem = Meeting & {
   speakers: Pick<Speaker, "id" | "name" | "color" | "talk_ms">[];
+  summaries: { template: string; content: SummaryContent }[];
 };
 
 export type MeetingDetail = {

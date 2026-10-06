@@ -16,7 +16,8 @@ import type {
 export async function listMeetings(): Promise<MeetingListItem[]> {
   const { data, error } = await db
     .from("meetings")
-    .select("*, speakers(id, name, color, talk_ms)")
+    .select("*, speakers(id, name, color, talk_ms), summaries(template, content)")
+    .eq("summaries.template", "general")
     .order("started_at", { ascending: false });
   if (error) throw error;
   return (data ?? []) as MeetingListItem[];

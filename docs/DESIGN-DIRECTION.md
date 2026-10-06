@@ -31,4 +31,4 @@ glance than the video does.
 
 Three meeting-page directions in `design-options/`. The chosen one is noted below.
 
-- Chosen: _pending_
+- Chosen: **Option 1, Minutes.** Cream background reworked to stone grey (#f3f3f0), and no functional text below 11px.

@@ -43,3 +43,17 @@ export function initials(name: string) {
     .join("")
     .toUpperCase();
 }
+
+// Speaker colours are CSS variables, ordered by talk time.
+export function speakerColor(i: number) {
+  return `var(--s${((i % 12) + 12) % 12})`;
+}
+
+export function dayKey(iso: string) {
+  return new Date(iso).toLocaleDateString("en-GB", {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+    timeZone: WORKSPACE_TZ,
+  });
+}
