@@ -8,7 +8,7 @@ import type { SearchHit } from "@/lib/types";
 
 export const metadata: Metadata = { title: "Search" };
 
-const TRIES = ["budget", "deadline", "customers", "battery", "release", "hiring", "security"];
+const TRIES = ["customers", "feedback", "pricing", "release", "battery", "milestone", "merge request"];
 
 export default async function SearchPage({ searchParams }: PageProps<"/search">) {
   const { q: raw } = await searchParams;
