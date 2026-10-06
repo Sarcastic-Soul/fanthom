@@ -1,0 +1,2434 @@
+{
+ "meeting": {
+  "slug": "syncing-ci-yaml-and-project-settings",
+  "title": "Syncing CI YAML and project settings",
+  "started_at": "2026-09-29T10:00:00-07:00",
+  "duration_ms": 3170000,
+  "media_type": "youtube",
+  "media_path": null,
+  "youtube_id": "JaYXLlXrfDM",
+  "source_name": "GitLab on YouTube",
+  "source_url": "https://www.youtube.com/watch?v=JaYXLlXrfDM",
+  "credit": "GitLab on YouTube: \"Ops Cross-Stage Think Big - 2021-04-15\" https://www.youtube.com/watch?v=JaYXLlXrfDM",
+  "kind": "demo",
+  "status": "ready",
+  "meeting_type": "general",
+  "source_key": "JaYXLlXrfDM"
+ },
+ "speakers": [
+  {
+   "label": "A",
+   "name": "James",
+   "role": null,
+   "talk_ms": 688745,
+   "turns": 41,
+   "color": 0
+  },
+  {
+   "label": "D",
+   "name": "Thao",
+   "role": null,
+   "talk_ms": 629235,
+   "turns": 38,
+   "color": 1
+  },
+  {
+   "label": "C",
+   "name": "Hyanna",
+   "role": null,
+   "talk_ms": 585699,
+   "turns": 35,
+   "color": 2
+  },
+  {
+   "label": "B",
+   "name": "Victor",
+   "role": null,
+   "talk_ms": 571396,
+   "turns": 26,
+   "color": 3
+  },
+  {
+   "label": "E",
+   "name": "Darren",
+   "role": null,
+   "talk_ms": 162591,
+   "turns": 9,
+   "color": 4
+  }
+ ],
+ "utterances": [
+  {
+   "idx": 0,
+   "speaker": "A",
+   "start_ms": 3528,
+   "end_ms": 20978,
+   "text": "This is the OP section cross-stage Think Big for April 15th, 2021. Our topic today is one that I added to the agenda, so I'll be moderating today. I don't have a mural board for us, so we'll just be doing this discussion style"
+  },
+  {
+   "idx": 1,
+   "speaker": "A",
+   "start_ms": 22788,
+   "end_ms": 55851,
+   "text": "through the doc and verbally. I do have all of the prompt questions in the agenda if you want to click into that to follow along. But our topic today is one that has come up for the testing team a couple of times, and it's around settings, things that you can set up in CI/CD settings through the UI and things you can also do through your GitLab CI YAML file, how those things potentially are authored, displayed, conflict if that happens, and what we should do in those cases, understanding what the problem would be there."
+  },
+  {
+   "idx": 2,
+   "speaker": "A",
+   "start_ms": 56365,
+   "end_ms": 81397,
+   "text": "So that's our topic, and I've started with a problem description in kind of our jobs to be done style around, as a developer or a DevOps engineer who's setting up GitLab for my group, I want to know if there are conflicts between the GitLab CI YAML and settings so I can avoid hunting down questions from developers who have a bad experience, slash, I know, or I look like I know what I'm doing when it comes to GitLab."
+  },
+  {
+   "idx": 3,
+   "speaker": "A",
+   "start_ms": 82359,
+   "end_ms": 105345,
+   "text": "So that's what they're trying to accomplish in this. Um, specifically the one that comes up for us is around test coverage. You can set up your coverage badges, you can set up parsing for coverage in your settings in CI/CD. You can also do that at the job level in your GitLab CI YAML. Those two things could potentially be in conflict, and when that happens, it's not a great experience for a user."
+  },
+  {
+   "idx": 4,
+   "speaker": "A",
+   "start_ms": 106131,
+   "end_ms": 117250,
+   "text": "I have to imagine that this happens for in other areas of the site or for the platform. And so wanted to open it up to the broader group of how should we handle these things going forward."
+  },
+  {
+   "idx": 5,
+   "speaker": "A",
+   "start_ms": 119760,
+   "end_ms": 122771,
+   "text": "Victor, do you want to verbalize your point there?"
+  },
+  {
+   "idx": 6,
+   "speaker": "B",
+   "start_ms": 125499,
+   "end_ms": 139408,
+   "text": "Yeah, um, I'm just trying to understand this, uh, user story still, which is like it says that I'm setting up GitLab for my group Does it mean that the group did not exist yet, or it's already"
+  },
+  {
+   "idx": 7,
+   "speaker": "B",
+   "start_ms": 140916,
+   "end_ms": 143138,
+   "text": "a long-living group that I'm just changing the settings?"
+  },
+  {
+   "idx": 8,
+   "speaker": "A",
+   "start_ms": 144850,
+   "end_ms": 151807,
+   "text": "I, I think it could be either, um, the persona being that DevOps engineer or, um, like CI/CD engineer."
+  },
+  {
+   "idx": 9,
+   "speaker": "B",
+   "start_ms": 152927,
+   "end_ms": 163158,
+   "text": "Let me clarify the question then, because if I'm setting up a new group, then I don't understand the, the possibility of a conflict in the project that doesn't have a group yet."
+  },
+  {
+   "idx": 10,
+   "speaker": "B",
+   "start_ms": 164980,
+   "end_ms": 165832,
+   "text": "That's why I'm—"
+  },
+  {
+   "idx": 11,
+   "speaker": "C",
+   "start_ms": 165832,
+   "end_ms": 166455,
+   "text": "That makes sense."
+  },
+  {
+   "idx": 12,
+   "speaker": "B",
+   "start_ms": 173213,
+   "end_ms": 184105,
+   "text": "But so I really, I'm trying to understand the whole setup. The truth is I never run into such a problem. I haven't seen any issues in this topic. And I'm trying to understand the environment."
+  },
+  {
+   "idx": 13,
+   "speaker": "D",
+   "start_ms": 184611,
+   "end_ms": 193779,
+   "text": "Yeah, maybe, Let me give an example, and then James, you can tell me if this is what the intent is, and then Victor, you can tell me if this helps."
+  },
+  {
+   "idx": 14,
+   "speaker": "D",
+   "start_ms": 195931,
+   "end_ms": 200086,
+   "text": "Let's say one of the settings, project settings, could be"
+  },
+  {
+   "idx": 15,
+   "speaker": "D",
+   "start_ms": 202552,
+   "end_ms": 203664,
+   "text": "pipeline must succeed"
+  },
+  {
+   "idx": 16,
+   "speaker": "D",
+   "start_ms": 205292,
+   "end_ms": 230808,
+   "text": "in order to merge. Under the merge requests section of project settings, you can set that feature pipeline must succeed in order to merge, but this conflicts with a YAML file that maybe already just got created for the same group or project that doesn't even have keywords in it that would run a pipeline."
+  },
+  {
+   "idx": 17,
+   "speaker": "D",
+   "start_ms": 231178,
+   "end_ms": 246359,
+   "text": "So is that an example of there is a conflict between a setting you're about to select, but it's not something that's supported based on how the YAML file has been authored? It should clue the user in immediately. That there is something that's going to break here."
+  },
+  {
+   "idx": 18,
+   "speaker": "D",
+   "start_ms": 249216,
+   "end_ms": 251067,
+   "text": "Is that a valid example? Yeah."
+  },
+  {
+   "idx": 19,
+   "speaker": "A",
+   "start_ms": 251615,
+   "end_ms": 253933,
+   "text": "That is absolutely a valid example. That's a great one."
+  },
+  {
+   "idx": 20,
+   "speaker": "C",
+   "start_ms": 254046,
+   "end_ms": 254272,
+   "text": "Thanks,"
+  },
+  {
+   "idx": 21,
+   "speaker": "C",
+   "start_ms": 259214,
+   "end_ms": 259841,
+   "text": "Tao."
+  },
+  {
+   "idx": 22,
+   "speaker": "D",
+   "start_ms": 259922,
+   "end_ms": 282478,
+   "text": "I think in those cases in the past, we have tried to help alleviate that with some tooltips for each of those settings, like, hey, when you select this, just be aware you have to— but that's almost too passive to help prevent these scenarios. And so I totally see what you're presenting here, James, is something that we want to solve for."
+  },
+  {
+   "idx": 23,
+   "speaker": "D",
+   "start_ms": 284424,
+   "end_ms": 290029,
+   "text": "It would make our product actually run more smoothly for new users and even"
+  },
+  {
+   "idx": 24,
+   "speaker": "D",
+   "start_ms": 291993,
+   "end_ms": 302091,
+   "text": "experienced users that's new to— that's using a feature for the first time, you know. It would help them not break their, their, their"
+  },
+  {
+   "idx": 25,
+   "speaker": "D",
+   "start_ms": 304743,
+   "end_ms": 307017,
+   "text": "pipeline for their, their project."
+  },
+  {
+   "idx": 26,
+   "speaker": "C",
+   "start_ms": 308612,
+   "end_ms": 312638,
+   "text": "Yeah. And I think this also relates a little bit with what the—"
+  },
+  {
+   "idx": 27,
+   "speaker": "C",
+   "start_ms": 314249,
+   "end_ms": 319612,
+   "text": "Dov is not here, right? Today? No, but I know that pipeline authoring, they are working on"
+  },
+  {
+   "idx": 28,
+   "speaker": "C",
+   "start_ms": 321256,
+   "end_ms": 323446,
+   "text": "a sort of drawer or a UI"
+  },
+  {
+   "idx": 29,
+   "speaker": "C",
+   "start_ms": 326691,
+   "end_ms": 328124,
+   "text": "for creating pipelines"
+  },
+  {
+   "idx": 30,
+   "speaker": "C",
+   "start_ms": 330412,
+   "end_ms": 347804,
+   "text": "in a much more smooth way. So a pipeline builder where you have the CI file, but you also have some sort of templates that you can quickly apply to the code that you're writing. And this— your team, I think they showcased this week"
+  },
+  {
+   "idx": 31,
+   "speaker": "C",
+   "start_ms": 349481,
+   "end_ms": 374759,
+   "text": "a solution I think was a lot of fuzz testing or fuzz something. I apologize for not knowing exactly what I'm talking about. But I'm going to just link here because I think it's best if I, if I show you on how they're trying to solve the linking with advanced settings and configuration and CI file in the UI."
+  },
+  {
+   "idx": 32,
+   "speaker": "C",
+   "start_ms": 375289,
+   "end_ms": 381071,
+   "text": "So just showing you some related topics from other stage groups."
+  },
+  {
+   "idx": 33,
+   "speaker": "A",
+   "start_ms": 389418,
+   "end_ms": 389709,
+   "text": "So"
+  },
+  {
+   "idx": 34,
+   "speaker": "A",
+   "start_ms": 391518,
+   "end_ms": 403394,
+   "text": "I don't want to get too far into the weeds, but in this proposal, are they saying that you would utilize settings to build the CI YAML and then copy it over like a wizard, or is this building it and here's what we're going to add to your YAML?"
+  },
+  {
+   "idx": 35,
+   "speaker": "C",
+   "start_ms": 404456,
+   "end_ms": 412439,
+   "text": "Let me see what they say in the description. Uh, you can easily create a YAML file and add a YAML file in the repo, uh, by an API."
+  },
+  {
+   "idx": 36,
+   "speaker": "C",
+   "start_ms": 414045,
+   "end_ms": 418500,
+   "text": "That's what they say from the settings based on the configuration that you choose in the,"
+  },
+  {
+   "idx": 37,
+   "speaker": "C",
+   "start_ms": 420014,
+   "end_ms": 420787,
+   "text": "in the settings page."
+  },
+  {
+   "idx": 38,
+   "speaker": "D",
+   "start_ms": 422575,
+   "end_ms": 422688,
+   "text": "Gotcha."
+  },
+  {
+   "idx": 39,
+   "speaker": "A",
+   "start_ms": 424025,
+   "end_ms": 427635,
+   "text": "Yeah, I'll have to watch that video to, to get the full walkthrough."
+  },
+  {
+   "idx": 40,
+   "speaker": "A",
+   "start_ms": 432036,
+   "end_ms": 442594,
+   "text": "Interesting. It might be an interesting way to do it where as you're changing settings, you're seeing then how it impacts the YAML, and then potentially it surfaces the conflicts."
+  },
+  {
+   "idx": 41,
+   "speaker": "A",
+   "start_ms": 446570,
+   "end_ms": 449682,
+   "text": "But back to Victor's question, I want to dig in."
+  },
+  {
+   "idx": 42,
+   "speaker": "B",
+   "start_ms": 449747,
+   "end_ms": 449876,
+   "text": "Does—"
+  },
+  {
+   "idx": 43,
+   "speaker": "A",
+   "start_ms": 450327,
+   "end_ms": 463945,
+   "text": "do those extra examples help clarify a little bit? And maybe the my initial problem description of setting up wasn't a good one. This isn't necessarily a new group, but this is someone who's maintaining a pipeline might be a better example here."
+  },
+  {
+   "idx": 44,
+   "speaker": "B",
+   "start_ms": 466220,
+   "end_ms": 487316,
+   "text": "Yeah, I'm still thinking a lot about, about really how this might work out in, in everyday work situations. I, I, this is— I, I start to understand. So Tao's example helped a lot I don't have any examples on my own, so that's the problem."
+  },
+  {
+   "idx": 45,
+   "speaker": "B",
+   "start_ms": 487702,
+   "end_ms": 490819,
+   "text": "That's why it's hard for me"
+  },
+  {
+   "idx": 46,
+   "speaker": "B",
+   "start_ms": 492378,
+   "end_ms": 512928,
+   "text": "to get much involved. And as it was specifically said, that there's only a reason to have this discussion if there's configure— somebody from the configure team as well. And I think that what, what I don't see here that I should, uh, so it's, uh And are there examples—"
+  },
+  {
+   "idx": 47,
+   "speaker": "A",
+   "start_ms": 513297,
+   "end_ms": 529603,
+   "text": "I'm just not as familiar with like the, the IaC bit of the product, but are there examples where you can do things in GitLab CI YAML that you also have settings for potentially, like around Terraform or any of those kinds of things? I could see that there would be big— could be big conflicts there."
+  },
+  {
+   "idx": 48,
+   "speaker": "B",
+   "start_ms": 530374,
+   "end_ms": 552848,
+   "text": "Actually, the other way around. So basically there are many, many users who use Terraform to set up groups and create projects and everything like that because To give you a very realistic example here, whenever you have a new project, you want to set up Datadog integration, you want to set up all kinds of integration, sensor integration, um, whatever."
+  },
+  {
+   "idx": 49,
+   "speaker": "B",
+   "start_ms": 553473,
+   "end_ms": 574930,
+   "text": "And simply creating a new GitLab project is 10% of the work, or even less. As a result, you set up the GitLab project with your custom tooling that actually runs Terraform and Terraform creates the project. It could just do it from a template or in any way, but Terraform creates the project."
+  },
+  {
+   "idx": 50,
+   "speaker": "B",
+   "start_ms": 575058,
+   "end_ms": 600130,
+   "text": "It injects the environment variables received from all these services that were, uh, reached at the project creation as well. And then your project is set up as you want it to be. And I can imagine that there are situations when when the, the thing that, for example, Tao described can, can come up easily."
+  },
+  {
+   "idx": 51,
+   "speaker": "B",
+   "start_ms": 601348,
+   "end_ms": 623685,
+   "text": "Um, if you manage, for example, even your group with Terraform and you change something in Terraform, even a UI-based notification will never be surfaced to you actually, and we can't surface notifications through Terraform. So it's, uh, this is the way where I see this conflict, that it could happen. But it's, it's different, uh, use case than what, what you're asking for."
+  },
+  {
+   "idx": 52,
+   "speaker": "B",
+   "start_ms": 623733,
+   "end_ms": 625519,
+   "text": "So there are no settings for Terraform as such."
+  },
+  {
+   "idx": 53,
+   "speaker": "C",
+   "start_ms": 629076,
+   "end_ms": 639855,
+   "text": "Yeah, I can think of a lot of scenarios for CD release management, uh, so the release team also for Verify, we do have a lot configuration. For example, deploy freezes,"
+  },
+  {
+   "idx": 54,
+   "speaker": "C",
+   "start_ms": 641665,
+   "end_ms": 663629,
+   "text": "automatic rollbacks, variables. So So many things that we set up in the, both in the CI file and the settings. So for example, deploy freezes, you must, you have to update the jobs in the CI file and then go to the settings and say, this is the specific period of time or the dates, whatever, where I don't want my deployments"
+  },
+  {
+   "idx": 55,
+   "speaker": "C",
+   "start_ms": 665550,
+   "end_ms": 671674,
+   "text": "to run. Things like that. And one of the challenges, many challenges actually that we found"
+  },
+  {
+   "idx": 56,
+   "speaker": "C",
+   "start_ms": 673618,
+   "end_ms": 688290,
+   "text": "from the customer interviews, the user interviews, was that similar to merge trains, people just didn't know why their application was not working. So my— I'm telling the story because my question is, James,"
+  },
+  {
+   "idx": 57,
+   "speaker": "C",
+   "start_ms": 690010,
+   "end_ms": 704485,
+   "text": "this job to be done is about informing users that configuration needs to be done in a separate part of the project, or is facilitating that's set up so that they can— that we can,"
+  },
+  {
+   "idx": 58,
+   "speaker": "C",
+   "start_ms": 706054,
+   "end_ms": 719962,
+   "text": "yeah, just connect those workflows? Because I understand that we are talking about the super technical personas, but also maybe some engineers that just go in the settings page and click a button, but don't necessarily write the YAML file."
+  },
+  {
+   "idx": 59,
+   "speaker": "A",
+   "start_ms": 724288,
+   "end_ms": 728656,
+   "text": "Yeah, maybe the The problem here is for anyone who modifies a setting"
+  },
+  {
+   "idx": 60,
+   "speaker": "A",
+   "start_ms": 730199,
+   "end_ms": 733463,
+   "text": "or modifies the .gitlab-ci.yaml that"
+  },
+  {
+   "idx": 61,
+   "speaker": "A",
+   "start_ms": 736814,
+   "end_ms": 750215,
+   "text": "impacts— I don't know how to construct my phrase. Anybody who touches a thing that you can change two ways, like how do they know they broke it or how do you surface why it's broken to somebody who uses it later?"
+  },
+  {
+   "idx": 62,
+   "speaker": "A",
+   "start_ms": 752160,
+   "end_ms": 755896,
+   "text": "And that's a horrible problem statement, but I'm sure that this group can fix it for me."
+  },
+  {
+   "idx": 63,
+   "speaker": "B",
+   "start_ms": 757868,
+   "end_ms": 771893,
+   "text": "Yeah, something that, that, uh, as I started to understand, it's more like something like a compatibility matrix that with these kinds of settings, these GitLab keywords should be used or should not be used. And,"
+  },
+  {
+   "idx": 64,
+   "speaker": "B",
+   "start_ms": 773536,
+   "end_ms": 778283,
+   "text": "and something like this, that, that's what we are speaking about. And And this is today,"
+  },
+  {
+   "idx": 65,
+   "speaker": "B",
+   "start_ms": 780066,
+   "end_ms": 782174,
+   "text": "might exist, I don't know, I've never seen that."
+  },
+  {
+   "idx": 66,
+   "speaker": "C",
+   "start_ms": 783340,
+   "end_ms": 783453,
+   "text": "Yeah."
+  },
+  {
+   "idx": 67,
+   "speaker": "A",
+   "start_ms": 784524,
+   "end_ms": 786747,
+   "text": "So if we were to tackle one of these,"
+  },
+  {
+   "idx": 68,
+   "speaker": "A",
+   "start_ms": 788852,
+   "end_ms": 799538,
+   "text": "where are we going to have the most leverage if we fix the problem? Should— will we have more leverage if we fix the problem for someone who is making the change or someone who experiences the problem?"
+  },
+  {
+   "idx": 69,
+   "speaker": "B",
+   "start_ms": 802528,
+   "end_ms": 826147,
+   "text": "Actually, I would, I would add a third option as well, because my answer to your question would be someone who's making the change and have a constant banner at the top of the page that there are conflicting settings in your, in your project. Fix it here. So you don't have to experience it, you don't have to set up, you just open the page, you see that there is something weird."
+  },
+  {
+   "idx": 70,
+   "speaker": "A",
+   "start_ms": 827512,
+   "end_ms": 848535,
+   "text": "Sure. So if I came up with a not great analogy, it would be you, you get the alert from Waze that there is a traffic jam up ahead so that you can divert around it before you get into the middle of it and realize you would need to look for an alternate route. Yeah, okay, I like it. So in that case, I think we have two different personas then."
+  },
+  {
+   "idx": 71,
+   "speaker": "A",
+   "start_ms": 848583,
+   "end_ms": 869199,
+   "text": "We have that DevOps engineer who's potentially doing the change as well as the developer because everyone can can get in there and change things. And then probably it's a developer or maybe it's a release train engineer for some of Hyanna's examples of, I see that there is an issue somewhere in our setup that's going to prevent me from deploying."
+  },
+  {
+   "idx": 72,
+   "speaker": "A",
+   "start_ms": 869740,
+   "end_ms": 873668,
+   "text": "How do I go fix that? Or where do I need to look to start trying to figure out how to fix it?"
+  },
+  {
+   "idx": 73,
+   "speaker": "A",
+   "start_ms": 879627,
+   "end_ms": 881204,
+   "text": "Darren Tao, how does that sound to you?"
+  },
+  {
+   "idx": 74,
+   "speaker": "E",
+   "start_ms": 884360,
+   "end_ms": 910200,
+   "text": "Sounds reasonable. I guess for me, I'm just kind of listening and soaking it all in, James, if you're wondering why I'm being so quiet, because I really haven't experienced this particular use case. I'm trying to understand kind of like where the problem happens, but a high level sounds reasonable. Don't mean to go all the way back to Thao, but I was just wondering, Thao, if by chance you can— are you able to show us your example pretty easily on the screen by any chance or no?"
+  },
+  {
+   "idx": 75,
+   "speaker": "D",
+   "start_ms": 912945,
+   "end_ms": 918612,
+   "text": "Yeah, let me go, let me go get an example."
+  },
+  {
+   "idx": 76,
+   "speaker": "D",
+   "start_ms": 920624,
+   "end_ms": 941885,
+   "text": "In your case, by the way, Darren, it might be something that they didn't configure. They didn't configure their runners, for example, in their settings, and so they're wondering why the pipeline is not running. That would be an example of a conflict potentially between settings. And so let me go find—"
+  },
+  {
+   "idx": 77,
+   "speaker": "C",
+   "start_ms": 941885,
+   "end_ms": 947472,
+   "text": "open the project. I have an example here, Tao, while you're searching for it."
+  },
+  {
+   "idx": 78,
+   "speaker": "D",
+   "start_ms": 947521,
+   "end_ms": 947858,
+   "text": "Oh, go ahead."
+  },
+  {
+   "idx": 79,
+   "speaker": "C",
+   "start_ms": 948115,
+   "end_ms": 973539,
+   "text": "Yeah, it's related to deployment. Let's see, can you see my project? Um, okay, so for example, deploy— what I was talking about, deploy for ease. So the user needs to say that, okay, um, what, what jobs or what the, um, what configuration needs to happen in the CI, as I was saying."
+  },
+  {
+   "idx": 80,
+   "speaker": "C",
+   "start_ms": 974197,
+   "end_ms": 998903,
+   "text": "And then here in this view, in the settings, they need to say when the freeze starts, when should I not be deploying to production, and at what specific time zone. So for example, if you just set this up, and if I say, uh, let me get an example here. From Chrome. If I just say start freeze and then freeze here on whatever time zone, that means nothing to the application because the CI file is not configured."
+  },
+  {
+   "idx": 81,
+   "speaker": "C",
+   "start_ms": 999723,
+   "end_ms": 1023441,
+   "text": "And this doesn't take the user to any other step. Of course, you can— here you, you, you first off, you have to discover this in the settings page. That's issue number one. A lot of options, uh, you need to know what you're looking for. And at the same time, when you are in the CI file, there is nothing telling the users that, okay, after updating the deployment jobs, go to settings."
+  },
+  {
+   "idx": 82,
+   "speaker": "C",
+   "start_ms": 1024451,
+   "end_ms": 1041599,
+   "text": "So usually what we see is that the users, they just go to Google and they have to figure out, end up in the documentation, have to read a lot of things to just find this modal. So this is one of the examples. I have many from CD that connect to this problem."
+  },
+  {
+   "idx": 83,
+   "speaker": "B",
+   "start_ms": 1043096,
+   "end_ms": 1049223,
+   "text": "Ryan, could you— and what, what do you have to update in your CI/ML just to have the example?"
+  },
+  {
+   "idx": 84,
+   "speaker": "C",
+   "start_ms": 1052533,
+   "end_ms": 1061692,
+   "text": "Um, yeah, you need to say which stage— yeah, which stage you want to deploy to production and pass the variable for the freeze."
+  },
+  {
+   "idx": 85,
+   "speaker": "C",
+   "start_ms": 1063402,
+   "end_ms": 1067016,
+   "text": "You probably have to— yeah, you need to create a variable as well."
+  },
+  {
+   "idx": 86,
+   "speaker": "B",
+   "start_ms": 1068462,
+   "end_ms": 1072753,
+   "text": "I think that CI deploy freeze is the, the more interesting part."
+  },
+  {
+   "idx": 87,
+   "speaker": "C",
+   "start_ms": 1073509,
+   "end_ms": 1073653,
+   "text": "Yeah."
+  },
+  {
+   "idx": 88,
+   "speaker": "B",
+   "start_ms": 1075823,
+   "end_ms": 1090524,
+   "text": "Um, what I'm— and, uh, what is the workflow usually? Is it that people do the CI YAML update and forget the settings update, or is it that they do the settings update and forget the CI YAML update? So, or it's both?"
+  },
+  {
+   "idx": 89,
+   "speaker": "D",
+   "start_ms": 1091058,
+   "end_ms": 1092240,
+   "text": "It could be either."
+  },
+  {
+   "idx": 90,
+   "speaker": "C",
+   "start_ms": 1092515,
+   "end_ms": 1106051,
+   "text": "It could be either. No, we also had— where's the merge strings settings? Uh, I don't even know where it is, but we had the thing, remember when we first released merge strings and then we had to disable it?"
+  },
+  {
+   "idx": 91,
+   "speaker": "D",
+   "start_ms": 1106228,
+   "end_ms": 1113874,
+   "text": "Yeah, go to General. Yeah, it's under General, and then you— oh wait, I'm sorry, I'm leading you the wrong place."
+  },
+  {
+   "idx": 92,
+   "speaker": "C",
+   "start_ms": 1114725,
+   "end_ms": 1116331,
+   "text": "Oh my goodness, we don't know, we should know."
+  },
+  {
+   "idx": 93,
+   "speaker": "D",
+   "start_ms": 1116893,
+   "end_ms": 1121455,
+   "text": "So sorry, can you search settings? It's under General."
+  },
+  {
+   "idx": 94,
+   "speaker": "C",
+   "start_ms": 1121520,
+   "end_ms": 1123108,
+   "text": "Search now. Oh my goodness."
+  },
+  {
+   "idx": 95,
+   "speaker": "D",
+   "start_ms": 1124660,
+   "end_ms": 1131699,
+   "text": "Yeah, it might be under the merge train settings that— yeah, it's, it's the merge request settings."
+  },
+  {
+   "idx": 96,
+   "speaker": "B",
+   "start_ms": 1132605,
+   "end_ms": 1133804,
+   "text": "What if you just search for train?"
+  },
+  {
+   "idx": 97,
+   "speaker": "C",
+   "start_ms": 1135286,
+   "end_ms": 1136165,
+   "text": "I don't think it's working."
+  },
+  {
+   "idx": 98,
+   "speaker": "B",
+   "start_ms": 1136279,
+   "end_ms": 1138038,
+   "text": "There are not many, there are not many trains."
+  },
+  {
+   "idx": 99,
+   "speaker": "C",
+   "start_ms": 1138380,
+   "end_ms": 1139748,
+   "text": "Edit this video, it's not working."
+  },
+  {
+   "idx": 100,
+   "speaker": "D",
+   "start_ms": 1140320,
+   "end_ms": 1152359,
+   "text": "So, um, yeah, so go to, um, expand your— in general, expand merge request and scroll down to—"
+  },
+  {
+   "idx": 101,
+   "speaker": "D",
+   "start_ms": 1154234,
+   "end_ms": 1155511,
+   "text": "it's under Merge Options."
+  },
+  {
+   "idx": 102,
+   "speaker": "D",
+   "start_ms": 1157546,
+   "end_ms": 1173836,
+   "text": "Oh wait, you're under CI/CD, which is configured. Yeah, go to General and expand, scroll so you can expand Merge Requests. Yeah, but by the way, this is interesting that it wasn't obvious to us, and I think you scrolled right past it, but under"
+  },
+  {
+   "idx": 103,
+   "speaker": "D",
+   "start_ms": 1176119,
+   "end_ms": 1187680,
+   "text": "Merge Options. You have to enable that in order to enable merge streams. The moment you click on that Enable Merge Results, then it makes it possible to select merge stream."
+  },
+  {
+   "idx": 104,
+   "speaker": "C",
+   "start_ms": 1188947,
+   "end_ms": 1197926,
+   "text": "So what happened was that you have the configuration in your CI file, but this checkbox is not clicked. So you have to save the changes, etc."
+  },
+  {
+   "idx": 105,
+   "speaker": "D",
+   "start_ms": 1198728,
+   "end_ms": 1208091,
+   "text": "And so while you have your screen, go to CI/CD. And I'll give the example that I was thinking of. And if you go to General Pipeline,"
+  },
+  {
+   "idx": 106,
+   "speaker": "D",
+   "start_ms": 1211264,
+   "end_ms": 1214108,
+   "text": "so where is it?"
+  },
+  {
+   "idx": 107,
+   "speaker": "D",
+   "start_ms": 1216213,
+   "end_ms": 1221185,
+   "text": "Actually, maybe I'm thinking maybe it's not, maybe it's under the General as well."
+  },
+  {
+   "idx": 108,
+   "speaker": "C",
+   "start_ms": 1221688,
+   "end_ms": 1226893,
+   "text": "So this is about being— This already illustrates the problem where it's impossible to find configurations."
+  },
+  {
+   "idx": 109,
+   "speaker": "D",
+   "start_ms": 1226942,
+   "end_ms": 1227769,
+   "text": "Yes. Yeah."
+  },
+  {
+   "idx": 110,
+   "speaker": "D",
+   "start_ms": 1231004,
+   "end_ms": 1249480,
+   "text": "Sorry, go back to where you were under Settings, General, and then expand Merge Request. This is all about— a lot of settings are here about ability to merge, and there's a lot of potential for conflict of what's in the YAML file. But under"
+  },
+  {
+   "idx": 111,
+   "speaker": "D",
+   "start_ms": 1251305,
+   "end_ms": 1252323,
+   "text": "Merge Checks,"
+  },
+  {
+   "idx": 112,
+   "speaker": "D",
+   "start_ms": 1254067,
+   "end_ms": 1283645,
+   "text": "which is below Merge Options, yeah. Keep going. There it is, Merge Checks. There's a couple settings there about pipeline must succeed that I mentioned in my example, but there's another setting that says skipped pipelines are considered successful. If you don't have that enabled but you put in your commit the keywords CI skip, and you haven't enabled this checkbox for skipped pipeline is considered successful, then your pipeline will get stuck as well if you have pipeline must succeed enabled."
+  },
+  {
+   "idx": 113,
+   "speaker": "D",
+   "start_ms": 1284066,
+   "end_ms": 1289865,
+   "text": "But it's not obvious here, right? Uh, it doesn't even have a tooltip, I just realized."
+  },
+  {
+   "idx": 114,
+   "speaker": "A",
+   "start_ms": 1291570,
+   "end_ms": 1301770,
+   "text": "So, so it seems we have a number of places where it's really hard to figure out what all you need to configure to actually enable a feature."
+  },
+  {
+   "idx": 115,
+   "speaker": "C",
+   "start_ms": 1302254,
+   "end_ms": 1302721,
+   "text": "Yes."
+  },
+  {
+   "idx": 116,
+   "speaker": "A",
+   "start_ms": 1303060,
+   "end_ms": 1310449,
+   "text": "And there's conflicts between— if you don't do them both right, you're just— it's not going to work. And that sounds actually like the same thing."
+  },
+  {
+   "idx": 117,
+   "speaker": "D",
+   "start_ms": 1310739,
+   "end_ms": 1310836,
+   "text": "Yeah."
+  },
+  {
+   "idx": 118,
+   "speaker": "A",
+   "start_ms": 1310917,
+   "end_ms": 1315089,
+   "text": "So it's less conflicting, it's more multiple steps to get something fully set up."
+  },
+  {
+   "idx": 119,
+   "speaker": "D",
+   "start_ms": 1315410,
+   "end_ms": 1338649,
+   "text": "We're assuming the same user is doing this, and it's not. I think the problem arises when the product owner is selecting these settings, but it's someone completely different that's authoring the configurations in the YAML file. They're not aware that these settings have an impact on what they're writing in the CI configs."
+  },
+  {
+   "idx": 120,
+   "speaker": "D",
+   "start_ms": 1340753,
+   "end_ms": 1343772,
+   "text": "Yeah, so it's—"
+  },
+  {
+   "idx": 121,
+   "speaker": "A",
+   "start_ms": 1343885,
+   "end_ms": 1365037,
+   "text": "yeah, so if we were to focus in, like, let's think small for just a minute of those two personas, because you have someone who's managing the instance and is setting these things up there, and someone who's managing an individual project, and like in Victor's example, running Terraform to build the project and maybe setting some of these settings up at the time."
+  },
+  {
+   "idx": 122,
+   "speaker": "A",
+   "start_ms": 1365894,
+   "end_ms": 1369159,
+   "text": "Which of those two personas should we focus on for our purposes today?"
+  },
+  {
+   "idx": 123,
+   "speaker": "C",
+   "start_ms": 1372367,
+   "end_ms": 1372820,
+   "text": "I would say"
+  },
+  {
+   "idx": 124,
+   "speaker": "C",
+   "start_ms": 1374564,
+   "end_ms": 1402769,
+   "text": "the technical persona. I'm not sure how exactly we are showing in the, in the job logs or the errors that things are, that things need to be set up in the settings, for example, what type of error messages. But from my learnings with release, right, with CD, We are focusing mostly on the developer persona because they're the ones that spend the most time working on the application in the sense of with these workflows."
+  },
+  {
+   "idx": 125,
+   "speaker": "C",
+   "start_ms": 1403524,
+   "end_ms": 1417058,
+   "text": "That's my perspective from CD, knowing that their tasks are somewhere, somehow more critical than let's say that the group project admin or owner."
+  },
+  {
+   "idx": 126,
+   "speaker": "E",
+   "start_ms": 1421007,
+   "end_ms": 1428445,
+   "text": "Basically, Hyanna, if to reflect back, you're basically saying the person that's kind of waiting for the pipeline to actually execute."
+  },
+  {
+   "idx": 127,
+   "speaker": "D",
+   "start_ms": 1432039,
+   "end_ms": 1433806,
+   "text": "Gotcha. I would,"
+  },
+  {
+   "idx": 128,
+   "speaker": "D",
+   "start_ms": 1435540,
+   "end_ms": 1445453,
+   "text": "if we assume that this problem is out there, I would want to also focus on the persona that's feeling the pain. Because of this mismatch,"
+  },
+  {
+   "idx": 129,
+   "speaker": "D",
+   "start_ms": 1448249,
+   "end_ms": 1454760,
+   "text": "because changing the settings may not happen as often as seeing the impact of improperly"
+  },
+  {
+   "idx": 130,
+   "speaker": "D",
+   "start_ms": 1456610,
+   "end_ms": 1467260,
+   "text": "configured files or improperly selected settings. So, and then once we solve for that, I would— and that's very—"
+  },
+  {
+   "idx": 131,
+   "speaker": "D",
+   "start_ms": 1468817,
+   "end_ms": 1489650,
+   "text": "it's addressing, helping with addressing the pain point is very reactive, but after that I would like to do the proactive thing, which is preventing it from happening by having more intuitive, um, or some kind of guidance when settings are selected or when authoring is done on a YAML file."
+  },
+  {
+   "idx": 132,
+   "speaker": "D",
+   "start_ms": 1490243,
+   "end_ms": 1504713,
+   "text": "Like, for example, we talk about the settings having an impact, but on the other hand, if you're putting some kind of configuration in the YAML file, it'd be nice if they got a warning that says, hey, uh, this will not have any—"
+  },
+  {
+   "idx": 133,
+   "speaker": "D",
+   "start_ms": 1506367,
+   "end_ms": 1510896,
+   "text": "this will conflict with a missing setting in your projects, right? Project settings."
+  },
+  {
+   "idx": 134,
+   "speaker": "C",
+   "start_ms": 1512021,
+   "end_ms": 1513387,
+   "text": "So, okay."
+  },
+  {
+   "idx": 135,
+   "speaker": "A",
+   "start_ms": 1514994,
+   "end_ms": 1532830,
+   "text": "All right, so let's, let's tackle it from that person changing the setting perspective. And what would an ideal outcome for someone— what would an ideal outcome look like for someone changing a setting to enable a new feature?"
+  },
+  {
+   "idx": 136,
+   "speaker": "C",
+   "start_ms": 1538120,
+   "end_ms": 1540900,
+   "text": "And you say changing a setting is on the UI, right?"
+  },
+  {
+   "idx": 137,
+   "speaker": "D",
+   "start_ms": 1543891,
+   "end_ms": 1550106,
+   "text": "Or the API. Well, I guess it's hard to give a warning with the API. Except in documentation."
+  },
+  {
+   "idx": 138,
+   "speaker": "D",
+   "start_ms": 1553247,
+   "end_ms": 1555853,
+   "text": "Maybe let's start with the UI to be specific."
+  },
+  {
+   "idx": 139,
+   "speaker": "B",
+   "start_ms": 1555982,
+   "end_ms": 1575804,
+   "text": "Yeah, I would go back to— sorry, I would go back to previous question because from what Ryan described, my understanding is that the— this problem emerges usually after changing the CI/ML file, not after changing the setting, because the settings side is is based."
+  },
+  {
+   "idx": 140,
+   "speaker": "B",
+   "start_ms": 1577556,
+   "end_ms": 1605801,
+   "text": "Like, the majority of the examples were on these lines. Not all, because the Merge Train was settings-based first. But yeah, so okay, I just said nothing because I don't have a— I don't have an opinion, actually. The thing is, I don't have an opinion on it because sometimes it seems to me that it doesn't depend on the settings whether it's driven from the CI/ML or whether it's driven from the setting."
+  },
+  {
+   "idx": 141,
+   "speaker": "B",
+   "start_ms": 1607750,
+   "end_ms": 1614988,
+   "text": "And yeah. And settings might be better because the developer might not have rights to change that actually."
+  },
+  {
+   "idx": 142,
+   "speaker": "C",
+   "start_ms": 1616298,
+   "end_ms": 1639030,
+   "text": "Exactly. And it's always a two-way street. Like what Tao was saying, might not be that the same person that is configuring things in the UI is the one that wrote the CI/ML file. And then how do you even report that to someone, right? I think a couple of things I, I've thought in the past related to the release management functionalities was that one, improve how we are helping users in the UI."
+  },
+  {
+   "idx": 143,
+   "speaker": "C",
+   "start_ms": 1639302,
+   "end_ms": 1668885,
+   "text": "For example, like really state that, you know, every configuration that you select here needs an update in this UI, in the CI file. Like that's a low-hanging fruit. And maybe even add like some sort of feedback to the UI once the user clicks that checkbox, say, hey, reminder, hey, now go configure your CI file so that this, whatever the deploy phrases, it's working for your project."
+  },
+  {
+   "idx": 144,
+   "speaker": "C",
+   "start_ms": 1669223,
+   "end_ms": 1704654,
+   "text": "So those were the low-hanging fruits that we talked back in the day when the release management team still existed. And for the things in the API, right, so in the CI file, We could only rely at that point on the job failing and then telling people why it failed and where to go configure things. So that's why when I talked about the pipeline authoring proposals for the visual builder for the CI file is that they want to have this, this connection, bridge this gap so that while you're writing your"
+  },
+  {
+   "idx": 145,
+   "speaker": "C",
+   "start_ms": 1704719,
+   "end_ms": 1726695,
+   "text": "CI file, you see all these templates, all these snippets, and you either drag and drop or configure things there. But this is not going to happen anytime soon. So this is really like the long-term vision for, for writing the CI file. So it's all, it's up to my head in terms of low-hanging fruit. So I'll pause now to see if you have any thoughts on that."
+  },
+  {
+   "idx": 146,
+   "speaker": "A",
+   "start_ms": 1731128,
+   "end_ms": 1743107,
+   "text": "So if I under— or if I heard you right, Hyanna, that's low-hanging fruit. But what would the big picture look like? What would the best outcome be for these users if we were really thinking big about this?"
+  },
+  {
+   "idx": 147,
+   "speaker": "D",
+   "start_ms": 1748550,
+   "end_ms": 1756619,
+   "text": "Hey, and before we leave that, we probably need to capture Hyanna's ideas under the think small part, which, because her ideas are very specific."
+  },
+  {
+   "idx": 148,
+   "speaker": "B",
+   "start_ms": 1758477,
+   "end_ms": 1774172,
+   "text": "Yeah, we can just copy down those things. One thing that how I would imagine the ideal outcome is that I change the setting and the merge request is opened with the CI/ML changes and I just have to accept that."
+  },
+  {
+   "idx": 149,
+   "speaker": "B",
+   "start_ms": 1776140,
+   "end_ms": 1785255,
+   "text": "And I'm— and there's notification as well that please review these changes in the merge requests that go together with the setting change."
+  },
+  {
+   "idx": 150,
+   "speaker": "B",
+   "start_ms": 1787729,
+   "end_ms": 1799147,
+   "text": "Something like this if it was started from the settings. If it started from the YAML change, I have— I don't really have an idea because the user might not even have rights to change the settings."
+  },
+  {
+   "idx": 151,
+   "speaker": "C",
+   "start_ms": 1801320,
+   "end_ms": 1803541,
+   "text": "That's true, that's another one."
+  },
+  {
+   "idx": 152,
+   "speaker": "A",
+   "start_ms": 1806358,
+   "end_ms": 1806407,
+   "text": "Uh,"
+  },
+  {
+   "idx": 153,
+   "speaker": "A",
+   "start_ms": 1808699,
+   "end_ms": 1817159,
+   "text": "sorry, Victor, did you say if it's— if you open Or if you start down the settings road, that it just opens NMR to change your GitLab CI YAML for you."
+  },
+  {
+   "idx": 154,
+   "speaker": "B",
+   "start_ms": 1818121,
+   "end_ms": 1830295,
+   "text": "Yeah, exactly. And it adds that snippet to the point where we think it, it's best to have. And of course you might move it, but at least we show them that this is how it should look like at the end."
+  },
+  {
+   "idx": 155,
+   "speaker": "D",
+   "start_ms": 1831611,
+   "end_ms": 1841178,
+   "text": "Oh, that's a, um, so I'm glad you started off with that, Victor, because you said from the YAML you don't know what could happen. It could create a to-do. To go"
+  },
+  {
+   "idx": 156,
+   "speaker": "D",
+   "start_ms": 1843164,
+   "end_ms": 1853948,
+   "text": "change the project setting. The to-do could be the project owner and the person who is the author making the change to the YAML."
+  },
+  {
+   "idx": 157,
+   "speaker": "E",
+   "start_ms": 1854806,
+   "end_ms": 1855227,
+   "text": "Right?"
+  },
+  {
+   "idx": 158,
+   "speaker": "B",
+   "start_ms": 1855713,
+   "end_ms": 1856263,
+   "text": "Yeah."
+  },
+  {
+   "idx": 159,
+   "speaker": "E",
+   "start_ms": 1858702,
+   "end_ms": 1859396,
+   "text": "Yeah."
+  },
+  {
+   "idx": 160,
+   "speaker": "D",
+   "start_ms": 1859573,
+   "end_ms": 1874415,
+   "text": "And so, yeah, so that would be a very think big outcome, both of these, which is an action that requires some other thing for that action to be effective triggers"
+  },
+  {
+   "idx": 161,
+   "speaker": "D",
+   "start_ms": 1876000,
+   "end_ms": 1884417,
+   "text": "some kind of— whether it's an MR or to-do— to marry up, you know, the two requirements to make that thing work."
+  },
+  {
+   "idx": 162,
+   "speaker": "A",
+   "start_ms": 1888309,
+   "end_ms": 1899477,
+   "text": "If you were trying to do this through the API, could you do both? Where the to-do is assigned to owners and then an MR is also opened and assigned to owners."
+  },
+  {
+   "idx": 163,
+   "speaker": "B",
+   "start_ms": 1901360,
+   "end_ms": 1902412,
+   "text": "Yeah, we could do that."
+  },
+  {
+   "idx": 164,
+   "speaker": "A",
+   "start_ms": 1904460,
+   "end_ms": 1914480,
+   "text": "I think that'd be really cool of, hey, here's part of a setting or a feature that you've enabled. Here's the rest of it for you in a way that makes sense, kind of like a Danger Bot kind of a implementation."
+  },
+  {
+   "idx": 165,
+   "speaker": "D",
+   "start_ms": 1916194,
+   "end_ms": 1931503,
+   "text": "Or maybe both of them would just simply, um, create a to-do, the one of the to-do, in one case, the to-do would also link to an MR, you know, but in the other case, the to-do is just simply a link to that specific"
+  },
+  {
+   "idx": 166,
+   "speaker": "D",
+   "start_ms": 1933185,
+   "end_ms": 1945601,
+   "text": "feature in the project settings. You know, that would be nice because we were fumbling around trying to find where to go. Just link them straight to that section or that field, that text box would be nice."
+  },
+  {
+   "idx": 167,
+   "speaker": "C",
+   "start_ms": 1946103,
+   "end_ms": 1946686,
+   "text": "Yeah."
+  },
+  {
+   "idx": 168,
+   "speaker": "D",
+   "start_ms": 1947900,
+   "end_ms": 1949843,
+   "text": "But either way, it generates a to-do."
+  },
+  {
+   "idx": 169,
+   "speaker": "C",
+   "start_ms": 1949989,
+   "end_ms": 1950183,
+   "text": "Yeah."
+  },
+  {
+   "idx": 170,
+   "speaker": "C",
+   "start_ms": 1951770,
+   "end_ms": 1979523,
+   "text": "And in terms of discoverability, the Create team, they're actually working on a cleanup of the settings page and the UX department will have an OKR now in Q2 to focus on, you know, a huge facelift on the settings copy and the structure of those pages. So if we are able to also clearly tell users where to find things while we create those to-dos and a link to where they should set things up, that would be awesome."
+  },
+  {
+   "idx": 171,
+   "speaker": "C",
+   "start_ms": 1984452,
+   "end_ms": 1984792,
+   "text": "Yeah."
+  },
+  {
+   "idx": 172,
+   "speaker": "D",
+   "start_ms": 1984873,
+   "end_ms": 1989436,
+   "text": "Well, we, we clearly demonstrated that it could be more intuitive."
+  },
+  {
+   "idx": 173,
+   "speaker": "A",
+   "start_ms": 1993368,
+   "end_ms": 2003470,
+   "text": "I think we have all felt that pain multiple times, especially as product managers. For things that live in settings. Or even not too many things that live in settings."
+  },
+  {
+   "idx": 174,
+   "speaker": "D",
+   "start_ms": 2004771,
+   "end_ms": 2018601,
+   "text": "You know, I'm wondering, after the facelift, is there also going to be guidelines or someone monitoring so that it doesn't become the hodgepodge that we've all teams contributing to that has made it how it is today?"
+  },
+  {
+   "idx": 175,
+   "speaker": "C",
+   "start_ms": 2018697,
+   "end_ms": 2026088,
+   "text": "Okay, so we do— we don't really have assigned DRI, so it's really everyone own settings, but I linked here"
+  },
+  {
+   "idx": 176,
+   "speaker": "C",
+   "start_ms": 2028147,
+   "end_ms": 2033887,
+   "text": "the OKR for the next, for the upcoming quarter. And you can see that, let's see if they already created,"
+  },
+  {
+   "idx": 177,
+   "speaker": "C",
+   "start_ms": 2037514,
+   "end_ms": 2062392,
+   "text": "uh, uh, there's something about settings here, uh, review and refactor UI text on project and group settings. Um, it's all the way in the bottom. Let me paste here. But the idea is that, well, not just the idea, but the UX department has been working on Putting together those patterns and reviewing settings across admin, group, and project views and defining those standards."
+  },
+  {
+   "idx": 178,
+   "speaker": "C",
+   "start_ms": 2062489,
+   "end_ms": 2075399,
+   "text": "So what's going to happen is that at some point we're going to have a bunch of tasks for the product teams, for the teams to implement those improvements based on which features we found. So they're going to be the gatekeepers and we implement it."
+  },
+  {
+   "idx": 179,
+   "speaker": "D",
+   "start_ms": 2077248,
+   "end_ms": 2083078,
+   "text": "Okay, so it'll be— go beyond just refactoring UI text like it's written. It's also just going to improve the experience in general on those pages."
+  },
+  {
+   "idx": 180,
+   "speaker": "C",
+   "start_ms": 2084776,
+   "end_ms": 2089588,
+   "text": "Okay, we did a bunch of research on that this year, on how to improve settings and navigation."
+  },
+  {
+   "idx": 181,
+   "speaker": "D",
+   "start_ms": 2091156,
+   "end_ms": 2091253,
+   "text": "Great."
+  },
+  {
+   "idx": 182,
+   "speaker": "A",
+   "start_ms": 2095052,
+   "end_ms": 2121396,
+   "text": "Cool, so we've done a great job of think big. We have about 12 minutes, 10 to 12 minutes left for the think small part, but I think that we are ready to move on to that. And I've rearranged the order of the questions here instead of thinking about What's the next thing we could do? I want to talk through just generally, as this applies to a bunch of different areas and settings, what are the hardest parts or the single hardest part of this to solve?"
+  },
+  {
+   "idx": 183,
+   "speaker": "B",
+   "start_ms": 2124203,
+   "end_ms": 2132928,
+   "text": "My guess is to figure out when there is a— when there are incompatible settings."
+  },
+  {
+   "idx": 184,
+   "speaker": "B",
+   "start_ms": 2138176,
+   "end_ms": 2141445,
+   "text": "Because it might happen that, yeah, I'm changing now"
+  },
+  {
+   "idx": 185,
+   "speaker": "B",
+   "start_ms": 2143031,
+   "end_ms": 2149592,
+   "text": "the YAML file and I'm aware of the need to change the settings as well."
+  },
+  {
+   "idx": 186,
+   "speaker": "B",
+   "start_ms": 2151837,
+   "end_ms": 2155024,
+   "text": "So GitLab just gives me a to-do that I just have to close."
+  },
+  {
+   "idx": 187,
+   "speaker": "B",
+   "start_ms": 2157792,
+   "end_ms": 2163545,
+   "text": "And the same for the MR. What if— maybe the MR, it's still nice, I think, because it could have, but"
+  },
+  {
+   "idx": 188,
+   "speaker": "B",
+   "start_ms": 2167628,
+   "end_ms": 2172037,
+   "text": "Yeah, figuring out which part is still required to do, that would be tricky."
+  },
+  {
+   "idx": 189,
+   "speaker": "B",
+   "start_ms": 2173692,
+   "end_ms": 2175616,
+   "text": "And in a sense that, I mean, it's not that"
+  },
+  {
+   "idx": 190,
+   "speaker": "B",
+   "start_ms": 2177168,
+   "end_ms": 2194108,
+   "text": "because it's required, but that the user knows about it and he's, he's ready to do that, and then we just annoy them with creating an issue that he actually would have fixed anyway. So that's, that's the really hard part. But it could be a minor annoyance."
+  },
+  {
+   "idx": 191,
+   "speaker": "A",
+   "start_ms": 2196360,
+   "end_ms": 2207730,
+   "text": "You might call that out as an assumption, like we assume that users, all users don't know how to do this and some users or even many users may. And so we will annoy them."
+  },
+  {
+   "idx": 192,
+   "speaker": "B",
+   "start_ms": 2207972,
+   "end_ms": 2209408,
+   "text": "Nice. Yeah."
+  },
+  {
+   "idx": 193,
+   "speaker": "A",
+   "start_ms": 2224003,
+   "end_ms": 2224586,
+   "text": "Are"
+  },
+  {
+   "idx": 194,
+   "speaker": "A",
+   "start_ms": 2226480,
+   "end_ms": 2228309,
+   "text": "there other hard parts of this?"
+  },
+  {
+   "idx": 195,
+   "speaker": "C",
+   "start_ms": 2232504,
+   "end_ms": 2241844,
+   "text": "I don't have an answer, but I'm just thinking access, permissions, security, anything on these topics that might be a constraint for us."
+  },
+  {
+   "idx": 196,
+   "speaker": "C",
+   "start_ms": 2247220,
+   "end_ms": 2249543,
+   "text": "I don't have the answers, I'm just thinking out loud."
+  },
+  {
+   "idx": 197,
+   "speaker": "A",
+   "start_ms": 2261051,
+   "end_ms": 2283996,
+   "text": "I think that's both a— that's a hard part to solve and a risk of if we Even if somebody doesn't know that they need to go set up then their GitLab CI YAML, if it's a protected file or something and they can't actually make that change, we haven't solved the problem for them. We've told them how to solve it, but they still have a lot of manual work to do to find the person to make the change for them."
+  },
+  {
+   "idx": 198,
+   "speaker": "D",
+   "start_ms": 2294979,
+   "end_ms": 2310661,
+   "text": "I, I think I agree with Victor that the hardest problem, the hardest part to solve is, is the logic that knows what ties into that setting or that YAML configuration that needs to be enabled or disabled to stay in sync."
+  },
+  {
+   "idx": 199,
+   "speaker": "A",
+   "start_ms": 2313008,
+   "end_ms": 2334038,
+   "text": "Yeah, I would think that's hardest when you're making a change to the YAML file and reading the setting versus the other way around, just because we could grab the CI YAML and do some sort of linting on it specific to the setting that then could raise the MR for it."
+  },
+  {
+   "idx": 200,
+   "speaker": "B",
+   "start_ms": 2335965,
+   "end_ms": 2349459,
+   "text": "Um, I think it's more tricky than that because what if you— let's say the deploy freeze example, because that's the only one when I, but I see the specific YAML part that we would need to apply. What if you set up a deploy freeze,"
+  },
+  {
+   "idx": 201,
+   "speaker": "B",
+   "start_ms": 2351398,
+   "end_ms": 2367700,
+   "text": "you have that CI deploy freeze variable in one of your jobs but not another one that you would like to have as well? So it's like, it's, it's, it, it's really a huge problem there because it's like"
+  },
+  {
+   "idx": 202,
+   "speaker": "B",
+   "start_ms": 2370068,
+   "end_ms": 2397103,
+   "text": "You have deploy-prod, deploy-dev. You have it set up for deploy-prod, and for whatever reason, you would like to set it up for, I don't know, for another deploy job, like a geographically different one, and then you forget it there. It's— that's why it's tricky to find the incompatibilities, because We can parse the YAML, that's not a big deal."
+  },
+  {
+   "idx": 203,
+   "speaker": "B",
+   "start_ms": 2397380,
+   "end_ms": 2403797,
+   "text": "We can read the settings, that's not a big deal. But matching the two together, I think that's super complicated."
+  },
+  {
+   "idx": 204,
+   "speaker": "E",
+   "start_ms": 2406050,
+   "end_ms": 2413924,
+   "text": "Yeah, I agree with Victor. And I just had a thought. I'm not quite sure, James, which bucket this thought goes into."
+  },
+  {
+   "idx": 205,
+   "speaker": "B",
+   "start_ms": 2416170,
+   "end_ms": 2416676,
+   "text": "So bear with me."
+  },
+  {
+   "idx": 206,
+   "speaker": "E",
+   "start_ms": 2416725,
+   "end_ms": 2437167,
+   "text": "So I was kind of thinking about, kind of reflecting back on the, the initial problem statement very, you know, very early up in the agenda, right, where the DevOps engineer says, hey, I want to know if there are conflicts between the YAML and the settings so that they can avoid hunting down questions from developers, right, who have had a bad experience."
+  },
+  {
+   "idx": 207,
+   "speaker": "E",
+   "start_ms": 2437857,
+   "end_ms": 2459987,
+   "text": "So I was thinking, so far our discussion has been trying to mitigate the risk of that, I think, by letting that DevOps person know, hey, you're about to make a change in a setting, and oh, by the way, you need to go do this other action to make sure you don't create the incompatibility. But I was wondering, like, without having all the data, like, say, um, James, you are my DevOps engineer and you're the maintainer for my project, right?"
+  },
+  {
+   "idx": 208,
+   "speaker": "E",
+   "start_ms": 2460854,
+   "end_ms": 2478357,
+   "text": "And then I'm just a developer. Maybe I have a whole— I have my feature branch, and maybe Hyanna has her own feature branch, or what have you. Um, I create some change in my feature branch, git add YAML file, and then my pipeline is doesn't work because I'm unaware of that setting change. Do we still have that risk?"
+  },
+  {
+   "idx": 209,
+   "speaker": "E",
+   "start_ms": 2481513,
+   "end_ms": 2490443,
+   "text": "And do we still— like, you know, I need to call James up. Hey James, the pipeline's broken. It's like, oh Darren, did you not see my ping on needing to change the whatever for the deploy freezes?"
+  },
+  {
+   "idx": 210,
+   "speaker": "A",
+   "start_ms": 2491586,
+   "end_ms": 2506840,
+   "text": "Oh, so, so your example is I'm working in a feature branch, somebody has changed a setting that is that operates outside of branches, all of those branches need to be updated at the same time to take it, right?"
+  },
+  {
+   "idx": 211,
+   "speaker": "E",
+   "start_ms": 2506840,
+   "end_ms": 2531093,
+   "text": "Yeah, again, going back to the original question, because I think the original— I think we've been kind of thinking about it like we're assuming that we're all working off the main branch, right? So that makes the setting change, James gets notified, I need to go change the YAML. That's cool if we're all working off of main, but let's assume we're all not working off of main, which I'm just kind of— without us having data at our fingertips, like maybe that's one of the the use case branches here, right?"
+  },
+  {
+   "idx": 212,
+   "speaker": "E",
+   "start_ms": 2531269,
+   "end_ms": 2543626,
+   "text": "That's causing the initial experience, like, \"Oh, I now need to call up James to have him help me debug when my pipeline is broken.\" And then James has to, like, \"Oh, your YAML file is missing the regex for the deploy freezers.\""
+  },
+  {
+   "idx": 213,
+   "speaker": "E",
+   "start_ms": 2546019,
+   "end_ms": 2549300,
+   "text": "Maybe the way that would be caught is in"
+  },
+  {
+   "idx": 214,
+   "speaker": "E",
+   "start_ms": 2551889,
+   "end_ms": 2562555,
+   "text": "a job that runs on the pipeline that is triggered when you're merging your code from the source branch to the, the, you know, the main branch."
+  },
+  {
+   "idx": 215,
+   "speaker": "D",
+   "start_ms": 2563553,
+   "end_ms": 2564164,
+   "text": "In that case,"
+  },
+  {
+   "idx": 216,
+   "speaker": "D",
+   "start_ms": 2566190,
+   "end_ms": 2586868,
+   "text": "that's how we would solve for it. It probably— I mean, we hadn't thought about this, but maybe changes in the project setting should result in some more tests added in the jobs that run for a pipeline that, you know, for merging purposes."
+  },
+  {
+   "idx": 217,
+   "speaker": "D",
+   "start_ms": 2586950,
+   "end_ms": 2587327,
+   "text": "And so the, the"
+  },
+  {
+   "idx": 218,
+   "speaker": "D",
+   "start_ms": 2588926,
+   "end_ms": 2615319,
+   "text": "the job error can be very specific. This failed because of this project setting, or this existing project setting required this in the YAML file. I don't know. We haven't even thought about incorporating a way to solve for this by making our jobs smarter to add tests based on project settings."
+  },
+  {
+   "idx": 219,
+   "speaker": "B",
+   "start_ms": 2616763,
+   "end_ms": 2619727,
+   "text": "So I, I have a question here. Is that, that, uh,"
+  },
+  {
+   "idx": 220,
+   "speaker": "B",
+   "start_ms": 2621865,
+   "end_ms": 2637911,
+   "text": "when, when I edit the GitLab CI YAML in a branch, then the pipeline uses the main branch CI? No, it uses that, that branches, or it's a setting?"
+  },
+  {
+   "idx": 221,
+   "speaker": "A",
+   "start_ms": 2638764,
+   "end_ms": 2642661,
+   "text": "Okay, yeah, until you go to merge it to the main, it doesn't"
+  },
+  {
+   "idx": 222,
+   "speaker": "A",
+   "start_ms": 2644830,
+   "end_ms": 2667988,
+   "text": "Um, okay, so the example of that that pops out to me, because we've been talking about in testing merge request approval, is someone creates a new merge request approval rule around a security scan that you don't have yet, or that you do have and the rule was maybe removed."
+  },
+  {
+   "idx": 223,
+   "speaker": "A",
+   "start_ms": 2668857,
+   "end_ms": 2684195,
+   "text": "How does that impact— can you even merge that without doing some sort of rebase, or will a rebase even fix that if you get the right GitLab CI YAML configuration that matches up with merge request approval rules upstream?"
+  },
+  {
+   "idx": 224,
+   "speaker": "D",
+   "start_ms": 2689780,
+   "end_ms": 2695463,
+   "text": "Uh, sorry, what, um, where were you going with that, James? Was that an example?"
+  },
+  {
+   "idx": 225,
+   "speaker": "C",
+   "start_ms": 2695527,
+   "end_ms": 2695832,
+   "text": "That's the—"
+  },
+  {
+   "idx": 226,
+   "speaker": "A",
+   "start_ms": 2695832,
+   "end_ms": 2731460,
+   "text": "yeah, that's the example that comes to mind because, like, Victor, your example for deploys, like, I don't really care about deploys when it comes to a feature branch. I'm not going to deploy this on my own. I trust that when I merge, like, the GitLab CI YAML that's associated with the branch that will actually deploy will match up with settings. Like, for me, that's not a use case I care about as a developer, but But a merge request approval rule is something that could impact my workflow today if I don't have a job or I do have a job that is now no longer required"
+  },
+  {
+   "idx": 227,
+   "speaker": "A",
+   "start_ms": 2731813,
+   "end_ms": 2758090,
+   "text": "for merge request approval. That there's, I think there's some sort of conflict that lies in there. I don't know exactly enough about how the secure jobs work to know that for a fact, but I would take as a next step for us maybe talking to this talking to the secure team and seeing how they've thought about that when new merge request approval rules are implemented and someone doesn't have jobs set up to support it in long-lived feature branches."
+  },
+  {
+   "idx": 228,
+   "speaker": "A",
+   "start_ms": 2761203,
+   "end_ms": 2773460,
+   "text": "That might give us some more data around what we're trying to solve here, or if it's not a problem, if they've already solved it and this just doesn't exist the way that— for more than the 2 or 3 users that I've talked to, who tell me it's a problem."
+  },
+  {
+   "idx": 229,
+   "speaker": "B",
+   "start_ms": 2781050,
+   "end_ms": 2785546,
+   "text": "I don't know if it's a problem or not. I don't have any data, but from what you see here,"
+  },
+  {
+   "idx": 230,
+   "speaker": "B",
+   "start_ms": 2787470,
+   "end_ms": 2803085,
+   "text": "there are clearly situations when— that you don't want to face and it's hard to avoid. So the question is how often this change. So that's, I think, the question because It might be super annoying in every project once in a lifetime."
+  },
+  {
+   "idx": 231,
+   "speaker": "A",
+   "start_ms": 2808509,
+   "end_ms": 2827626,
+   "text": "Yep, yep. And I— when we've done these think bigs within testing, sometimes our, our what's our next thing to change is just documentation. And maybe that's the last thing we change that solves our problem enough today for the users that have it, and the next iteration of the feature might make the overall experience better. And I think that would be—"
+  },
+  {
+   "idx": 232,
+   "speaker": "B",
+   "start_ms": 2827706,
+   "end_ms": 2831554,
+   "text": "I think that, okay, one thing we could do is"
+  },
+  {
+   "idx": 233,
+   "speaker": "B",
+   "start_ms": 2833503,
+   "end_ms": 2842985,
+   "text": "the growth team might be able to help with that, to, to get data around, around two things that come to my mind, uh, totally independently from each other. One is,"
+  },
+  {
+   "idx": 234,
+   "speaker": "B",
+   "start_ms": 2844787,
+   "end_ms": 2850063,
+   "text": "is there a significant change in churn between users"
+  },
+  {
+   "idx": 235,
+   "speaker": "B",
+   "start_ms": 2852088,
+   "end_ms": 2869748,
+   "text": "whose first pipeline run was successful versus users whose first pipeline run was not successful, something along these lines. And, and if it could be that the unsuccessful pipeline run is the result of the settings, uh, YAML incompatibility."
+  },
+  {
+   "idx": 236,
+   "speaker": "B",
+   "start_ms": 2871818,
+   "end_ms": 2873321,
+   "text": "The other interesting thing"
+  },
+  {
+   "idx": 237,
+   "speaker": "B",
+   "start_ms": 2874970,
+   "end_ms": 2875326,
+   "text": "would be"
+  },
+  {
+   "idx": 238,
+   "speaker": "B",
+   "start_ms": 2877148,
+   "end_ms": 2893375,
+   "text": "to check the data on gitlab.com for one or two of these settings, like how often do they happen that they are— that, for example, the deploy freezes are not properly set up in the YAML file"
+  },
+  {
+   "idx": 239,
+   "speaker": "B",
+   "start_ms": 2895726,
+   "end_ms": 2903425,
+   "text": "and they are enabled, or anything else along these lines, because this can give us an idea how often this happens."
+  },
+  {
+   "idx": 240,
+   "speaker": "D",
+   "start_ms": 2924748,
+   "end_ms": 2952567,
+   "text": "Um, while James is writing that, I added my note under documentation as far As far as what we can do next is all the things that we want the logic to do automatically, we should start with defining those in the troubleshooting guide of the manual step a user would have to do. And once we clearly know, um, if this, then that has to happen, then that would be the basis of what we would automate."
+  },
+  {
+   "idx": 241,
+   "speaker": "D",
+   "start_ms": 2952856,
+   "end_ms": 2962601,
+   "text": "But at least give them the guidance of of what they have to manually do first to resolve their, uh, whatever's broken out of sync."
+  },
+  {
+   "idx": 242,
+   "speaker": "A",
+   "start_ms": 2963643,
+   "end_ms": 2971211,
+   "text": "Yep, that'll be a great way to get feedback on would you actually automate the right thing to do and not just a bad process that makes it worse."
+  },
+  {
+   "idx": 243,
+   "speaker": "C",
+   "start_ms": 2973824,
+   "end_ms": 2973953,
+   "text": "Awesome."
+  },
+  {
+   "idx": 244,
+   "speaker": "A",
+   "start_ms": 2975130,
+   "end_ms": 2988263,
+   "text": "So we have a couple of next steps here, or potential next steps, things that we could do. Um, what are our actual steps as we wrap up in the next minute or so, as we're getting close to time, actually over time for our allotted time."
+  },
+  {
+   "idx": 245,
+   "speaker": "D",
+   "start_ms": 2990862,
+   "end_ms": 3001688,
+   "text": "Um, for, for me, I would, uh, I would create— I would look at the settings that my team owns that require certain"
+  },
+  {
+   "idx": 246,
+   "speaker": "D",
+   "start_ms": 3004054,
+   "end_ms": 3022421,
+   "text": "parameters in the YAML file and open issues for our tech writer to add that to our troubleshooting guides that exist. I think there's one for, you know, troubleshooting why your pipeline is broken or something like that. So that's a step that I can think of."
+  },
+  {
+   "idx": 247,
+   "speaker": "B",
+   "start_ms": 3026521,
+   "end_ms": 3026778,
+   "text": "Awesome."
+  },
+  {
+   "idx": 248,
+   "speaker": "A",
+   "start_ms": 3027164,
+   "end_ms": 3041268,
+   "text": "I'll share this with Orit as well, not to put to-dos on on Orit's plate, but as a potential thing since Hyanna raised so many of the release examples for us."
+  },
+  {
+   "idx": 249,
+   "speaker": "C",
+   "start_ms": 3044996,
+   "end_ms": 3045320,
+   "text": "Cool."
+  },
+  {
+   "idx": 250,
+   "speaker": "A",
+   "start_ms": 3048542,
+   "end_ms": 3050777,
+   "text": "This has been a great discussion. I appreciate it, everyone."
+  },
+  {
+   "idx": 251,
+   "speaker": "D",
+   "start_ms": 3052324,
+   "end_ms": 3053097,
+   "text": "It was really good."
+  },
+  {
+   "idx": 252,
+   "speaker": "A",
+   "start_ms": 3054016,
+   "end_ms": 3073798,
+   "text": "Yeah, I thought we were getting close to this isn't a problem. I think we still found some things that we could potentially solve. And it didn't end up anywhere close to where I thought it would, but that is okay. I think this was time well spent and us refining some user experience today that we can make people's GitLab experience a ton better. And that's why we do these."
+  },
+  {
+   "idx": 253,
+   "speaker": "D",
+   "start_ms": 3074696,
+   "end_ms": 3080790,
+   "text": "Are we still using the Think Big label? Like when I create my issues to my tech writer, for example, do I apply that Think Big label?"
+  },
+  {
+   "idx": 254,
+   "speaker": "C",
+   "start_ms": 3080886,
+   "end_ms": 3081047,
+   "text": "Okay."
+  },
+  {
+   "idx": 255,
+   "speaker": "D",
+   "start_ms": 3081832,
+   "end_ms": 3083227,
+   "text": "Thanks, Ryan. I see the nods."
+  },
+  {
+   "idx": 256,
+   "speaker": "C",
+   "start_ms": 3083628,
+   "end_ms": 3090332,
+   "text": "Okay. James, I also suggest you reach out to Dov since, he'll be working to improve"
+  },
+  {
+   "idx": 257,
+   "speaker": "C",
+   "start_ms": 3092220,
+   "end_ms": 3100003,
+   "text": "the templates, but also— oh my goodness, what are they calling the generating—"
+  },
+  {
+   "idx": 258,
+   "speaker": "C",
+   "start_ms": 3103314,
+   "end_ms": 3109372,
+   "text": "a drawer for helping to help write the YAML file. My goodness. Anyways, I'll link the issue."
+  },
+  {
+   "idx": 259,
+   "speaker": "A",
+   "start_ms": 3111023,
+   "end_ms": 3111814,
+   "text": "All right, will do."
+  },
+  {
+   "idx": 260,
+   "speaker": "D",
+   "start_ms": 3112299,
+   "end_ms": 3118974,
+   "text": "Hey James, if you create an issue out of this, I can link it to whatever we create in addition to adding the Think Big,"
+  },
+  {
+   "idx": 261,
+   "speaker": "D",
+   "start_ms": 3120968,
+   "end_ms": 3121713,
+   "text": "like, I don't know."
+  },
+  {
+   "idx": 262,
+   "speaker": "A",
+   "start_ms": 3124397,
+   "end_ms": 3126282,
+   "text": "Okay, I wasn't planning on creating an issue."
+  },
+  {
+   "idx": 263,
+   "speaker": "D",
+   "start_ms": 3126835,
+   "end_ms": 3130654,
+   "text": "Oh, okay, I didn't know if we did that out of Think Big sessions. Okay, sounds good."
+  },
+  {
+   "idx": 264,
+   "speaker": "C",
+   "start_ms": 3132546,
+   "end_ms": 3139307,
+   "text": "I think it would be nice to have an issue so we can consolidate everything in one place and kind of like refer, maybe an epic, so that we can just throw"
+  },
+  {
+   "idx": 265,
+   "speaker": "C",
+   "start_ms": 3141045,
+   "end_ms": 3142092,
+   "text": "the related items there."
+  },
+  {
+   "idx": 266,
+   "speaker": "A",
+   "start_ms": 3143848,
+   "end_ms": 3150643,
+   "text": "OK. I'll get something drafted up and then we can iterate within it to make sure I captured everything correctly."
+  },
+  {
+   "idx": 267,
+   "speaker": "D",
+   "start_ms": 3152087,
+   "end_ms": 3155981,
+   "text": "And you could just link to this agenda. You don't need to copy paste everything from today."
+  },
+  {
+   "idx": 268,
+   "speaker": "A",
+   "start_ms": 3157419,
+   "end_ms": 3158195,
+   "text": "OK. Will do."
+  },
+  {
+   "idx": 269,
+   "speaker": "D",
+   "start_ms": 3158615,
+   "end_ms": 3158986,
+   "text": "Awesome."
+  },
+  {
+   "idx": 270,
+   "speaker": "A",
+   "start_ms": 3160246,
+   "end_ms": 3162184,
+   "text": "Thank you so much, everybody. Appreciate the time."
+  },
+  {
+   "idx": 271,
+   "speaker": "E",
+   "start_ms": 3163050,
+   "end_ms": 3163552,
+   "text": "Hey, thanks."
+  },
+  {
+   "idx": 272,
+   "speaker": "A",
+   "start_ms": 3163666,
+   "end_ms": 3166148,
+   "text": "Have a great day. Have a good family and friends tomorrow."
+  },
+  {
+   "idx": 273,
+   "speaker": "C",
+   "start_ms": 3166586,
+   "end_ms": 3167154,
+   "text": "Oh yeah, enjoy."
+  },
+  {
+   "idx": 274,
+   "speaker": "D",
+   "start_ms": 3167219,
+   "end_ms": 3167624,
+   "text": "Thanks."
+  },
+  {
+   "idx": 275,
+   "speaker": "A",
+   "start_ms": 3168257,
+   "end_ms": 3168565,
+   "text": "Bye. Cheers."
+  },
+  {
+   "idx": 276,
+   "speaker": "E",
+   "start_ms": 3169230,
+   "end_ms": 3169490,
+   "text": "Bye."
+  }
+ ],
+ "chapters": [
+  {
+   "idx": 0,
+   "title": "Introduction to settings conflicts",
+   "start_ms": 0,
+   "gist": "James introduces the problem of conflicting configurations between the UI settings and the GitLab CI YAML file.",
+   "line": 0,
+   "end_ms": 184611
+  },
+  {
+   "idx": 1,
+   "title": "Defining conflict examples",
+   "start_ms": 184611,
+   "gist": "The team discusses specific examples like pipeline success requirements and deploy freezes that cause user confusion.",
+   "line": 13,
+   "end_ms": 513297
+  },
+  {
+   "idx": 2,
+   "title": "Terraform and automation workflows",
+   "start_ms": 513297,
+   "gist": "Victor explains how infrastructure as code tools like Terraform complicate UI-based notifications and settings management.",
+   "line": 47,
+   "end_ms": 784524
+  },
+  {
+   "idx": 3,
+   "title": "Selecting a target persona",
+   "start_ms": 784524,
+   "gist": "The group debates whether to focus on the DevOps engineer making changes or the developer who encounters errors.",
+   "line": 67,
+   "end_ms": 941885
+  },
+  {
+   "idx": 4,
+   "title": "UX challenges in current settings",
+   "start_ms": 941885,
+   "gist": "Hyanna demonstrates the difficulty of finding related configurations across different parts of the project UI.",
+   "line": 77,
+   "end_ms": 1514994
+  },
+  {
+   "idx": 5,
+   "title": "Brainstorming big picture outcomes",
+   "start_ms": 1514994,
+   "gist": "The team explores automated solutions such as opening merge requests or creating to-dos when settings change.",
+   "line": 135,
+   "end_ms": 2095052
+  },
+  {
+   "idx": 6,
+   "title": "Identifying technical blockers",
+   "start_ms": 2095052,
+   "gist": "The discussion focuses on the difficulty of writing logic that can accurately detect mismatches between YAML and UI state.",
+   "line": 182,
+   "end_ms": 2808509
+  },
+  {
+   "idx": 7,
+   "title": "Next steps and documentation",
+   "start_ms": 2808509,
+   "gist": "The team agrees to start with documentation updates and data gathering from the growth team.",
+   "line": 231,
+   "end_ms": 3170000
+  }
+ ],
+ "action_items": [
+  {
+   "idx": 0,
+   "text": "Watch the video about the pipeline authoring visual builder.",
+   "owner_name": "James",
+   "speaker_label": "A",
+   "ts_ms": 424025,
+   "line": 39
+  },
+  {
+   "idx": 1,
+   "text": "Discuss merge request approval rules and secure jobs with the secure team.",
+   "owner_name": "James",
+   "speaker_label": "A",
+   "ts_ms": 2731813,
+   "line": 227
+  },
+  {
+   "idx": 2,
+   "text": "Request data from the growth team regarding pipeline failure rates due to settings.",
+   "owner_name": "James",
+   "speaker_label": "A",
+   "ts_ms": 2833503,
+   "line": 233
+  },
+  {
+   "idx": 3,
+   "text": "Identify project settings that require specific YAML parameters for documentation.",
+   "owner_name": "Thao",
+   "speaker_label": "D",
+   "ts_ms": 2990862,
+   "line": 245
+  },
+  {
+   "idx": 4,
+   "text": "Open issues for technical writers to add instructions to troubleshooting guides.",
+   "owner_name": "Thao",
+   "speaker_label": "D",
+   "ts_ms": 3004054,
+   "line": 246
+  },
+  {
+   "idx": 5,
+   "text": "Share the discussion points about release management with Orit.",
+   "owner_name": "James",
+   "speaker_label": "A",
+   "ts_ms": 3027164,
+   "line": 248
+  },
+  {
+   "idx": 6,
+   "text": "Reach out to Dov regarding improvements to YAML templates and drawers.",
+   "owner_name": "James",
+   "speaker_label": "A",
+   "ts_ms": 3083628,
+   "line": 256
+  },
+  {
+   "idx": 7,
+   "text": "Draft a consolidated issue or epic to track these configuration ideas.",
+   "owner_name": "James",
+   "speaker_label": "A",
+   "ts_ms": 3143848,
+   "line": 266
+  }
+ ],
+ "summaries": [
+  {
+   "template": "general",
+   "content": {
+    "tldr": "The team discussed the confusion caused when GitLab CI YAML files and project UI settings are out of sync. They explored ways to notify users of these conflicts or automate the alignment between the two configuration methods.",
+    "sections": [
+     {
+      "heading": "Meeting purpose",
+      "bullets": [
+       {
+        "text": "To address how settings in the UI and the CI YAML file can conflict or require dual updates.",
+        "line": 1,
+        "ts_ms": 22788
+       }
+      ]
+     },
+     {
+      "heading": "Key takeaways",
+      "bullets": [
+       {
+        "text": "Matching YAML logic with UI settings is technically complex and hard to automate perfectly.",
+        "line": 203,
+        "ts_ms": 2397380
+       },
+       {
+        "text": "The current UI makes it very difficult for users to find all the settings they need to enable a single feature.",
+        "line": 108,
+        "ts_ms": 1221688
+       }
+      ]
+     },
+     {
+      "heading": "Topics",
+      "bullets": [
+       {
+        "text": "Deploy freeze configurations requiring both UI and YAML changes.",
+        "line": 79,
+        "ts_ms": 948115
+       },
+       {
+        "text": "The impact of merge request approval rules on developer workflows.",
+        "line": 226,
+        "ts_ms": 2695832
+       }
+      ]
+     },
+     {
+      "heading": "Next steps",
+      "bullets": [
+       {
+        "text": "Identify specific settings for technical writers to update troubleshooting guides.",
+        "line": 245,
+        "ts_ms": 2990862
+       },
+       {
+        "text": "Create a consolidated epic to track the brainstormed ideas.",
+        "line": 264,
+        "ts_ms": 3132546
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "template": "project_update",
+   "content": {
+    "tldr": "This session served as a conceptual review of configuration challenges in the Ops section. The team identified major technical and UX blockers before moving toward documentation-based iterations.",
+    "sections": [
+     {
+      "heading": "Progress",
+      "bullets": [
+       {
+        "text": "The team defined the core problem of configuration mismatch for various features like merge trains.",
+        "line": 103,
+        "ts_ms": 1176119
+       }
+      ]
+     },
+     {
+      "heading": "Blockers",
+      "bullets": [
+       {
+        "text": "User permissions can prevent individuals from fixing conflicts between settings and code files.",
+        "line": 150,
+        "ts_ms": 1787729
+       },
+       {
+        "text": "Parsing the YAML and matching it to every possible UI setting is a huge technical hurdle.",
+        "line": 202,
+        "ts_ms": 2370068
+       }
+      ]
+     },
+     {
+      "heading": "Decisions",
+      "bullets": [
+       {
+        "text": "The team decided to focus on low-hanging fruit like improved UI feedback and better documentation.",
+        "line": 142,
+        "ts_ms": 1616298
+       }
+      ]
+     },
+     {
+      "heading": "Next steps",
+      "bullets": [
+       {
+        "text": "James will draft a consolidated issue to summarize the discussion and plan future work.",
+        "line": 266,
+        "ts_ms": 3143848
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "template": "standup",
+   "content": {
+    "tldr": "The team reviewed current pain points in the CI/CD configuration experience. They plan to gather data and update documentation to address these issues in the short term.",
+    "sections": [
+     {
+      "heading": "Yesterday / done",
+      "bullets": [
+       {
+        "text": "The testing team identified specific issues with coverage badge parsing and YAML conflicts.",
+        "line": 3,
+        "ts_ms": 82359
+       }
+      ]
+     },
+     {
+      "heading": "Today / planned",
+      "bullets": [
+       {
+        "text": "Thao plans to identify specific settings her team owns that need better troubleshooting guides.",
+        "line": 245,
+        "ts_ms": 2990862
+       }
+      ]
+     },
+     {
+      "heading": "Blockers",
+      "bullets": [
+       {
+        "text": "There is a lack of data on how often pipeline failures are caused by setting incompatibilities.",
+        "line": 230,
+        "ts_ms": 2787470
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "template": "retro",
+   "content": {
+    "tldr": "The group analyzed why current configuration workflows are confusing for both new and experienced users. They highlighted UI discoverability as a major area for improvement.",
+    "sections": [
+     {
+      "heading": "What went well",
+      "bullets": [
+       {
+        "text": "The group provided clear, real-world examples of where users feel pain during setup.",
+        "line": 13,
+        "ts_ms": 184611
+       }
+      ]
+     },
+     {
+      "heading": "What didn't",
+      "bullets": [
+       {
+        "text": "The team struggled to find specific settings during the meeting, illustrating the discoverability problem.",
+        "line": 108,
+        "ts_ms": 1221688
+       }
+      ]
+     },
+     {
+      "heading": "Ideas to improve",
+      "bullets": [
+       {
+        "text": "Automatically open a merge request to update the YAML file when a UI setting is changed.",
+        "line": 148,
+        "ts_ms": 1758477
+       },
+       {
+        "text": "Create to-dos for project owners when a YAML change requires a corresponding UI setting update.",
+        "line": 160,
+        "ts_ms": 1859573
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "template": "sales",
+   "content": {
+    "tldr": "This was an internal technical discussion focused on product usability and architecture. No sales prospects, budgets, or commercial timelines were discussed.",
+    "sections": [
+     {
+      "heading": "Prospect needs",
+      "bullets": [
+       {
+        "text": "No prospects were involved in this internal discussion.",
+        "line": null,
+        "ts_ms": null
+       }
+      ]
+     },
+     {
+      "heading": "Objections",
+      "bullets": [
+       {
+        "text": "No sales objections were raised.",
+        "line": null,
+        "ts_ms": null
+       }
+      ]
+     },
+     {
+      "heading": "Budget & timeline",
+      "bullets": [
+       {
+        "text": "No budget or commercial timelines were discussed.",
+        "line": null,
+        "ts_ms": null
+       }
+      ]
+     },
+     {
+      "heading": "Next steps",
+      "bullets": [
+       {
+        "text": "No sales-related next steps were identified.",
+        "line": null,
+        "ts_ms": null
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "template": "one_on_one",
+   "content": {
+    "tldr": "This was a cross-stage group discussion, not a one-on-one performance review. The participants collaborated on identifying product improvements for GitLab.",
+    "sections": [
+     {
+      "heading": "Wins",
+      "bullets": [
+       {
+        "text": "The participants successfully identified several high-impact UX improvements for the settings pages.",
+        "line": 170,
+        "ts_ms": 1951770
+       }
+      ]
+     },
+     {
+      "heading": "Concerns",
+      "bullets": [
+       {
+        "text": "There is concern that automated changes could be an annoyance to experienced users who already know the steps.",
+        "line": 190,
+        "ts_ms": 2177168
+       }
+      ]
+     },
+     {
+      "heading": "Feedback",
+      "bullets": [
+       {
+        "text": "The UX department is planning a major facelift for settings based on previous research.",
+        "line": 170,
+        "ts_ms": 1951770
+       }
+      ]
+     },
+     {
+      "heading": "Follow-ups",
+      "bullets": [
+       {
+        "text": "James will coordinate with Dov and Orit to ensure all relevant teams are aligned.",
+        "line": 248,
+        "ts_ms": 3027164
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-3-flash-preview"
+  }
+ ]
+}

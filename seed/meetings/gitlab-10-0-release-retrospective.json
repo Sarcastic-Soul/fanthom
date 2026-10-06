@@ -1,0 +1,1899 @@
+{
+ "meeting": {
+  "slug": "gitlab-10-0-release-retrospective",
+  "title": "GitLab 10.0 release retrospective",
+  "started_at": "2026-09-17T09:30:00-07:00",
+  "duration_ms": 2764000,
+  "media_type": "youtube",
+  "media_path": null,
+  "youtube_id": "BGnH10g-eZ0",
+  "source_name": "GitLab on YouTube",
+  "source_url": "https://www.youtube.com/watch?v=BGnH10g-eZ0",
+  "credit": "GitLab on YouTube: \"GitLab 10.0 Release Retrospective\" https://www.youtube.com/watch?v=BGnH10g-eZ0",
+  "kind": "demo",
+  "status": "ready",
+  "meeting_type": "retro",
+  "source_key": "BGnH10g-eZ0"
+ },
+ "speakers": [
+  {
+   "label": "E",
+   "name": "Fabio",
+   "role": null,
+   "talk_ms": 473342,
+   "turns": 8,
+   "color": 0
+  },
+  {
+   "label": "D",
+   "name": "Kamil",
+   "role": null,
+   "talk_ms": 404037,
+   "turns": 6,
+   "color": 1
+  },
+  {
+   "label": "C",
+   "name": "Mark",
+   "role": null,
+   "talk_ms": 313015,
+   "turns": 10,
+   "color": 2
+  },
+  {
+   "label": "B",
+   "name": "Victor",
+   "role": null,
+   "talk_ms": 276468,
+   "turns": 16,
+   "color": 3
+  },
+  {
+   "label": "J",
+   "name": "Maren",
+   "role": null,
+   "talk_ms": 188593,
+   "turns": 5,
+   "color": 4
+  },
+  {
+   "label": "K",
+   "name": "Sean",
+   "role": null,
+   "talk_ms": 170135,
+   "turns": 7,
+   "color": 5
+  },
+  {
+   "label": "H",
+   "name": "Filippa",
+   "role": null,
+   "talk_ms": 104495,
+   "turns": 4,
+   "color": 6
+  },
+  {
+   "label": "A",
+   "name": "Job",
+   "role": null,
+   "talk_ms": 99475,
+   "turns": 5,
+   "color": 7
+  },
+  {
+   "label": "L",
+   "name": "Jacob",
+   "role": null,
+   "talk_ms": 95151,
+   "turns": 6,
+   "color": 8
+  },
+  {
+   "label": "M",
+   "name": "Eric",
+   "role": null,
+   "talk_ms": 79467,
+   "turns": 4,
+   "color": 9
+  },
+  {
+   "label": "I",
+   "name": "Joshua",
+   "role": null,
+   "talk_ms": 73113,
+   "turns": 2,
+   "color": 10
+  },
+  {
+   "label": "F",
+   "name": "Robert",
+   "role": null,
+   "talk_ms": 60062,
+   "turns": 4,
+   "color": 11
+  },
+  {
+   "label": "G",
+   "name": "Nick",
+   "role": null,
+   "talk_ms": 38350,
+   "turns": 2,
+   "color": 12
+  }
+ ],
+ "utterances": [
+  {
+   "idx": 0,
+   "speaker": "A",
+   "start_ms": 138063,
+   "end_ms": 142659,
+   "text": "Alright, welcome everybody. Victor, you can stop sharing your screen."
+  },
+  {
+   "idx": 1,
+   "speaker": "B",
+   "start_ms": 149931,
+   "end_ms": 150388,
+   "text": "Or not."
+  },
+  {
+   "idx": 2,
+   "speaker": "A",
+   "start_ms": 155652,
+   "end_ms": 164007,
+   "text": "Just a reminder, this is all live streamed. This is the retrospective of GitLab 10, by far the best release we ever shipped."
+  },
+  {
+   "idx": 3,
+   "speaker": "A",
+   "start_ms": 166810,
+   "end_ms": 170535,
+   "text": "But maybe, Victor, you can start us off with what went well this month."
+  },
+  {
+   "idx": 4,
+   "speaker": "A",
+   "start_ms": 176089,
+   "end_ms": 176939,
+   "text": "You're still muted though."
+  },
+  {
+   "idx": 5,
+   "speaker": "B",
+   "start_ms": 179310,
+   "end_ms": 204565,
+   "text": "Apologize for that, I was just jumping around with the setup here. So I wanted to share that we did a really good job with the issue boards. So there was a lot of coordination required in shipping group issue boards. Of course, it was a really big feature for our premium customers, and in particular, there was a lot of edge cases on how to bring the boards to groups with all the labels and milestones."
+  },
+  {
+   "idx": 6,
+   "speaker": "B",
+   "start_ms": 204661,
+   "end_ms": 218960,
+   "text": "So we were able to ship the same great project boards to the group level and bring all the great functionality there. And we're following up with, in 10.1, with even more functionality. So kudos to the team there."
+  },
+  {
+   "idx": 7,
+   "speaker": "C",
+   "start_ms": 219500,
+   "end_ms": 221033,
+   "text": "Kamil?"
+  },
+  {
+   "idx": 8,
+   "speaker": "D",
+   "start_ms": 221533,
+   "end_ms": 251052,
+   "text": "Yes, so basically I wanted to mention about Auto DevOps because this was basically the tremendous effort from everyone involved. It was probably one of the bigger tasks that we managed to do in so short time. It involves a lot of people, a lot of different stories to cover, keeping in mind that we have to have a proper UX, that we have to make it actually work."
+  },
+  {
+   "idx": 9,
+   "speaker": "D",
+   "start_ms": 251550,
+   "end_ms": 265519,
+   "text": "We want to actually also make it possible to use on GitLab.com. So thank everyone for doing that, for making this happen. Fabio. Okay, Fabio did mention to me that he cannot talk."
+  },
+  {
+   "idx": 10,
+   "speaker": "D",
+   "start_ms": 267129,
+   "end_ms": 268477,
+   "text": "Uh, phrasing— I think I have to talk now."
+  },
+  {
+   "idx": 11,
+   "speaker": "D",
+   "start_ms": 272190,
+   "end_ms": 273053,
+   "text": "Fabio, can you try?"
+  },
+  {
+   "idx": 12,
+   "speaker": "E",
+   "start_ms": 274582,
+   "end_ms": 306551,
+   "text": "Okay, thank you. Now it's better. Yeah, getting back to the auto DevOps, it was great, but we were also able to ship other things since we don't want just to focus on one thing at all. So even if we were on low capacity, on low time, we were able to ship protected runners and variables for pipeline schedules that are very awesome and that reflects the fact that the team can work together on different things at the same time."
+  },
+  {
+   "idx": 13,
+   "speaker": "E",
+   "start_ms": 310394,
+   "end_ms": 310507,
+   "text": "So,"
+  },
+  {
+   "idx": 14,
+   "speaker": "E",
+   "start_ms": 312140,
+   "end_ms": 314517,
+   "text": "next one is what went wrong. Robert?"
+  },
+  {
+   "idx": 15,
+   "speaker": "F",
+   "start_ms": 316020,
+   "end_ms": 339291,
+   "text": "Yeah, so unfortunately our deploy of RC1 was a little bit delayed than what we would have that seems to be because the initial CE to EE merge for the master branch, which we based the stable— we based the stable branches off of, was delayed. And I think that was purely because of conflicts. So we got a huge conflict probably on the 6th, and then that got pushed into the 7th and the 8th, and then that was Friday."
+  },
+  {
+   "idx": 16,
+   "speaker": "F",
+   "start_ms": 339387,
+   "end_ms": 356486,
+   "text": "And then we didn't actually get that merged until Monday the 11th, at which point we could actually resolve the same conflicts in stable branches which had been created. That's mostly due to conflicts, differences between C and E, which we are actively still working on reducing. It's an ongoing process."
+  },
+  {
+   "idx": 17,
+   "speaker": "F",
+   "start_ms": 358022,
+   "end_ms": 359427,
+   "text": "I don't know if anybody has anything to add to that."
+  },
+  {
+   "idx": 18,
+   "speaker": "G",
+   "start_ms": 359637,
+   "end_ms": 360170,
+   "text": "Sean?"
+  },
+  {
+   "idx": 19,
+   "speaker": "F",
+   "start_ms": 362609,
+   "end_ms": 366989,
+   "text": "Yeah, single codebase will help there. We're still discussing that. But that's it. We"
+  },
+  {
+   "idx": 20,
+   "speaker": "F",
+   "start_ms": 368527,
+   "end_ms": 377374,
+   "text": "got RC1 deployed on the 11th, and as far as deploys, everything was fine after that, I think. Drew's not here. Is anybody reading that on his behalf?"
+  },
+  {
+   "idx": 21,
+   "speaker": "D",
+   "start_ms": 378081,
+   "end_ms": 399626,
+   "text": "So basically, I, I can mention Drew's points. So basically, we did focus with 10.0 on renaming GitLab CI/MDRunner to be formally named GitLab Runner, and this kind of makes some confusion because we assume that we have to keep intact the old repository because some people may use container registry."
+  },
+  {
+   "idx": 22,
+   "speaker": "D",
+   "start_ms": 400172,
+   "end_ms": 435928,
+   "text": "But later it kind of shown that it was not really true. But like the problem that we face is that we actually break the redirects. So basically we had a bunch of links everywhere that were still pointing to GitLab CI multi-runner to either issues or merge requests. And basically these things started having 404, which kind of make a little harder for us our customers and for the community to basically link to the valid place."
+  },
+  {
+   "idx": 23,
+   "speaker": "D",
+   "start_ms": 437072,
+   "end_ms": 440383,
+   "text": "Like, the solution for that is that we decided that we are gonna"
+  },
+  {
+   "idx": 24,
+   "speaker": "D",
+   "start_ms": 442321,
+   "end_ms": 469055,
+   "text": "remove GitLab CI/Multi-Runner project completely and bring back the redirect because we kind of confirmed that the container registry problem that we in the beginning thought that it will be a huge issue. It's not really an issue because the container registry is only used by us. But like the meta out of it that it didn't went very well because it just creates some extra toy job for everyone."
+  },
+  {
+   "idx": 25,
+   "speaker": "D",
+   "start_ms": 471110,
+   "end_ms": 471432,
+   "text": "Victor."
+  },
+  {
+   "idx": 26,
+   "speaker": "B",
+   "start_ms": 472366,
+   "end_ms": 494112,
+   "text": "So the lock issue was not shipped. It was originally scoped for 10.0 and currently it's It is planned to be shipped in 10.1, but unfortunately it is not merged yet into master. So that's why I said that it will take at least 2 releases to complete. The issue and merge request are linked there."
+  },
+  {
+   "idx": 27,
+   "speaker": "B",
+   "start_ms": 495107,
+   "end_ms": 508032,
+   "text": "And I'll mention what we can improve in the other section, but essentially it seems that there was a lot of coordination required in this issue that we could have done a better job in accounting for. Nick, you're up."
+  },
+  {
+   "idx": 28,
+   "speaker": "G",
+   "start_ms": 509553,
+   "end_ms": 533343,
+   "text": "Yes, so we wanted to get an initial GraphQL API endpoint into 10.0 and use it for the merge request widget. As we were developing this, it came to light that there were a number of outstanding licensing and patenting issues to do with GraphQL, the software and the spec itself. So in the end, we decided not to go ahead and it's basically on ice until we can resolve these issues."
+  },
+  {
+   "idx": 29,
+   "speaker": "G",
+   "start_ms": 533407,
+   "end_ms": 547434,
+   "text": "I understand it's being taken up internally in Facebook and it's affecting other projects as well, not just us. So it's unfortunate it didn't go in, but probably the right decision given the uncertainty that exists at the moment. Kamil, you next."
+  },
+  {
+   "idx": 30,
+   "speaker": "D",
+   "start_ms": 549140,
+   "end_ms": 570520,
+   "text": "So basically I mentioned a lot about autodevops being so great that we managed to ship that, but it also turned out a very big story and one of the biggest that we work for, like, in my lifetime at GitLab. And there was basically a few things that we noticed that were not completely right."
+  },
+  {
+   "idx": 31,
+   "speaker": "D",
+   "start_ms": 571548,
+   "end_ms": 594244,
+   "text": "We started working on auto DevOps quite late, and because this was basically shortly after a lot of people's vacations, and we kind of hit that there was a lot of back and forth between different people, a lot of changing and evolving requirements. During the time when we focus on engineering, but also we were kind of developing the product side and UX side."
+  },
+  {
+   "idx": 32,
+   "speaker": "D",
+   "start_ms": 594581,
+   "end_ms": 614621,
+   "text": "We kind of were aware that it will be hard to make this in time. So we started like the best, maybe like the best or the correct approach ever that we decided that we have a sync every few days where we'll be basically doing future assurance constantly. Seeing what is done, what is not done, what is left to be done."
+  },
+  {
+   "idx": 33,
+   "speaker": "D",
+   "start_ms": 615777,
+   "end_ms": 635848,
+   "text": "But it still didn't, like, fulfill what we kind of expected because we tried to find some problems during this feature assurance that we had basically with most of the people in the team. Like, that we showed the banner when you have CI present, something that we had to later fix after 7th."
+  },
+  {
+   "idx": 34,
+   "speaker": "D",
+   "start_ms": 637293,
+   "end_ms": 659410,
+   "text": "But like the matter out of that is that we effectively didn't finish the auto-devops at 7th, something that it's like the best approach and the proper approach, but more like at 18th, 19th. When we, between this time, we actually merged something like 6 merge requests with this very small bug and regressions."
+  },
+  {
+   "idx": 35,
+   "speaker": "D",
+   "start_ms": 660405,
+   "end_ms": 670711,
+   "text": "They were not very big, but It kind of was not very comfortable doing that. Testing out of DevOps was quite a manual"
+  },
+  {
+   "idx": 36,
+   "speaker": "D",
+   "start_ms": 672545,
+   "end_ms": 680199,
+   "text": "and repetitive job, something that also required a lot of effort from a lot of people. Filipa."
+  },
+  {
+   "idx": 37,
+   "speaker": "C",
+   "start_ms": 681202,
+   "end_ms": 683822,
+   "text": "Thank you."
+  },
+  {
+   "idx": 38,
+   "speaker": "H",
+   "start_ms": 684614,
+   "end_ms": 713476,
+   "text": "It's mostly what you just mentioned. Both UX and front end were included super late. And a lot of issues were open as deliverables more than a week before the 7th, and UX was not included on those as well. And those two issues that were open before the 7th as deliverable were the result of not including UX earlier and not having the product deciding what should be done before the last week."
+  },
+  {
+   "idx": 39,
+   "speaker": "H",
+   "start_ms": 714247,
+   "end_ms": 723513,
+   "text": "And often a lot of UX concerns were dismissed. There are some links there. Slack link as well. Fabio, your point is next."
+  },
+  {
+   "idx": 40,
+   "speaker": "E",
+   "start_ms": 723641,
+   "end_ms": 746655,
+   "text": "Yeah, thank you, Filippa. So yeah, also on the same topic, eventually we did it, so that's good, but I recognized that it was a very rough road. So the main problem was that feature assurance failed at feature freeze since we were focusing on feature assurance of a specific path that was not the only one."
+  },
+  {
+   "idx": 41,
+   "speaker": "E",
+   "start_ms": 747167,
+   "end_ms": 767422,
+   "text": "So once we did the full path walkthrough, we found that there was something that is not technically wrong, maybe, but it is very hard to say that we can reach our original goal for AutoDevOps without the specific changes."
+  },
+  {
+   "idx": 42,
+   "speaker": "E",
+   "start_ms": 768432,
+   "end_ms": 789417,
+   "text": "So we mainly decided to try to fix these problems instead of postpone the Auto DevOps as a whole. And this required non-standard processes, and I understand that people part of this will not be comfortable. I was not comfortable with this change."
+  },
+  {
+   "idx": 43,
+   "speaker": "E",
+   "start_ms": 790637,
+   "end_ms": 822327,
+   "text": "Unfortunately, we had to move at incredible speed, so we mostly did things and then asked for validation. At the end, everything merged as UX and engineering lead authorized that, let's say. But we also cut a lot of things that were also included in the MVP but were not done in time or were not authorized by UX or engineering."
+  },
+  {
+   "idx": 44,
+   "speaker": "E",
+   "start_ms": 822375,
+   "end_ms": 848136,
+   "text": "So that was quite bad even if the result was very good. This also had some implications on what we are working on in 10.1. We are recovering them, so it's not really a problem, but obviously going along with the old release makes us short time for this, this one for 10.1."
+  },
+  {
+   "idx": 45,
+   "speaker": "E",
+   "start_ms": 849689,
+   "end_ms": 851031,
+   "text": "Next one is Joshua Marin."
+  },
+  {
+   "idx": 46,
+   "speaker": "B",
+   "start_ms": 853219,
+   "end_ms": 854272,
+   "text": "Thanks, Fabio."
+  },
+  {
+   "idx": 47,
+   "speaker": "I",
+   "start_ms": 854515,
+   "end_ms": 878146,
+   "text": "So we have one of our kind of large goals for 10.0 was to announce PGHA going GA. Unfortunately, we weren't able to quite get there. We got quite close, but a couple goalposts that I wanted to have was to have it running in production for a little bit of time to make sure we kind of ate our dog food before we recommended it to our customers as something they can move their production HA clusters onto."
+  },
+  {
+   "idx": 48,
+   "speaker": "I",
+   "start_ms": 879144,
+   "end_ms": 902554,
+   "text": "So wanted us to test that first, and we just couldn't quite get that done within time. So I think that was, that was the big one for me, as well as having a little bit of sort of discussion around some documentation and other challenge kind of improvements a couple days before release there. So that was that one. We also didn't get all of our applications that we were planning to get done included."
+  },
+  {
+   "idx": 49,
+   "speaker": "I",
+   "start_ms": 904096,
+   "end_ms": 926443,
+   "text": "And we're working on a more clear deprecation process as well. And you can see that in the linked issue. We can certainly discuss whether it makes sense to move that to a broader area for more of GitLab. I couldn't find an official deprecation process, but one more time right there, just so we have expectations and we kind of know what we should communicate ahead of time before we can sort of start down this path."
+  },
+  {
+   "idx": 50,
+   "speaker": "I",
+   "start_ms": 927838,
+   "end_ms": 931450,
+   "text": "But, but yeah, Maren, you have any further feedback there?"
+  },
+  {
+   "idx": 51,
+   "speaker": "J",
+   "start_ms": 933210,
+   "end_ms": 954612,
+   "text": "Just to add that PGHA has been proven to be quite a difficult thing to test as well. It has a lot of moving parts. So basically, as we were working on it and doing the reviews and merging things, things that we thought we fixed would get broken even though we had tests."
+  },
+  {
+   "idx": 52,
+   "speaker": "J",
+   "start_ms": 955194,
+   "end_ms": 964240,
+   "text": "So we had to start over. Reinstall everything from the beginning, and that's quite a difficult and time-consuming process."
+  },
+  {
+   "idx": 53,
+   "speaker": "J",
+   "start_ms": 965899,
+   "end_ms": 976916,
+   "text": "And that's one of the other reasons why we didn't push harder for getting this into GA, apart from what Joshua said. And as for the deprecations,"
+  },
+  {
+   "idx": 54,
+   "speaker": "J",
+   "start_ms": 979247,
+   "end_ms": 986360,
+   "text": "we almost managed to get all of them in, but we ended up reverting some of them because we realized that"
+  },
+  {
+   "idx": 55,
+   "speaker": "J",
+   "start_ms": 988629,
+   "end_ms": 1010401,
+   "text": "we would get probably more broken instances, and we even got our instances broken at some point because of communication that failed somewhere. So basically, this is why the deprecation process will need to be created for us to be able to move on. The technical debt is growing, and we need to handle it in a timely manner."
+  },
+  {
+   "idx": 56,
+   "speaker": "J",
+   "start_ms": 1012676,
+   "end_ms": 1015045,
+   "text": "That's pretty much it. What can we improve? Sean?"
+  },
+  {
+   "idx": 57,
+   "speaker": "K",
+   "start_ms": 1017075,
+   "end_ms": 1021125,
+   "text": "Yep, thanks, Maren. My first point here was that"
+  },
+  {
+   "idx": 58,
+   "speaker": "K",
+   "start_ms": 1024693,
+   "end_ms": 1028129,
+   "text": "we did a deploy on the 7th of September,"
+  },
+  {
+   "idx": 59,
+   "speaker": "K",
+   "start_ms": 1030054,
+   "end_ms": 1058137,
+   "text": "which we should probably try not to do, at least until we've made it so that our background jobs aren't stopped for quite as long while we're deploying. Because at the moment when we deploy, we stop our background jobs for quite a long period of time, often hours, which means that things like merge requests don't get updated, pipelines don't get triggered, etc., which is always important, but especially important because,"
+  },
+  {
+   "idx": 60,
+   "speaker": "K",
+   "start_ms": 1060041,
+   "end_ms": 1080334,
+   "text": "for better or worse, we seem to merge a lot more on the 7th than we do on any other day, and we can't merge stuff if, if the background jobs aren't running and things aren't updating. And merging itself, it happens in a background job. So it's kind of frustrating. I thought I saw someone add a comment to this. I think it was maybe Robert."
+  },
+  {
+   "idx": 61,
+   "speaker": "K",
+   "start_ms": 1080527,
+   "end_ms": 1080640,
+   "text": "But"
+  },
+  {
+   "idx": 62,
+   "speaker": "K",
+   "start_ms": 1082198,
+   "end_ms": 1092417,
+   "text": "yeah, I don't know if anybody has any specific feedback on that. But I think just in general, like, please don't unless it's a critical deploy."
+  },
+  {
+   "idx": 63,
+   "speaker": "F",
+   "start_ms": 1093964,
+   "end_ms": 1098603,
+   "text": "Yeah, I deleted my comment. I had the dates wrong. But I think the 7th deploy, that was a 9.5 deploy."
+  },
+  {
+   "idx": 64,
+   "speaker": "E",
+   "start_ms": 1099495,
+   "end_ms": 1099515,
+   "text": "Right?"
+  },
+  {
+   "idx": 65,
+   "speaker": "F",
+   "start_ms": 1099515,
+   "end_ms": 1099936,
+   "text": "Not a—"
+  },
+  {
+   "idx": 66,
+   "speaker": "K",
+   "start_ms": 1100000,
+   "end_ms": 1108420,
+   "text": "Yes, yeah, no, it's not 10.0.1 because obviously this is the previous release, like a patch for that. But yeah, you know,"
+  },
+  {
+   "idx": 67,
+   "speaker": "K",
+   "start_ms": 1112089,
+   "end_ms": 1118986,
+   "text": "that's sort of one release manager making trouble for the next one, essentially. My next point is sort of more general."
+  },
+  {
+   "idx": 68,
+   "speaker": "K",
+   "start_ms": 1121689,
+   "end_ms": 1140353,
+   "text": "I don't know if this is because we're live streaming it, but there are definitely— or just because the team is bigger. But it definitely feels like there's less actual discussion in the retrospective. It's mostly people like me going down through the points that we've already written in the agenda, which is great."
+  },
+  {
+   "idx": 69,
+   "speaker": "K",
+   "start_ms": 1142300,
+   "end_ms": 1164960,
+   "text": "But part of the point of a retrospective is to have those discussions and dig into things. So maybe we need to— schedule separate calls for those, for the auto DevOps thing or the lock issue thing. Maybe those belong in separate meetings to keep in the time limit."
+  },
+  {
+   "idx": 70,
+   "speaker": "K",
+   "start_ms": 1166434,
+   "end_ms": 1168982,
+   "text": "Jacob, did you want to talk?"
+  },
+  {
+   "idx": 71,
+   "speaker": "L",
+   "start_ms": 1170104,
+   "end_ms": 1188920,
+   "text": "No, I'm just wondering when, if not now, should we actually retrospect and solve the problems that we're talking about? It seems like this conversation is really good to bring up the problems, but to solve them, We don't necessarily have a process unless we do it on our own, which is also fine, which we do do as well."
+  },
+  {
+   "idx": 72,
+   "speaker": "L",
+   "start_ms": 1190690,
+   "end_ms": 1193250,
+   "text": "The next person—"
+  },
+  {
+   "idx": 73,
+   "speaker": "H",
+   "start_ms": 1193250,
+   "end_ms": 1193870,
+   "text": "oh, Joep."
+  },
+  {
+   "idx": 74,
+   "speaker": "K",
+   "start_ms": 1193870,
+   "end_ms": 1195250,
+   "text": "Yeah, Joep, yeah."
+  },
+  {
+   "idx": 75,
+   "speaker": "A",
+   "start_ms": 1195250,
+   "end_ms": 1213550,
+   "text": "Yeah, you know, we shouldn't have meetings for no reason, right? So if you feel that we're not getting any value out of this meeting, we have to change it, right? And we're free to change it in any ways we want. The fact that we're live streaming is just according to our values, but it shouldn't influence the quality and the purpose of this meeting. So if that is a problem, we can stop live streaming."
+  },
+  {
+   "idx": 76,
+   "speaker": "E",
+   "start_ms": 1215460,
+   "end_ms": 1215686,
+   "text": "Streaming."
+  },
+  {
+   "idx": 77,
+   "speaker": "A",
+   "start_ms": 1216316,
+   "end_ms": 1220693,
+   "text": "If you feel that the time limit is too short, we can consider expanding it."
+  },
+  {
+   "idx": 78,
+   "speaker": "A",
+   "start_ms": 1222503,
+   "end_ms": 1244400,
+   "text": "I do feel that the balance between going very deep into things and having retrospective about particular things and still having something that's useful for everyone in this call is very hard. So I'm not sure what the solution is. Either stop having a retrospective with everyone or, you know, only discuss things that are actually applicable to everyone."
+  },
+  {
+   "idx": 79,
+   "speaker": "A",
+   "start_ms": 1244400,
+   "end_ms": 1264980,
+   "text": "For instance, I think that the release process is something that affects all of us. So anything related to the release process should have, you know, many comments, it should have many people having an opinion about it. And this should be a good place to discuss these kinds of things. So, and not having this time to discuss things like release process might be a loss as well."
+  },
+  {
+   "idx": 80,
+   "speaker": "K",
+   "start_ms": 1264980,
+   "end_ms": 1289099,
+   "text": "Yeah, no, I don't, I don't think we should cancel the meeting, nor do I think we should extend it because I think making it longer is not really solving a problem. But I just think maybe the balance has moved a bit too far towards the async meeting where we've got everything written down in advance and we then rattle through a bunch of stuff away from that slightly looser form."
+  },
+  {
+   "idx": 81,
+   "speaker": "K",
+   "start_ms": 1289392,
+   "end_ms": 1290579,
+   "text": "But I think maybe"
+  },
+  {
+   "idx": 82,
+   "speaker": "K",
+   "start_ms": 1292807,
+   "end_ms": 1294677,
+   "text": "retrospectives by product area"
+  },
+  {
+   "idx": 83,
+   "speaker": "K",
+   "start_ms": 1296202,
+   "end_ms": 1301089,
+   "text": "I think Mark is actually just typing that right now. And then Jacob typed some stuff as well."
+  },
+  {
+   "idx": 84,
+   "speaker": "B",
+   "start_ms": 1303790,
+   "end_ms": 1305980,
+   "text": "Yeah, then that defeats the purpose of a meeting."
+  },
+  {
+   "idx": 85,
+   "speaker": "L",
+   "start_ms": 1306221,
+   "end_ms": 1308443,
+   "text": "Because otherwise we're just reading a script."
+  },
+  {
+   "idx": 86,
+   "speaker": "B",
+   "start_ms": 1308878,
+   "end_ms": 1323344,
+   "text": "Then we can chat on Slack. I wanted to add, I was actually looking at some of the old retros in this document. I think there was actually action items, or was I mistaken? I mean, that seems like a common thing to do in retros. Action items at the end of the—"
+  },
+  {
+   "idx": 87,
+   "speaker": "K",
+   "start_ms": 1323360,
+   "end_ms": 1326923,
+   "text": "At this point, should be action items. I didn't read it."
+  },
+  {
+   "idx": 88,
+   "speaker": "B",
+   "start_ms": 1327228,
+   "end_ms": 1347403,
+   "text": "And then we actually review said items at our next retro and make sure that we've completed them. So to me, that forces us to actually, in addition to discussing, there's actually change that is affected from the discussion or at least has been in an issue to say that we will address it at some point."
+  },
+  {
+   "idx": 89,
+   "speaker": "B",
+   "start_ms": 1347772,
+   "end_ms": 1351040,
+   "text": "Rather than just be another document where people just talk."
+  },
+  {
+   "idx": 90,
+   "speaker": "M",
+   "start_ms": 1351938,
+   "end_ms": 1375250,
+   "text": "I think that's a, that's a good point, Victor. I like this open discussion. I like the large discussion. I think if, if we could exit this meeting with some consensus about what the, what the priority of these is, and maybe the top 1 or 2 things identified, then we can have a smaller team. And lots of times it'll be me and Jobin and a bunch of others kind of take it offline, and, and maybe there's a series of meetings that come out of that."
+  },
+  {
+   "idx": 91,
+   "speaker": "M",
+   "start_ms": 1375571,
+   "end_ms": 1387451,
+   "text": "But, you know, productive, very focused ones. And I like the emphasis on, you know, at the next retrospective, reviewing the progress that we made or the changes that we implemented and see if it was actually effective."
+  },
+  {
+   "idx": 92,
+   "speaker": "B",
+   "start_ms": 1388398,
+   "end_ms": 1405095,
+   "text": "Yep, yep. I think we do a really good job in building the product and tracking issues, but we do a shitty job of tracking process improvements, maybe because we just do everything in our handbook. But maybe we need to do it here in the retro as well."
+  },
+  {
+   "idx": 93,
+   "speaker": "J",
+   "start_ms": 1406074,
+   "end_ms": 1427661,
+   "text": "So, our previous retros, like some time ago, were actually a lot of discussion and a lot of actionable items that we had to do. The problem with that was, though, that even that we had at the next retro, \"What did you do with your actionable items last time?\" No one actually had enough power, enough will, enough time, whatever, to actually follow those things through."
+  },
+  {
+   "idx": 94,
+   "speaker": "J",
+   "start_ms": 1428159,
+   "end_ms": 1433763,
+   "text": "So, if you check out the early notes, we had same people repeating things over and over again."
+  },
+  {
+   "idx": 95,
+   "speaker": "I",
+   "start_ms": 1433811,
+   "end_ms": 1433924,
+   "text": "Right."
+  },
+  {
+   "idx": 96,
+   "speaker": "J",
+   "start_ms": 1434101,
+   "end_ms": 1454753,
+   "text": "And at some point, things just dropped off, people gave up and then product went in and took over this meeting completely, right? Leading it completely. And then engineering, or at least how I felt, engineering kind of just backed off and left this as a product retro meeting rather than engineering retro meeting that was original the goal."
+  },
+  {
+   "idx": 97,
+   "speaker": "J",
+   "start_ms": 1455139,
+   "end_ms": 1462072,
+   "text": "So maybe we can find a common ground for all of us and actually have someone who will follow this through."
+  },
+  {
+   "idx": 98,
+   "speaker": "M",
+   "start_ms": 1463608,
+   "end_ms": 1491734,
+   "text": "I think you can look to me to be responsible for a good portion of this. That's why I say focus is so important. If we can determine, let's say, one product and one engineering thing, but a major thing that we're going to fix before the next one. I'm sure there's 10 or 20 things we want to fix, but if you really focus on the highest priority items, and a few number of them over a series of successive releases, all of a sudden you'll really start to see substantive change rather than, you know, just spreading action items all over the place."
+  },
+  {
+   "idx": 99,
+   "speaker": "M",
+   "start_ms": 1491863,
+   "end_ms": 1496356,
+   "text": "And as you noted, you know, lack of follow-up. I think focus is kind of the answer to that."
+  },
+  {
+   "idx": 100,
+   "speaker": "B",
+   "start_ms": 1496837,
+   "end_ms": 1497607,
+   "text": "So I'll try to—"
+  },
+  {
+   "idx": 101,
+   "speaker": "M",
+   "start_ms": 1497704,
+   "end_ms": 1508695,
+   "text": "obviously I'm the new guy, it's my second day, but look to me to start to, you know, bring some discipline around this and slow but significant change over time."
+  },
+  {
+   "idx": 102,
+   "speaker": "B",
+   "start_ms": 1509424,
+   "end_ms": 1521084,
+   "text": "So dare I assign an action item to Eric? So that we come back next retro, yeah, next retro, and then we will have improved the process? Should we write that down?"
+  },
+  {
+   "idx": 103,
+   "speaker": "M",
+   "start_ms": 1521294,
+   "end_ms": 1521959,
+   "text": "I'll take it."
+  },
+  {
+   "idx": 104,
+   "speaker": "B",
+   "start_ms": 1522737,
+   "end_ms": 1523045,
+   "text": "Awesome."
+  },
+  {
+   "idx": 105,
+   "speaker": "K",
+   "start_ms": 1523482,
+   "end_ms": 1524730,
+   "text": "Mark, do you want to talk as well?"
+  },
+  {
+   "idx": 106,
+   "speaker": "B",
+   "start_ms": 1529040,
+   "end_ms": 1530991,
+   "text": "Sorry, Sean, did you ask? Oh, I missed that."
+  },
+  {
+   "idx": 107,
+   "speaker": "K",
+   "start_ms": 1531088,
+   "end_ms": 1537586,
+   "text": "Yeah, I was wondering if Mark wanted to talk about his point about team team retrospectives? Because I think that's something we could explore as well."
+  },
+  {
+   "idx": 108,
+   "speaker": "C",
+   "start_ms": 1538806,
+   "end_ms": 1563162,
+   "text": "Yeah, I mean, I think the only thing to mention there is just that if this is a problem of scale, where having a discussion with 100 people that really only affected 5 is probably not the right scale, but if you have those 5 people that are affected, or whatever, 10, and then share those learnings— I've never actually seen this work really well, but I've tried it at other companies, where each team would do retrospectives, and then if they learned something, you'd share it."
+  },
+  {
+   "idx": 109,
+   "speaker": "C",
+   "start_ms": 1564375,
+   "end_ms": 1582413,
+   "text": "And I think we've done that sometimes at product meetings, for example. We've had conversations where we share things amongst product managers. So maybe this is another form. But of course, when you're sharing it, it's also then one way, and it could be shared asynchronously using email or something else, although you might lose some context. But it's better than what we're doing today."
+  },
+  {
+   "idx": 110,
+   "speaker": "C",
+   "start_ms": 1587175,
+   "end_ms": 1589214,
+   "text": "So that's it then. Victor, next point."
+  },
+  {
+   "idx": 111,
+   "speaker": "B",
+   "start_ms": 1589552,
+   "end_ms": 1611419,
+   "text": "Sure. So one of the things I saw or observed in the lock issue is that we can do a better job in planning and coordination. And I wanted to highlight that the teams are working really hard and shipping a lot of features and doing a lot of great work. But one area I think that we can improve is aligning said efforts."
+  },
+  {
+   "idx": 112,
+   "speaker": "B",
+   "start_ms": 1611644,
+   "end_ms": 1633941,
+   "text": "And for example, if the frontend is blocked by the backend and the frontend goes and does something else, maybe does some release management duties, and then the backend engineer comes back and then does the task. Maybe the frontend engineer is no longer available to finish up the task. So I have observed that this often is the case."
+  },
+  {
+   "idx": 113,
+   "speaker": "B",
+   "start_ms": 1634037,
+   "end_ms": 1662613,
+   "text": "And then, so there's essentially a lot of parallel streams of workers. There's a lot of blocking work. And my suspicion is this is due to our async nature and open source roots, which I don't think should change. And so we should, try ways to improve that. I think always we want to make smaller and smaller iterations and issues. So the suggestion that I've worked— or in talking with the discussion team is we're going to try making even smaller issues"
+  },
+  {
+   "idx": 114,
+   "speaker": "B",
+   "start_ms": 1664400,
+   "end_ms": 1669537,
+   "text": "or merge requests in particular, not issues, smaller merge requests. Well, issues should be one-to-one anyways,"
+  },
+  {
+   "idx": 115,
+   "speaker": "B",
+   "start_ms": 1671100,
+   "end_ms": 1686032,
+   "text": "and trying to be able to merge code in more quickly so that there's integration problems, for example, are not in a huge bunch, but that you're integrating code into the main branch a lot sooner, and hopefully that will reduce some of"
+  },
+  {
+   "idx": 116,
+   "speaker": "B",
+   "start_ms": 1687787,
+   "end_ms": 1699124,
+   "text": "this, these problems here. Somebody wrote design triple equals UX and UI. I'll let that person comment on that if they want to. If not, Jacob, if you wanted to speak your—"
+  },
+  {
+   "idx": 117,
+   "speaker": "L",
+   "start_ms": 1700014,
+   "end_ms": 1702358,
+   "text": "No, I'm good. I wrote it, so. Okay."
+  },
+  {
+   "idx": 118,
+   "speaker": "L",
+   "start_ms": 1706327,
+   "end_ms": 1706928,
+   "text": "No, go ahead."
+  },
+  {
+   "idx": 119,
+   "speaker": "B",
+   "start_ms": 1707513,
+   "end_ms": 1712533,
+   "text": "Okay, so Fabio, you can speak or continue typing. If not, Camille, feel free to jump in."
+  },
+  {
+   "idx": 120,
+   "speaker": "E",
+   "start_ms": 1713570,
+   "end_ms": 1740446,
+   "text": "Okay, just a note about that. I feel the expected process to be product, then UX, then engineering. That is probably what is stated or what is expected sometimes, but I feel that is not fully working, at least for big things. It should be product plus UX plus engineering at the same time, maybe at early time."
+  },
+  {
+   "idx": 121,
+   "speaker": "E",
+   "start_ms": 1740526,
+   "end_ms": 1771458,
+   "text": "So I'm not saying that we have to do everything at the end, but it is very difficult from a product perspective or from UX perspective to find out which are the engineering implications. So maybe early involvement of UX and engineering in the city planning as something that will add value and will allow mainly better planning and people will be aware of everything in advance."
+  },
+  {
+   "idx": 122,
+   "speaker": "E",
+   "start_ms": 1771972,
+   "end_ms": 1791985,
+   "text": "So even if engineering will start engineering the feature after it is defined, they already know about it. They are, they were involved in the process. And so it's not just specification that arrives is something that is deeper feared by them."
+  },
+  {
+   "idx": 123,
+   "speaker": "E",
+   "start_ms": 1795330,
+   "end_ms": 1799988,
+   "text": "And that's all. So next is Kamil."
+  },
+  {
+   "idx": 124,
+   "speaker": "D",
+   "start_ms": 1801023,
+   "end_ms": 1810090,
+   "text": "So basically my item is kind of connected with what you mentioned because we often recently"
+  },
+  {
+   "idx": 125,
+   "speaker": "D",
+   "start_ms": 1811794,
+   "end_ms": 1821706,
+   "text": "start working on something that is not yet well defined. This kind of makes us to deal with a lot of uncertainty,"
+  },
+  {
+   "idx": 126,
+   "speaker": "D",
+   "start_ms": 1823630,
+   "end_ms": 1841561,
+   "text": "sometimes, and like very often because we choose to do it like that. But there are some cases where these things can be like figured out before we pick the task. It can be figured out that we have this kind of"
+  },
+  {
+   "idx": 127,
+   "speaker": "D",
+   "start_ms": 1844833,
+   "end_ms": 1865927,
+   "text": "outline. Okay, okay, these things can be figured out that can be— sorry, these items can be figured out that we can like have it defined before we start working on them, and it's actually, it makes it slightly easier on some of these items to be done later on by the engineers."
+  },
+  {
+   "idx": 128,
+   "speaker": "D",
+   "start_ms": 1865992,
+   "end_ms": 1873156,
+   "text": "So basically, something that maybe we should follow more closely on the CI/CD team where we"
+  },
+  {
+   "idx": 129,
+   "speaker": "D",
+   "start_ms": 1874843,
+   "end_ms": 1890645,
+   "text": "try to make sure that this is not an exception but more like a rule. And we kind of want to have the exception if there is definitely needed in like something that maybe a little like an auto DevOps or maybe something else."
+  },
+  {
+   "idx": 130,
+   "speaker": "D",
+   "start_ms": 1892225,
+   "end_ms": 1904266,
+   "text": "Mark did mention about the product discovery. I agree with Mark, but I just wonder if we always have to do product discovery for every single issue. Mark, maybe you may want to add a few words."
+  },
+  {
+   "idx": 131,
+   "speaker": "C",
+   "start_ms": 1906186,
+   "end_ms": 1926946,
+   "text": "Sure, I'm just going to throw out my bias here. I worked in an organization where I struggled for a long time with a team and we spent a lot of time increasing the process, like tweaking a 5 or 10% improvement, eventually coming up with like full specs so that everything was fully defined before the engineers pick it up."
+  },
+  {
+   "idx": 132,
+   "speaker": "C",
+   "start_ms": 1927107,
+   "end_ms": 1961942,
+   "text": "And the most I was able to do was like squeeze out 10 or 20% improvement. Um, eventually hired a new team throughout that process, started from scratch with basically what I've linked there as product discovery, and we literally were 10 times faster. So I am a fully converted person over to absolutely this is a better way to work. The challenge that I'm struggling with is how to make that work with our culture and our values and our distributed remote nature, because the product discovery work that I did before was highly synchronous, highly collaborative, high bandwidth on the PMs."
+  },
+  {
+   "idx": 133,
+   "speaker": "C",
+   "start_ms": 1963966,
+   "end_ms": 1989180,
+   "text": "And so there's a lot of challenges there which I haven't quite been able to reconcile. but literally 10 times faster from a calendar wall clock time from coming up with an idea to actually shipping it. And the quality of the product was much higher in the end as well. To Jacob's point, yes, this is more important for high uncertainty items. Like, one of the reasons I think it's really important is basically sometimes you're going to hit technical limitations that you can't know until you actually start implementing."
+  },
+  {
+   "idx": 134,
+   "speaker": "C",
+   "start_ms": 1989917,
+   "end_ms": 2012587,
+   "text": "And in order to do a technical evaluation first, you basically have to implement a proof of concept for everything. To know fully what the design is going to look like, because you need to fully understand everything. That fully understanding everything is just this really, really huge burden. But if instead you say, well, let's just start working, and then you hit a limitation, get all the people together, figure out what to do with that limitation, then move on, it just works so much better."
+  },
+  {
+   "idx": 135,
+   "speaker": "C",
+   "start_ms": 2013053,
+   "end_ms": 2037891,
+   "text": "So it works— it's far more important for high uncertainty items. So usually at companies, certain teams will adopt this and other teams will not. Because they don't have these kind of high uncertainty items. But what I will say is, it's hard for me to forget this bias, but basically I had whole teams doing this 100% of the time. And that once you start switching this way, you will see that every project can be seen as a product discovery sprint because everything has uncertainty."
+  },
+  {
+   "idx": 136,
+   "speaker": "C",
+   "start_ms": 2037971,
+   "end_ms": 2053934,
+   "text": "We are just in that kind of a space. So that's my short pitch. I've talked about this at length with the product team. I'll probably link at some point to the recorded video. Where I shared this with the product team, and that's a blog post on the topic, and then I'll move on. Jacob, do you want to have any comments?"
+  },
+  {
+   "idx": 137,
+   "speaker": "L",
+   "start_ms": 2055710,
+   "end_ms": 2066079,
+   "text": "No, I mean, this is such a huge— this is an enormous topic that there's no way I could possibly— this has got to be outside of this. But I was just saying that"
+  },
+  {
+   "idx": 138,
+   "speaker": "L",
+   "start_ms": 2068705,
+   "end_ms": 2070686,
+   "text": "sometimes when you can—"
+  },
+  {
+   "idx": 139,
+   "speaker": "L",
+   "start_ms": 2072555,
+   "end_ms": 2084703,
+   "text": "we learned a lot from the repo editor, which was just, I think, one of the bigger things that we worked on, which wound up with like 800 comments. And doing that, just kind of going for it without a fully specced out thing,"
+  },
+  {
+   "idx": 140,
+   "speaker": "L",
+   "start_ms": 2086417,
+   "end_ms": 2115194,
+   "text": "I think we wound up losing a lot of time with that. But we gained a lot of knowledge, but we lost a lot. I don't know. It's a balance. I have to probably see it in action, and maybe we can practice it and get that. But what I was saying is that maybe like when you're painting, you paint the whole picture at once. If you can like lightly sketch out and lightly engineer the whole thing, it doesn't have to be perfect to get it kind of functioning, then you can get some feedback early versus like going hardcore into the details and making everything perfect only to change it."
+  },
+  {
+   "idx": 141,
+   "speaker": "L",
+   "start_ms": 2117660,
+   "end_ms": 2119774,
+   "text": "Yeah, so that's it. Next person."
+  },
+  {
+   "idx": 142,
+   "speaker": "J",
+   "start_ms": 2120113,
+   "end_ms": 2143763,
+   "text": "I just want to ask a question to Mark. I know it's a huge topic, so I don't want to start, you know, like a huge humongous discussion, but I'm curious, we have 3 weeks to do something in one release, right? Maybe not even 3 weeks to do that. How do we— it feels to me from the engineering side that there is this huge pressure and expectation that we ship something."
+  },
+  {
+   "idx": 143,
+   "speaker": "J",
+   "start_ms": 2144213,
+   "end_ms": 2171269,
+   "text": "If something doesn't get shipped, we are very much public, which means everyone gets hammered down from the community, from customers. Disappointment, public disappointment is very big. So it, from my side, that looks like a huge pressure for anyone going into the work when you don't have anything, like even like the light skeleton set, um, and when you're kind of stumbling and, and trying to figure things out."
+  },
+  {
+   "idx": 144,
+   "speaker": "J",
+   "start_ms": 2171317,
+   "end_ms": 2178799,
+   "text": "So that's, I'm not sure whether that product discovery works in, in our time constraint."
+  },
+  {
+   "idx": 145,
+   "speaker": "C",
+   "start_ms": 2179666,
+   "end_ms": 2200313,
+   "text": "Well, let me just put it this way. In the teams I'm used to, we would start a sprint, and a sprint was 1 week. We would have zero designs. We would do everything and ship 5 iterations in 1 week. And at the end, it was beautiful, perfectly polished, fully functional. And then maybe at most there's a couple of bugs you'd come up with the following week."
+  },
+  {
+   "idx": 146,
+   "speaker": "C",
+   "start_ms": 2200650,
+   "end_ms": 2217870,
+   "text": "So by my reckoning, we should be able to do 3 or 4 of these within a release. So our time pressure, I'd say it's the opposite. The time pressure of a month is not a problem, except it's a problem that we're going too slow. We should be able to iterate so much faster than what we're doing today."
+  },
+  {
+   "idx": 147,
+   "speaker": "J",
+   "start_ms": 2218480,
+   "end_ms": 2221390,
+   "text": "What does that mean, like through the whole stack or just like a feature?"
+  },
+  {
+   "idx": 148,
+   "speaker": "C",
+   "start_ms": 2221640,
+   "end_ms": 2224560,
+   "text": "Whole stack. No, no, whole stack. End to end delivered."
+  },
+  {
+   "idx": 149,
+   "speaker": "B",
+   "start_ms": 2225080,
+   "end_ms": 2226060,
+   "text": "Awesome. We should do that."
+  },
+  {
+   "idx": 150,
+   "speaker": "C",
+   "start_ms": 2226060,
+   "end_ms": 2235880,
+   "text": "So in particular, by Wednesday we'd have a design, you know, we'd have the first iteration and it kind of looks ugly. By Wednesday afternoon, we'd have it looking a little bit better. By Thursday it'd be polished more. We'd have metrics in there so that we'd"
+  },
+  {
+   "idx": 151,
+   "speaker": "C",
+   "start_ms": 2237640,
+   "end_ms": 2253859,
+   "text": "we'd actually have it out to beta customers by Thursday afternoon, and then we'd have monitoring so we'd know if the feature was actually successful or not, so that Friday we could report on it and say, yes, we delivered it, here's what it looks like, and it's validated that this solution actually worked. One week."
+  },
+  {
+   "idx": 152,
+   "speaker": "L",
+   "start_ms": 2253859,
+   "end_ms": 2263760,
+   "text": "What I currently see is a lot of— so in order for that to work, I think what we'd have to do is we'd have to get the design and be like, that's the design, that's it. But right now there's like a lot of back and forth."
+  },
+  {
+   "idx": 153,
+   "speaker": "C",
+   "start_ms": 2264000,
+   "end_ms": 2267900,
+   "text": "No, no, no, absolutely not. That is— throw out the design that way. You don't do it that way. What you do is you come up with the tiniest little"
+  },
+  {
+   "idx": 154,
+   "speaker": "C",
+   "start_ms": 2269572,
+   "end_ms": 2287989,
+   "text": "thing first with the cheapest, ugliest design you possibly can. You ship that, and then you iterate on it, and you improve it, and improve it, and improve it, but you do the small iterations 5 times within 1 week. So you don't absolutely— unequivocally do not start with the full design ahead of time. That would be the wrong direction to go."
+  },
+  {
+   "idx": 155,
+   "speaker": "L",
+   "start_ms": 2288309,
+   "end_ms": 2291627,
+   "text": "Sounds like the most amount of work for the front-end engineers to me."
+  },
+  {
+   "idx": 156,
+   "speaker": "C",
+   "start_ms": 2292429,
+   "end_ms": 2306941,
+   "text": "It's not about a total amount of work, it's just about coordination. The real challenge is that you need an overlap of 3 or 4 hours a day with everybody— product design, engineering, frontend, backend. I mean, it's hard in our remote"
+  },
+  {
+   "idx": 157,
+   "speaker": "C",
+   "start_ms": 2308596,
+   "end_ms": 2317683,
+   "text": "timezone world. So that's why I haven't been pushing this hard, because I don't want to disturb things. But all I can say is, in certain circumstances, it works absolutely beautifully."
+  },
+  {
+   "idx": 158,
+   "speaker": "C",
+   "start_ms": 2319617,
+   "end_ms": 2321147,
+   "text": "And we should figure out some way to make it work here."
+  },
+  {
+   "idx": 159,
+   "speaker": "H",
+   "start_ms": 2322290,
+   "end_ms": 2350131,
+   "text": "I think the main problem we're seeing in this topic is that we often— have a decision from product and then we design some mockups and then the product change and then we design other mockups and then the product change again. And this is super hard to, at least on the end, the MVP on that issue, on the issues, uh, they often change and it's hard for the developers to get something done, you know, with a lot of these iterations."
+  },
+  {
+   "idx": 160,
+   "speaker": "D",
+   "start_ms": 2353110,
+   "end_ms": 2381447,
+   "text": "But also the, the other problem with our velocity. We kind of see our velocity as very big, but like if you look at the minimal time in order to ship even the smallest change, when this smallest change actually lands something very useful, it's right now, I don't know, 3, 4 days basically before it gets reviewed, before someone approves that, before we have the pipeline green, before this lands on dev, before, before anything else."
+  },
+  {
+   "idx": 161,
+   "speaker": "D",
+   "start_ms": 2381575,
+   "end_ms": 2405781,
+   "text": "So It seems that it's kind of impossible for us to work today at this pace with the process that we have today. So we have to fix our process to be more agile in the way how we can— how quickly we can make change and how quickly we can test this change. Because today this process is only taking longer and longer, something that I believe everyone sees."
+  },
+  {
+   "idx": 162,
+   "speaker": "B",
+   "start_ms": 2407489,
+   "end_ms": 2410791,
+   "text": "Just to give a small thing into reviewing merge requests,"
+  },
+  {
+   "idx": 163,
+   "speaker": "B",
+   "start_ms": 2412462,
+   "end_ms": 2428262,
+   "text": "In the most ideal sense, I mostly— it cost me 10 minutes, but often it costs around 30 minutes to get the JDK running and like check out the merge request and like review it properly, find it within the JDK where the changes, etc., etc."
+  },
+  {
+   "idx": 164,
+   "speaker": "C",
+   "start_ms": 2428487,
+   "end_ms": 2434364,
+   "text": "Like this thing can all be solved with Review Apps, but it is not here yet for GitLab itself."
+  },
+  {
+   "idx": 165,
+   "speaker": "E",
+   "start_ms": 2437912,
+   "end_ms": 2465763,
+   "text": "Maybe one of the other possible improvements, maybe it's already there, but I'm not really sure about that. I see sometimes engineering working on the same person working maybe on two different items, two different issues at the same time. That is good in order to spot possible problems in advance, but it's also hard since then we tend to have merge request merged by the 7th or so."
+  },
+  {
+   "idx": 166,
+   "speaker": "E",
+   "start_ms": 2466212,
+   "end_ms": 2494794,
+   "text": "And so it is maybe too late to fix or to add or to change at that point. Focusing on one thing at a time. So the whole team or 3 persons at the same time to one specific issue, deliver it sort of early feature freeze just for that issue, and then move on to another one can be useful to avoid the after-feature freeze time that we often need, unfortunately."
+  },
+  {
+   "idx": 167,
+   "speaker": "E",
+   "start_ms": 2502750,
+   "end_ms": 2517825,
+   "text": "Okay, so it seems that the next point is mine too. Always in the same bucket but from a different angle. I feel that sometimes we need to make the team more aware of which is the vision behind the feature, which is the value that we want to deliver."
+  },
+  {
+   "idx": 168,
+   "speaker": "E",
+   "start_ms": 2519329,
+   "end_ms": 2527728,
+   "text": "To our users. It is not— I'm looking at your comments— yeah, there's nothing else. It's something like having"
+  },
+  {
+   "idx": 169,
+   "speaker": "E",
+   "start_ms": 2529918,
+   "end_ms": 2541692,
+   "text": "the, say, the value of what we are doing, a part of feeling it our own value. So putting our own experience, our own"
+  },
+  {
+   "idx": 170,
+   "speaker": "E",
+   "start_ms": 2543580,
+   "end_ms": 2565092,
+   "text": "goals into the specific feature. I don't want to say that people are working on features like robots, absolutely. But sometimes I'd like to see more involvement and to make people aware of what is really important."
+  },
+  {
+   "idx": 171,
+   "speaker": "E",
+   "start_ms": 2565156,
+   "end_ms": 2591317,
+   "text": "In this case, AutoDevOps, for example, we fought a lot on AutoDevOps. To get it done. And eventually we did it, but I'm not so sure that it was clear that it is a specific case. It was a very important item that really want to be the best MVP, at least the best MVP, that is not the best feature, best MVP for our users."
+  },
+  {
+   "idx": 172,
+   "speaker": "E",
+   "start_ms": 2591734,
+   "end_ms": 2606266,
+   "text": "So this time we added this process because of a reason. It's not just done a priori. And that is something that we can improve in order to understand what is really important to ship and what is not."
+  },
+  {
+   "idx": 173,
+   "speaker": "E",
+   "start_ms": 2608960,
+   "end_ms": 2609694,
+   "text": "Filippa, you're next."
+  },
+  {
+   "idx": 174,
+   "speaker": "H",
+   "start_ms": 2613613,
+   "end_ms": 2639885,
+   "text": "My point is to respect UX decisions a little bit more. This, I often feel this on the CI/CD team, and I think we can improve this. I think the feeling is that we can all decide on UX, which I don't think it's the process. If we have a UX team, it's because we need someone expert in UX, and product and engineering teams are not experts on UX."
+  },
+  {
+   "idx": 175,
+   "speaker": "H",
+   "start_ms": 2640368,
+   "end_ms": 2645212,
+   "text": "So I think we should respect their decisions a little bit more. We can improve on that."
+  },
+  {
+   "idx": 176,
+   "speaker": "H",
+   "start_ms": 2646915,
+   "end_ms": 2653705,
+   "text": "If there's no other points, not sure if someone wants to add something, or we can end the meeting."
+  },
+  {
+   "idx": 177,
+   "speaker": "E",
+   "start_ms": 2654658,
+   "end_ms": 2677717,
+   "text": "I just want to say a word about this. Yeah, sometimes I feel that it may happen, may appear that this is the fact. Actually, we as a product, me personally, we are pushing things also to UX in order to make it really clear which is the goal that we want to achieve, which is the value that we want to deliver."
+  },
+  {
+   "idx": 178,
+   "speaker": "E",
+   "start_ms": 2678344,
+   "end_ms": 2705544,
+   "text": "But frankly, I'm seeing that normally we are at least finding a middle way with UX that is shared, that is agreed. So as far as I know, there is nothing that is shipped or delivered without UX approval, even if sometimes maybe UX is just moving in a different direction and we try to make our point in order to make them understand."
+  },
+  {
+   "idx": 179,
+   "speaker": "E",
+   "start_ms": 2705592,
+   "end_ms": 2726385,
+   "text": "But it's not a question of taking over UX is a matter of communicating the real value of that. So if it's not clear, I agree that we should improve, not maybe the respect that I see that the respect is there, but at least the communication and this process too."
+  },
+  {
+   "idx": 180,
+   "speaker": "E",
+   "start_ms": 2726915,
+   "end_ms": 2730624,
+   "text": "So good to know that it could be a problem. We will address it."
+  },
+  {
+   "idx": 181,
+   "speaker": "E",
+   "start_ms": 2734827,
+   "end_ms": 2735234,
+   "text": "Anyone else?"
+  },
+  {
+   "idx": 182,
+   "speaker": "E",
+   "start_ms": 2737837,
+   "end_ms": 2740912,
+   "text": "Job, do you want to close the meeting? Sure, Fabio."
+  },
+  {
+   "idx": 183,
+   "speaker": "D",
+   "start_ms": 2741963,
+   "end_ms": 2742815,
+   "text": "This was a good meeting."
+  },
+  {
+   "idx": 184,
+   "speaker": "A",
+   "start_ms": 2743234,
+   "end_ms": 2760029,
+   "text": "We wanted to be more actionable, we want to be more iterative and more communicative. Well, I think that's a pretty good conclusion to all of it. And I think everyone would agree that if we improve all of those, we'd be even more great. So everyone have a nice day, have a nice week, and see you in a month."
+  },
+  {
+   "idx": 185,
+   "speaker": "E",
+   "start_ms": 2761710,
+   "end_ms": 2761958,
+   "text": "Goodbye."
+  }
+ ],
+ "chapters": [
+  {
+   "idx": 0,
+   "title": "Release wins and highlights",
+   "start_ms": 0,
+   "gist": "The team celebrates shipping group issue boards, Auto DevOps, and protected runners for the 10.0 release.",
+   "line": 0,
+   "end_ms": 312140
+  },
+  {
+   "idx": 1,
+   "title": "Deployment delays and project renaming",
+   "start_ms": 312140,
+   "gist": "Technical conflicts during the CE to EE merge and confusion over the GitLab Runner rename caused some initial release friction.",
+   "line": 14,
+   "end_ms": 472366
+  },
+  {
+   "idx": 2,
+   "title": "Blocked features and missed goals",
+   "start_ms": 472366,
+   "gist": "The lock issue, GraphQL API, and Postgres high availability did not make the release due to technical and licensing challenges.",
+   "line": 26,
+   "end_ms": 549140
+  },
+  {
+   "idx": 3,
+   "title": "Auto DevOps process challenges",
+   "start_ms": 549140,
+   "gist": "Speakers discuss how late UX involvement and changing requirements made the Auto DevOps launch a rough road for the team.",
+   "line": 30,
+   "end_ms": 1012676
+  },
+  {
+   "idx": 4,
+   "title": "Improving the retrospective format",
+   "start_ms": 1012676,
+   "gist": "The team debates how to make the retrospective meetings more interactive and focused on actionable process improvements.",
+   "line": 56,
+   "end_ms": 1587175
+  },
+  {
+   "idx": 5,
+   "title": "Adopting product discovery for speed",
+   "start_ms": 1587175,
+   "gist": "Mark suggests using smaller iterations and early collaborative discovery to ship features significantly faster.",
+   "line": 110,
+   "end_ms": 2608960
+  },
+  {
+   "idx": 6,
+   "title": "Respecting design and UX decisions",
+   "start_ms": 2608960,
+   "gist": "The meeting concludes with a discussion on better communication and respecting the expertise of the UX team.",
+   "line": 173,
+   "end_ms": 2764000
+  }
+ ],
+ "action_items": [
+  {
+   "idx": 0,
+   "text": "Remove the old GitLab CI/Multi-Runner project to restore broken redirects.",
+   "owner_name": "Kamil",
+   "speaker_label": "D",
+   "ts_ms": 437072,
+   "line": 23
+  },
+  {
+   "idx": 1,
+   "text": "Create a clear deprecation process for GitLab applications.",
+   "owner_name": "Joshua",
+   "speaker_label": "I",
+   "ts_ms": 904096,
+   "line": 49
+  },
+  {
+   "idx": 2,
+   "text": "Bring discipline and focus to the retrospective process and track improvements.",
+   "owner_name": "Eric",
+   "speaker_label": "M",
+   "ts_ms": 1497704,
+   "line": 101
+  },
+  {
+   "idx": 3,
+   "text": "Experiment with making smaller merge requests to reduce integration problems.",
+   "owner_name": "Victor",
+   "speaker_label": "B",
+   "ts_ms": 1634037,
+   "line": 113
+  },
+  {
+   "idx": 4,
+   "text": "Involve UX and engineering earlier in the planning process.",
+   "owner_name": "Fabio",
+   "speaker_label": "E",
+   "ts_ms": 1740526,
+   "line": 121
+  }
+ ],
+ "summaries": [
+  {
+   "template": "general",
+   "content": {
+    "tldr": "The meeting reviewed the successes and failures of the GitLab 10.0 release while debating how to improve internal processes. While the release included major features like Auto DevOps, it was hindered by coordination issues and late involvement of key teams.",
+    "sections": [
+     {
+      "heading": "Meeting purpose",
+      "bullets": [
+       {
+        "text": "Review the results and process of the GitLab 10.0 release.",
+        "line": 2,
+        "ts_ms": 155652
+       }
+      ]
+     },
+     {
+      "heading": "Key takeaways",
+      "bullets": [
+       {
+        "text": "Group issue boards and Auto DevOps were successfully shipped despite heavy coordination needs.",
+        "line": 5,
+        "ts_ms": 179310
+       },
+       {
+        "text": "The retrospective format needs more discussion and fewer pre-written scripts.",
+        "line": 68,
+        "ts_ms": 1121689
+       },
+       {
+        "text": "The release process suffered from late UX and frontend involvement.",
+        "line": 38,
+        "ts_ms": 684614
+       }
+      ]
+     },
+     {
+      "heading": "Topics",
+      "bullets": [
+       {
+        "text": "Technical delays in the deployment cycle due to merge conflicts.",
+        "line": 15,
+        "ts_ms": 316020
+       },
+       {
+        "text": "Licensing issues that put the GraphQL API project on ice.",
+        "line": 28,
+        "ts_ms": 509553
+       },
+       {
+        "text": "The proposed adoption of 'product discovery' to increase shipping speed.",
+        "line": 132,
+        "ts_ms": 1927107
+       }
+      ]
+     },
+     {
+      "heading": "Next steps",
+      "bullets": [
+       {
+        "text": "Eric will take responsibility for improving the retrospective and process discipline.",
+        "line": 101,
+        "ts_ms": 1497704
+       },
+       {
+        "text": "Teams will explore earlier collaboration between product, UX, and engineering.",
+        "line": 120,
+        "ts_ms": 1713570
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "template": "project_update",
+   "content": {
+    "tldr": "GitLab 10.0 delivered major functionality but highlighted significant technical debt in the release process. Moving forward, the team aims to fix the deprecation process and improve deployment stability.",
+    "sections": [
+     {
+      "heading": "Progress",
+      "bullets": [
+       {
+        "text": "Shipped group issue boards and protected runners.",
+        "line": 6,
+        "ts_ms": 204661
+       },
+       {
+        "text": "Successfully launched Auto DevOps after a massive team effort.",
+        "line": 8,
+        "ts_ms": 221533
+       }
+      ]
+     },
+     {
+      "heading": "Blockers",
+      "bullets": [
+       {
+        "text": "Merge conflicts between CE and EE delayed the release candidate.",
+        "line": 15,
+        "ts_ms": 316020
+       },
+       {
+        "text": "Uncertain licensing and patent issues blocked the GraphQL endpoint.",
+        "line": 28,
+        "ts_ms": 509553
+       },
+       {
+        "text": "Postgres high availability was blocked by testing difficulties and broken instances.",
+        "line": 51,
+        "ts_ms": 933210
+       }
+      ]
+     },
+     {
+      "heading": "Decisions",
+      "bullets": [
+       {
+        "text": "Decided to remove the runner project to fix link redirects.",
+        "line": 23,
+        "ts_ms": 437072
+       },
+       {
+        "text": "Reverted some deprecations to avoid breaking customer instances.",
+        "line": 54,
+        "ts_ms": 979247
+       }
+      ]
+     },
+     {
+      "heading": "Next steps",
+      "bullets": [
+       {
+        "text": "Fix the background job process to allow merging on release days.",
+        "line": 59,
+        "ts_ms": 1030054
+       },
+       {
+        "text": "Resolve the lock issue for the 10.1 release.",
+        "line": 26,
+        "ts_ms": 472366
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "template": "standup",
+   "content": {
+    "tldr": "The team has finished the major 10.0 release and is now identifying process failures to address in the next cycle. Planning for 10.1 is underway with a focus on fixing regressions from the hurried Auto DevOps launch.",
+    "sections": [
+     {
+      "heading": "Yesterday / done",
+      "bullets": [
+       {
+        "text": "Completed the GitLab 10.0 release including Auto DevOps.",
+        "line": 2,
+        "ts_ms": 155652
+       },
+       {
+        "text": "Renamed the runner project.",
+        "line": 21,
+        "ts_ms": 378081
+       }
+      ]
+     },
+     {
+      "heading": "Today / planned",
+      "bullets": [
+       {
+        "text": "Fixing bugs and regressions introduced during the final push for 10.0.",
+        "line": 34,
+        "ts_ms": 637293
+       },
+       {
+        "text": "Developing a more structured deprecation process.",
+        "line": 49,
+        "ts_ms": 904096
+       }
+      ]
+     },
+     {
+      "heading": "Blockers",
+      "bullets": [
+       {
+        "text": "Manual and repetitive testing for Auto DevOps slows down iteration.",
+        "line": 35,
+        "ts_ms": 660405
+       },
+       {
+        "text": "Background jobs stopping during deploys prevents work on the 7th.",
+        "line": 59,
+        "ts_ms": 1030054
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "template": "retro",
+   "content": {
+    "tldr": "While group issue boards and Auto DevOps were big wins, the 10.0 release was marred by poor coordination and late involvement of UX and frontend teams. The retrospective itself was criticized for lacking deep discussion and follow-up on action items.",
+    "sections": [
+     {
+      "heading": "What went well",
+      "bullets": [
+       {
+        "text": "The team successfully coordinated complex labels and milestones for group boards.",
+        "line": 5,
+        "ts_ms": 179310
+       },
+       {
+        "text": "Shipped protected runners and variables despite low capacity.",
+        "line": 12,
+        "ts_ms": 274582
+       }
+      ]
+     },
+     {
+      "heading": "What didn't",
+      "bullets": [
+       {
+        "text": "RC1 was delayed due to large merge conflicts between branches.",
+        "line": 15,
+        "ts_ms": 316020
+       },
+       {
+        "text": "The renaming of the runner project caused widespread 404 errors.",
+        "line": 22,
+        "ts_ms": 400172
+       },
+       {
+        "text": "UX and frontend were brought into the Auto DevOps project too late.",
+        "line": 38,
+        "ts_ms": 684614
+       }
+      ]
+     },
+     {
+      "heading": "Ideas to improve",
+      "bullets": [
+       {
+        "text": "Schedule separate calls to dig deeper into specific problems.",
+        "line": 69,
+        "ts_ms": 1142300
+       },
+       {
+        "text": "Focus on fixing one major product and one major engineering process per month.",
+        "line": 98,
+        "ts_ms": 1463608
+       },
+       {
+        "text": "Implement 'product discovery' to ship end-to-end iterations in one week.",
+        "line": 145,
+        "ts_ms": 2179666
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "template": "sales",
+   "content": {
+    "tldr": "The meeting was an internal technical retrospective and did not involve sales negotiations or budget discussions with prospects.",
+    "sections": [
+     {
+      "heading": "Prospect needs",
+      "bullets": [
+       {
+        "text": "No external prospects were involved in this meeting.",
+        "line": null,
+        "ts_ms": null
+       }
+      ]
+     },
+     {
+      "heading": "Objections",
+      "bullets": [
+       {
+        "text": "No sales objections were discussed.",
+        "line": null,
+        "ts_ms": null
+       }
+      ]
+     },
+     {
+      "heading": "Budget & timeline",
+      "bullets": [
+       {
+        "text": "No financial budgets were discussed.",
+        "line": null,
+        "ts_ms": null
+       }
+      ]
+     },
+     {
+      "heading": "Next steps",
+      "bullets": [
+       {
+        "text": "No sales follow-ups were generated.",
+        "line": null,
+        "ts_ms": null
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "template": "one_on_one",
+   "content": {
+    "tldr": "Eric, as a new team member, is assigned responsibility for refining the retrospective process. The team discussed the need for better discipline in following through on improvements.",
+    "sections": [
+     {
+      "heading": "Wins",
+      "bullets": [
+       {
+        "text": "Eric joined the team and is on his second day.",
+        "line": 101,
+        "ts_ms": 1497704
+       }
+      ]
+     },
+     {
+      "heading": "Concerns",
+      "bullets": [
+       {
+        "text": "Engineering feels they have backed off from leading the retrospective meeting.",
+        "line": 96,
+        "ts_ms": 1434101
+       }
+      ]
+     },
+     {
+      "heading": "Feedback",
+      "bullets": [
+       {
+        "text": "The meeting feels like reading a script rather than a discussion.",
+        "line": 85,
+        "ts_ms": 1306221
+       },
+       {
+        "text": "UX decisions need to be respected more consistently.",
+        "line": 174,
+        "ts_ms": 2613613
+       }
+      ]
+     },
+     {
+      "heading": "Follow-ups",
+      "bullets": [
+       {
+        "text": "Eric will bring discipline and slow, significant change to the process over time.",
+        "line": 101,
+        "ts_ms": 1497704
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-3-flash-preview"
+  }
+ ]
+}

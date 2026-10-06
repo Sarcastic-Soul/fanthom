@@ -1,0 +1,2147 @@
+{
+ "meeting": {
+  "slug": "plan-team-weekly-sync",
+  "title": "Plan team weekly sync",
+  "started_at": "2026-09-23T08:00:00-07:00",
+  "duration_ms": 3341000,
+  "media_type": "youtube",
+  "media_path": null,
+  "youtube_id": "UtOVYRBbNVw",
+  "source_name": "GitLab on YouTube",
+  "source_url": "https://www.youtube.com/watch?v=UtOVYRBbNVw",
+  "credit": "GitLab on YouTube: \"Plan | 2021-07-07 Weekly Team Meeting\" https://www.youtube.com/watch?v=UtOVYRBbNVw",
+  "kind": "demo",
+  "status": "ready",
+  "meeting_type": "general",
+  "source_key": "UtOVYRBbNVw"
+ },
+ "speakers": [
+  {
+   "label": "A",
+   "name": "Alex",
+   "role": null,
+   "talk_ms": 666013,
+   "turns": 20,
+   "color": 0
+  },
+  {
+   "label": "B",
+   "name": "Kristen",
+   "role": null,
+   "talk_ms": 547305,
+   "turns": 21,
+   "color": 1
+  },
+  {
+   "label": "E",
+   "name": "John",
+   "role": null,
+   "talk_ms": 483385,
+   "turns": 13,
+   "color": 2
+  },
+  {
+   "label": "C",
+   "name": "Speaker C",
+   "role": null,
+   "talk_ms": 374527,
+   "turns": 11,
+   "color": 3
+  },
+  {
+   "label": "G",
+   "name": "Alexis",
+   "role": null,
+   "talk_ms": 250539,
+   "turns": 13,
+   "color": 4
+  },
+  {
+   "label": "D",
+   "name": "Brett",
+   "role": null,
+   "talk_ms": 235662,
+   "turns": 15,
+   "color": 5
+  },
+  {
+   "label": "H",
+   "name": "Melissa",
+   "role": null,
+   "talk_ms": 121970,
+   "turns": 4,
+   "color": 6
+  },
+  {
+   "label": "F",
+   "name": "Donald",
+   "role": null,
+   "talk_ms": 107993,
+   "turns": 3,
+   "color": 7
+  }
+ ],
+ "utterances": [
+  {
+   "idx": 0,
+   "speaker": "A",
+   "start_ms": 44,
+   "end_ms": 19499,
+   "text": "and so on. Like, for instance, a big, a big, a big thing would be, well, we cannot do this because this will block sharding. We will not be able to shard it this way then further down the line or something like that. Then you kind of know that you cannot go that way anymore. Um, and I'm like, more like things like that"
+  },
+  {
+   "idx": 1,
+   "speaker": "A",
+   "start_ms": 21367,
+   "end_ms": 42942,
+   "text": "is what I'm looking for. But yeah, it's also worth it. So just to As we started recording later, I'll vocalize mine. So first, uh, congrats to all the promotions this week. It was a busy one, it seemed, and it was nice to see."
+  },
+  {
+   "idx": 2,
+   "speaker": "A",
+   "start_ms": 43589,
+   "end_ms": 45092,
+   "text": "So yep, congrats to everyone."
+  },
+  {
+   "idx": 3,
+   "speaker": "A",
+   "start_ms": 48798,
+   "end_ms": 50521,
+   "text": "And then the next one is on"
+  },
+  {
+   "idx": 4,
+   "speaker": "A",
+   "start_ms": 52919,
+   "end_ms": 82765,
+   "text": "custom work item types and custom widgets and all that fun stuff. I was trying to do some POCs on the data structure and, um, testing out how it would perform with some amount of data. So basically I was looking at two main directions, basically, like EAV and JSONB options."
+  },
+  {
+   "idx": 5,
+   "speaker": "A",
+   "start_ms": 84307,
+   "end_ms": 114400,
+   "text": "And I've laid it down in the, um, in the issue, pinged— I think pinged the backend plan and database teams. Not sure if database team will be chiming in soon because they have a lot on their plate, but it will definitely be something that I would look for, um, because that is what is affecting them the most, I guess, the database scalability and performance."
+  },
+  {
+   "idx": 6,
+   "speaker": "A",
+   "start_ms": 115111,
+   "end_ms": 121412,
+   "text": "So yeah, feel free to leave your feedback if you feel so."
+  },
+  {
+   "idx": 7,
+   "speaker": "A",
+   "start_ms": 128220,
+   "end_ms": 150476,
+   "text": "But yeah, like I mentioned, I think there might be a couple things that can be already taken out of that POC as something that we can move on with. Like defining this metadata for the widgets and defining like which widget belongs or will be displayed on which issue type and stuff like that."
+  },
+  {
+   "idx": 8,
+   "speaker": "A",
+   "start_ms": 150540,
+   "end_ms": 154943,
+   "text": "So even, even before we start adding custom widgets,"
+  },
+  {
+   "idx": 9,
+   "speaker": "A",
+   "start_ms": 156899,
+   "end_ms": 170095,
+   "text": "um, defining or customizing the work item types with the current widgets is still a problem that we would need to solve sooner rather than when we get to the custom"
+  },
+  {
+   "idx": 10,
+   "speaker": "A",
+   "start_ms": 172553,
+   "end_ms": 173400,
+   "text": "widgets, so to say."
+  },
+  {
+   "idx": 11,
+   "speaker": "A",
+   "start_ms": 175870,
+   "end_ms": 179029,
+   "text": "So yeah, probably that's a thing that we can use."
+  },
+  {
+   "idx": 12,
+   "speaker": "B",
+   "start_ms": 188750,
+   "end_ms": 195544,
+   "text": "So this one is scheduled just to get— is this going to start right now? I missed."
+  },
+  {
+   "idx": 13,
+   "speaker": "B",
+   "start_ms": 197554,
+   "end_ms": 200717,
+   "text": "Is this one going to just begin as a spike in terms of timing?"
+  },
+  {
+   "idx": 14,
+   "speaker": "A",
+   "start_ms": 202420,
+   "end_ms": 203580,
+   "text": "It did begin. I just started."
+  },
+  {
+   "idx": 15,
+   "speaker": "B",
+   "start_ms": 204740,
+   "end_ms": 206187,
+   "text": "Yeah, this is cool."
+  },
+  {
+   "idx": 16,
+   "speaker": "A",
+   "start_ms": 207812,
+   "end_ms": 221195,
+   "text": "Um, yeah, so it will take a while, I guess, to get all the feedback and to get alignment and get— well, not specifically consensus, but pros and cons and waiting and decide to which direction we're going to move it."
+  },
+  {
+   "idx": 17,
+   "speaker": "C",
+   "start_ms": 223100,
+   "end_ms": 246850,
+   "text": "I think the POCs are awesome because it helps tease out the data model. And I was just going to say, I think at least for a while, the majority of widgets will be defined by us and have a schema like we can define. And I think, uh, follow up on John, what you said, it feels like we're trying to solve too many things right now. Um, I personally like that we're thinking in terms of idealized design and working backwards. And then I also just wanted to reiterate that we aren't doing custom fields, attributes until further down the road."
+  },
+  {
+   "idx": 18,
+   "speaker": "C",
+   "start_ms": 246850,
+   "end_ms": 272871,
+   "text": "I think the most important thing to get right now is a data model behind the widget work item associations and the Perfect example is you want to launch default issue types or work item types. The monitor team implemented the severity widget. I would want the severity widget to be on a bug, for example, the bug issue type, right? But we wouldn't want it to necessarily be like on a feature or something else because a feature is not going to have the severity, but a bug will."
+  },
+  {
+   "idx": 19,
+   "speaker": "C",
+   "start_ms": 272999,
+   "end_ms": 277529,
+   "text": "So I don't know how they implemented that. I think they tied it to the issuable model."
+  },
+  {
+   "idx": 20,
+   "speaker": "C",
+   "start_ms": 279075,
+   "end_ms": 282050,
+   "text": "That's also something to consider too when we think about widgets and things like that is"
+  },
+  {
+   "idx": 21,
+   "speaker": "C",
+   "start_ms": 283773,
+   "end_ms": 304829,
+   "text": "there are other teams that have built issue types on top of the issue goal and on top of the issue. I think vulnerabilities is an example too. And sort of like, how can we take sort of part, part of why we're trying to solve this too is for our own use cases where another team might want to quickly build a type of issue that has certain types of widgets, right? And we want to be able to reuse those widgets other places."
+  },
+  {
+   "idx": 22,
+   "speaker": "C",
+   "start_ms": 305310,
+   "end_ms": 330409,
+   "text": "Like, I wish that the MR reviewers was a widget that was built against Issuable so we could automatically use it easily on issue, right? But it's not. So I think that's like, that's the foundation we want to look for. And then after that, we'll think about like custom things, right? To me, like an issue or work item type name that someone can customize, they're just changing the name, like, right?"
+  },
+  {
+   "idx": 23,
+   "speaker": "C",
+   "start_ms": 330473,
+   "end_ms": 338541,
+   "text": "And then eventually maybe they can turn widgets on and off, but That's the most important thing to get right before we introduce any custom widgets, if that makes sense."
+  },
+  {
+   "idx": 24,
+   "speaker": "D",
+   "start_ms": 343950,
+   "end_ms": 345487,
+   "text": "So are we, are we still working on"
+  },
+  {
+   "idx": 25,
+   "speaker": "D",
+   "start_ms": 348433,
+   "end_ms": 351670,
+   "text": "work item types or issue types, or has that been shelved?"
+  },
+  {
+   "idx": 26,
+   "speaker": "C",
+   "start_ms": 352524,
+   "end_ms": 353360,
+   "text": "No, it's not shelved."
+  },
+  {
+   "idx": 27,
+   "speaker": "D",
+   "start_ms": 353473,
+   "end_ms": 354985,
+   "text": "I've been gone for a few days."
+  },
+  {
+   "idx": 28,
+   "speaker": "C",
+   "start_ms": 356208,
+   "end_ms": 358928,
+   "text": "Yeah, it's, it's still the foundation, I think, of"
+  },
+  {
+   "idx": 29,
+   "speaker": "C",
+   "start_ms": 360532,
+   "end_ms": 366827,
+   "text": "what we're doing for the whole, like, initiative of having a feature, right? We still need to have types of work items."
+  },
+  {
+   "idx": 30,
+   "speaker": "C",
+   "start_ms": 368451,
+   "end_ms": 373710,
+   "text": "So I think that's where, like, that is an opportunity to add some incremental value as we work towards the bigger goal."
+  },
+  {
+   "idx": 31,
+   "speaker": "B",
+   "start_ms": 376204,
+   "end_ms": 376895,
+   "text": "Cool, thanks."
+  },
+  {
+   "idx": 32,
+   "speaker": "E",
+   "start_ms": 382097,
+   "end_ms": 410376,
+   "text": "I think some of the concern from the database team was around the idea that what we're doing looks an awful lot like single table inheritance. Which is discouraged. But, um, while we use a column called issue type, like, had it been called anything else, it might not have rung such alarm bells. And it's really just a coincidence. Um, these are really just— work items are really just what we now call issues with different labeling attached, right?"
+  },
+  {
+   "idx": 33,
+   "speaker": "E",
+   "start_ms": 410604,
+   "end_ms": 410815,
+   "text": "I mean,"
+  },
+  {
+   "idx": 34,
+   "speaker": "E",
+   "start_ms": 412781,
+   "end_ms": 413837,
+   "text": "they'll have different, um,"
+  },
+  {
+   "idx": 35,
+   "speaker": "E",
+   "start_ms": 415376,
+   "end_ms": 419689,
+   "text": "like features or widgets or whatever you want to call them, but they all broadly share,"
+  },
+  {
+   "idx": 36,
+   "speaker": "E",
+   "start_ms": 421537,
+   "end_ms": 435140,
+   "text": "broadly share these widgets. Like, you know, yeah, like this one might not have a due date, but it could have a due date, right? Like it's just hidden in the interface or maybe deeper down, but it's nevertheless just hidden."
+  },
+  {
+   "idx": 37,
+   "speaker": "E",
+   "start_ms": 436764,
+   "end_ms": 445283,
+   "text": "And so if you think about it that way, it doesn't seem so bad. Like it doesn't seem like such a contravention of our documentation that we would have it in the, issues table?"
+  },
+  {
+   "idx": 38,
+   "speaker": "A",
+   "start_ms": 446309,
+   "end_ms": 468609,
+   "text": "Yeah, I think from database perspective, the main problem with the single table inheritance is because you cannot really have foreign keys on a table that is using single table inheritance. If you model it in a way that it stores very different objects and then you need them to be referenced in a different table, then you cannot do that."
+  },
+  {
+   "idx": 39,
+   "speaker": "A",
+   "start_ms": 468994,
+   "end_ms": 493626,
+   "text": "And what we are doing with the issues table in this case is not really that. It's like you can reference it. And, and because this issue type is not a hard-coded thing, it can change from one type to another. You can actually reference the ID of an— of a bug to a requirement because it can later on become a sub-requirement or something like that."
+  },
+  {
+   "idx": 40,
+   "speaker": "A",
+   "start_ms": 493690,
+   "end_ms": 501301,
+   "text": "So it's not really a single table inheritance in this case, I don't think. But yeah, it's good to get feedback to get them aligned."
+  },
+  {
+   "idx": 41,
+   "speaker": "A",
+   "start_ms": 502917,
+   "end_ms": 508144,
+   "text": "Just to make sure we don't create any issues further down the line, but I think we should be fine."
+  },
+  {
+   "idx": 42,
+   "speaker": "A",
+   "start_ms": 513859,
+   "end_ms": 516007,
+   "text": "At least that's my understanding on the matter."
+  },
+  {
+   "idx": 43,
+   "speaker": "E",
+   "start_ms": 521326,
+   "end_ms": 521805,
+   "text": "I think as well,"
+  },
+  {
+   "idx": 44,
+   "speaker": "E",
+   "start_ms": 524786,
+   "end_ms": 535986,
+   "text": "it's— if you're looking at potentially sharding the database, it might look counterintuitive that a team is working on consolidating everything in one table when when you would probably say, well,"
+  },
+  {
+   "idx": 45,
+   "speaker": "E",
+   "start_ms": 537629,
+   "end_ms": 544614,
+   "text": "why not keep these things in separate tables since we're already having problems with the size of tables and the amount of things being stored in a table?"
+  },
+  {
+   "idx": 46,
+   "speaker": "E",
+   "start_ms": 547706,
+   "end_ms": 567265,
+   "text": "But that's the thing. We're not just moving the data in there for the fun of it. We're actually in the interface and in the application and in every way you can think about it, we're consolidating what these items are and how they work. And so it's not, it's not a bad architectural choice, and that in this case is probably a good one."
+  },
+  {
+   "idx": 47,
+   "speaker": "A",
+   "start_ms": 568757,
+   "end_ms": 599314,
+   "text": "Like, I don't think we are conflicting with sharding. Like, I don't, I don't think we have a decision on how we're going to shard yet. I think there is an ongoing effort to vertically shard first, and then we'll see if we can do like by namespace and shard horizontally. But This also can align fairly well with then partitioning the issues table by the issue type, for the— like you shard it by namespace ID, for instance, and then partition it by issue type."
+  },
+  {
+   "idx": 48,
+   "speaker": "A",
+   "start_ms": 599714,
+   "end_ms": 626765,
+   "text": "Like, I don't know how this will break out, but I don't think we're blocking, um, in that regard. But again, just because this is such a huge effort, it is— it will be nice to get the database and maybe the sharding team aligned on what we are going to do, what we plan on doing. From the high-level perspective, and then they can chime in and say that's okay from their perspective or not really okay."
+  },
+  {
+   "idx": 49,
+   "speaker": "D",
+   "start_ms": 630887,
+   "end_ms": 635545,
+   "text": "I like that we've kind of laid out the tables a little bit or got an idea of that, because"
+  },
+  {
+   "idx": 50,
+   "speaker": "D",
+   "start_ms": 638398,
+   "end_ms": 662592,
+   "text": "particularly from a non-optimization point, and now we can take smaller pieces of it and start figuring out how to optimize that with the database. It's one thing to lay out, you know, okay, this is ideally what we want. This is the kind of interaction we want, the kind of data we want. Now, how do we actually store that performantly? How do we access that? Is it— maybe it really is many, many smaller tables, or maybe it is one giant table."
+  },
+  {
+   "idx": 51,
+   "speaker": "D",
+   "start_ms": 662769,
+   "end_ms": 670396,
+   "text": "But, um, I think what you put together is a good step in terms of understanding overall what we really need in this."
+  },
+  {
+   "idx": 52,
+   "speaker": "A",
+   "start_ms": 673268,
+   "end_ms": 689347,
+   "text": "I'm not sure how we're going to scale separate table per issue type. I mean, that's fine with the predefined issue types. I guess if you have a limited number, like, you would have a limited number, but then when you want to scale it to customers, I'm not sure that's—"
+  },
+  {
+   "idx": 53,
+   "speaker": "D",
+   "start_ms": 690117,
+   "end_ms": 707930,
+   "text": "No, no, I'm not advocating one way or the other. I'm saying now we can have a real DBA come in and say, since you're wanting to do this, this really is the best structure to go for, even, you know, whatever it may be. So that's optimization, kind of, as would be in the next step."
+  },
+  {
+   "idx": 54,
+   "speaker": "A",
+   "start_ms": 710917,
+   "end_ms": 710981,
+   "text": "Sure."
+  },
+  {
+   "idx": 55,
+   "speaker": "B",
+   "start_ms": 716206,
+   "end_ms": 718745,
+   "text": "I'll voice mine."
+  },
+  {
+   "idx": 56,
+   "speaker": "B",
+   "start_ms": 721270,
+   "end_ms": 744903,
+   "text": "Um, I just wanted to, as we were just talking through this and We will need more ideation on this as well, but do we need to create different types of widgets that some may be for data entry? So a lot of like health status and some of the others where you're actually putting data in or it's giving you options like a small app."
+  },
+  {
+   "idx": 57,
+   "speaker": "B",
+   "start_ms": 745929,
+   "end_ms": 768288,
+   "text": "And then the other ones which would do roll-ups or calculations on the data that's already in and have those be two separate types. And then like rollups or calculations would use any related objects for rollups or calculations would be basically calculating against the row itself or a subset of rows to do like a sum or an average or something like that."
+  },
+  {
+   "idx": 58,
+   "speaker": "B",
+   "start_ms": 771170,
+   "end_ms": 781406,
+   "text": "I'm just wondering if we've thought through in terms of architecture being able to have sort of 2 or 3 different ways widgets could behave."
+  },
+  {
+   "idx": 59,
+   "speaker": "B",
+   "start_ms": 784597,
+   "end_ms": 808369,
+   "text": "And I posted a screenshot of Notion when you could see here, this is adding a new field or column. They're giving you all of the basics, which would be like our, like, title, description, assignees, which is at the top of that UI. And then advanced, you, you either formula, which is a calculation, you add a new relation, which is like our hierarchy."
+  },
+  {
+   "idx": 60,
+   "speaker": "B",
+   "start_ms": 809140,
+   "end_ms": 817669,
+   "text": "Or you roll up, which summarizes on a relation, essentially could do a count on children or something like that."
+  },
+  {
+   "idx": 61,
+   "speaker": "A",
+   "start_ms": 818456,
+   "end_ms": 836574,
+   "text": "Yeah, I briefly looked and looked at Notion's interface or how they are doing it. Um, I don't have a solution for that, but I think that's something that we can tackle once we get into widgets themselves, implementing widgets and"
+  },
+  {
+   "idx": 62,
+   "speaker": "A",
+   "start_ms": 838178,
+   "end_ms": 859042,
+   "text": "doing stuff. It should not be too different from a simple field sort of thing. It will have some logic behind it, but in terms of data structure and so on, I don't think that influences our decision, um, on how we're going to design the data structure to hold the different widgets."
+  },
+  {
+   "idx": 63,
+   "speaker": "A",
+   "start_ms": 860645,
+   "end_ms": 882193,
+   "text": "Now it will be specific to every widget's implementation, so the sort of thing. Um, but yeah, I think Notion only does rollups for a single level or something like that. You can pick a relation and then do the sum, but you cannot use that calculated field now in a next level kind of relationship."
+  },
+  {
+   "idx": 64,
+   "speaker": "A",
+   "start_ms": 882289,
+   "end_ms": 896628,
+   "text": "Yes, so it's a one on a single level one. But like, there are things and things that needs to be— which leads me to think that this is a widget implementation thing rather than a data structure decision to be made now."
+  },
+  {
+   "idx": 65,
+   "speaker": "B",
+   "start_ms": 898692,
+   "end_ms": 917175,
+   "text": "Yeah, it's flexible in that it lets you add relations to a multitude of things if you want to, but you're right, when it does a calculation on a column, that doesn't live in the DB, that's kind of in real time. You can't go reference it and pull the calculated value again. So it would be cool if our fields could handle that."
+  },
+  {
+   "idx": 66,
+   "speaker": "A",
+   "start_ms": 919610,
+   "end_ms": 922672,
+   "text": "Yeah, that's going to be a different problem to solve, I think."
+  },
+  {
+   "idx": 67,
+   "speaker": "B",
+   "start_ms": 923026,
+   "end_ms": 932225,
+   "text": "Yeah, I just want to make sure the architecture would let us build on that when we get there, and, and just so it's in your head when we're all thinking through this."
+  },
+  {
+   "idx": 68,
+   "speaker": "C",
+   "start_ms": 933944,
+   "end_ms": 963650,
+   "text": "In the extensible issues epic that I kind of put together a while ago, I kind of split out the two, two different kinds of widgets. One would just be like fields that kind of hold data Right. Um, and then others that were like apps, which are like more complex widgets that maybe tie into other parts of the product or do rollups or calculations or that sort of thing. Um, I also did some research on Notion and supposedly they're using Postgres with BSON, which is like from MongoDB and has great support for calculated fields or rollups like that."
+  },
+  {
+   "idx": 69,
+   "speaker": "C",
+   "start_ms": 964115,
+   "end_ms": 990242,
+   "text": "So I think it'll be harder to support at scale with our current stack based on my limited understanding, but. I do think that if we basically, as we go through this process of converting each basically field or that we have a widget that we have on the current issue view into this new format, like there'll be some good patterns that emerge and we can start applying some basic rules to like how things do roll up and whatnot."
+  },
+  {
+   "idx": 70,
+   "speaker": "C",
+   "start_ms": 991363,
+   "end_ms": 1007009,
+   "text": "And so like if we have the right data model, at least how we're storing the widgets related to work items. I think we can tackle that one at a time as we work on each widget. And then eventually, if we need to have a different type of widget, we can design that from the ground up and tie it into the same framework."
+  },
+  {
+   "idx": 71,
+   "speaker": "C",
+   "start_ms": 1008840,
+   "end_ms": 1009890,
+   "text": "That's how I would think about it, at least."
+  },
+  {
+   "idx": 72,
+   "speaker": "A",
+   "start_ms": 1010003,
+   "end_ms": 1032762,
+   "text": "Yeah, I'm not sure how this is going to be implemented, but it may very well be that the calculated widgets are going to be a totally different data structure separate from what we are thinking right now in terms of custom widgets that basically just display data that can be changed, updated, but you don't do any calculations on that."
+  },
+  {
+   "idx": 73,
+   "speaker": "A",
+   "start_ms": 1033308,
+   "end_ms": 1043424,
+   "text": "So I don't think that affects us, um, in this case. But yeah, aware of things that we want to do."
+  },
+  {
+   "idx": 74,
+   "speaker": "B",
+   "start_ms": 1057956,
+   "end_ms": 1063425,
+   "text": "Anything else on that first point before we roll on?"
+  },
+  {
+   "idx": 75,
+   "speaker": "B",
+   "start_ms": 1069503,
+   "end_ms": 1085936,
+   "text": "I know there were some good contributions in there. I think we captured most of them. Brett, some of what you said may not have been captured in notes. I think I may have missed some as well. Just everyone can help get notes in. That would be great for the rest of our team who can't be on."
+  },
+  {
+   "idx": 76,
+   "speaker": "B",
+   "start_ms": 1092130,
+   "end_ms": 1097887,
+   "text": "I just linked our main MVC, which everyone is aware of. We did add some shells of the"
+  },
+  {
+   "idx": 77,
+   "speaker": "B",
+   "start_ms": 1100135,
+   "end_ms": 1115005,
+   "text": "other MVCs as we've talked through them in the spreadsheets as of just yesterday, so everyone could see that. We added one for the backend architecture that might need its own issues before we get into actually displaying the feature."
+  },
+  {
+   "idx": 78,
+   "speaker": "B",
+   "start_ms": 1116790,
+   "end_ms": 1126270,
+   "text": "So feel free as a team to start populating these. The spike should pull in here, maybe in the architecture would be a good spot."
+  },
+  {
+   "idx": 79,
+   "speaker": "B",
+   "start_ms": 1127930,
+   "end_ms": 1153437,
+   "text": "And we'll fill out the different work item fields. The hierarchy, stories, all of it as we go. But it's— we're in planning breakdown and design for all this. So make sure like that if you see something that's missing, that you add it, that you change things, that you— this is all work in progress. So don't feel you can't add new MVCs, add new issues and make this work so that we get all of it in here."
+  },
+  {
+   "idx": 80,
+   "speaker": "C",
+   "start_ms": 1157248,
+   "end_ms": 1182480,
+   "text": "And I'm gonna need to add references to the custom issue types work to there as well. I don't know if I'll move it over because there's a bunch of people following it now and that's just confusing, but I am going to create some sort of reference there so we know that, like, that's part of the effort. And I think we're also going to do the same thing for requirements, figuring out some way to reference it in that epic as well. So we can kind of see all these different work streams in one place, at least."
+  },
+  {
+   "idx": 81,
+   "speaker": "B",
+   "start_ms": 1182690,
+   "end_ms": 1190990,
+   "text": "Yeah, that's a good point. Mark's work with requirements should be in somewhere near the top, anything that's blocking MBC 1. We should get a reference in for that."
+  },
+  {
+   "idx": 82,
+   "speaker": "C",
+   "start_ms": 1198356,
+   "end_ms": 1226605,
+   "text": "I have the next point. Um, do we have an engineering BRI that will convert like the outcomes from the engineering discussions into an architecture blueprint? Largely because I think it will be helpful to coordinate everyone who maybe can work on parallel MBCs and things like that, but also help other teams follow behind and implement a type of work item and widgets if they want, just in terms of documenting the system as we're designing it."
+  },
+  {
+   "idx": 83,
+   "speaker": "C",
+   "start_ms": 1227190,
+   "end_ms": 1228976,
+   "text": "I don't know if you all have any thoughts about that."
+  },
+  {
+   "idx": 84,
+   "speaker": "E",
+   "start_ms": 1237310,
+   "end_ms": 1239542,
+   "text": "So the architecture— sorry, go on, Kristen."
+  },
+  {
+   "idx": 85,
+   "speaker": "B",
+   "start_ms": 1240076,
+   "end_ms": 1250498,
+   "text": "I was just going to— I've never done this before, so I'm just curious. What the delivery deliverable is, like, is it a doc that we then maintain in our docs"
+  },
+  {
+   "idx": 86,
+   "speaker": "B",
+   "start_ms": 1252232,
+   "end_ms": 1252849,
+   "text": "for all time?"
+  },
+  {
+   "idx": 87,
+   "speaker": "E",
+   "start_ms": 1253677,
+   "end_ms": 1270330,
+   "text": "Yeah, well, the, the issue describes the outcome as to be able to draw an architecture blueprint. So yeah, like, I don't know if we have a DRI specifically for that yet, um, but there are a couple of things going on, I guess, that would"
+  },
+  {
+   "idx": 88,
+   "speaker": "E",
+   "start_ms": 1272804,
+   "end_ms": 1298390,
+   "text": "that also tie into this, so there are members of the team involved in that. The one that comes most readily to mind is that Jan is currently working on a proof of concept for group and project consolidation. There are two proof of concepts being produced. The timeline is around 2 weeks, and the reason, like, I'm bringing that up is that it would also have an impact on this because one of them is to move issues to the group level, I believe."
+  },
+  {
+   "idx": 89,
+   "speaker": "E",
+   "start_ms": 1298438,
+   "end_ms": 1307005,
+   "text": "I think that's the one that's been done by Imre. So depending on the outcome of that, then it would also feed into this issue because"
+  },
+  {
+   "idx": 90,
+   "speaker": "E",
+   "start_ms": 1308788,
+   "end_ms": 1324522,
+   "text": "guess what, it's the issues table. So, um, yes, I don't have an answer for the question if we have a DRI. Like, um, if anyone would like to volunteer before they're volunteered, um, yeah, like we could use a DRI just even for"
+  },
+  {
+   "idx": 91,
+   "speaker": "E",
+   "start_ms": 1326591,
+   "end_ms": 1343242,
+   "text": "not to necessarily write the architecture blueprint, but just to be responsible for seeing it through. Otherwise, we'll look into where we are probably in a week, I would imagine, when those POCs start bearing fruit for the group and project consolidation and take it from there."
+  },
+  {
+   "idx": 92,
+   "speaker": "A",
+   "start_ms": 1363347,
+   "end_ms": 1363524,
+   "text": "Cool."
+  },
+  {
+   "idx": 93,
+   "speaker": "C",
+   "start_ms": 1363668,
+   "end_ms": 1384640,
+   "text": "I think I have the next one. Um, as we think about planning breakdown with this, the other thing I was thinking about is like, we have a lot of engineers in plan, and if we're sort of making this the shared initiative that we're going to be focusing on for the next several releases, um, One of the things that I learned from you, John, and you taught me very well a long time ago, was creating parallel, like, work streams or MVCs."
+  },
+  {
+   "idx": 94,
+   "speaker": "C",
+   "start_ms": 1384640,
+   "end_ms": 1406040,
+   "text": "And I was wondering, as we think through this, how can we create those parallel MVCs? Because some of them can happen, don't need to be blocked by each other, like refactoring discussions to use subscriptions and, you know, our modern front end. And there's, like, the structure and layout of the new work item view, there's parenting, there's, like, a lot of things that can sort of happen simultaneously once we have, like, an architecture blueprint, I think."
+  },
+  {
+   "idx": 95,
+   "speaker": "C",
+   "start_ms": 1408105,
+   "end_ms": 1426024,
+   "text": "And then being able to assign a couple backend and frontend engineers to each MVC so that way you have a clear work stream basically that people are responsible for, but they can also act autonomously. Is that something that would be worth exploring, or what do you think? What do the engineers think?"
+  },
+  {
+   "idx": 96,
+   "speaker": "A",
+   "start_ms": 1434640,
+   "end_ms": 1445842,
+   "text": "I'm fine with so many POCs. I don't think I have too many engineers on the call, but yep. I think there was 4 of us. Yeah."
+  },
+  {
+   "idx": 97,
+   "speaker": "E",
+   "start_ms": 1447357,
+   "end_ms": 1456065,
+   "text": "I think once the architecture blueprint is done, there are things that can be done in a parallel fashion, and there are things that need to be done in a linear fashion."
+  },
+  {
+   "idx": 98,
+   "speaker": "E",
+   "start_ms": 1461092,
+   "end_ms": 1491077,
+   "text": "The— what's interesting, I think, at the minute is that the requirements work that Tali is doing is it stops at the API layer, so there's no front-end work as far as I'm aware anyway. Donald, you can correct me. But everything from the API up is going to look the exact same. We're just moving requirements into the issues table and have them act underneath the API as as work items will, but you'll still interact with them through the regular API and nothing should change."
+  },
+  {
+   "idx": 99,
+   "speaker": "E",
+   "start_ms": 1491892,
+   "end_ms": 1511251,
+   "text": "That's a good example of things that would be parallelizable. If we had the architecture blueprint, we could do that for many types of objects at once because nothing changes for anyone else besides— yeah, besides for us on the backend where where we change the architecture."
+  },
+  {
+   "idx": 100,
+   "speaker": "E",
+   "start_ms": 1512910,
+   "end_ms": 1541906,
+   "text": "I'm trying to think, like, there will be things though that are— that have to be done linearly, I would imagine. Like, you can't— you have to wait for something to be widgetized before you can move all the objects that will use that widget to, to use it, right? Does that make sense? Like, if we wanted to add Jude to test cases and requirements we would have to wait that would be blocked by creating a widget for due dates, I guess."
+  },
+  {
+   "idx": 101,
+   "speaker": "F",
+   "start_ms": 1547316,
+   "end_ms": 1568356,
+   "text": "Where we could kind of, um, have it be parallel there though is, uh, creating multiple widgets at the same time, right? And then the work to fully convert an object over to a work item would take place, yeah, after all the widgets have been created."
+  },
+  {
+   "idx": 102,
+   "speaker": "E",
+   "start_ms": 1571423,
+   "end_ms": 1587497,
+   "text": "Yeah, so a better example might be like the actual deciding the actual architecture of the first widget, like, or how we'll decide an issue type knows which widgets it has and so on. But that should be covered by the architecture blueprint anyway, I think."
+  },
+  {
+   "idx": 103,
+   "speaker": "D",
+   "start_ms": 1593492,
+   "end_ms": 1598184,
+   "text": "Aren't our current— I mean, I know we need to put everything in the widgets, but"
+  },
+  {
+   "idx": 104,
+   "speaker": "D",
+   "start_ms": 1599839,
+   "end_ms": 1622094,
+   "text": "I mean, due date is already something we show in the UI. So, and it already accesses— the data is already stored. It's not like this is something new coming in. So for that, that doesn't actually need to be in a widget table per se. Those things, I think, signees, all that stuff is still— will get migrated over eventually to this new thing."
+  },
+  {
+   "idx": 105,
+   "speaker": "D",
+   "start_ms": 1622222,
+   "end_ms": 1624982,
+   "text": "But those things just keep moving forward, can't they?"
+  },
+  {
+   "idx": 106,
+   "speaker": "C",
+   "start_ms": 1625704,
+   "end_ms": 1647349,
+   "text": "Dates is an interesting one because once we have parenting to work items or issues, like we need to support start and end dates. And then I was talking with Kristen also about the idea of having an issue or a work item be able to have both like a fixed date as well as an inherited date at the same time."
+  },
+  {
+   "idx": 107,
+   "speaker": "C",
+   "start_ms": 1647590,
+   "end_ms": 1666762,
+   "text": "So like you can actually plan something and see the drift where things below it actually get scheduled out. So like the behavior of date will change by nature of introducing parenting. So that's like we could, we could roll with what we have in terms of due dates and then migrate over to the widget when it's ready. So either, either or, if that makes sense."
+  },
+  {
+   "idx": 108,
+   "speaker": "A",
+   "start_ms": 1672822,
+   "end_ms": 1675049,
+   "text": "And the widgeting part, even on"
+  },
+  {
+   "idx": 109,
+   "speaker": "A",
+   "start_ms": 1676694,
+   "end_ms": 1692704,
+   "text": "other widgets or attributes, is more like deciding on which type, on which work item type, this specific widget is being displayed or not. So that's another part of widgetizing the attributes, I would think."
+  },
+  {
+   "idx": 110,
+   "speaker": "A",
+   "start_ms": 1695037,
+   "end_ms": 1718159,
+   "text": "Which is not currently live. Like, right now, we would— if we would move requirements as an issue type right now and display it, it will just display everything that an issue has, right? Unless you go in the code and, and tweak it so that it is aware of the type itself. But like with an Egypt, you can configure that so that you don't have to code it out."
+  },
+  {
+   "idx": 111,
+   "speaker": "C",
+   "start_ms": 1734891,
+   "end_ms": 1736123,
+   "text": "Alexis, I think you have the next item."
+  },
+  {
+   "idx": 112,
+   "speaker": "G",
+   "start_ms": 1739108,
+   "end_ms": 1743796,
+   "text": "I do. I was thinking about sharding and single tables and stuff still."
+  },
+  {
+   "idx": 113,
+   "speaker": "G",
+   "start_ms": 1745373,
+   "end_ms": 1772458,
+   "text": "Yeah, I opened an Epic around just feedback and discussion for these weekly, uh, syncs, if that's helpful. Um, maybe different time zones could better bring things up async. I'm not sure, I'm just kind of piloting it out. Uh, so what I did was just created a discussion issue for every week, and I'm thinking at least it can be kind of like a single source of truth."
+  },
+  {
+   "idx": 114,
+   "speaker": "G",
+   "start_ms": 1773518,
+   "end_ms": 1780543,
+   "text": "Um, interested in y'all's participation, or if you think it's a good or bad idea. I'd love to know, what do y'all think?"
+  },
+  {
+   "idx": 115,
+   "speaker": "B",
+   "start_ms": 1789096,
+   "end_ms": 1813752,
+   "text": "I think it's a great idea to document this for sure, and to track— seeing each meeting as meeting notes, that's great because That will give us a lot more formality just around where we're at. I would like to make sure that those decisions get translated up into that top initiative as well. So anything that we discover, uncover, blockers, decisions, that those keep rolling up to top-level artifacts so everybody's aware."
+  },
+  {
+   "idx": 116,
+   "speaker": "G",
+   "start_ms": 1817900,
+   "end_ms": 1826175,
+   "text": "Yeah, that makes sense. Like, make sure we're having discussions in that, that epic. For example, for work items versus don't let it all translate over into this."
+  },
+  {
+   "idx": 117,
+   "speaker": "G",
+   "start_ms": 1828202,
+   "end_ms": 1851702,
+   "text": "But things like DRI, like we just discussed, like things like that, maybe having people in APAC chime in here and then moving it to some of those other places, would that make sense? I'm just wondering how do we get— you know, how do we allow for other time zones especially to have more"
+  },
+  {
+   "idx": 118,
+   "speaker": "G",
+   "start_ms": 1853283,
+   "end_ms": 1860041,
+   "text": "say in some of these discussions we have? Or maybe they, you know, maybe they are. I don't see all the collaboration here, so."
+  },
+  {
+   "idx": 119,
+   "speaker": "D",
+   "start_ms": 1861089,
+   "end_ms": 1862845,
+   "text": "What if we collected"
+  },
+  {
+   "idx": 120,
+   "speaker": "D",
+   "start_ms": 1866403,
+   "end_ms": 1884963,
+   "text": "certain points, things that need decisions, whatever, into a summary at the bottom of the meeting that can then be because it's, it's nice to have a lot of the context and stuff like that from the meeting itself, and then you can have a summary below it. So it still all stays in one place and it's easy to scroll through and participate in."
+  },
+  {
+   "idx": 121,
+   "speaker": "D",
+   "start_ms": 1887766,
+   "end_ms": 1888170,
+   "text": "Or is that—"
+  },
+  {
+   "idx": 122,
+   "speaker": "B",
+   "start_ms": 1888170,
+   "end_ms": 1888412,
+   "text": "do you—"
+  },
+  {
+   "idx": 123,
+   "speaker": "G",
+   "start_ms": 1889059,
+   "end_ms": 1904739,
+   "text": "no, that can make sense. Do y'all— is that how you kind of consume this agenda? Are y'all going back in here and like adding more discussion points and then communicating on older agenda items. That's, that's what I'm trying to figure out."
+  },
+  {
+   "idx": 124,
+   "speaker": "G",
+   "start_ms": 1908091,
+   "end_ms": 1909211,
+   "text": "Is that something you do, Brad?"
+  },
+  {
+   "idx": 125,
+   "speaker": "D",
+   "start_ms": 1909579,
+   "end_ms": 1916683,
+   "text": "Yeah, I go through and read it, but I might fill something in. But no, I don't, I don't add too much to it. That's, that's true."
+  },
+  {
+   "idx": 126,
+   "speaker": "B",
+   "start_ms": 1917392,
+   "end_ms": 1930681,
+   "text": "It would be great if they translate. Yeah, like if they translate to issues, we should have the conversation over there and like it should be clear out of this meeting, we had these discussions, here's where you can actually comment on."
+  },
+  {
+   "idx": 127,
+   "speaker": "B",
+   "start_ms": 1932607,
+   "end_ms": 1947925,
+   "text": "I wouldn't want to gate us moving forward with like waiting for APAC to put theirs in. Similarly, if they move forward with something, I wouldn't want them to gate off our getting our consensus because we don't really wait for consensus at GitLab, but I do think it would be valuable to"
+  },
+  {
+   "idx": 128,
+   "speaker": "B",
+   "start_ms": 1949452,
+   "end_ms": 1963126,
+   "text": "surface more of the TL;DR discussions that they should get into, or maybe go back and watch a section of this video because we highlight this was a great part of the discussion, this 3 minutes is really important."
+  },
+  {
+   "idx": 129,
+   "speaker": "A",
+   "start_ms": 1966004,
+   "end_ms": 1981345,
+   "text": "I think it will be nice during the meeting to decide what are the questions that need more feedback, like the DRI and so on, and just move those into a separate issue and so on. And then it's just easier to, to track it there because you can ping everyone and so on, rather than come back to the agenda."
+  },
+  {
+   "idx": 130,
+   "speaker": "A",
+   "start_ms": 1984464,
+   "end_ms": 2010725,
+   "text": "Similarly to what we did with the technical discussions, I think, like, it was sort of obvious that we need to discuss things there, and then we made it, and we are having the conversations in the issue. I don't find it too easy to, to track progress in the doc, to be honest. I don't think I've ever looked back at a lot of the discussions that happened in the doc and commented or stuff like that."
+  },
+  {
+   "idx": 131,
+   "speaker": "A",
+   "start_ms": 2010774,
+   "end_ms": 2031546,
+   "text": "I'm not sure that anyone does that, but yeah, moving it to issue makes sense. So to me, it's a lot of work for someone to go through the discussion and move things to the issue. That's, that's a nice amount of work to be done. So maybe if we can decide during the meeting that these are the action items and people can take them out into issues, that will be"
+  },
+  {
+   "idx": 132,
+   "speaker": "A",
+   "start_ms": 2033545,
+   "end_ms": 2033948,
+   "text": "the way to go."
+  },
+  {
+   "idx": 133,
+   "speaker": "G",
+   "start_ms": 2034028,
+   "end_ms": 2054857,
+   "text": "I don't know. And I don't know, this is just me. I don't think I was envisioning moving like the entire agenda, for example, to, but more just like, hey, this was something interesting that, you know, Alex, you know, that you brought up, and I want to discuss it further, but I wasn't on the call. Like, where do I do that, right?"
+  },
+  {
+   "idx": 134,
+   "speaker": "G",
+   "start_ms": 2055130,
+   "end_ms": 2072552,
+   "text": "Maybe it's within the issue, but then you might have to look through the issues. So to a prior point, maybe bringing up something you want to discuss trying to find the relevant issue and referencing that within the discussion as well. I don't know, John, you're adding some things too."
+  },
+  {
+   "idx": 135,
+   "speaker": "E",
+   "start_ms": 2073423,
+   "end_ms": 2080730,
+   "text": "Yeah, no, I agree with, um, with Brett and Alex. Like, if we could have the issue maybe in advance of the meeting, then we can just add stuff in real time. Doesn't have to be"
+  },
+  {
+   "idx": 136,
+   "speaker": "E",
+   "start_ms": 2082452,
+   "end_ms": 2108014,
+   "text": "James Joyce— preferably wouldn't be James Joyce, actually. But, um, yeah, like, the thing is, like, we just had that conversation about DRI, but I didn't actually make any commitment to do and I didn't give any timeline, and so I can't be held accountable for it. So I'll add something to this that says that we'll have a DRI by this time next week, and it's like APAC have 24 hours to, I guess, at least to jump in and give any feedback on that one."
+  },
+  {
+   "idx": 137,
+   "speaker": "E",
+   "start_ms": 2108062,
+   "end_ms": 2127189,
+   "text": "And sure, I'll get it, I'll get it started. I like the idea of referencing specific parts of the call that may be interesting to people in APAC as well. That unfortunately will end my 2-year streak of never watching myself back on YouTube, but Yeah, I mean, gotta bite the bullet someday, I suppose."
+  },
+  {
+   "idx": 138,
+   "speaker": "G",
+   "start_ms": 2130289,
+   "end_ms": 2139458,
+   "text": "I was just sharing, John, because I was like, yeah, like, that's it. If this is helpful, this is like the whole notes I've captured from y'all so far. And then I was going to bring up a few other things."
+  },
+  {
+   "idx": 139,
+   "speaker": "G",
+   "start_ms": 2141070,
+   "end_ms": 2141716,
+   "text": "Also sharing."
+  },
+  {
+   "idx": 140,
+   "speaker": "B",
+   "start_ms": 2141991,
+   "end_ms": 2167508,
+   "text": "Kristen, go ahead. I did just add a little section at the bottom. Anyone, if you have an item, an action item or summary, just add it there. See, um, just so we have the items coming out of this week. I do want to say, like, we need to really consolidate because there's so much going on. We got to get them all under the initiative and have things roll up to the top of that so it's not just our team who sees it, it's everyone else at GitLab."
+  },
+  {
+   "idx": 141,
+   "speaker": "B",
+   "start_ms": 2168085,
+   "end_ms": 2182022,
+   "text": "So, um, Alexis, if you want to drive the note-taking of it and the rallying of the team, that's okay, but I, I just want to make sure that it does add value and not like a lot of overhead so that everyone knows where to go and"
+  },
+  {
+   "idx": 142,
+   "speaker": "B",
+   "start_ms": 2183988,
+   "end_ms": 2184826,
+   "text": "keep things moving."
+  },
+  {
+   "idx": 143,
+   "speaker": "G",
+   "start_ms": 2186711,
+   "end_ms": 2200609,
+   "text": "Yeah, and I'm not tied to this, I just thought it'd be interesting to pilot it out, or I don't know if anyone has any other ideas here, but just making sure the action items are, you know, actioned on, I guess, to John's point."
+  },
+  {
+   "idx": 144,
+   "speaker": "G",
+   "start_ms": 2203211,
+   "end_ms": 2203452,
+   "text": "Melissa."
+  },
+  {
+   "idx": 145,
+   "speaker": "H",
+   "start_ms": 2203854,
+   "end_ms": 2220430,
+   "text": "Okay, yeah, that was gonna be my question, right? So if we have videos of recordings of this, right, we have them in a playlist that is easy to find, and we have notes, I'm wondering what the gaps are, and maybe we can approach it that way and figure out how we fill those gaps."
+  },
+  {
+   "idx": 146,
+   "speaker": "G",
+   "start_ms": 2227370,
+   "end_ms": 2232361,
+   "text": "So I think that what— John— oh, go ahead, Kristen, because I feel like you would know this better than I."
+  },
+  {
+   "idx": 147,
+   "speaker": "B",
+   "start_ms": 2232473,
+   "end_ms": 2239096,
+   "text": "Yeah, yeah, yeah, I guess the gap is like I'm not really sure where the gaps are as well. Is the— are the playlists,"
+  },
+  {
+   "idx": 148,
+   "speaker": "B",
+   "start_ms": 2240963,
+   "end_ms": 2255967,
+   "text": "are they all getting posted into one unified playlist? I don't know that for— I don't know the answer. That's something we should check. And then we should also just check what is the— is APEC having a problem? For sure. Do we need to solve this right now?"
+  },
+  {
+   "idx": 149,
+   "speaker": "B",
+   "start_ms": 2258140,
+   "end_ms": 2263598,
+   "text": "Because I'm aware of all the information, but I just want to make sure."
+  },
+  {
+   "idx": 150,
+   "speaker": "D",
+   "start_ms": 2263743,
+   "end_ms": 2267296,
+   "text": "There is a link to the recording at the very top of this document, and it looks like it"
+  },
+  {
+   "idx": 151,
+   "speaker": "D",
+   "start_ms": 2268897,
+   "end_ms": 2273151,
+   "text": "actually does have all of our stuff in there."
+  },
+  {
+   "idx": 152,
+   "speaker": "E",
+   "start_ms": 2273765,
+   "end_ms": 2292763,
+   "text": "Yeah. Yeah, there's a plan stage playlist, and that playlist is embedded in our team pages. Nevertheless, this call sometimes does go on 50 minutes. If somebody— it's easy, people could miss things. So I don't think it's a terrible idea that we'd have at least the takeaways and the commitments"
+  },
+  {
+   "idx": 153,
+   "speaker": "E",
+   "start_ms": 2294418,
+   "end_ms": 2302559,
+   "text": "in some medium where we could be held accountable for them, in particular, probably EMs and BMs, but everybody."
+  },
+  {
+   "idx": 154,
+   "speaker": "A",
+   "start_ms": 2304263,
+   "end_ms": 2339294,
+   "text": "I think it'll be useful to just have the issue for the— time when for the meeting, and then if I feel that I do have a question regarding to this meeting, to whatever it was discussed, I can, I can paste it there as a thread or, or whatever, and then we can extract it to a bigger issue, epic, and whatnot. But like having it in an issue where you can find it easily, sort of like in some ways it's like Plan retrospective, but it will be the, the plans weekly meetings, and then everyone can add their"
+  },
+  {
+   "idx": 155,
+   "speaker": "A",
+   "start_ms": 2339342,
+   "end_ms": 2349313,
+   "text": "questions or interesting things that they think others should take a look at. So maybe that's the way to wait. Sometimes those issues will be empty, and sometimes they'll have a lot of stuff, obviously."
+  },
+  {
+   "idx": 156,
+   "speaker": "H",
+   "start_ms": 2349377,
+   "end_ms": 2372258,
+   "text": "But my concern with that is just that there's more places where important pieces of information can be, right? So My concern would be that something important gets lost in one of those issues, and we should try to find the source of truth for that question, right, and post a question there instead."
+  },
+  {
+   "idx": 157,
+   "speaker": "H",
+   "start_ms": 2373243,
+   "end_ms": 2376956,
+   "text": "I don't know if that's realistic or if that makes sense."
+  },
+  {
+   "idx": 158,
+   "speaker": "A",
+   "start_ms": 2378602,
+   "end_ms": 2410320,
+   "text": "I don't think current situation is, is better in any way. Like, I Like right now we have the videos and we have this document, but then if no one comes back or no one uses it to collaborate on a specific item, I, I'm not sure that's helpful either, um, unless we really take out the important stuff and make them the single source of truth issue or epic or whatever, and then everyone contributes there."
+  },
+  {
+   "idx": 159,
+   "speaker": "D",
+   "start_ms": 2412121,
+   "end_ms": 2417421,
+   "text": "What, what if we, for, to, in order to populate that issue,"
+  },
+  {
+   "idx": 160,
+   "speaker": "D",
+   "start_ms": 2419342,
+   "end_ms": 2425792,
+   "text": "uh, that Alexis would create, or that would be created each week, we actually copy and paste what's in the Google Doc?"
+  },
+  {
+   "idx": 161,
+   "speaker": "D",
+   "start_ms": 2427637,
+   "end_ms": 2430644,
+   "text": "That's the, that's the single source of truth in terms of, you know,"
+  },
+  {
+   "idx": 162,
+   "speaker": "D",
+   "start_ms": 2432342,
+   "end_ms": 2459679,
+   "text": "what went on in the meeting. Put that in there and then people can comment on that, because I agree, if, if you have comments on, on what went on in the meeting there's not necessarily a good place to go put it unless there's a specific issue somewhere, and you can't use Google Docs very easily for that. So, you know, might be copying that over into that weekly issue, and, um, and then conversation can go on from there."
+  },
+  {
+   "idx": 163,
+   "speaker": "D",
+   "start_ms": 2461010,
+   "end_ms": 2462132,
+   "text": "Or is that too much work?"
+  },
+  {
+   "idx": 164,
+   "speaker": "B",
+   "start_ms": 2463239,
+   "end_ms": 2488694,
+   "text": "The problem with that is you've got dupes, and then things can change in one and not the other. And like, if you see Sid doing CEO shadow, he has a lot of that going on where he has these massive agendas, but like what they do is they always just say it's moved to this issue and they link to the issue where it's happening from the agenda. Um, so my fear would just be that there'd be out-of-date information in either place or someone could edit it in either place."
+  },
+  {
+   "idx": 165,
+   "speaker": "B",
+   "start_ms": 2488823,
+   "end_ms": 2497969,
+   "text": "And then the agenda should be what happened in real time for that meeting. And who was there, and then it splits off the actual work product."
+  },
+  {
+   "idx": 166,
+   "speaker": "D",
+   "start_ms": 2500102,
+   "end_ms": 2500550,
+   "text": "That makes sense."
+  },
+  {
+   "idx": 167,
+   "speaker": "H",
+   "start_ms": 2504056,
+   "end_ms": 2524705,
+   "text": "Um, one thing that we might want to consider that I saw— I've never tried it, but I thought it was cool— um, one of the other PMs do is that you can automatically post to a Slack channel when a video gets added to a specific playlist. Um, so that's like a capability we could explore, right? That at the end of this meeting, it just gets posted to Slack."
+  },
+  {
+   "idx": 168,
+   "speaker": "H",
+   "start_ms": 2525046,
+   "end_ms": 2526197,
+   "text": "That's just like an additional,"
+  },
+  {
+   "idx": 169,
+   "speaker": "H",
+   "start_ms": 2527972,
+   "end_ms": 2542514,
+   "text": "um, kind of like ping to— for people to go look if they're interested. And then if they have questions, they could raise them on Slack. It's something that's temporary, and from there we could decide, okay, this goes in this issue or this other place. But"
+  },
+  {
+   "idx": 170,
+   "speaker": "H",
+   "start_ms": 2544075,
+   "end_ms": 2546673,
+   "text": "that could be something. That would help."
+  },
+  {
+   "idx": 171,
+   "speaker": "F",
+   "start_ms": 2549810,
+   "end_ms": 2574496,
+   "text": "Yeah, we kind of do that manually after every, um, after every week. We just post it on the, uh, on the plan channel. Um, but we can, we can figure out— I think we could probably figure out a way to automate that, um, just to make sure we don't miss it. Uh, I'm, I'm still— so the main problem we're trying to solve here is to encourage feedback from"
+  },
+  {
+   "idx": 172,
+   "speaker": "F",
+   "start_ms": 2576146,
+   "end_ms": 2584745,
+   "text": "the people that can't attend this meeting because of either time zones or whatnot, right?"
+  },
+  {
+   "idx": 173,
+   "speaker": "E",
+   "start_ms": 2584971,
+   "end_ms": 2586086,
+   "text": "Is that the main problem we're trying to solve?"
+  },
+  {
+   "idx": 174,
+   "speaker": "G",
+   "start_ms": 2586264,
+   "end_ms": 2603383,
+   "text": "And maybe surfacing kind of like retro items sooner, like having like pulse checks every week, right? Which I think is kind of the intention of this meeting, but it's just not everyone is here. Here, right? I'm interested in what y'all think too, what it could solve."
+  },
+  {
+   "idx": 175,
+   "speaker": "F",
+   "start_ms": 2604251,
+   "end_ms": 2625694,
+   "text": "Yeah, so I do think that's a good idea whenever we do have like decisions made in this meeting to somehow highlight that with the rest of the team, and maybe that's just even sending out a Slack saying that, hey, you should definitely watch this meeting because decisions were made."
+  },
+  {
+   "idx": 176,
+   "speaker": "F",
+   "start_ms": 2625830,
+   "end_ms": 2631966,
+   "text": "But to encourage feedback, I think we should try going the other way in that"
+  },
+  {
+   "idx": 177,
+   "speaker": "F",
+   "start_ms": 2633606,
+   "end_ms": 2648295,
+   "text": "we try to fill the agenda a little bit earlier than we have been, and that way everyone else that isn't going to be able to attend can kind of look at the agenda and comment, and then we can just read through it in the, in the sync meeting."
+  },
+  {
+   "idx": 178,
+   "speaker": "F",
+   "start_ms": 2649857,
+   "end_ms": 2661257,
+   "text": "'Cause yeah, right now we've kind of been filling it like on the fly, which doesn't give a whole lot of opportunity for other people to comment or to discuss."
+  },
+  {
+   "idx": 179,
+   "speaker": "B",
+   "start_ms": 2663584,
+   "end_ms": 2673657,
+   "text": "Maybe posting the agenda the night before, the day before, 24 hours ahead to Slack too and saying, hey everyone, put in what you want to have talked about tomorrow."
+  },
+  {
+   "idx": 180,
+   "speaker": "D",
+   "start_ms": 2679492,
+   "end_ms": 2681850,
+   "text": "Yeah, I'm sorry, go ahead."
+  },
+  {
+   "idx": 181,
+   "speaker": "H",
+   "start_ms": 2682619,
+   "end_ms": 2703839,
+   "text": "One other thing that I was going to add, right, is that we do also have to be conscious of what's discussed in sync meetings, right? Because by sort of like making decisions and talking about things in asynchronous meetings, we're sort of like automatically not including some people in the discussion, right, that can't make it at that specific time."
+  },
+  {
+   "idx": 182,
+   "speaker": "H",
+   "start_ms": 2704352,
+   "end_ms": 2722992,
+   "text": "For that specific meeting. So as much as possible, if there are decisions like that that need to be made, we should try to do that in an issue in GitLab or some other async way, or maybe post them in the agenda days ahead of time, right, so someone has time to think about and leave feedback. But that's something else to, to consider."
+  },
+  {
+   "idx": 183,
+   "speaker": "D",
+   "start_ms": 2730142,
+   "end_ms": 2742684,
+   "text": "Kristen, you mentioned something about the way Sid does this. Is there anything else that we can take from how he kind of manages this information overload to—"
+  },
+  {
+   "idx": 184,
+   "speaker": "B",
+   "start_ms": 2743375,
+   "end_ms": 2772107,
+   "text": "I may be a year out of date. Melissa did it more recently. But he has these massive 50-page things that he maintains in Google because there's so many references. So he doesn't just run off issues. Kind of the other way around. But anything where it goes to, like, it needs collaboration gets a note with the action item, which is this issue is going to be updated, this comment is going to be updated, and that's linked as a bullet."
+  },
+  {
+   "idx": 185,
+   "speaker": "B",
+   "start_ms": 2772524,
+   "end_ms": 2795358,
+   "text": "So it's not— so you can then go to the actual work product. But he has an intense table of contents for every executive, like an executive's one-on-one document is like 50 pages long, and it's all in flowchart flight. So, but the single source of truth stays in Google, which is the meetings, what was said, the action items, but it's always linking out from there."
+  },
+  {
+   "idx": 186,
+   "speaker": "C",
+   "start_ms": 2797553,
+   "end_ms": 2813921,
+   "text": "I linked to the format that he uses. I really like it. I think it's a lot better than just like dates with numbers. It's like long-running lists of things that are actionable or not and provides like— yeah, it'd be cool to try that. In a team setting too."
+  },
+  {
+   "idx": 187,
+   "speaker": "B",
+   "start_ms": 2824260,
+   "end_ms": 2853095,
+   "text": "One of the things he does obviously is hold everyone's feet to the fire, so we don't necessarily come back like, John, you're gonna get the DRI by next week, but that would be top of the agenda every week until John executed on it with Sid, so that's just things don't slip ever because he's always seeing them in there. So that's something we could think about too, is just having team accountability when we're in these sync spaces, but making sure that works in the— in actually GitLab."
+  },
+  {
+   "idx": 188,
+   "speaker": "B",
+   "start_ms": 2853673,
+   "end_ms": 2856966,
+   "text": "Okay, I withdraw my question."
+  },
+  {
+   "idx": 189,
+   "speaker": "A",
+   "start_ms": 2858379,
+   "end_ms": 2869484,
+   "text": "So, so I guess one practice that we can take out of that with this is like, after, during each meeting, if we don't have an answer for a question, move it to the next date right away. During the meeting or something like that?"
+  },
+  {
+   "idx": 190,
+   "speaker": "B",
+   "start_ms": 2870517,
+   "end_ms": 2883292,
+   "text": "Yeah, we could start the agenda for the next meeting right now. Yeah, and have follow-ups at the very top that we're committed to from the last one, and just so we keep a loose list of what needs to be checked in on."
+  },
+  {
+   "idx": 191,
+   "speaker": "B",
+   "start_ms": 2885124,
+   "end_ms": 2890418,
+   "text": "That should get transferred over probably into the main initiative as well, but I think that's a great idea."
+  },
+  {
+   "idx": 192,
+   "speaker": "G",
+   "start_ms": 2891460,
+   "end_ms": 2899359,
+   "text": "Would that be captured in— so for example, then APAC's meeting. That's kind of the interesting thing because we— yeah, okay."
+  },
+  {
+   "idx": 193,
+   "speaker": "B",
+   "start_ms": 2901200,
+   "end_ms": 2902492,
+   "text": "Whoever has the next sync"
+  },
+  {
+   "idx": 194,
+   "speaker": "B",
+   "start_ms": 2904204,
+   "end_ms": 2908639,
+   "text": "could follow up on everything that's a blocker or an action."
+  },
+  {
+   "idx": 195,
+   "speaker": "G",
+   "start_ms": 2918945,
+   "end_ms": 2920207,
+   "text": "So if we wanted to"
+  },
+  {
+   "idx": 196,
+   "speaker": "G",
+   "start_ms": 2921952,
+   "end_ms": 2923353,
+   "text": "I guess kind of like, um,"
+  },
+  {
+   "idx": 197,
+   "speaker": "G",
+   "start_ms": 2925012,
+   "end_ms": 2943827,
+   "text": "discuss something that was brought up in a meeting in one of these weekly syncs, then would it be added like a question about something? Would it be added to the agenda for next time then? Like if it wasn't, let's say, necessarily issue-specific, maybe it was kind of like a workflow thing. Okay."
+  },
+  {
+   "idx": 198,
+   "speaker": "G",
+   "start_ms": 2974957,
+   "end_ms": 2980414,
+   "text": "So, John, what are you doing with that comment with the date? How are you hoping to use that? Just wondering."
+  },
+  {
+   "idx": 199,
+   "speaker": "E",
+   "start_ms": 2981879,
+   "end_ms": 2988946,
+   "text": "Yeah, I do this in my one-to-one agendas. Like, if you put your own email, you get an email from it. And then I'll,"
+  },
+  {
+   "idx": 200,
+   "speaker": "E",
+   "start_ms": 2990987,
+   "end_ms": 2998337,
+   "text": "yeah, grab my inbox from time to time to make sure that I'm meeting everything. But I'm trying to work more from—"
+  },
+  {
+   "idx": 201,
+   "speaker": "E",
+   "start_ms": 3000564,
+   "end_ms": 3025675,
+   "text": "todos, which is what I was talking about earlier in the Slack channel and dangerously close to having zero todos. And then I'm gonna put a todo SLO on so that if I don't get back to you within 2 weeks, I don't know what happens. Something bad happens. Nothing happens, but it's better than, like, it's better than, yeah, how long it's taken me to get back to some people."
+  },
+  {
+   "idx": 202,
+   "speaker": "E",
+   "start_ms": 3026520,
+   "end_ms": 3026810,
+   "text": "This far."
+  },
+  {
+   "idx": 203,
+   "speaker": "E",
+   "start_ms": 3028536,
+   "end_ms": 3036669,
+   "text": "But until then, yeah, it's— I use these, I don't know what you call them, like assignments or whatever in Google Docs, just to help me keep on top of things."
+  },
+  {
+   "idx": 204,
+   "speaker": "A",
+   "start_ms": 3037332,
+   "end_ms": 3041741,
+   "text": "I would prefer to use issues as a single source of truth for this meeting, but I don't think it's"
+  },
+  {
+   "idx": 205,
+   "speaker": "A",
+   "start_ms": 3043308,
+   "end_ms": 3055826,
+   "text": "viable yet without the real-time commenting and real-time collaboration. But like, I would rather prefer doing it in the issues than in Google Docs."
+  },
+  {
+   "idx": 206,
+   "speaker": "D",
+   "start_ms": 3059501,
+   "end_ms": 3074140,
+   "text": "I tend to agree with you, Alex. It's— the problem is, for me, I'm not going to really know if you've made a comment later today on something or if someone from APAC has added additional details under this discussion or something."
+  },
+  {
+   "idx": 207,
+   "speaker": "D",
+   "start_ms": 3076047,
+   "end_ms": 3083370,
+   "text": "I won't necessarily be notified about that. I guess I could be notified of every change in the document, but I think that might drive me or everybody else crazy."
+  },
+  {
+   "idx": 208,
+   "speaker": "A",
+   "start_ms": 3084288,
+   "end_ms": 3085109,
+   "text": "So, uh,"
+  },
+  {
+   "idx": 209,
+   "speaker": "A",
+   "start_ms": 3087346,
+   "end_ms": 3089438,
+   "text": "yeah, I'm usually— that's why I thought—"
+  },
+  {
+   "idx": 210,
+   "speaker": "D",
+   "start_ms": 3089438,
+   "end_ms": 3103179,
+   "text": "that's why I thought copying what the contents were of this into the issue, that's— that kind of locks that down, and then you're com— everybody can comment on that and come in and bring up different threads and stuff like that. But, you know, that's great."
+  },
+  {
+   "idx": 211,
+   "speaker": "A",
+   "start_ms": 3107276,
+   "end_ms": 3134734,
+   "text": "Yeah, if there is a way to move this to the issue, I'm all for it, because like me as well, I'm not checking on these docs too often, and it's awkward for me to go to the Google Doc to check it, um, rather than looking into, into the issues or following issue or, or stuff like that. But yeah, if we cannot do it, or if it doesn't work for the other people, I I'll try to do my best to follow this one."
+  },
+  {
+   "idx": 212,
+   "speaker": "D",
+   "start_ms": 3135376,
+   "end_ms": 3150855,
+   "text": "I think it's, I think it's good putting the next, starting the next agenda already for the next one and putting follow-up, you know, uh, points in there like the DRI or whatever that we definitely need to follow up on. I think that's a good idea. I think that gives us a heads up on stuff."
+  },
+  {
+   "idx": 213,
+   "speaker": "G",
+   "start_ms": 3159364,
+   "end_ms": 3184186,
+   "text": "So then when we're— where would we make decisions on the kind of like ongoing discussion? So what if, uh, and we also wouldn't want to wait for like APAC, let's say, right? If we— so using for like the DRI, um, as an example, if we put that in the agenda for next time, um, what would be, I guess, the like ideal scenario for the— that discussion that kind of rolls over?"
+  },
+  {
+   "idx": 214,
+   "speaker": "G",
+   "start_ms": 3184362,
+   "end_ms": 3186537,
+   "text": "Kristen, you're unmuted. Do you want to Talk about it."
+  },
+  {
+   "idx": 215,
+   "speaker": "B",
+   "start_ms": 3188690,
+   "end_ms": 3209265,
+   "text": "Oh, I was just going to say hopefully the action would happen sooner than the next meeting. So like whenever John does it, he knows we're all talking about it. He could even vocalize it into Slack just with wherever his comment is in GitLab and say, hey, it's handled, it's done. And we could just check, tick that box for next time."
+  },
+  {
+   "idx": 216,
+   "speaker": "B",
+   "start_ms": 3210031,
+   "end_ms": 3220855,
+   "text": "But if it's something that's ongoing, maybe it's like a decision that we have to revisit the next meeting, then we would be saying, what do we need to get this unblocked so that we can cross this off the list"
+  },
+  {
+   "idx": 217,
+   "speaker": "B",
+   "start_ms": 3223127,
+   "end_ms": 3224613,
+   "text": "if it goes that full week?"
+  },
+  {
+   "idx": 218,
+   "speaker": "E",
+   "start_ms": 3226577,
+   "end_ms": 3253086,
+   "text": "The DRI one's a good example, right? Because Jake's not on the call, and we sort of share the responsibility for the back end of work items. So the fact that— and yeah, other engineers involved aren't on the call. So it's classic decision that should be made not synchronously on the call, but it does have a pretty clear criteria, like completion criteria, which is there's a DR."
+  },
+  {
+   "idx": 219,
+   "speaker": "E",
+   "start_ms": 3254503,
+   "end_ms": 3266951,
+   "text": "But yeah, and also, yeah, during the APAC calls, as Donald said, like I'm just default DRI for everything, which has worked out pretty well so far, one time it happened. So anyway, where was I going with that?"
+  },
+  {
+   "idx": 220,
+   "speaker": "E",
+   "start_ms": 3268729,
+   "end_ms": 3298061,
+   "text": "Yeah, like I think even those things that go on for a while, like we can still we can still find something to do in the week timeline. We can still say we want to— like this decision about whether to use the work items table, I would hope that we can resolve it pretty quickly. My worst fear would be that it goes on for a very long time. But by next week, we should be able to accomplish something on that, whether it's having had a sync call or some other kind of call with the database team that is going to move that decision forward."
+  },
+  {
+   "idx": 221,
+   "speaker": "E",
+   "start_ms": 3298768,
+   "end_ms": 3301701,
+   "text": "And that's something we can absolutely definitely do by next week."
+  },
+  {
+   "idx": 222,
+   "speaker": "G",
+   "start_ms": 3313208,
+   "end_ms": 3318084,
+   "text": "We're at time. I have questions, but we could talk about it next time."
+  },
+  {
+   "idx": 223,
+   "speaker": "E",
+   "start_ms": 3323536,
+   "end_ms": 3324278,
+   "text": "Stick them in the issue."
+  },
+  {
+   "idx": 224,
+   "speaker": "G",
+   "start_ms": 3325046,
+   "end_ms": 3330432,
+   "text": "And we'll have a look. And just make John do everything, I think. You're DRR of all the things."
+  },
+  {
+   "idx": 225,
+   "speaker": "E",
+   "start_ms": 3332147,
+   "end_ms": 3332618,
+   "text": "Sounds good."
+  },
+  {
+   "idx": 226,
+   "speaker": "C",
+   "start_ms": 3336699,
+   "end_ms": 3338113,
+   "text": "Thank you. Bye."
+  }
+ ],
+ "chapters": [
+  {
+   "idx": 0,
+   "title": "Team promotions and POC intro",
+   "start_ms": 0,
+   "gist": "Alex opens the meeting by congratulating team members on recent promotions and introducing his proof of concept for work items.",
+   "line": 0,
+   "end_ms": 52919
+  },
+  {
+   "idx": 1,
+   "title": "Custom work items data structure",
+   "start_ms": 52919,
+   "gist": "Alex discusses exploring EAV and JSONB options for custom work item data structures and seeks feedback from the database team.",
+   "line": 4,
+   "end_ms": 382097
+  },
+  {
+   "idx": 2,
+   "title": "Database scaling and sharding concerns",
+   "start_ms": 382097,
+   "gist": "The team discusses whether their approach to work items conflicts with database sharding or single table inheritance guidelines.",
+   "line": 32,
+   "end_ms": 716206
+  },
+  {
+   "idx": 3,
+   "title": "Widget behavior and architecture",
+   "start_ms": 716206,
+   "gist": "Kristen and Speaker C discuss different types of widgets, including data entry fields and complex rollup or calculation widgets.",
+   "line": 55,
+   "end_ms": 1092130
+  },
+  {
+   "idx": 4,
+   "title": "Planning MVCs and architecture blueprints",
+   "start_ms": 1092130,
+   "gist": "The team reviews the MVC roadmap and discusses the need for an engineering DRI to lead the architecture blueprint documentation.",
+   "line": 76,
+   "end_ms": 1363668
+  },
+  {
+   "idx": 5,
+   "title": "Parallelizing engineering work streams",
+   "start_ms": 1363668,
+   "gist": "John and Speaker C discuss how to structure work into parallel streams to move faster once the architecture is defined.",
+   "line": 93,
+   "end_ms": 1739108
+  },
+  {
+   "idx": 6,
+   "title": "Improving async communication and feedback",
+   "start_ms": 1739108,
+   "gist": "Alexis proposes a pilot for weekly discussion issues to help team members in other time zones participate in sync meeting outcomes.",
+   "line": 112,
+   "end_ms": 2263743
+  },
+  {
+   "idx": 7,
+   "title": "Refining meeting processes",
+   "start_ms": 2263743,
+   "gist": "The team debates the best way to handle meeting notes, action items, and cross-timezone collaboration using GitLab issues versus Google Docs.",
+   "line": 150,
+   "end_ms": 3341000
+  }
+ ],
+ "action_items": [
+  {
+   "idx": 0,
+   "text": "Review and provide feedback on the custom work items data structure POC.",
+   "owner_name": null,
+   "speaker_label": null,
+   "ts_ms": 115111,
+   "line": 6
+  },
+  {
+   "idx": 1,
+   "text": "Populate the backend architecture and work item field issues in the MVC spreadsheet.",
+   "owner_name": null,
+   "speaker_label": null,
+   "ts_ms": 1127930,
+   "line": 79
+  },
+  {
+   "idx": 2,
+   "text": "Appoint an engineering DRI for the architecture blueprint by next week.",
+   "owner_name": "John",
+   "speaker_label": "E",
+   "ts_ms": 2082452,
+   "line": 136
+  },
+  {
+   "idx": 3,
+   "text": "Pilot a discussion issue for each weekly sync to help include APAC team members.",
+   "owner_name": "Alexis",
+   "speaker_label": "G",
+   "ts_ms": 1745373,
+   "line": 113
+  },
+  {
+   "idx": 4,
+   "text": "Explore automating Slack notifications when meeting recordings are added to the playlist.",
+   "owner_name": "Melissa",
+   "speaker_label": "H",
+   "ts_ms": 2504056,
+   "line": 167
+  },
+  {
+   "idx": 5,
+   "text": "Post the meeting agenda to Slack 24 hours in advance to encourage earlier feedback.",
+   "owner_name": null,
+   "speaker_label": null,
+   "ts_ms": 2663584,
+   "line": 179
+  }
+ ],
+ "summaries": [
+  {
+   "template": "general",
+   "content": {
+    "tldr": "The team discussed technical proofs of concept for custom work items and how to structure the underlying database without blocking future sharding efforts. They also focused on improving team processes to better include asynchronous feedback from different time zones.",
+    "sections": [
+     {
+      "heading": "Meeting purpose",
+      "bullets": [
+       {
+        "text": "Review technical progress on the work items initiative.",
+        "line": 4,
+        "ts_ms": 52919
+       },
+       {
+        "text": "Discuss the transition of requirements into the issues table.",
+        "line": 98,
+        "ts_ms": 1461092
+       }
+      ]
+     },
+     {
+      "heading": "Key takeaways",
+      "bullets": [
+       {
+        "text": "The team is testing EAV and JSONB data structures for custom widgets.",
+        "line": 4,
+        "ts_ms": 52919
+       },
+       {
+        "text": "Consolidating items into the issues table is intended to align the application's architecture with its interface.",
+        "line": 46,
+        "ts_ms": 547706
+       },
+       {
+        "text": "Tracking decisions in Google Docs is difficult and often leads to information being lost.",
+        "line": 130,
+        "ts_ms": 1984464
+       }
+      ]
+     },
+     {
+      "heading": "Topics",
+      "bullets": [
+       {
+        "text": "Database sharding and single table inheritance concerns from the database team.",
+        "line": 32,
+        "ts_ms": 382097
+       },
+       {
+        "text": "Designing widgets to handle calculations and rollups versus simple data entry.",
+        "line": 56,
+        "ts_ms": 721270
+       },
+       {
+        "text": "Improving documentation through architecture blueprints.",
+        "line": 82,
+        "ts_ms": 1198356
+       }
+      ]
+     },
+     {
+      "heading": "Next steps",
+      "bullets": [
+       {
+        "text": "John will ensure a DRI is assigned for the architecture blueprint.",
+        "line": 136,
+        "ts_ms": 2082452
+       },
+       {
+        "text": "The team will experiment with a new discussion issue format for weekly syncs.",
+        "line": 113,
+        "ts_ms": 1745373
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "template": "project_update",
+   "content": {
+    "tldr": "A POC for work item data structures has begun, focusing on balancing customization with database performance. The project is moving toward planning breakdown for multiple MVCs including hierarchy and custom issue types.",
+    "sections": [
+     {
+      "heading": "Progress",
+      "bullets": [
+       {
+        "text": "A spike for custom work item types and widgets has already started.",
+        "line": 14,
+        "ts_ms": 202420
+       },
+       {
+        "text": "MVC shells for backend architecture and hierarchy have been added to the planning spreadsheets.",
+        "line": 77,
+        "ts_ms": 1100135
+       }
+      ]
+     },
+     {
+      "heading": "Blockers",
+      "bullets": [
+       {
+        "text": "The database team has a heavy workload and may not provide feedback immediately.",
+        "line": 5,
+        "ts_ms": 84307
+       },
+       {
+        "text": "Lack of a clear DRI for the architecture blueprint hinders coordination across parallel work streams.",
+        "line": 82,
+        "ts_ms": 1198356
+       }
+      ]
+     },
+     {
+      "heading": "Decisions",
+      "bullets": [
+       {
+        "text": "The team will not implement custom fields or attributes until later in the roadmap.",
+        "line": 17,
+        "ts_ms": 223100
+       },
+       {
+        "text": "Widgetizing existing attributes like due dates will be handled incrementally.",
+        "line": 107,
+        "ts_ms": 1647590
+       }
+      ]
+     },
+     {
+      "heading": "Next steps",
+      "bullets": [
+       {
+        "text": "Finalize the architecture blueprint to allow parallel engineering work streams.",
+        "line": 97,
+        "ts_ms": 1447357
+       },
+       {
+        "text": "Consolidate all related epics under a single top-level initiative for visibility.",
+        "line": 140,
+        "ts_ms": 2141991
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "template": "standup",
+   "content": {
+    "tldr": "Alex has initiated technical spikes on data structures while the team prepares for a larger planning breakdown. A primary focus is resolving database inheritance concerns and establishing clear engineering leadership for the upcoming architecture.",
+    "sections": [
+     {
+      "heading": "Yesterday / done",
+      "bullets": [
+       {
+        "text": "Alex started a POC comparing EAV and JSONB options for data storage.",
+        "line": 4,
+        "ts_ms": 52919
+       },
+       {
+        "text": "Kristen added MVC shells for backend architecture to the team spreadsheets.",
+        "line": 77,
+        "ts_ms": 1100135
+       }
+      ]
+     },
+     {
+      "heading": "Today / planned",
+      "bullets": [
+       {
+        "text": "Obtain feedback from the database and sharding teams on the proposed table structures.",
+        "line": 48,
+        "ts_ms": 599714
+       },
+       {
+        "text": "Assign a DRI to convert engineering discussions into a formal architecture blueprint.",
+        "line": 82,
+        "ts_ms": 1198356
+       }
+      ]
+     },
+     {
+      "heading": "Blockers",
+      "bullets": [
+       {
+        "text": "The team needs to align with the database team to ensure the single table approach doesn't hinder sharding.",
+        "line": 48,
+        "ts_ms": 599714
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "template": "retro",
+   "content": {
+    "tldr": "The team is pleased with the progress of the POCs but acknowledges significant friction in how they track decisions and include remote team members. Moving forward, they aim to transition more communication from transient documents to GitLab issues.",
+    "sections": [
+     {
+      "heading": "What went well",
+      "bullets": [
+       {
+        "text": "The technical POCs are effectively teasing out necessary details for the data model.",
+        "line": 17,
+        "ts_ms": 223100
+       },
+       {
+        "text": "The team celebrated several internal promotions this week.",
+        "line": 1,
+        "ts_ms": 21367
+       }
+      ]
+     },
+     {
+      "heading": "What didn't",
+      "bullets": [
+       {
+        "text": "The current Google Doc agenda makes it difficult to track progress and collaboration over time.",
+        "line": 130,
+        "ts_ms": 1984464
+       },
+       {
+        "text": "Current sync practices don't provide enough opportunity for APAC team members to contribute.",
+        "line": 117,
+        "ts_ms": 1828202
+       }
+      ]
+     },
+     {
+      "heading": "Ideas to improve",
+      "bullets": [
+       {
+        "text": "Use GitLab issues as the single source of truth for meeting outcomes and discussions.",
+        "line": 154,
+        "ts_ms": 2304263
+       },
+       {
+        "text": "Carry forward unaddressed action items to the top of the next meeting's agenda.",
+        "line": 190,
+        "ts_ms": 2870517
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "template": "sales",
+   "content": {
+    "tldr": "This meeting focused on internal architecture for custom work items and team processes. No external sales prospects or commercial terms were discussed.",
+    "sections": [
+     {
+      "heading": "Prospect needs",
+      "bullets": [
+       {
+        "text": "No specific external prospect needs were mentioned.",
+        "line": null,
+        "ts_ms": null
+       }
+      ]
+     },
+     {
+      "heading": "Objections",
+      "bullets": [
+       {
+        "text": "No sales objections were discussed.",
+        "line": null,
+        "ts_ms": null
+       }
+      ]
+     },
+     {
+      "heading": "Budget & timeline",
+      "bullets": [
+       {
+        "text": "No budget or financial timelines were discussed.",
+        "line": null,
+        "ts_ms": null
+       }
+      ]
+     },
+     {
+      "heading": "Next steps",
+      "bullets": [
+       {
+        "text": "No sales-related next steps were identified.",
+        "line": null,
+        "ts_ms": null
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "template": "one_on_one",
+   "content": {
+    "tldr": "The team sync included celebration of promotions and individual updates on engineering tasks like POCs. Most feedback centered on improving team-wide communication and defining clear roles for upcoming initiatives.",
+    "sections": [
+     {
+      "heading": "Wins",
+      "bullets": [
+       {
+        "text": "Multiple team members received promotions this week.",
+        "line": 1,
+        "ts_ms": 21367
+       }
+      ]
+     },
+     {
+      "heading": "Concerns",
+      "bullets": [
+       {
+        "text": "John expressed concern about making commitments for others who are not present on the call.",
+        "line": 218,
+        "ts_ms": 3226577
+       },
+       {
+        "text": "Alex finds it difficult to track progress in the current agenda document format.",
+        "line": 130,
+        "ts_ms": 1984464
+       }
+      ]
+     },
+     {
+      "heading": "Feedback",
+      "bullets": [
+       {
+        "text": "Alexis suggested creating more formal pulse checks for the team every week.",
+        "line": 174,
+        "ts_ms": 2586264
+       }
+      ]
+     },
+     {
+      "heading": "Follow-ups",
+      "bullets": [
+       {
+        "text": "John will check in on the DRI status after consulting with Jake.",
+        "line": 218,
+        "ts_ms": 3226577
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-3-flash-preview"
+  }
+ ]
+}

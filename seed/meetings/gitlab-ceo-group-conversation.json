@@ -1,0 +1,1396 @@
+{
+ "meeting": {
+  "slug": "gitlab-ceo-group-conversation",
+  "title": "GitLab CEO group conversation",
+  "started_at": "2026-10-05T11:00:00-07:00",
+  "duration_ms": 1624000,
+  "media_type": "youtube",
+  "media_path": null,
+  "youtube_id": "HRWk_xeXc4Y",
+  "source_name": "GitLab on YouTube",
+  "source_url": "https://www.youtube.com/watch?v=HRWk_xeXc4Y",
+  "credit": "GitLab on YouTube: \"2021-08-16 General (CEO) GitLab Group Conversation (Public)\" https://www.youtube.com/watch?v=HRWk_xeXc4Y",
+  "kind": "demo",
+  "status": "ready",
+  "meeting_type": "general",
+  "source_key": "HRWk_xeXc4Y"
+ },
+ "speakers": [
+  {
+   "label": "A",
+   "name": "Sid",
+   "role": null,
+   "talk_ms": 1063404,
+   "turns": 21,
+   "color": 0
+  },
+  {
+   "label": "F",
+   "name": "Christina",
+   "role": null,
+   "talk_ms": 59996,
+   "turns": 4,
+   "color": 1
+  },
+  {
+   "label": "B",
+   "name": "John",
+   "role": null,
+   "talk_ms": 58806,
+   "turns": 6,
+   "color": 2
+  },
+  {
+   "label": "E",
+   "name": "Speaker E",
+   "role": null,
+   "talk_ms": 52094,
+   "turns": 3,
+   "color": 3
+  },
+  {
+   "label": "D",
+   "name": "Chris",
+   "role": null,
+   "talk_ms": 45688,
+   "turns": 6,
+   "color": 4
+  },
+  {
+   "label": "C",
+   "name": "PJ",
+   "role": null,
+   "talk_ms": 41956,
+   "turns": 2,
+   "color": 5
+  },
+  {
+   "label": "G",
+   "name": "Speaker G",
+   "role": null,
+   "talk_ms": 31871,
+   "turns": 1,
+   "color": 6
+  }
+ ],
+ "utterances": [
+  {
+   "idx": 0,
+   "speaker": "A",
+   "start_ms": 3142,
+   "end_ms": 13307,
+   "text": "Hi, I'm Sid Sijbrandij, co-founder and CEO at GitLab, and this is the CEO group conversation, and John has the first question. Thanks for that, John. Can you verbalize it?"
+  },
+  {
+   "idx": 1,
+   "speaker": "B",
+   "start_ms": 14606,
+   "end_ms": 33300,
+   "text": "Sure, thanks, Sid. I reviewed your video and deck and saw you're very excited about the addition of a new board member. I just wanted to get some insight into what the board selection process looks like and how you find new board members and make the decision to kind of add seats on the board."
+  },
+  {
+   "idx": 2,
+   "speaker": "A",
+   "start_ms": 34165,
+   "end_ms": 56669,
+   "text": "Yeah, thanks for that. Yeah, super excited to have Sunny on board. Um, on board, um, the— there's a, there's a committee called the NOMGOV committee. It stands for nominations and government, and one of the most important tasks of that board committee is to kind of get new board members and recruit new board members."
+  },
+  {
+   "idx": 3,
+   "speaker": "A",
+   "start_ms": 57738,
+   "end_ms": 64973,
+   "text": "And what we start off with is kind of seeing where can we add expertise."
+  },
+  {
+   "idx": 4,
+   "speaker": "A",
+   "start_ms": 70760,
+   "end_ms": 95047,
+   "text": "There's kind of two ways you look at it. You look at kind of where are all the different functions represented, like who has like sales experience, marketing experience, CEO experience, product, sales, legal, etc. The other viewpoint is like, how do we staff our committees? And then I'm thinking of the kind of a compensation committee and the audit committee."
+  },
+  {
+   "idx": 5,
+   "speaker": "A",
+   "start_ms": 95721,
+   "end_ms": 115871,
+   "text": "For the audit committee, for example, you need financial expertise. And then also what Sunny is bringing to that committee is kind of cyber expertise. So making sure that all our systems are safe and secure. And that our IT systems are well audited, et cetera."
+  },
+  {
+   "idx": 6,
+   "speaker": "A",
+   "start_ms": 117562,
+   "end_ms": 124634,
+   "text": "So we made a profile. And then it's kind of like recruiting executives."
+  },
+  {
+   "idx": 7,
+   "speaker": "A",
+   "start_ms": 126203,
+   "end_ms": 150885,
+   "text": "I think what I learned is that the stakes are a bit higher. You're approaching people that are very, very accomplished. Even they have bigger careers than the typical executives. They know a lot of people. So it's important that it's a good process for them. So we worked with an external recruiter in this case to make sure it was a good process for everyone."
+  },
+  {
+   "idx": 8,
+   "speaker": "A",
+   "start_ms": 152313,
+   "end_ms": 179538,
+   "text": "And then you depend a lot on existing board members to kind of shape the funnel. And then also we had criteria for like how to make sure that our funnel was as— funnel or pipeline was as diverse as it could be. And both in gender, ethnicity, but also we tried but did not succeed this time to get a non-US board member."
+  },
+  {
+   "idx": 9,
+   "speaker": "B",
+   "start_ms": 184197,
+   "end_ms": 186417,
+   "text": "Can I ask a quick follow-up question?"
+  },
+  {
+   "idx": 10,
+   "speaker": "A",
+   "start_ms": 186996,
+   "end_ms": 187334,
+   "text": "For sure."
+  },
+  {
+   "idx": 11,
+   "speaker": "B",
+   "start_ms": 188315,
+   "end_ms": 202123,
+   "text": "So through the recruiting process, you know, with these highly accomplished people, Like, do you kind of move from, you know, like, you're one candidate to the next, or is it— is there multiple candidates in process at the same time?"
+  },
+  {
+   "idx": 12,
+   "speaker": "A",
+   "start_ms": 202475,
+   "end_ms": 223529,
+   "text": "It's like you read my mind about something I forgot to tell. Because it's so sensitive, you tend to do one at a time instead of like three at a time, you know, saying, oh, we're— we, we made an offer to another candidate, which is more how you run if you run a regular search at GitLab for a team member. You, you you have more candidates in parallel."
+  },
+  {
+   "idx": 13,
+   "speaker": "A",
+   "start_ms": 223884,
+   "end_ms": 246001,
+   "text": "Because of the sensitivity, we did one at a time this time. You can also do two at a time, but you won't do three, four, or five at a time, but you might do 14 members. Great, thanks for bringing that up. Also, we were not super in a rush. Like, we're super happy we got someone, but there was no hard deadline, so we could like"
+  },
+  {
+   "idx": 14,
+   "speaker": "A",
+   "start_ms": 249070,
+   "end_ms": 252637,
+   "text": "make sure we made it a good process for people and optimize for that."
+  },
+  {
+   "idx": 15,
+   "speaker": "B",
+   "start_ms": 255057,
+   "end_ms": 255475,
+   "text": "Thank you."
+  },
+  {
+   "idx": 16,
+   "speaker": "B",
+   "start_ms": 258287,
+   "end_ms": 260536,
+   "text": "I can verbalize for Darren since he can't attend."
+  },
+  {
+   "idx": 17,
+   "speaker": "A",
+   "start_ms": 260617,
+   "end_ms": 261790,
+   "text": "Nice, thanks John."
+  },
+  {
+   "idx": 18,
+   "speaker": "B",
+   "start_ms": 263815,
+   "end_ms": 274989,
+   "text": "Darren asked, top 2 or 3 takeaways thus far from your sessions with an executive coach? We support professional coaching for managers at GitLab, so this may be useful for those considering taking advantage of this."
+  },
+  {
+   "idx": 19,
+   "speaker": "A",
+   "start_ms": 277140,
+   "end_ms": 285000,
+   "text": "It's funny because Darren attended the session with my executive coach yesterday. Not sure"
+  },
+  {
+   "idx": 20,
+   "speaker": "A",
+   "start_ms": 287730,
+   "end_ms": 290021,
+   "text": "what that was triggered by."
+  },
+  {
+   "idx": 21,
+   "speaker": "A",
+   "start_ms": 293232,
+   "end_ms": 321328,
+   "text": "I think maybe Chris wants to talk about what I learned during that session with the executive coach. I think there's a video on Unfiltered that we can link with a lesson. And the TL;DR of that lesson is if something isn't quite up to the level that you want it to be, instead of delaying communication, set expectations like, hey, it's not quite where I want it to be."
+  },
+  {
+   "idx": 22,
+   "speaker": "A",
+   "start_ms": 321408,
+   "end_ms": 350885,
+   "text": "It's falling short here and here, but don't delay getting feedback and interaction because If you're behind now, that's a good indicator you'll— it's going to be hard to have it ready at the appropriate time. So it's even more important to get feedback in early. I think one of the most important lessons I ever learned was from my coach John Hamm, not the actor, and it was when our results were falling short."
+  },
+  {
+   "idx": 23,
+   "speaker": "A",
+   "start_ms": 351351,
+   "end_ms": 373287,
+   "text": "We were going to be 30% short for the quarter, which is a lot. We ended up 20% short in additional kind of orders. And I was super spooked. And then it was 2 weeks before the end of the quarter. And John said, look, the board will not be—"
+  },
+  {
+   "idx": 24,
+   "speaker": "A",
+   "start_ms": 375895,
+   "end_ms": 400423,
+   "text": "they see startups, they know it goes up and down. So the problem is not so much They will not focus on the results not being there, but they will focus on do you understand why it is short and what you're going to do about it. And that sounds super simple and it was super simple. And he said, basically what you got to do is probably for every other day for the next 2 weeks, you should dive into the problem and figure it out."
+  },
+  {
+   "idx": 25,
+   "speaker": "A",
+   "start_ms": 401081,
+   "end_ms": 432734,
+   "text": "So I did that and I gave a very long— I opened the board meeting with like, huge problem is this. And these, I had a flip over once in, once in a few times in my life, I used to flip over. I drew out all the stuff that was wrong and then what we were gonna do about it. And then I, after half an hour, I paused and then they looked at each other and I remember Philippe Iltschew said, don't do any crazy things as in don't take any deals with bad terms to make the next quarter, because we see you're kind of on this, like,"
+  },
+  {
+   "idx": 26,
+   "speaker": "A",
+   "start_ms": 434443,
+   "end_ms": 435284,
+   "text": "And that was it."
+  },
+  {
+   "idx": 27,
+   "speaker": "A",
+   "start_ms": 437274,
+   "end_ms": 445152,
+   "text": "As John predicted, results can fall short. It's about being on top of it, understanding it, and remediating it."
+  },
+  {
+   "idx": 28,
+   "speaker": "D",
+   "start_ms": 451360,
+   "end_ms": 452556,
+   "text": "Thanks, Sid. I think I have the next question."
+  },
+  {
+   "idx": 29,
+   "speaker": "A",
+   "start_ms": 453760,
+   "end_ms": 462604,
+   "text": "You have the next question. But also, anything you want to share about the coaching session yesterday? Otherwise, feel free to go to the next question. Oh yeah, thanks, Sid."
+  },
+  {
+   "idx": 30,
+   "speaker": "D",
+   "start_ms": 463262,
+   "end_ms": 486143,
+   "text": "I think one of the big things was that people are not their work. So make sure that we kind of keep things to the work, not about the person, and make sure that we're always focused on solutions, not, you know, pointing out, you know, who didn't do what. Just make sure you stayed focused on results and our values, assume positive intent, and stay focused on the work."
+  },
+  {
+   "idx": 31,
+   "speaker": "A",
+   "start_ms": 487739,
+   "end_ms": 488367,
+   "text": "Thanks for that, Chris."
+  },
+  {
+   "idx": 32,
+   "speaker": "E",
+   "start_ms": 490237,
+   "end_ms": 492944,
+   "text": "Did I interrupt someone?"
+  },
+  {
+   "idx": 33,
+   "speaker": "D",
+   "start_ms": 492992,
+   "end_ms": 494249,
+   "text": "I thought someone was going to say something."
+  },
+  {
+   "idx": 34,
+   "speaker": "A",
+   "start_ms": 494870,
+   "end_ms": 495805,
+   "text": "No, I don't think so."
+  },
+  {
+   "idx": 35,
+   "speaker": "D",
+   "start_ms": 497467,
+   "end_ms": 507073,
+   "text": "I have the next question. So given the breadth of all of the training available through EdCast, have you had a chance to consume any of those courses lately that really interested you?"
+  },
+  {
+   "idx": 36,
+   "speaker": "A",
+   "start_ms": 508448,
+   "end_ms": 508480,
+   "text": "Ooh,"
+  },
+  {
+   "idx": 37,
+   "speaker": "A",
+   "start_ms": 510308,
+   "end_ms": 516992,
+   "text": "I, I did. I, I didn't do any extra courses. I did do our cybersecurity or phishing training, which is"
+  },
+  {
+   "idx": 38,
+   "speaker": "A",
+   "start_ms": 518846,
+   "end_ms": 521641,
+   "text": "required and important, and I encourage everyone to do that."
+  },
+  {
+   "idx": 39,
+   "speaker": "A",
+   "start_ms": 524570,
+   "end_ms": 541644,
+   "text": "I did some of the team member research groups introduction training, and that's about it. And I watch way too much YouTube on how to restart old engines that have been out of commission for a long time."
+  },
+  {
+   "idx": 40,
+   "speaker": "D",
+   "start_ms": 543019,
+   "end_ms": 548179,
+   "text": "What kind of engines, like two-stroke car engines? Some two-stroke, but most—"
+  },
+  {
+   "idx": 41,
+   "speaker": "A",
+   "start_ms": 548211,
+   "end_ms": 564618,
+   "text": "there's a really good one with like Someone made a translucent carburetor, and that's a really cool one to see how that works. But mostly like old diesel engines and tractors and stuff like that that have been abandoned for 20 years."
+  },
+  {
+   "idx": 42,
+   "speaker": "D",
+   "start_ms": 566031,
+   "end_ms": 571619,
+   "text": "You should join us over in the Wheels Slack channel, talk shop. Oh, that's good."
+  },
+  {
+   "idx": 43,
+   "speaker": "A",
+   "start_ms": 571860,
+   "end_ms": 573658,
+   "text": "I'll do that."
+  },
+  {
+   "idx": 44,
+   "speaker": "F",
+   "start_ms": 573787,
+   "end_ms": 578107,
+   "text": "Why did you start this new hobby with the engines."
+  },
+  {
+   "idx": 45,
+   "speaker": "A",
+   "start_ms": 579023,
+   "end_ms": 606972,
+   "text": "I don't know, yeah, YouTube figures out you're kind of— it gives you the satisfaction of repairing things without actually having to repair things, which is miserable. Yesterday I actually tried to repair something, it was extremely stressful. There was a power outage here. We have a generator which is amazing, it came on, but there was power to the to part of the house, but not the important parts like the internet."
+  },
+  {
+   "idx": 46,
+   "speaker": "A",
+   "start_ms": 607437,
+   "end_ms": 628429,
+   "text": "And I had all kinds of scheduled meetings, so I was running around with a screwdriver and flipped all kinds of switches and it didn't work. And it turned out the load transfer thing LED signaled its intent to switch power to the generator, but it did not signal its status because there was something stuck and you had to wiggle it to make that happen."
+  },
+  {
+   "idx": 47,
+   "speaker": "A",
+   "start_ms": 629339,
+   "end_ms": 630453,
+   "text": "And, but luckily"
+  },
+  {
+   "idx": 48,
+   "speaker": "A",
+   "start_ms": 632019,
+   "end_ms": 652604,
+   "text": "there was a scheduled maintenance of the generator just then, and that person did know what he was talking about. So let me show the thing that you should wiggle if your load doesn't turn on. By the way, this is not electrical advice, and you might electrocute yourself doing this. This part had to be wiggled."
+  },
+  {
+   "idx": 49,
+   "speaker": "A",
+   "start_ms": 654314,
+   "end_ms": 657535,
+   "text": "Please don't. Please only do this if you're a professional."
+  },
+  {
+   "idx": 50,
+   "speaker": "F",
+   "start_ms": 662140,
+   "end_ms": 685868,
+   "text": "Thanks for sharing. And actually, I have the next question. Um, you had a tweet like, I don't know, 2 weeks ago, and then I decided I will ask this for you on Ask Me Anything. You said that, \"I agree being in person for small parts of the time, I think the time should be spent on 3 things.\" And what I would like to ask is, like, how much time do you spend on these, on these"
+  },
+  {
+   "idx": 51,
+   "speaker": "F",
+   "start_ms": 687573,
+   "end_ms": 694576,
+   "text": "3 things? Like, now I can't see the question anymore, but like hard decisions, giving each other feedback, and informal communication."
+  },
+  {
+   "idx": 52,
+   "speaker": "F",
+   "start_ms": 700417,
+   "end_ms": 704145,
+   "text": "Um, or how much would you like to spend? What do you think is, is the perfect and the best for you?"
+  },
+  {
+   "idx": 53,
+   "speaker": "A",
+   "start_ms": 704874,
+   "end_ms": 707288,
+   "text": "I think informal communication is the most important."
+  },
+  {
+   "idx": 54,
+   "speaker": "A",
+   "start_ms": 710198,
+   "end_ms": 738423,
+   "text": "Thing. I think hard decisions sometimes need a lot of context. And it's kind of more— it feels like people give slightly more information if they're in person. They'll add a little bit more context. So it might be nice. But at GitLab, we take hard decisions all the time in a remote setting. It gets more about having enough time to hear everyone's viewpoint, have time to reflect, time to look over the data once more."
+  },
+  {
+   "idx": 55,
+   "speaker": "A",
+   "start_ms": 739668,
+   "end_ms": 739975,
+   "text": "And then"
+  },
+  {
+   "idx": 56,
+   "speaker": "A",
+   "start_ms": 741544,
+   "end_ms": 748854,
+   "text": "if you give each other feedback without having that kind of basis of trust that informal communication creates, it might even backfire."
+  },
+  {
+   "idx": 57,
+   "speaker": "A",
+   "start_ms": 750565,
+   "end_ms": 757569,
+   "text": "So I'd say informal communication is the most important thing. Thank you. Thanks for asking."
+  },
+  {
+   "idx": 58,
+   "speaker": "A",
+   "start_ms": 761364,
+   "end_ms": 766448,
+   "text": "John, you did a good job vocalizing Darren's question. Can you do Matthew's one as well?"
+  },
+  {
+   "idx": 59,
+   "speaker": "A",
+   "start_ms": 768590,
+   "end_ms": 768799,
+   "text": "Happy to."
+  },
+  {
+   "idx": 60,
+   "speaker": "B",
+   "start_ms": 769654,
+   "end_ms": 779897,
+   "text": "When you look ahead to our growth to a billion-dollar company, what do you find is the biggest challenge we will face as a company in the next 2 to 3 years, which we will need to keep in mind to address as we grow?"
+  },
+  {
+   "idx": 61,
+   "speaker": "A",
+   "start_ms": 782050,
+   "end_ms": 786710,
+   "text": "Yeah, that's a, that's a great question. First of all, I love that"
+  },
+  {
+   "idx": 62,
+   "speaker": "A",
+   "start_ms": 788474,
+   "end_ms": 798593,
+   "text": "implied is revenue. So as a company, we should focus on revenue and not valuation. And that's great that that's behind Matthew, his question."
+  },
+  {
+   "idx": 63,
+   "speaker": "A",
+   "start_ms": 800877,
+   "end_ms": 802675,
+   "text": "There's a lot to do."
+  },
+  {
+   "idx": 64,
+   "speaker": "A",
+   "start_ms": 805072,
+   "end_ms": 807426,
+   "text": "I think one of the most important things is to"
+  },
+  {
+   "idx": 65,
+   "speaker": "A",
+   "start_ms": 810228,
+   "end_ms": 825940,
+   "text": "make sure that we clearly communicate the advantages of a single application over DIY DevOps. We take best of, best-in-class point solutions and string them together yourself and have custom integrations on top of that. If we can,"
+  },
+  {
+   "idx": 66,
+   "speaker": "A",
+   "start_ms": 828170,
+   "end_ms": 836312,
+   "text": "we know it's much better because when our customers and users start using GitLab, they love it and they expand the usage. I think there's, but there's a whole,"
+  },
+  {
+   "idx": 67,
+   "speaker": "A",
+   "start_ms": 837870,
+   "end_ms": 860013,
+   "text": "most companies are not aware yet and not convinced yet. I think that's one of the most important things that are ahead of us. And then look, it also means everything else. It means like making sure GitLab.com is reliable. It means maturing all the parts of the product. It means doing great in sales and having great sales materials."
+  },
+  {
+   "idx": 68,
+   "speaker": "A",
+   "start_ms": 860061,
+   "end_ms": 878678,
+   "text": "It means staying compliant. And it takes— we're 1,400 people now, so it takes a village. But I think what's really exciting is we know that people are going to figure out over time that a DevOps platform is better. What can we do to accelerate that?"
+  },
+  {
+   "idx": 69,
+   "speaker": "G",
+   "start_ms": 883807,
+   "end_ms": 897287,
+   "text": "I have the next question. Thank you for supporting the Latinx team, or your background, and for being a champion of DIB. And then I ask you, in your opinion, how should we be encouraging wider participation? Right?"
+  },
+  {
+   "idx": 70,
+   "speaker": "G",
+   "start_ms": 898867,
+   "end_ms": 917258,
+   "text": "Actions we can take, things we can do to make a more positive impact, especially with the— you know, it concerns me a bit, the early notice today that I got with the loss of an amazing champion. Not that we don't have other amazing people contributing to it, but what can we do to keep this moving?"
+  },
+  {
+   "idx": 71,
+   "speaker": "A",
+   "start_ms": 920440,
+   "end_ms": 936847,
+   "text": "Yeah, so it's a great question, and we'll Thanks for keeping this video public. And in the doc, you can find the name of the person who left, and that's been an amazing person, and she did a lot to make sure that the TMRGs were"
+  },
+  {
+   "idx": 72,
+   "speaker": "A",
+   "start_ms": 938350,
+   "end_ms": 943290,
+   "text": "organized well and had great attendance and got ahead."
+  },
+  {
+   "idx": 73,
+   "speaker": "A",
+   "start_ms": 946703,
+   "end_ms": 950055,
+   "text": "There's a couple of things I'm focused on. One"
+  },
+  {
+   "idx": 74,
+   "speaker": "A",
+   "start_ms": 951796,
+   "end_ms": 967010,
+   "text": "One of them is make sure that there's kind of— it would be great to have more money and more like people dedicated"
+  },
+  {
+   "idx": 75,
+   "speaker": "A",
+   "start_ms": 972200,
+   "end_ms": 974575,
+   "text": "to making sure we have a positive impact in the world."
+  },
+  {
+   "idx": 76,
+   "speaker": "A",
+   "start_ms": 976135,
+   "end_ms": 983200,
+   "text": "Think that that could have a very symbiotic relationship with the TMRGs."
+  },
+  {
+   "idx": 77,
+   "speaker": "A",
+   "start_ms": 986226,
+   "end_ms": 995023,
+   "text": "I'm grateful for the kind of the reverse AMAs that I've done and will continue to do them."
+  },
+  {
+   "idx": 78,
+   "speaker": "A",
+   "start_ms": 998304,
+   "end_ms": 1006888,
+   "text": "And maybe it's a good venue. We've got 129 people in the call. But to encourage people to switch their Zoom backgrounds for the month."
+  },
+  {
+   "idx": 79,
+   "speaker": "A",
+   "start_ms": 1009598,
+   "end_ms": 1031378,
+   "text": "And yesterday was the start of the month, and I learned yesterday that it's because 7 South American countries declared independence on that same day, September 15th, in the same year. So that was a cool fact I learned."
+  },
+  {
+   "idx": 80,
+   "speaker": "A",
+   "start_ms": 1035817,
+   "end_ms": 1039731,
+   "text": "And we'll make sure that"
+  },
+  {
+   "idx": 81,
+   "speaker": "A",
+   "start_ms": 1043120,
+   "end_ms": 1049258,
+   "text": "department, that group is adequately staffed. And I'm sure we'll find a great new person."
+  },
+  {
+   "idx": 82,
+   "speaker": "A",
+   "start_ms": 1053067,
+   "end_ms": 1057197,
+   "text": "And thanks for whoever linked that back home. Appreciate it. PJ?"
+  },
+  {
+   "idx": 83,
+   "speaker": "C",
+   "start_ms": 1058734,
+   "end_ms": 1083363,
+   "text": "Hey, um, I hope my microphone is working right now. I come from a background of education where like certain goals have to be met. You have to cover certain materials, you have to make sure the kid's ready for the next year because once they're gone, they're, they're gone. And one of my adjustments to a more corporate world is being okay with like our OKRs, our quarterly goals, not always being green or not really hitting the mark."
+  },
+  {
+   "idx": 84,
+   "speaker": "C",
+   "start_ms": 1083459,
+   "end_ms": 1099318,
+   "text": "And I was wondering if there was any advice for moving into that mindset, I get, uh, like nervous and anxious that I'm like, oh, like I get the feeling like I'm not getting my kids prepared, if that makes sense, from my previous job. So how can I make that adjustment in my mind?"
+  },
+  {
+   "idx": 85,
+   "speaker": "A",
+   "start_ms": 1100813,
+   "end_ms": 1102067,
+   "text": "Yeah, um,"
+  },
+  {
+   "idx": 86,
+   "speaker": "A",
+   "start_ms": 1104209,
+   "end_ms": 1111465,
+   "text": "the, the mental model I use is you want to— like, every outcome is a distribution."
+  },
+  {
+   "idx": 87,
+   "speaker": "A",
+   "start_ms": 1113371,
+   "end_ms": 1113598,
+   "text": "And"
+  },
+  {
+   "idx": 88,
+   "speaker": "A",
+   "start_ms": 1115740,
+   "end_ms": 1117703,
+   "text": "there's no part, like,"
+  },
+  {
+   "idx": 89,
+   "speaker": "A",
+   "start_ms": 1119552,
+   "end_ms": 1150360,
+   "text": "it's not gonna look like there's, there's, there's the point where you're 100% sure that something will happen is the, the long tail to the, in my mind, the left. And it's like, it's a super not ambitious goal. So if you're going for 100%, you'll set goals that are way too low. So it's much better to aim for a goal that's not even at the 50th percentile, but at like 70% sure you're going to hit it."
+  },
+  {
+   "idx": 90,
+   "speaker": "A",
+   "start_ms": 1151622,
+   "end_ms": 1161107,
+   "text": "Because it's better to kind of aim for the mass of the probability distribution than to be out in some weird tail. It's like"
+  },
+  {
+   "idx": 91,
+   "speaker": "A",
+   "start_ms": 1162628,
+   "end_ms": 1168888,
+   "text": "we've seen, for example, In engineering, when we said, hey, you gotta be sure you ship everything."
+  },
+  {
+   "idx": 92,
+   "speaker": "A",
+   "start_ms": 1173017,
+   "end_ms": 1197724,
+   "text": "We, our plan was half as much. And the weird thing was the rate at which we accomplished things was not significantly higher. It was about the same, 70%. So it's just hard to get stuff done. So at least at least get 70% done of an ambitious goal, that's way better than getting 70% done of a goal that's half that."
+  },
+  {
+   "idx": 93,
+   "speaker": "A",
+   "start_ms": 1202494,
+   "end_ms": 1203882,
+   "text": "Does that help, PJ?"
+  },
+  {
+   "idx": 94,
+   "speaker": "C",
+   "start_ms": 1206206,
+   "end_ms": 1207674,
+   "text": "Absolutely, thank you."
+  },
+  {
+   "idx": 95,
+   "speaker": "F",
+   "start_ms": 1208417,
+   "end_ms": 1210745,
+   "text": "May I try to get more clarification on that?"
+  },
+  {
+   "idx": 96,
+   "speaker": "A",
+   "start_ms": 1211231,
+   "end_ms": 1211895,
+   "text": "Yeah, for sure."
+  },
+  {
+   "idx": 97,
+   "speaker": "F",
+   "start_ms": 1212057,
+   "end_ms": 1230946,
+   "text": "So the idea is here that, getting back to the original setup of education, is that You don't aim just to set up your kids for next year, but you aim to set up your kids to be straight A's for the next year. And then you fail to 70% of that. Something around those things, that's what ambition would mean."
+  },
+  {
+   "idx": 98,
+   "speaker": "A",
+   "start_ms": 1231604,
+   "end_ms": 1242442,
+   "text": "Yeah, I think that's an interesting way to look at it. And I'm not sure straight A's is the 70th percentile, but it depends a bit on your kids as well, I guess. Yeah."
+  },
+  {
+   "idx": 99,
+   "speaker": "A",
+   "start_ms": 1247975,
+   "end_ms": 1249148,
+   "text": "Thanks for that, Christina."
+  },
+  {
+   "idx": 100,
+   "speaker": "E",
+   "start_ms": 1250658,
+   "end_ms": 1265863,
+   "text": "Hi, Sid. I'd love to hear your thoughts on how we may be able to iterate on bringing GitLab to nonprofits via kind of a more non-for— or sorry, via a more formal nonprofit program."
+  },
+  {
+   "idx": 101,
+   "speaker": "E",
+   "start_ms": 1267578,
+   "end_ms": 1273225,
+   "text": "There are things that we've been doing that are a great first stop, such as working with the, the Last Mile and the like."
+  },
+  {
+   "idx": 102,
+   "speaker": "E",
+   "start_ms": 1274753,
+   "end_ms": 1295758,
+   "text": "But there are so many different kinds of nonprofits out there that may or may not align with our values. So if we were to think of kind of a next step of how we would start opening that up, obviously if we open up a program, we're going to have a lot of applications, and there's a scaling issue there as well. So I just wanted to kind of hear your thoughts on that."
+  },
+  {
+   "idx": 103,
+   "speaker": "A",
+   "start_ms": 1296978,
+   "end_ms": 1310301,
+   "text": "Yeah, well, I was in DC yesterday of the community relations group of which you are a part. And I saw the slide that I'll share now."
+  },
+  {
+   "idx": 104,
+   "speaker": "A",
+   "start_ms": 1314484,
+   "end_ms": 1336164,
+   "text": "Here I saw the board has requested a corporate social responsibility fan plan before considering nonprofit licenses. And I was like, oh, what's going on there? And so thanks for highlighting, like, and that's why it's so important we talk about the stuff that's not going well, because like sometimes people can help."
+  },
+  {
+   "idx": 105,
+   "speaker": "A",
+   "start_ms": 1336794,
+   "end_ms": 1339334,
+   "text": "Sometimes people think they can help, which is the case now."
+  },
+  {
+   "idx": 106,
+   "speaker": "A",
+   "start_ms": 1341290,
+   "end_ms": 1342185,
+   "text": "So first of all,"
+  },
+  {
+   "idx": 107,
+   "speaker": "A",
+   "start_ms": 1343927,
+   "end_ms": 1365471,
+   "text": "the board has an advisory role. So they will advise us things and then it's up to the management of the company to do that or not. Now, if we're doing pretty badly in follow-up, in just if we're doing badly in general, they can replace me. That's one of the, that's the action they can take."
+  },
+  {
+   "idx": 108,
+   "speaker": "A",
+   "start_ms": 1365793,
+   "end_ms": 1391026,
+   "text": "And they have an approval right on things like the budgets. But they can maybe hold up something, but it's not normal for them to do something like that. So I was intrigued and I, yesterday I went and talked and what was behind this. And what is behind this is if we give a free license to"
+  },
+  {
+   "idx": 109,
+   "speaker": "A",
+   "start_ms": 1392948,
+   "end_ms": 1398405,
+   "text": "a not— a nonprofit, we can take that as—"
+  },
+  {
+   "idx": 110,
+   "speaker": "A",
+   "start_ms": 1400836,
+   "end_ms": 1425818,
+   "text": "sometimes you take that as not a cash expense, but you account for the dollar value. So it's an accounting thing. And it might not be necessary to have a corporate social responsibility plan in place before we figure out the accounting treatment. So the relevant people will now discuss that and see whether we can already figure out the accounting treatment."
+  },
+  {
+   "idx": 111,
+   "speaker": "A",
+   "start_ms": 1426188,
+   "end_ms": 1438875,
+   "text": "So I've seen it, I'm trying to unblock it. Thanks for, like, making clear what the— where the problems are and and we're trying to get that addressed. Apart from that,"
+  },
+  {
+   "idx": 112,
+   "speaker": "A",
+   "start_ms": 1440844,
+   "end_ms": 1450465,
+   "text": "potentially giving these licenses and the accounting treatment of that, we're also looking into kind of a more sustained way to kind of support causes we believe in."
+  },
+  {
+   "idx": 113,
+   "speaker": "E",
+   "start_ms": 1453655,
+   "end_ms": 1461185,
+   "text": "Thank you, Seth. That's a great answer, and I have some more follow-ups to that comment that I'll share after. Thank you. Sure. Yeah."
+  },
+  {
+   "idx": 114,
+   "speaker": "A",
+   "start_ms": 1461509,
+   "end_ms": 1463953,
+   "text": "After the livestream, I'll be in the call for a second."
+  },
+  {
+   "idx": 115,
+   "speaker": "A",
+   "start_ms": 1466617,
+   "end_ms": 1474637,
+   "text": "Christine? Hey, Sid. I was curious if— how you're feeling about the Q3 CEO OKRs and if there's any points that need more focus."
+  },
+  {
+   "idx": 116,
+   "speaker": "A",
+   "start_ms": 1476667,
+   "end_ms": 1477423,
+   "text": "Thanks for that."
+  },
+  {
+   "idx": 117,
+   "speaker": "A",
+   "start_ms": 1479197,
+   "end_ms": 1480544,
+   "text": "So let's have a quick look."
+  },
+  {
+   "idx": 118,
+   "speaker": "A",
+   "start_ms": 1488956,
+   "end_ms": 1490928,
+   "text": "I'm not sharing the right thing."
+  },
+  {
+   "idx": 119,
+   "speaker": "A",
+   "start_ms": 1492832,
+   "end_ms": 1494264,
+   "text": "Sharing the right thing now."
+  },
+  {
+   "idx": 120,
+   "speaker": "A",
+   "start_ms": 1499349,
+   "end_ms": 1505011,
+   "text": "So I think we're doing well here. We very much— so GitLab Managed is the future,"
+  },
+  {
+   "idx": 121,
+   "speaker": "A",
+   "start_ms": 1506620,
+   "end_ms": 1512502,
+   "text": "and I think Project Horse is making great progress, and thanks to the people in that"
+  },
+  {
+   "idx": 122,
+   "speaker": "A",
+   "start_ms": 1514416,
+   "end_ms": 1533824,
+   "text": "team, Matt and Andrew, Josh, and everyone else who's contributing there. I think there's a, there's a lot of focus on the reliability of GitLab.com, and a lot of people are now spending time kind of working on infra dev issues and things like that."
+  },
+  {
+   "idx": 123,
+   "speaker": "A",
+   "start_ms": 1535841,
+   "end_ms": 1537781,
+   "text": "So a lot of work on the conversion from free"
+  },
+  {
+   "idx": 124,
+   "speaker": "A",
+   "start_ms": 1539410,
+   "end_ms": 1550971,
+   "text": "Some of these initiatives are starting to pay off. I love product has an ambitious plan for our registration tier, for example. I'm super encouraged by that."
+  },
+  {
+   "idx": 125,
+   "speaker": "A",
+   "start_ms": 1555201,
+   "end_ms": 1560847,
+   "text": "And also the work on improving the golden page is super, super exciting."
+  },
+  {
+   "idx": 126,
+   "speaker": "A",
+   "start_ms": 1563452,
+   "end_ms": 1566548,
+   "text": "Yeah. I think we have the right set of OKRs. We're"
+  },
+  {
+   "idx": 127,
+   "speaker": "A",
+   "start_ms": 1568070,
+   "end_ms": 1572832,
+   "text": "making progress. Your question was any points that need more focus?"
+  },
+  {
+   "idx": 128,
+   "speaker": "A",
+   "start_ms": 1575150,
+   "end_ms": 1578431,
+   "text": "We're not going to— we're going to achieve 70% of them."
+  },
+  {
+   "idx": 129,
+   "speaker": "A",
+   "start_ms": 1580369,
+   "end_ms": 1601865,
+   "text": "PJ asked the question. He's— they set some really ambitious goals, and they're not going to get dinged for not achieving them. But what I really liked is that education. An L&D group came back to me with like, we looked at the data and the stuff we're doing with you, no one is watching it. So we're going to stop doing that. I'm like, wow, that's amazing."
+  },
+  {
+   "idx": 130,
+   "speaker": "A",
+   "start_ms": 1602090,
+   "end_ms": 1620823,
+   "text": "Because like, so important to say no to stuff so that you have time for the stuff that works. So I'm really encouraged by the data-driven focus that they have and kind of their focus in activities. So I'm excited and I'm very positive. We'll do great to Discord. Is it?"
+  }
+ ],
+ "chapters": [
+  {
+   "idx": 0,
+   "title": "Board member selection process",
+   "start_ms": 0,
+   "gist": "Sid explains how GitLab recruits board members and evaluates expertise and diversity.",
+   "line": 0,
+   "end_ms": 258287
+  },
+  {
+   "idx": 1,
+   "title": "Executive coaching lessons",
+   "start_ms": 258287,
+   "gist": "Sid shares insights from his executive coach regarding early communication and handling falling short of results.",
+   "line": 16,
+   "end_ms": 497467
+  },
+  {
+   "idx": 2,
+   "title": "EdCast and personal hobbies",
+   "start_ms": 497467,
+   "gist": "Sid discusses required compliance training and his hobby of watching engine repair videos.",
+   "line": 35,
+   "end_ms": 662140
+  },
+  {
+   "idx": 3,
+   "title": "In-person work priorities",
+   "start_ms": 662140,
+   "gist": "Sid explains why informal communication is the most important aspect of in-person time.",
+   "line": 50,
+   "end_ms": 761364
+  },
+  {
+   "idx": 4,
+   "title": "Company growth to a billion",
+   "start_ms": 761364,
+   "gist": "Sid discusses the biggest challenge of communicating the value of a single DevOps application.",
+   "line": 58,
+   "end_ms": 883807
+  },
+  {
+   "idx": 5,
+   "title": "Supporting team member resource groups",
+   "start_ms": 883807,
+   "gist": "Participants ask about encouraging wider participation and supporting DIB initiatives.",
+   "line": 69,
+   "end_ms": 1058734
+  },
+  {
+   "idx": 6,
+   "title": "Mindset on OKRs",
+   "start_ms": 1058734,
+   "gist": "Sid explains the probability distribution model for setting ambitious goals and hitting about 70%.",
+   "line": 83,
+   "end_ms": 1250658
+  },
+  {
+   "idx": 7,
+   "title": "Nonprofit program and board role",
+   "start_ms": 1250658,
+   "gist": "Sid clarifies the board advisory role and addresses the corporate social responsibility plan for nonprofit licenses.",
+   "line": 100,
+   "end_ms": 1466617
+  },
+  {
+   "idx": 8,
+   "title": "Q3 CEO OKRs review",
+   "start_ms": 1466617,
+   "gist": "Sid reviews current progress on Q3 OKRs, reliability, and saying no to ineffective activities.",
+   "line": 115,
+   "end_ms": 1624000
+  }
+ ],
+ "action_items": [
+  {
+   "idx": 0,
+   "text": "Link the video on Unfiltered regarding lessons from the executive coaching session.",
+   "owner_name": null,
+   "speaker_label": null,
+   "ts_ms": 293232,
+   "line": 21
+  },
+  {
+   "idx": 1,
+   "text": "Join the Wheels Slack channel to talk shop about engines.",
+   "owner_name": "Sid",
+   "speaker_label": "A",
+   "ts_ms": 566031,
+   "line": 42
+  },
+  {
+   "idx": 2,
+   "text": "Discuss accounting treatment for nonprofit licenses with relevant people to unblock the process.",
+   "owner_name": null,
+   "speaker_label": null,
+   "ts_ms": 1400836,
+   "line": 110
+  }
+ ],
+ "summaries": [
+  {
+   "template": "general",
+   "content": {
+    "tldr": "Sid Sijbrandij hosted the CEO group conversation covering topics ranging from board member recruitment and executive coaching to company growth and Q3 OKRs. Participants asked questions about remote work, DIB initiatives, and nonprofit programs. Sid emphasized data-driven focus and ambitious goal-setting.",
+    "sections": [
+     {
+      "heading": "Meeting purpose",
+      "bullets": [
+       {
+        "text": "The meeting is the CEO group conversation where team members ask Sid questions.",
+        "line": 0,
+        "ts_ms": 3142
+       }
+      ]
+     },
+     {
+      "heading": "Key takeaways",
+      "bullets": [
+       {
+        "text": "Sid emphasized that ambition means aiming for a goal where there is about a 70% chance of success.",
+        "line": 89,
+        "ts_ms": 1119552
+       },
+       {
+        "text": "Informal communication is highlighted as the most important part of in-person work.",
+        "line": 54,
+        "ts_ms": 710198
+       }
+      ]
+     },
+     {
+      "heading": "Topics",
+      "bullets": [
+       {
+        "text": "John asked about the board member selection and recruitment process.",
+        "line": 1,
+        "ts_ms": 14606
+       },
+       {
+        "text": "Chris and John discussed lessons learned from Sid's executive coaching session.",
+        "line": 18,
+        "ts_ms": 263815
+       },
+       {
+        "text": "Christina asked about Sid's views on in-person work priorities.",
+        "line": 50,
+        "ts_ms": 662140
+       },
+       {
+        "text": "Speaker E asked about formalizing a nonprofit program and addressing corporate social responsibility plans.",
+        "line": 100,
+        "ts_ms": 1250658
+       }
+      ]
+     },
+     {
+      "heading": "Next steps",
+      "bullets": [
+       {
+        "text": "Relevant people will discuss the accounting treatment for nonprofit licenses.",
+        "line": 110,
+        "ts_ms": 1400836
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-3.5-flash-lite"
+  },
+  {
+   "template": "project_update",
+   "content": {
+    "tldr": "Sid reviewed the progress on Q3 CEO OKRs, noting strong momentum in GitLab Managed and reliability efforts. The team discussed ongoing challenges in communicating the benefits of a single DevOps application.",
+    "sections": [
+     {
+      "heading": "Progress",
+      "bullets": [
+       {
+        "text": "Project Horse is making great progress with contributions from Matt, Andrew, and Josh.",
+        "line": 121,
+        "ts_ms": 1506620
+       },
+       {
+        "text": "Product has an ambitious plan for the registration tier.",
+        "line": 124,
+        "ts_ms": 1539410
+       }
+      ]
+     },
+     {
+      "heading": "Blockers",
+      "bullets": [
+       {
+        "text": "Nonprofit licensing was blocked pending a corporate social responsibility plan and accounting treatment review.",
+        "line": 104,
+        "ts_ms": 1314484
+       }
+      ]
+     },
+     {
+      "heading": "Decisions",
+      "bullets": [
+       {
+        "text": "The L&D group decided to stop running activities where data showed no one was watching.",
+        "line": 129,
+        "ts_ms": 1580369
+       }
+      ]
+     },
+     {
+      "heading": "Next steps",
+      "bullets": [
+       {
+        "text": "Relevant people will review the accounting treatment for nonprofit licenses to unblock the process.",
+        "line": 110,
+        "ts_ms": 1400836
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-3.5-flash-lite"
+  },
+  {
+   "template": "standup",
+   "content": {
+    "tldr": "This is a general Q&A session and not a daily standup meeting. Individual daily progress was not reported.",
+    "sections": [
+     {
+      "heading": "Yesterday / done",
+      "bullets": [
+       {
+        "text": "No yesterday tasks were reported.",
+        "line": null,
+        "ts_ms": null
+       }
+      ]
+     },
+     {
+      "heading": "Today / planned",
+      "bullets": [
+       {
+        "text": "No planned daily tasks were discussed.",
+        "line": null,
+        "ts_ms": null
+       }
+      ]
+     },
+     {
+      "heading": "Blockers",
+      "bullets": [
+       {
+        "text": "No daily operational blockers were reported.",
+        "line": null,
+        "ts_ms": null
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-3.5-flash-lite"
+  },
+  {
+   "template": "retro",
+   "content": {
+    "tldr": "The team reflected on company processes, goal setting, and communication practices during the general conversation.",
+    "sections": [
+     {
+      "heading": "What went well",
+      "bullets": [
+       {
+        "text": "The L&D group successfully used data to stop ineffective activities and focus on what works.",
+        "line": 129,
+        "ts_ms": 1580369
+       }
+      ]
+     },
+     {
+      "heading": "What didn't",
+      "bullets": [
+       {
+        "text": "The team did not succeed in recruiting a non-US board member this time.",
+        "line": 8,
+        "ts_ms": 152313
+       }
+      ]
+     },
+     {
+      "heading": "Ideas to improve",
+      "bullets": [
+       {
+        "text": "Sid suggested aiming for ambitious goals with a 70% probability of success rather than setting them too low.",
+        "line": 89,
+        "ts_ms": 1119552
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-3.5-flash-lite"
+  },
+  {
+   "template": "sales",
+   "content": {
+    "tldr": "This meeting is an internal company group conversation and did not involve sales prospects or sales pipeline reviews.",
+    "sections": [
+     {
+      "heading": "Prospect needs",
+      "bullets": [
+       {
+        "text": "No prospect needs were discussed.",
+        "line": null,
+        "ts_ms": null
+       }
+      ]
+     },
+     {
+      "heading": "Objections",
+      "bullets": [
+       {
+        "text": "No sales objections were discussed.",
+        "line": null,
+        "ts_ms": null
+       }
+      ]
+     },
+     {
+      "heading": "Budget & timeline",
+      "bullets": [
+       {
+        "text": "No sales budget or timeline was discussed.",
+        "line": null,
+        "ts_ms": null
+       }
+      ]
+     },
+     {
+      "heading": "Next steps",
+      "bullets": [
+       {
+        "text": "No sales next steps were agreed upon.",
+        "line": null,
+        "ts_ms": null
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-3.5-flash-lite"
+  },
+  {
+   "template": "one_on_one",
+   "content": {
+    "tldr": "This meeting is a public group conversation with many attendees, not a one-on-one meeting between a manager and direct report.",
+    "sections": [
+     {
+      "heading": "Wins",
+      "bullets": [
+       {
+        "text": "No individual one-on-one wins were reviewed.",
+        "line": null,
+        "ts_ms": null
+       }
+      ]
+     },
+     {
+      "heading": "Concerns",
+      "bullets": [
+       {
+        "text": "No personal concerns were discussed.",
+        "line": null,
+        "ts_ms": null
+       }
+      ]
+     },
+     {
+      "heading": "Feedback",
+      "bullets": [
+       {
+        "text": "Sid discussed the importance of giving feedback early instead of delaying communication.",
+        "line": 21,
+        "ts_ms": 293232
+       }
+      ]
+     },
+     {
+      "heading": "Follow-ups",
+      "bullets": [
+       {
+        "text": "No individual follow-up items were assigned.",
+        "line": null,
+        "ts_ms": null
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-3.5-flash-lite"
+  }
+ ]
+}

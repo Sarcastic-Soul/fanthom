@@ -1,0 +1,1794 @@
+{
+ "meeting": {
+  "slug": "project-kickoff-for-remote-control-design",
+  "title": "Project kickoff for remote control design",
+  "started_at": "2026-09-15T10:00:00+05:30",
+  "duration_ms": 1272640,
+  "media_type": "audio",
+  "media_path": "ami/ES2002a.mp3",
+  "youtube_id": null,
+  "source_name": "AMI Meeting Corpus",
+  "source_url": "https://groups.inf.ed.ac.uk/ami/corpus/",
+  "credit": "AMI Meeting Corpus, CC BY 4.0 (meeting ES2002a)",
+  "kind": "demo",
+  "status": "ready",
+  "meeting_type": "general",
+  "source_key": "ES2002a"
+ },
+ "speakers": [
+  {
+   "label": "B",
+   "name": "Project Manager",
+   "role": "Project Manager",
+   "talk_ms": 467110,
+   "turns": 55,
+   "color": 0
+  },
+  {
+   "label": "D",
+   "name": "Marketing Expert",
+   "role": "Marketing Expert",
+   "talk_ms": 371201,
+   "turns": 52,
+   "color": 1
+  },
+  {
+   "label": "A",
+   "name": "Industrial Designer",
+   "role": "Industrial Designer",
+   "talk_ms": 82310,
+   "turns": 18,
+   "color": 2
+  },
+  {
+   "label": "C",
+   "name": "User Interface Designer",
+   "role": "User Interface Designer",
+   "talk_ms": 23710,
+   "turns": 6,
+   "color": 3
+  }
+ ],
+ "utterances": [
+  {
+   "idx": 0,
+   "speaker": "B",
+   "start_ms": 50420,
+   "end_ms": 50990,
+   "text": "Okay."
+  },
+  {
+   "idx": 1,
+   "speaker": "B",
+   "start_ms": 53560,
+   "end_ms": 53960,
+   "text": "Right."
+  },
+  {
+   "idx": 2,
+   "speaker": "B",
+   "start_ms": 55980,
+   "end_ms": 77290,
+   "text": "Well this is the kick-off meeting for our our project. and this is just what we're gonna be doing over the next twenty five minutes. so first of all, just to kind of make sure that we all know each other, I'm Laura and I'm the project manager. Do you want to introduce yourself again?"
+  },
+  {
+   "idx": 3,
+   "speaker": "D",
+   "start_ms": 67210,
+   "end_ms": 67450,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 4,
+   "speaker": "D",
+   "start_ms": 74890,
+   "end_ms": 75240,
+   "text": "Great."
+  },
+  {
+   "idx": 5,
+   "speaker": "A",
+   "start_ms": 77440,
+   "end_ms": 80870,
+   "text": "Hi, I'm David and I'm supposed to be an industrial designer."
+  },
+  {
+   "idx": 6,
+   "speaker": "B",
+   "start_ms": 80810,
+   "end_ms": 81260,
+   "text": "Okay."
+  },
+  {
+   "idx": 7,
+   "speaker": "D",
+   "start_ms": 82080,
+   "end_ms": 84460,
+   "text": "And I'm Andrew and I'm our marketing."
+  },
+  {
+   "idx": 8,
+   "speaker": "C",
+   "start_ms": 85990,
+   "end_ms": 88710,
+   "text": "I'm Craig and I'm User Interface."
+  },
+  {
+   "idx": 9,
+   "speaker": "D",
+   "start_ms": 86070,
+   "end_ms": 86500,
+   "text": "Expert."
+  },
+  {
+   "idx": 10,
+   "speaker": "B",
+   "start_ms": 89300,
+   "end_ms": 101760,
+   "text": "Great. Okay. so we're designing a new remote control and Oh I have to record who's here actually. So that's David, Andrew and Craig, isn't it?"
+  },
+  {
+   "idx": 11,
+   "speaker": "B",
+   "start_ms": 104890,
+   "end_ms": 106580,
+   "text": "And you all arrived on time."
+  },
+  {
+   "idx": 12,
+   "speaker": "B",
+   "start_ms": 108960,
+   "end_ms": 131360,
+   "text": "Yeah so design a new remote control. as you can see it's supposed to be original, trendy and user friendly. so that's kind of our our brief, as it were. and so there are three different stages to the design. I'm not really sure what what you guys have already received in your emails."
+  },
+  {
+   "idx": 13,
+   "speaker": "B",
+   "start_ms": 131360,
+   "end_ms": 132030,
+   "text": "What did you get?"
+  },
+  {
+   "idx": 14,
+   "speaker": "A",
+   "start_ms": 132570,
+   "end_ms": 141980,
+   "text": "I just got the project announcement about what the project is. Designing a remote control. That's about it, didn't get anything else. Did you get the same thing?"
+  },
+  {
+   "idx": 15,
+   "speaker": "B",
+   "start_ms": 135080,
+   "end_ms": 135440,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 16,
+   "speaker": "D",
+   "start_ms": 137120,
+   "end_ms": 137390,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 17,
+   "speaker": "D",
+   "start_ms": 138960,
+   "end_ms": 141950,
+   "text": "Yeah, that's that's it. Yeah."
+  },
+  {
+   "idx": 18,
+   "speaker": "B",
+   "start_ms": 140100,
+   "end_ms": 165910,
+   "text": "Is that what everybody got? Okay. So we're gonna have like individual work and then a meeting about it. And repeat that process three times. and at this point we get try out the whiteboard over there. So you get to draw your favourite animal and sum up your favourite characteristics of it."
+  },
+  {
+   "idx": 19,
+   "speaker": "C",
+   "start_ms": 140470,
+   "end_ms": 140830,
+   "text": "Yeah."
+  },
+  {
+   "idx": 20,
+   "speaker": "B",
+   "start_ms": 165910,
+   "end_ms": 168840,
+   "text": "So who would like to go first? Very good."
+  },
+  {
+   "idx": 21,
+   "speaker": "D",
+   "start_ms": 166670,
+   "end_ms": 167810,
+   "text": "I will go. That's fine."
+  },
+  {
+   "idx": 22,
+   "speaker": "D",
+   "start_ms": 174200,
+   "end_ms": 176690,
+   "text": "Alright. So."
+  },
+  {
+   "idx": 23,
+   "speaker": "D",
+   "start_ms": 181390,
+   "end_ms": 182340,
+   "text": "This one here, right?"
+  },
+  {
+   "idx": 24,
+   "speaker": "B",
+   "start_ms": 183260,
+   "end_ms": 184240,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 25,
+   "speaker": "D",
+   "start_ms": 183930,
+   "end_ms": 188350,
+   "text": "Okay. Very nice. Alright. My favourite animal."
+  },
+  {
+   "idx": 26,
+   "speaker": "D",
+   "start_ms": 190010,
+   "end_ms": 191680,
+   "text": "Is like."
+  },
+  {
+   "idx": 27,
+   "speaker": "D",
+   "start_ms": 203450,
+   "end_ms": 204240,
+   "text": "A beagle."
+  },
+  {
+   "idx": 28,
+   "speaker": "D",
+   "start_ms": 211970,
+   "end_ms": 237960,
+   "text": "Favourite characteristics of it? Is that right? right, well basically high priority for any animal for me is that they be willing to take a lot of physical affection from their family. And, yeah that they have lots of personality and be fit and in robust good health."
+  },
+  {
+   "idx": 29,
+   "speaker": "B",
+   "start_ms": 215950,
+   "end_ms": 216770,
+   "text": "Yeah. Yeah."
+  },
+  {
+   "idx": 30,
+   "speaker": "D",
+   "start_ms": 237960,
+   "end_ms": 242410,
+   "text": "So this is blue. Blue beagle. My family's beagle."
+  },
+  {
+   "idx": 31,
+   "speaker": "B",
+   "start_ms": 243400,
+   "end_ms": 245700,
+   "text": "Right. Lovely."
+  },
+  {
+   "idx": 32,
+   "speaker": "C",
+   "start_ms": 255070,
+   "end_ms": 257260,
+   "text": "Well, my favourite animal would be a monkey."
+  },
+  {
+   "idx": 33,
+   "speaker": "C",
+   "start_ms": 268000,
+   "end_ms": 273990,
+   "text": "Then they're small cute and furry, and when planet of the apes becomes real, I'm gonna be up there with them."
+  },
+  {
+   "idx": 34,
+   "speaker": "B",
+   "start_ms": 275670,
+   "end_ms": 276020,
+   "text": "Right."
+  },
+  {
+   "idx": 35,
+   "speaker": "A",
+   "start_ms": 275830,
+   "end_ms": 276150,
+   "text": "Cool."
+  },
+  {
+   "idx": 36,
+   "speaker": "A",
+   "start_ms": 280750,
+   "end_ms": 282650,
+   "text": "There's too much gear."
+  },
+  {
+   "idx": 37,
+   "speaker": "B",
+   "start_ms": 285960,
+   "end_ms": 293370,
+   "text": "You can take as long over this as you like, because we haven't got an awful lot to discuss. oh we do we do. Don't feel like you're in a rush, anyway."
+  },
+  {
+   "idx": 38,
+   "speaker": "A",
+   "start_ms": 293260,
+   "end_ms": 294250,
+   "text": "Okay."
+  },
+  {
+   "idx": 39,
+   "speaker": "D",
+   "start_ms": 296020,
+   "end_ms": 300920,
+   "text": "I coulda told you a whole lot more about beagles. Boy, let me tell you."
+  },
+  {
+   "idx": 40,
+   "speaker": "B",
+   "start_ms": 297940,
+   "end_ms": 303580,
+   "text": "Ach why not We might have to get you up again then. I don't know what mine is. I'm gonna have to think on the spot now."
+  },
+  {
+   "idx": 41,
+   "speaker": "D",
+   "start_ms": 307060,
+   "end_ms": 307900,
+   "text": "Impressionist."
+  },
+  {
+   "idx": 42,
+   "speaker": "A",
+   "start_ms": 309380,
+   "end_ms": 313520,
+   "text": "Can't draw. Yeah."
+  },
+  {
+   "idx": 43,
+   "speaker": "B",
+   "start_ms": 312050,
+   "end_ms": 315130,
+   "text": "Is that a whale?"
+  },
+  {
+   "idx": 44,
+   "speaker": "A",
+   "start_ms": 318580,
+   "end_ms": 341520,
+   "text": "Well anyway, I don't know, it's just the first animal I can think off the top of my head. Yes. Big reason is 'cause I'm allergic to most animals. Allergic to animal fur, so fish was a natural choice. yeah, and I kind of like whales. They come in and go eat everything in sight. And they're quite harmless and mild and interesting."
+  },
+  {
+   "idx": 45,
+   "speaker": "B",
+   "start_ms": 327910,
+   "end_ms": 328530,
+   "text": "Ah."
+  },
+  {
+   "idx": 46,
+   "speaker": "D",
+   "start_ms": 338480,
+   "end_ms": 339050,
+   "text": "Alright."
+  },
+  {
+   "idx": 47,
+   "speaker": "D",
+   "start_ms": 341850,
+   "end_ms": 342200,
+   "text": "Mm."
+  },
+  {
+   "idx": 48,
+   "speaker": "B",
+   "start_ms": 342420,
+   "end_ms": 346850,
+   "text": "Okay. God, I still don't know what I'm gonna write about."
+  },
+  {
+   "idx": 49,
+   "speaker": "D",
+   "start_ms": 349660,
+   "end_ms": 350840,
+   "text": "Superb sketch, by the way."
+  },
+  {
+   "idx": 50,
+   "speaker": "A",
+   "start_ms": 353860,
+   "end_ms": 355110,
+   "text": "Tail's a bit big, I think."
+  },
+  {
+   "idx": 51,
+   "speaker": "B",
+   "start_ms": 354910,
+   "end_ms": 364920,
+   "text": "I was gonna choose a dog as well. But I'll just draw a different kind of dog. my favourite animal is my own dog at home."
+  },
+  {
+   "idx": 52,
+   "speaker": "D",
+   "start_ms": 359620,
+   "end_ms": 359900,
+   "text": "Yep."
+  },
+  {
+   "idx": 53,
+   "speaker": "B",
+   "start_ms": 367010,
+   "end_ms": 368630,
+   "text": "That doesn't really look like him, actually."
+  },
+  {
+   "idx": 54,
+   "speaker": "B",
+   "start_ms": 373300,
+   "end_ms": 376270,
+   "text": "He looks more like a pig, actually. Ah well."
+  },
+  {
+   "idx": 55,
+   "speaker": "D",
+   "start_ms": 378460,
+   "end_ms": 380140,
+   "text": "I see a dog in there. Yep."
+  },
+  {
+   "idx": 56,
+   "speaker": "B",
+   "start_ms": 379520,
+   "end_ms": 380970,
+   "text": "Do you? Oh that's very good of you."
+  },
+  {
+   "idx": 57,
+   "speaker": "D",
+   "start_ms": 382820,
+   "end_ms": 383680,
+   "text": "Now I see a rooster."
+  },
+  {
+   "idx": 58,
+   "speaker": "B",
+   "start_ms": 388270,
+   "end_ms": 389070,
+   "text": "Uh."
+  },
+  {
+   "idx": 59,
+   "speaker": "D",
+   "start_ms": 393420,
+   "end_ms": 394210,
+   "text": "What kind is it?"
+  },
+  {
+   "idx": 60,
+   "speaker": "B",
+   "start_ms": 394870,
+   "end_ms": 421480,
+   "text": "He's a mixture of various things. and what do I like about him, That's just to suggest that his tail wags. he's very friendly and cheery and always pleased to see you, and very kind of affectionate and and he's quite quite wee as well so you know he can doesn't take up too much space."
+  },
+  {
+   "idx": 61,
+   "speaker": "B",
+   "start_ms": 421480,
+   "end_ms": 422220,
+   "text": "Um."
+  },
+  {
+   "idx": 62,
+   "speaker": "B",
+   "start_ms": 425560,
+   "end_ms": 431600,
+   "text": "And And he does a funny thing where he chases his tail as well, which is quite amusing, so."
+  },
+  {
+   "idx": 63,
+   "speaker": "D",
+   "start_ms": 431270,
+   "end_ms": 433440,
+   "text": "Is he aware that it's his own tail he's chasing?"
+  },
+  {
+   "idx": 64,
+   "speaker": "B",
+   "start_ms": 433830,
+   "end_ms": 441920,
+   "text": "It is. I think it is. He only does it after he's had his dinner and he'll just all of a sudden just get up and start chasing his tail 'round the living room."
+  },
+  {
+   "idx": 65,
+   "speaker": "D",
+   "start_ms": 440330,
+   "end_ms": 440470,
+   "text": "Hmm."
+  },
+  {
+   "idx": 66,
+   "speaker": "A",
+   "start_ms": 442020,
+   "end_ms": 443210,
+   "text": "It's an after dinner dog then."
+  },
+  {
+   "idx": 67,
+   "speaker": "B",
+   "start_ms": 443590,
+   "end_ms": 445260,
+   "text": "Yeah, so."
+  },
+  {
+   "idx": 68,
+   "speaker": "D",
+   "start_ms": 444050,
+   "end_ms": 448710,
+   "text": "Probably when he was little he got lots of attention for doing it and has forever been conditioned."
+  },
+  {
+   "idx": 69,
+   "speaker": "B",
+   "start_ms": 447150,
+   "end_ms": 453610,
+   "text": "Yeah, maybe. Maybe. Right, where did you find this? Just down here? Yeah."
+  },
+  {
+   "idx": 70,
+   "speaker": "B",
+   "start_ms": 455510,
+   "end_ms": 456760,
+   "text": "Okay."
+  },
+  {
+   "idx": 71,
+   "speaker": "B",
+   "start_ms": 458920,
+   "end_ms": 462970,
+   "text": "What are we doing next?"
+  },
+  {
+   "idx": 72,
+   "speaker": "B",
+   "start_ms": 465510,
+   "end_ms": 470660,
+   "text": "Okay, we now need to discuss the project finance."
+  },
+  {
+   "idx": 73,
+   "speaker": "B",
+   "start_ms": 472410,
+   "end_ms": 495000,
+   "text": "So according to the brief we're gonna be selling this remote control for twenty five Euro, and we're aiming to make fifty million Euro. so we're gonna be selling this on an international scale. And we don't want it to cost any more than twelve fifty Euros, so fifty percent of the selling price."
+  },
+  {
+   "idx": 74,
+   "speaker": "D",
+   "start_ms": 488560,
+   "end_ms": 488910,
+   "text": "'Kay."
+  },
+  {
+   "idx": 75,
+   "speaker": "D",
+   "start_ms": 496020,
+   "end_ms": 497600,
+   "text": "Can we just go over that again?"
+  },
+  {
+   "idx": 76,
+   "speaker": "B",
+   "start_ms": 497990,
+   "end_ms": 498460,
+   "text": "Sure."
+  },
+  {
+   "idx": 77,
+   "speaker": "D",
+   "start_ms": 499160,
+   "end_ms": 514000,
+   "text": "So at Alright, yeah. Okay. So cost like production cost is twelve fifty, but selling price is is that wholesale or retail? Like on the shelf."
+  },
+  {
+   "idx": 78,
+   "speaker": "B",
+   "start_ms": 508170,
+   "end_ms": 508920,
+   "text": "All together."
+  },
+  {
+   "idx": 79,
+   "speaker": "B",
+   "start_ms": 515159,
+   "end_ms": 530200,
+   "text": "I dunno. I imagine That's a good question. I imagine it probably is our sale actually because it's probably up to the the the retailer to sell it for whatever price they want."
+  },
+  {
+   "idx": 80,
+   "speaker": "D",
+   "start_ms": 518309,
+   "end_ms": 522570,
+   "text": "Our sale our sale anyway. Yeah, okay okay."
+  },
+  {
+   "idx": 81,
+   "speaker": "D",
+   "start_ms": 526790,
+   "end_ms": 527050,
+   "text": "Okay."
+  },
+  {
+   "idx": 82,
+   "speaker": "D",
+   "start_ms": 528900,
+   "end_ms": 529140,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 83,
+   "speaker": "D",
+   "start_ms": 531580,
+   "end_ms": 531810,
+   "text": "Alright."
+  },
+  {
+   "idx": 84,
+   "speaker": "B",
+   "start_ms": 531830,
+   "end_ms": 542150,
+   "text": "But I I don't know, I mean do you think the fact that it's going to be sold internationally will have a bearing on how we design it at all? Think it will?"
+  },
+  {
+   "idx": 85,
+   "speaker": "D",
+   "start_ms": 538770,
+   "end_ms": 539130,
+   "text": "Yes."
+  },
+  {
+   "idx": 86,
+   "speaker": "D",
+   "start_ms": 540690,
+   "end_ms": 540940,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 87,
+   "speaker": "D",
+   "start_ms": 543860,
+   "end_ms": 544120,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 88,
+   "speaker": "B",
+   "start_ms": 545430,
+   "end_ms": 546060,
+   "text": "Hmm."
+  },
+  {
+   "idx": 89,
+   "speaker": "D",
+   "start_ms": 548280,
+   "end_ms": 566700,
+   "text": "Well right away I'm wondering if there's like with D_V_D_ players, if there are zones. frequencies or something as well as characters, different keypad styles and symbols."
+  },
+  {
+   "idx": 90,
+   "speaker": "B",
+   "start_ms": 553780,
+   "end_ms": 558060,
+   "text": "Oh yeah, regions and stuff, yeah. Yeah. Okay."
+  },
+  {
+   "idx": 91,
+   "speaker": "A",
+   "start_ms": 565050,
+   "end_ms": 565320,
+   "text": "Hmm."
+  },
+  {
+   "idx": 92,
+   "speaker": "B",
+   "start_ms": 565130,
+   "end_ms": 571010,
+   "text": "Yeah. Well for a remote control, do you think that will be I suppose it's depends on how complicated our remote control is."
+  },
+  {
+   "idx": 93,
+   "speaker": "D",
+   "start_ms": 568460,
+   "end_ms": 568830,
+   "text": "I don't know."
+  },
+  {
+   "idx": 94,
+   "speaker": "D",
+   "start_ms": 571220,
+   "end_ms": 571580,
+   "text": "Yeah."
+  },
+  {
+   "idx": 95,
+   "speaker": "A",
+   "start_ms": 571740,
+   "end_ms": 582520,
+   "text": "It does make sense from maybe the design point of view 'cause you have more complicated characters like European languages, then you need more buttons. So, possibly."
+  },
+  {
+   "idx": 96,
+   "speaker": "B",
+   "start_ms": 580420,
+   "end_ms": 583900,
+   "text": "Yeah, yeah. Okay."
+  },
+  {
+   "idx": 97,
+   "speaker": "D",
+   "start_ms": 580660,
+   "end_ms": 588820,
+   "text": "Yeah. Yeah. And then and then the other thing international is on top of the price. I'm thinking."
+  },
+  {
+   "idx": 98,
+   "speaker": "D",
+   "start_ms": 591000,
+   "end_ms": 616940,
+   "text": "The price might might appeal to a certain market in one region, whereas in another it'll be different, so Just a just a characteristic of the Just Or just like, basic product positioning, the twenty five Euro remote control might be a big hit in London, might not be such a big hit in Greece, who knows, something like that, yeah."
+  },
+  {
+   "idx": 99,
+   "speaker": "B",
+   "start_ms": 597790,
+   "end_ms": 603430,
+   "text": "What, just like in terms of like the wealth of the country? Like how much money people have to spend on things like?"
+  },
+  {
+   "idx": 100,
+   "speaker": "B",
+   "start_ms": 615740,
+   "end_ms": 617280,
+   "text": "Aye, I see what you mean, yeah."
+  },
+  {
+   "idx": 101,
+   "speaker": "B",
+   "start_ms": 619010,
+   "end_ms": 624870,
+   "text": "Marketing. Good marketing thoughts. Oh gosh, I should be writing all this down."
+  },
+  {
+   "idx": 102,
+   "speaker": "D",
+   "start_ms": 620480,
+   "end_ms": 620640,
+   "text": "Yep."
+  },
+  {
+   "idx": 103,
+   "speaker": "D",
+   "start_ms": 655450,
+   "end_ms": 677530,
+   "text": "Right away I'm making some kind of assumptions about what what information we're given here, thinking, 'kay trendy probably means something other than just basic, something other than just standard. so I'm wondering right away, is selling twenty five Euros, is that sort of the is this gonna to be like the premium product kinda thing or."
+  },
+  {
+   "idx": 104,
+   "speaker": "B",
+   "start_ms": 660700,
+   "end_ms": 661220,
+   "text": "Mm."
+  },
+  {
+   "idx": 105,
+   "speaker": "B",
+   "start_ms": 665360,
+   "end_ms": 665840,
+   "text": "Yeah."
+  },
+  {
+   "idx": 106,
+   "speaker": "B",
+   "start_ms": 677150,
+   "end_ms": 699520,
+   "text": "Yeah, yeah. Like how much does, you know, a remote control cost. Well twenty five Euro, I mean that's that's about like eighteen pounds or something, isn't it? Or no, is it as much as that? Sixteen seventeen eighteen pounds. I dunno, I've never bought a remote control, so I don't know how how good a remote control that would get you."
+  },
+  {
+   "idx": 107,
+   "speaker": "D",
+   "start_ms": 680520,
+   "end_ms": 680810,
+   "text": "Uh-huh."
+  },
+  {
+   "idx": 108,
+   "speaker": "D",
+   "start_ms": 687720,
+   "end_ms": 688110,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 109,
+   "speaker": "D",
+   "start_ms": 689770,
+   "end_ms": 691970,
+   "text": "Yep. Yeah, I'd say so, yeah."
+  },
+  {
+   "idx": 110,
+   "speaker": "D",
+   "start_ms": 696230,
+   "end_ms": 702010,
+   "text": "No. Yeah, yeah."
+  },
+  {
+   "idx": 111,
+   "speaker": "B",
+   "start_ms": 699520,
+   "end_ms": 700410,
+   "text": "Um."
+  },
+  {
+   "idx": 112,
+   "speaker": "B",
+   "start_ms": 702020,
+   "end_ms": 705010,
+   "text": "But yeah, I suppose it has to look kind of cool and gimmicky."
+  },
+  {
+   "idx": 113,
+   "speaker": "D",
+   "start_ms": 704030,
+   "end_ms": 704410,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 114,
+   "speaker": "B",
+   "start_ms": 707100,
+   "end_ms": 721440,
+   "text": "Right, okay. Let me just scoot on ahead here. Okay. well Does anybody have anything to add to to the finance issue at all?"
+  },
+  {
+   "idx": 115,
+   "speaker": "D",
+   "start_ms": 722770,
+   "end_ms": 728780,
+   "text": "Do we have any other background information on like how that compares to other other."
+  },
+  {
+   "idx": 116,
+   "speaker": "B",
+   "start_ms": 727650,
+   "end_ms": 732870,
+   "text": "No, actually. That would be useful, though, wouldn't it, if you knew like what your money would get you now."
+  },
+  {
+   "idx": 117,
+   "speaker": "D",
+   "start_ms": 730730,
+   "end_ms": 731070,
+   "text": "Yeah."
+  },
+  {
+   "idx": 118,
+   "speaker": "A",
+   "start_ms": 732320,
+   "end_ms": 732540,
+   "text": "Hmm."
+  },
+  {
+   "idx": 119,
+   "speaker": "D",
+   "start_ms": 734730,
+   "end_ms": 735080,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 120,
+   "speaker": "B",
+   "start_ms": 735110,
+   "end_ms": 735700,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 121,
+   "speaker": "D",
+   "start_ms": 753670,
+   "end_ms": 773410,
+   "text": "Yeah, interesting thing about discussing production of a remote control for me is that as you point out, I just don't think of remote controls as something people consciously assess in their purchasing habits. It's just like getting shoelaces with shoes or something. It just comes along."
+  },
+  {
+   "idx": 122,
+   "speaker": "B",
+   "start_ms": 767690,
+   "end_ms": 768250,
+   "text": "Yeah, yeah."
+  },
+  {
+   "idx": 123,
+   "speaker": "B",
+   "start_ms": 772010,
+   "end_ms": 776970,
+   "text": "Oh. Five minutes to end of meeting. Oh, okay. We're a bit behind."
+  },
+  {
+   "idx": 124,
+   "speaker": "D",
+   "start_ms": 776120,
+   "end_ms": 794970,
+   "text": "Do you know what I mean? Like sort of like how do you I mean one one way of looking at it would be, well the people producing television sets, maybe they have to buy remote controls. Or another way is maybe people who have T_V_ sets are really fed up with their remote control and they really want a better one or something. But."
+  },
+  {
+   "idx": 125,
+   "speaker": "C",
+   "start_ms": 777320,
+   "end_ms": 777890,
+   "text": "Yeah."
+  },
+  {
+   "idx": 126,
+   "speaker": "A",
+   "start_ms": 777700,
+   "end_ms": 778020,
+   "text": "Yeah."
+  },
+  {
+   "idx": 127,
+   "speaker": "C",
+   "start_ms": 792520,
+   "end_ms": 804330,
+   "text": "I know My parents went out and bought remote controls because they got fed up of having four or five different remote controls for each things the house. So for them it was just how many devices control."
+  },
+  {
+   "idx": 128,
+   "speaker": "D",
+   "start_ms": 799880,
+   "end_ms": 802200,
+   "text": "Right. Right. Okay so."
+  },
+  {
+   "idx": 129,
+   "speaker": "D",
+   "start_ms": 804470,
+   "end_ms": 810390,
+   "text": "Right, so in function one of the priorities might be to combine as many uses."
+  },
+  {
+   "idx": 130,
+   "speaker": "B",
+   "start_ms": 806460,
+   "end_ms": 806980,
+   "text": "Yeah."
+  },
+  {
+   "idx": 131,
+   "speaker": "B",
+   "start_ms": 811510,
+   "end_ms": 820830,
+   "text": "Right, so do you think that should be like a main design aim of our remote control you know, do your your satellite and your regular telly and your V_C_R_ and everything?"
+  },
+  {
+   "idx": 132,
+   "speaker": "D",
+   "start_ms": 814980,
+   "end_ms": 836310,
+   "text": "I think so. Yeah, yeah. Yeah. Well like maybe what we could use is a sort of like a example of a successful other piece technology is palm palm pilots. They're gone from being just like little sort of scribble boards to cameras, M_P_ three players, telephones, everything, agenda."
+  },
+  {
+   "idx": 133,
+   "speaker": "B",
+   "start_ms": 832760,
+   "end_ms": 833200,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 134,
+   "speaker": "D",
+   "start_ms": 836310,
+   "end_ms": 844060,
+   "text": "So, like, I wonder if we might add something new to the to the remote control market, such as the lighting in your house, or."
+  },
+  {
+   "idx": 135,
+   "speaker": "B",
+   "start_ms": 840250,
+   "end_ms": 840690,
+   "text": "Yeah."
+  },
+  {
+   "idx": 136,
+   "speaker": "B",
+   "start_ms": 843990,
+   "end_ms": 853030,
+   "text": "Or even like, you know, notes about what you wanna watch. Like you might put in there oh I want to watch such and such and look Oh that's a good idea. So extra functionalities."
+  },
+  {
+   "idx": 137,
+   "speaker": "D",
+   "start_ms": 849080,
+   "end_ms": 851060,
+   "text": "Yeah, yeah."
+  },
+  {
+   "idx": 138,
+   "speaker": "D",
+   "start_ms": 852790,
+   "end_ms": 870270,
+   "text": "Yeah. Like, personally for me, at home I've I've combined the the audio video of my television set and my D_V_D_ player and my C_D_ player. So they all work actually function together but I have different remote controls for each of them. So it's sort of ironic that that then they're in there."
+  },
+  {
+   "idx": 139,
+   "speaker": "B",
+   "start_ms": 866590,
+   "end_ms": 867240,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 140,
+   "speaker": "D",
+   "start_ms": 872030,
+   "end_ms": 879220,
+   "text": "You know, the sound and everything it's just one system. But each one's got its own little part."
+  },
+  {
+   "idx": 141,
+   "speaker": "B",
+   "start_ms": 876880,
+   "end_ms": 877460,
+   "text": "Hmm."
+  },
+  {
+   "idx": 142,
+   "speaker": "B",
+   "start_ms": 883050,
+   "end_ms": 902620,
+   "text": "Okay, we're gonna have to wrap up pretty quickly in the next couple of minutes. I'll just check we've nothing else. Okay. so anything else anybody wants to add about what they don't like about remote controls they've used, what they would really like to be part of this new one at all?"
+  },
+  {
+   "idx": 143,
+   "speaker": "A",
+   "start_ms": 903080,
+   "end_ms": 903980,
+   "text": "And you keep losing them."
+  },
+  {
+   "idx": 144,
+   "speaker": "B",
+   "start_ms": 904600,
+   "end_ms": 906080,
+   "text": "You keep losing them. Okay."
+  },
+  {
+   "idx": 145,
+   "speaker": "D",
+   "start_ms": 904750,
+   "end_ms": 905260,
+   "text": "Mm."
+  },
+  {
+   "idx": 146,
+   "speaker": "A",
+   "start_ms": 906450,
+   "end_ms": 916110,
+   "text": "Finding them is really a pain, you know. I mean it's usually quite small, or when you want it right, it slipped behind the couch or it's kicked under the table. You know."
+  },
+  {
+   "idx": 147,
+   "speaker": "D",
+   "start_ms": 907470,
+   "end_ms": 909260,
+   "text": "Mm."
+  },
+  {
+   "idx": 148,
+   "speaker": "D",
+   "start_ms": 911100,
+   "end_ms": 916830,
+   "text": "Yeah. Yeah. That's just really good."
+  },
+  {
+   "idx": 149,
+   "speaker": "B",
+   "start_ms": 913170,
+   "end_ms": 922530,
+   "text": "Yeah. You get those ones where you can, if you like, whistle or make a really high pitched noise they beep. There I mean is that something we'd want to include, do you think?"
+  },
+  {
+   "idx": 150,
+   "speaker": "D",
+   "start_ms": 919280,
+   "end_ms": 919690,
+   "text": "Yep."
+  },
+  {
+   "idx": 151,
+   "speaker": "D",
+   "start_ms": 924350,
+   "end_ms": 946400,
+   "text": "Sure. I remember when the first remote control my my family had was on a cable. Actually had a cable between it and the T_V_ and big like buttons that sort of like, like on a blender or something. And you know, when I think about what they are now, it's better, but actually it's still kind of, I dunno, like a massive junky thing on the table."
+  },
+  {
+   "idx": 152,
+   "speaker": "B",
+   "start_ms": 925370,
+   "end_ms": 927400,
+   "text": "Dunno. Okay maybe."
+  },
+  {
+   "idx": 153,
+   "speaker": "B",
+   "start_ms": 937000,
+   "end_ms": 937620,
+   "text": "My goodness."
+  },
+  {
+   "idx": 154,
+   "speaker": "B",
+   "start_ms": 946260,
+   "end_ms": 948040,
+   "text": "Still feels quite primitive."
+  },
+  {
+   "idx": 155,
+   "speaker": "D",
+   "start_ms": 946400,
+   "end_ms": 951490,
+   "text": "Maybe we could think about how, could be more, you know, streamlined."
+  },
+  {
+   "idx": 156,
+   "speaker": "B",
+   "start_ms": 951410,
+   "end_ms": 954420,
+   "text": "Maybe like a touch screen or something? Okay."
+  },
+  {
+   "idx": 157,
+   "speaker": "D",
+   "start_ms": 953060,
+   "end_ms": 972960,
+   "text": "Something like that, yeah. Or whatever would be technologically reasonable. 'Cause it could it could it could be that it could be that functionally that doesn't make it any better, but that just the appeal of of not having You know, these days there's a things in people's homes are becoming more and more like chic, you know. nicer materials and might be."
+  },
+  {
+   "idx": 158,
+   "speaker": "B",
+   "start_ms": 956360,
+   "end_ms": 959300,
+   "text": "Okay. Well I guess that's up to our industrial designer."
+  },
+  {
+   "idx": 159,
+   "speaker": "B",
+   "start_ms": 962220,
+   "end_ms": 963350,
+   "text": "It looks better."
+  },
+  {
+   "idx": 160,
+   "speaker": "B",
+   "start_ms": 969000,
+   "end_ms": 969470,
+   "text": "Yeah."
+  },
+  {
+   "idx": 161,
+   "speaker": "B",
+   "start_ms": 971850,
+   "end_ms": 972390,
+   "text": "Okay."
+  },
+  {
+   "idx": 162,
+   "speaker": "B",
+   "start_ms": 975240,
+   "end_ms": 975630,
+   "text": "Okay."
+  },
+  {
+   "idx": 163,
+   "speaker": "D",
+   "start_ms": 975570,
+   "end_ms": 976830,
+   "text": "Be worth exploring anyway."
+  },
+  {
+   "idx": 164,
+   "speaker": "C",
+   "start_ms": 976660,
+   "end_ms": 976730,
+   "text": "Uh."
+  },
+  {
+   "idx": 165,
+   "speaker": "B",
+   "start_ms": 977170,
+   "end_ms": 1004080,
+   "text": "Right, well so just to wrap up, the next meeting's gonna be in thirty minutes. So that's about about ten to twelve by my watch. so inbetween now and then, as the industrial designer, you're gonna be working on you know the actual working design of it so you know what you're doing there. for user interface, technical functions, I guess that's you know like what we've been talking about, what it'll actually do."
+  },
+  {
+   "idx": 166,
+   "speaker": "A",
+   "start_ms": 993880,
+   "end_ms": 994020,
+   "text": "Yep."
+  },
+  {
+   "idx": 167,
+   "speaker": "B",
+   "start_ms": 1004080,
+   "end_ms": 1019310,
+   "text": "And marketing executive, you'll be just thinking about what it actually what, you know, what requirements it has to has to fulfil and you'll all get instructions emailed to you, I guess."
+  },
+  {
+   "idx": 168,
+   "speaker": "D",
+   "start_ms": 1019670,
+   "end_ms": 1020010,
+   "text": "Okay."
+  },
+  {
+   "idx": 169,
+   "speaker": "B",
+   "start_ms": 1021550,
+   "end_ms": 1022560,
+   "text": "Um."
+  },
+  {
+   "idx": 170,
+   "speaker": "B",
+   "start_ms": 1028050,
+   "end_ms": 1031660,
+   "text": "Yeah, so it's the functional design stage is next, I guess."
+  },
+  {
+   "idx": 171,
+   "speaker": "B",
+   "start_ms": 1034470,
+   "end_ms": 1042569,
+   "text": "And and that's the end of the meeting. So I got that little message a lot sooner than I thought I would, so."
+  },
+  {
+   "idx": 172,
+   "speaker": "D",
+   "start_ms": 1039800,
+   "end_ms": 1040970,
+   "text": "Um."
+  },
+  {
+   "idx": 173,
+   "speaker": "D",
+   "start_ms": 1047170,
+   "end_ms": 1059150,
+   "text": "Before we wrap up, just to make sure we're all on the same page here, do we We were given sort of an example of a coffee machine or something, right? Well."
+  },
+  {
+   "idx": 174,
+   "speaker": "B",
+   "start_ms": 1049540,
+   "end_ms": 1050040,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 175,
+   "speaker": "B",
+   "start_ms": 1056300,
+   "end_ms": 1057680,
+   "text": "Yeah."
+  },
+  {
+   "idx": 176,
+   "speaker": "A",
+   "start_ms": 1056930,
+   "end_ms": 1057090,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 177,
+   "speaker": "D",
+   "start_ms": 1060990,
+   "end_ms": 1074440,
+   "text": "Are we right now on the assumption that our television remote control may have features which go beyond the television? Or are we keeping sort of like a a design commitment to television features? I don't know."
+  },
+  {
+   "idx": 178,
+   "speaker": "B",
+   "start_ms": 1073560,
+   "end_ms": 1084800,
+   "text": "Okay, well just very quickly 'cause this we're supposed to finish now. I guess that's up to us, I mean you probably want some kind of unique selling point of it, so you know."
+  },
+  {
+   "idx": 179,
+   "speaker": "D",
+   "start_ms": 1076560,
+   "end_ms": 1078060,
+   "text": "Yep. Yeah, sure."
+  },
+  {
+   "idx": 180,
+   "speaker": "D",
+   "start_ms": 1081990,
+   "end_ms": 1082380,
+   "text": "Okay."
+  },
+  {
+   "idx": 181,
+   "speaker": "A",
+   "start_ms": 1084360,
+   "end_ms": 1098430,
+   "text": "I think one factor would be production cost. Because there's a cap there, so depends on how much you can cram into that price. I think that that's the main factor."
+  },
+  {
+   "idx": 182,
+   "speaker": "D",
+   "start_ms": 1086960,
+   "end_ms": 1087760,
+   "text": "Okay, yeah."
+  },
+  {
+   "idx": 183,
+   "speaker": "B",
+   "start_ms": 1087590,
+   "end_ms": 1088200,
+   "text": "Yeah."
+  },
+  {
+   "idx": 184,
+   "speaker": "D",
+   "start_ms": 1089890,
+   "end_ms": 1090230,
+   "text": "Okay."
+  },
+  {
+   "idx": 185,
+   "speaker": "B",
+   "start_ms": 1093820,
+   "end_ms": 1096160,
+   "text": "Yeah."
+  },
+  {
+   "idx": 186,
+   "speaker": "D",
+   "start_ms": 1093830,
+   "end_ms": 1094130,
+   "text": "Okay."
+  },
+  {
+   "idx": 187,
+   "speaker": "B",
+   "start_ms": 1098510,
+   "end_ms": 1109390,
+   "text": "Okay. Right, okay, we'll that's that's the end of the meeting, then. So, thank you all for coming."
+  },
+  {
+   "idx": 188,
+   "speaker": "D",
+   "start_ms": 1098520,
+   "end_ms": 1098850,
+   "text": "Okay."
+  },
+  {
+   "idx": 189,
+   "speaker": "D",
+   "start_ms": 1102400,
+   "end_ms": 1102860,
+   "text": "Alright."
+  },
+  {
+   "idx": 190,
+   "speaker": "A",
+   "start_ms": 1109230,
+   "end_ms": 1109450,
+   "text": "Cool."
+  }
+ ],
+ "chapters": [
+  {
+   "idx": 0,
+   "title": "Team introductions",
+   "start_ms": 0,
+   "gist": "The project manager and team members introduce themselves and their roles.",
+   "line": 0,
+   "end_ms": 89300
+  },
+  {
+   "idx": 1,
+   "title": "Project goals and stages",
+   "start_ms": 89300,
+   "gist": "The project manager outlines the goal to design a trendy, user-friendly remote control across three stages.",
+   "line": 10,
+   "end_ms": 140100
+  },
+  {
+   "idx": 2,
+   "title": "Animal drawing icebreaker",
+   "start_ms": 140100,
+   "gist": "Team members use the whiteboard to draw their favorite animals and describe their characteristics.",
+   "line": 18,
+   "end_ms": 465510
+  },
+  {
+   "idx": 3,
+   "title": "Budget and financial targets",
+   "start_ms": 465510,
+   "gist": "The project manager explains the production cost limits, selling price, and profit goals.",
+   "line": 72,
+   "end_ms": 531830
+  },
+  {
+   "idx": 4,
+   "title": "International market considerations",
+   "start_ms": 531830,
+   "gist": "The team discusses how selling globally affects button layouts, regional symbols, and product pricing.",
+   "line": 84,
+   "end_ms": 772010
+  },
+  {
+   "idx": 5,
+   "title": "Design ideas and user problems",
+   "start_ms": 772010,
+   "gist": "The group brainstorms features like finding lost remotes and controlling multiple household devices.",
+   "line": 123,
+   "end_ms": 977170
+  },
+  {
+   "idx": 6,
+   "title": "Assignments for the next phase",
+   "start_ms": 977170,
+   "gist": "The project manager assigns specific tasks to each team member to complete before the next meeting.",
+   "line": 165,
+   "end_ms": 1272640
+  }
+ ],
+ "action_items": [
+  {
+   "idx": 0,
+   "text": "Work on the physical design of the remote control.",
+   "owner_name": "Industrial Designer",
+   "speaker_label": "A",
+   "ts_ms": 977170,
+   "line": 165
+  },
+  {
+   "idx": 1,
+   "text": "Define the technical functions and user interface.",
+   "owner_name": "User Interface Designer",
+   "speaker_label": "C",
+   "ts_ms": 977170,
+   "line": 165
+  },
+  {
+   "idx": 2,
+   "text": "Identify the market requirements the product must fulfill.",
+   "owner_name": "Marketing Expert",
+   "speaker_label": "D",
+   "ts_ms": 1004080,
+   "line": 167
+  },
+  {
+   "idx": 3,
+   "text": "Email specific instructions for the next stage to the team.",
+   "owner_name": "Project Manager",
+   "speaker_label": "B",
+   "ts_ms": 1004080,
+   "line": 167
+  }
+ ],
+ "summaries": [
+  {
+   "template": "general",
+   "content": {
+    "tldr": "The team met to kick off the design of a new television remote control. They established financial constraints and brainstormed ways to make the device more functional and stylish.",
+    "sections": [
+     {
+      "heading": "Meeting purpose",
+      "bullets": [
+       {
+        "text": "Initiate the project to design a new, user-friendly remote control.",
+        "line": 2,
+        "ts_ms": 55980
+       }
+      ]
+     },
+     {
+      "heading": "Key takeaways",
+      "bullets": [
+       {
+        "text": "The production cost must not exceed 12.50 Euro per unit.",
+        "line": 73,
+        "ts_ms": 472410
+       },
+       {
+        "text": "The device should potentially control multiple home electronics.",
+        "line": 131,
+        "ts_ms": 811510
+       }
+      ]
+     },
+     {
+      "heading": "Topics",
+      "bullets": [
+       {
+        "text": "Team members drew animals on the whiteboard to test the equipment.",
+        "line": 18,
+        "ts_ms": 140100
+       },
+       {
+        "text": "The project aims to make 50 million Euro in profit.",
+        "line": 73,
+        "ts_ms": 472410
+       },
+       {
+        "text": "International markets might require different button sets or symbols.",
+        "line": 95,
+        "ts_ms": 571740
+       }
+      ]
+     },
+     {
+      "heading": "Next steps",
+      "bullets": [
+       {
+        "text": "The team will meet again in thirty minutes for the functional design stage.",
+        "line": 165,
+        "ts_ms": 977170
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "template": "project_update",
+   "content": {
+    "tldr": "The remote control project has officially started with clear budget and sales targets. Each team member has been assigned a specific area of focus for the upcoming design phase.",
+    "sections": [
+     {
+      "heading": "Progress",
+      "bullets": [
+       {
+        "text": "The project manager confirmed that everyone received the initial project announcement.",
+        "line": 12,
+        "ts_ms": 108960
+       }
+      ]
+     },
+     {
+      "heading": "Blockers",
+      "bullets": [
+       {
+        "text": "The project manager was unsure if the 25 Euro price was wholesale or retail.",
+        "line": 79,
+        "ts_ms": 515159
+       }
+      ]
+     },
+     {
+      "heading": "Decisions",
+      "bullets": [
+       {
+        "text": "The project will target a profit of 50 million Euro through international sales.",
+        "line": 73,
+        "ts_ms": 472410
+       }
+      ]
+     },
+     {
+      "heading": "Next steps",
+      "bullets": [
+       {
+        "text": "The Industrial Designer will begin work on the physical design.",
+        "line": 165,
+        "ts_ms": 977170
+       },
+       {
+        "text": "The User Interface Designer will focus on technical functions.",
+        "line": 165,
+        "ts_ms": 977170
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "template": "standup",
+   "content": {
+    "tldr": "As this was the kickoff meeting, no prior work was reported. The team spent the session aligning on goals and preparing for their first individual work blocks.",
+    "sections": [
+     {
+      "heading": "Yesterday / done",
+      "bullets": [
+       {
+        "text": "No previous project work was discussed as this was the first meeting.",
+        "line": null,
+        "ts_ms": null
+       }
+      ]
+     },
+     {
+      "heading": "Today / planned",
+      "bullets": [
+       {
+        "text": "Defined the design brief as creating an original and trendy remote.",
+        "line": 12,
+        "ts_ms": 108960
+       },
+       {
+        "text": "Set the target production cost at 12.50 Euro.",
+        "line": 73,
+        "ts_ms": 472410
+       }
+      ]
+     },
+     {
+      "heading": "Blockers",
+      "bullets": [
+       {
+        "text": "The team lacks background information on how their price compares to competitors.",
+        "line": 115,
+        "ts_ms": 722770
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "template": "retro",
+   "content": {
+    "tldr": "The team used an icebreaker to build rapport and successfully defined their main financial constraints. However, there was some confusion regarding specific market data.",
+    "sections": [
+     {
+      "heading": "What went well",
+      "bullets": [
+       {
+        "text": "All team members arrived on time for the meeting.",
+        "line": 11,
+        "ts_ms": 104890
+       },
+       {
+        "text": "The icebreaker helped the team get comfortable using the technology.",
+        "line": 18,
+        "ts_ms": 140100
+       }
+      ]
+     },
+     {
+      "heading": "What didn't",
+      "bullets": [
+       {
+        "text": "The project manager did not have competitive pricing data available.",
+        "line": 116,
+        "ts_ms": 727650
+       }
+      ]
+     },
+     {
+      "heading": "Ideas to improve",
+      "bullets": [
+       {
+        "text": "Determine if the product should be a premium item or a standard replacement.",
+        "line": 103,
+        "ts_ms": 655450
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "template": "sales",
+   "content": {
+    "tldr": "The project targets a mass international market with a 25 Euro price point. The team is looking for a unique selling point, such as finding lost remotes or controlling multiple devices.",
+    "sections": [
+     {
+      "heading": "Prospect needs",
+      "bullets": [
+       {
+        "text": "Users need a way to easily find remotes when they are lost.",
+        "line": 146,
+        "ts_ms": 906450
+       },
+       {
+        "text": "Customers want to combine multiple remotes into a single device.",
+        "line": 127,
+        "ts_ms": 792520
+       }
+      ]
+     },
+     {
+      "heading": "Objections",
+      "bullets": [
+       {
+        "text": "People may not be used to purchasing remotes separately from their televisions.",
+        "line": 121,
+        "ts_ms": 753670
+       }
+      ]
+     },
+     {
+      "heading": "Budget & timeline",
+      "bullets": [
+       {
+        "text": "The project has a strict production cost cap of 12.50 Euro.",
+        "line": 73,
+        "ts_ms": 472410
+       }
+      ]
+     },
+     {
+      "heading": "Next steps",
+      "bullets": [
+       {
+        "text": "Assess which technical features can be included within the production budget.",
+        "line": 181,
+        "ts_ms": 1084360
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "template": "one_on_one",
+   "content": {
+    "tldr": "The team had an productive first meeting where everyone participated in an icebreaker and accepted their roles. Initial concerns regarding cost and features were discussed briefly.",
+    "sections": [
+     {
+      "heading": "Wins",
+      "bullets": [
+       {
+        "text": "Every member successfully introduced themselves and their project roles.",
+        "line": 2,
+        "ts_ms": 55980
+       }
+      ]
+     },
+     {
+      "heading": "Concerns",
+      "bullets": [
+       {
+        "text": "The Industrial Designer noted that the production cost limit will restrict feature sets.",
+        "line": 181,
+        "ts_ms": 1084360
+       }
+      ]
+     },
+     {
+      "heading": "Feedback",
+      "bullets": [
+       {
+        "text": "The Marketing Expert complimented the Industrial Designer's animal sketch.",
+        "line": 49,
+        "ts_ms": 349660
+       }
+      ]
+     },
+     {
+      "heading": "Follow-ups",
+      "bullets": [
+       {
+        "text": "The project manager will send out detailed instruction emails.",
+        "line": 167,
+        "ts_ms": 1004080
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-3-flash-preview"
+  }
+ ]
+}

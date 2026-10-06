@@ -1,0 +1,2022 @@
+{
+ "meeting": {
+  "slug": "plan-team-weekly-sync-2026-10-01",
+  "title": "Plan team weekly sync",
+  "started_at": "2026-10-01T09:00:00-07:00",
+  "duration_ms": 2338000,
+  "media_type": "youtube",
+  "media_path": null,
+  "youtube_id": "uzcaqhUkBLU",
+  "source_name": "GitLab on YouTube",
+  "source_url": "https://www.youtube.com/watch?v=uzcaqhUkBLU",
+  "credit": "GitLab on YouTube: \"Plan | Weekly Sync 2022-12-07\" https://www.youtube.com/watch?v=uzcaqhUkBLU",
+  "kind": "demo",
+  "status": "ready",
+  "meeting_type": "project_update",
+  "source_key": "uzcaqhUkBLU"
+ },
+ "speakers": [
+  {
+   "label": "H",
+   "name": "Natalia",
+   "role": null,
+   "talk_ms": 445489,
+   "turns": 15,
+   "color": 0
+  },
+  {
+   "label": "C",
+   "name": "Donald",
+   "role": null,
+   "talk_ms": 317947,
+   "turns": 19,
+   "color": 1
+  },
+  {
+   "label": "A",
+   "name": "John",
+   "role": null,
+   "talk_ms": 234648,
+   "turns": 13,
+   "color": 2
+  },
+  {
+   "label": "G",
+   "name": "Speaker G",
+   "role": null,
+   "talk_ms": 232797,
+   "turns": 7,
+   "color": 3
+  },
+  {
+   "label": "J",
+   "name": "Abhilash",
+   "role": null,
+   "talk_ms": 181394,
+   "turns": 10,
+   "color": 4
+  },
+  {
+   "label": "E",
+   "name": "Speaker E",
+   "role": null,
+   "talk_ms": 134024,
+   "turns": 13,
+   "color": 5
+  },
+  {
+   "label": "F",
+   "name": "Amanda",
+   "role": null,
+   "talk_ms": 97816,
+   "turns": 6,
+   "color": 6
+  },
+  {
+   "label": "D",
+   "name": "Ian",
+   "role": null,
+   "talk_ms": 65086,
+   "turns": 5,
+   "color": 7
+  },
+  {
+   "label": "K",
+   "name": "Nicholas",
+   "role": null,
+   "talk_ms": 47472,
+   "turns": 5,
+   "color": 8
+  },
+  {
+   "label": "L",
+   "name": "Speaker L",
+   "role": null,
+   "talk_ms": 36696,
+   "turns": 2,
+   "color": 9
+  },
+  {
+   "label": "B",
+   "name": "Rudy",
+   "role": null,
+   "talk_ms": 34507,
+   "turns": 6,
+   "color": 10
+  },
+  {
+   "label": "I",
+   "name": "Alexandria",
+   "role": null,
+   "talk_ms": 28977,
+   "turns": 4,
+   "color": 11
+  }
+ ],
+ "utterances": [
+  {
+   "idx": 0,
+   "speaker": "A",
+   "start_ms": 2626,
+   "end_ms": 10334,
+   "text": "Okay, plan weekly sync, uh, 7th of December, 2022. Jarka's first, but I don't think she's on the call."
+  },
+  {
+   "idx": 1,
+   "speaker": "A",
+   "start_ms": 12175,
+   "end_ms": 15381,
+   "text": "Okay, no. Okay, so I'll verbalize. Uh, is Rudy on the call?"
+  },
+  {
+   "idx": 2,
+   "speaker": "B",
+   "start_ms": 15818,
+   "end_ms": 15899,
+   "text": "No."
+  },
+  {
+   "idx": 3,
+   "speaker": "A",
+   "start_ms": 16482,
+   "end_ms": 40050,
+   "text": "Okay, so we'll be welcoming Rudy async then. Uh, so okay, this is really for everyone else's benefit then. So yeah, we're welcoming Rudy Crespo as the first frontend engineer on Certify, and hopefully he can fill in all these fields, I think. And yeah, I don't know, maybe we'll hear from him in the next meeting."
+  },
+  {
+   "idx": 4,
+   "speaker": "A",
+   "start_ms": 41790,
+   "end_ms": 50472,
+   "text": "It's his first week. He's probably still on page 1 of the to-dos that you get when you join, so it's fine. I think we're straight into demos then."
+  },
+  {
+   "idx": 5,
+   "speaker": "A",
+   "start_ms": 52579,
+   "end_ms": 53555,
+   "text": "Are we starting with Deepika?"
+  },
+  {
+   "idx": 6,
+   "speaker": "C",
+   "start_ms": 54759,
+   "end_ms": 80411,
+   "text": "Oh no. I thought I had more time. I thought we were gonna have more of an intro. All right, I can— Deepika is— it's super late for her, so I'll take care of this demo for her. And this is my first time running through it, so it'll be a nice, fun, real live demo."
+  },
+  {
+   "idx": 7,
+   "speaker": "C",
+   "start_ms": 85999,
+   "end_ms": 107292,
+   "text": "Okay, so this is around the viewing of the activity and system notes. If y'all caught the recording last week, Deepika demoed just viewing the activity and system notes. Goal for this previous week was to"
+  },
+  {
+   "idx": 8,
+   "speaker": "C",
+   "start_ms": 109581,
+   "end_ms": 136265,
+   "text": "had the ability to sort, which she took care of. There's a little bit of backstage work done around the widget on the front end, which took the majority of the week and is still, still being worked on. But yesterday, she was able to get the sorting into her draft MR."
+  },
+  {
+   "idx": 9,
+   "speaker": "C",
+   "start_ms": 136394,
+   "end_ms": 158048,
+   "text": "So it's not ready yet on staging or production, but it is available in her, in her branch. So as you see here, hopefully, I am in an objective. We have some system notes, just, just 3 here. It defaults to oldest first. My first time clicking on this."
+  },
+  {
+   "idx": 10,
+   "speaker": "C",
+   "start_ms": 158722,
+   "end_ms": 162920,
+   "text": "Oh yeah, and it sorts to newest first. Let's see if—"
+  },
+  {
+   "idx": 11,
+   "speaker": "C",
+   "start_ms": 164697,
+   "end_ms": 166749,
+   "text": "what happens if we add another—"
+  },
+  {
+   "idx": 12,
+   "speaker": "C",
+   "start_ms": 168995,
+   "end_ms": 169835,
+   "text": "I do that."
+  },
+  {
+   "idx": 13,
+   "speaker": "C",
+   "start_ms": 173629,
+   "end_ms": 174943,
+   "text": "Okay, it added it to there."
+  },
+  {
+   "idx": 14,
+   "speaker": "C",
+   "start_ms": 176579,
+   "end_ms": 179633,
+   "text": "And that is not sorted, correct?"
+  },
+  {
+   "idx": 15,
+   "speaker": "D",
+   "start_ms": 180457,
+   "end_ms": 180796,
+   "text": "Oh, it is."
+  },
+  {
+   "idx": 16,
+   "speaker": "C",
+   "start_ms": 182350,
+   "end_ms": 183982,
+   "text": "Is this the other way around?"
+  },
+  {
+   "idx": 17,
+   "speaker": "E",
+   "start_ms": 185173,
+   "end_ms": 185760,
+   "text": "This first?"
+  },
+  {
+   "idx": 18,
+   "speaker": "F",
+   "start_ms": 186070,
+   "end_ms": 186331,
+   "text": "Yeah."
+  },
+  {
+   "idx": 19,
+   "speaker": "C",
+   "start_ms": 186739,
+   "end_ms": 194088,
+   "text": "Okay, so it looks like we just need to reverse that, but it did do it in the right order, which is great. Let's see if"
+  },
+  {
+   "idx": 20,
+   "speaker": "C",
+   "start_ms": 199074,
+   "end_ms": 199830,
+   "text": "we do that."
+  },
+  {
+   "idx": 21,
+   "speaker": "A",
+   "start_ms": 203659,
+   "end_ms": 205720,
+   "text": "It seems to resort it whenever—"
+  },
+  {
+   "idx": 22,
+   "speaker": "C",
+   "start_ms": 206346,
+   "end_ms": 207070,
+   "text": "yeah, it does."
+  },
+  {
+   "idx": 23,
+   "speaker": "C",
+   "start_ms": 209450,
+   "end_ms": 212401,
+   "text": "Did it change this? Did you notice if it changed the actual—"
+  },
+  {
+   "idx": 24,
+   "speaker": "A",
+   "start_ms": 212401,
+   "end_ms": 215816,
+   "text": "no, I think it Oh yeah, maybe it didn't change it."
+  },
+  {
+   "idx": 25,
+   "speaker": "C",
+   "start_ms": 216700,
+   "end_ms": 222745,
+   "text": "Okay. All right. So some tweaks that need to be done around the,"
+  },
+  {
+   "idx": 26,
+   "speaker": "C",
+   "start_ms": 225618,
+   "end_ms": 227522,
+   "text": "around the addition within"
+  },
+  {
+   "idx": 27,
+   "speaker": "C",
+   "start_ms": 229232,
+   "end_ms": 233466,
+   "text": "an objective, but we do have the sorting ability there."
+  },
+  {
+   "idx": 28,
+   "speaker": "C",
+   "start_ms": 234989,
+   "end_ms": 235491,
+   "text": "Let's see if,"
+  },
+  {
+   "idx": 29,
+   "speaker": "C",
+   "start_ms": 237370,
+   "end_ms": 238233,
+   "text": "let's add a"
+  },
+  {
+   "idx": 30,
+   "speaker": "C",
+   "start_ms": 249933,
+   "end_ms": 257084,
+   "text": "That may be on my side. All right, maybe we can't test the key result on this. MR may just be on my environment."
+  },
+  {
+   "idx": 31,
+   "speaker": "E",
+   "start_ms": 260510,
+   "end_ms": 260850,
+   "text": "Okay."
+  },
+  {
+   "idx": 32,
+   "speaker": "A",
+   "start_ms": 261904,
+   "end_ms": 266948,
+   "text": "Is it, is that widget meant to be below the list of system notes?"
+  },
+  {
+   "idx": 33,
+   "speaker": "G",
+   "start_ms": 270049,
+   "end_ms": 277088,
+   "text": "No, I think it's a bug. We, we need to address it to account for system notes. Basically, it needs to be right below description."
+  },
+  {
+   "idx": 34,
+   "speaker": "C",
+   "start_ms": 282090,
+   "end_ms": 285384,
+   "text": "Should it always be below description then?"
+  },
+  {
+   "idx": 35,
+   "speaker": "G",
+   "start_ms": 287524,
+   "end_ms": 299564,
+   "text": "Yeah, so the original designs that we have for Tree widget is similar to how we do other widget types where children items are always after description but below discussions and system notes."
+  },
+  {
+   "idx": 36,
+   "speaker": "H",
+   "start_ms": 305354,
+   "end_ms": 305822,
+   "text": "Cool."
+  },
+  {
+   "idx": 37,
+   "speaker": "C",
+   "start_ms": 306193,
+   "end_ms": 306967,
+   "text": "Yeah, do we have a—"
+  },
+  {
+   "idx": 38,
+   "speaker": "C",
+   "start_ms": 309516,
+   "end_ms": 331452,
+   "text": "we do have a design with all of the widgets for an objective done, right? Like everything should be— that's here, status, assignees, labels, and milestone should be above description, which should be above the child objectives, which should be above the activity and notes."
+  },
+  {
+   "idx": 39,
+   "speaker": "H",
+   "start_ms": 333337,
+   "end_ms": 335426,
+   "text": "Yep, I can attach it to the agenda."
+  },
+  {
+   "idx": 40,
+   "speaker": "F",
+   "start_ms": 340663,
+   "end_ms": 340683,
+   "text": "Cool."
+  },
+  {
+   "idx": 41,
+   "speaker": "G",
+   "start_ms": 340683,
+   "end_ms": 345323,
+   "text": "Yeah, I've pasted a link to the issue which contains all the designs, so you can refer to it, I think."
+  },
+  {
+   "idx": 42,
+   "speaker": "H",
+   "start_ms": 351810,
+   "end_ms": 351830,
+   "text": "Cool."
+  },
+  {
+   "idx": 43,
+   "speaker": "C",
+   "start_ms": 351830,
+   "end_ms": 352561,
+   "text": "Any other questions?"
+  },
+  {
+   "idx": 44,
+   "speaker": "C",
+   "start_ms": 358542,
+   "end_ms": 371350,
+   "text": "All right, okay, so the next item for the OKR management demos was around comments, which we don't have anything on the UI to show today."
+  },
+  {
+   "idx": 45,
+   "speaker": "C",
+   "start_ms": 373236,
+   "end_ms": 390241,
+   "text": "Unless, and Alexandria, I'll put you on the spot, you want to show the response of comments. Do you have anything easily available locally, or it's that backends, the API is in production now, so we could technically test on"
+  },
+  {
+   "idx": 46,
+   "speaker": "C",
+   "start_ms": 392452,
+   "end_ms": 395613,
+   "text": "staging or production, but do you want to show"
+  },
+  {
+   "idx": 47,
+   "speaker": "C",
+   "start_ms": 397856,
+   "end_ms": 403468,
+   "text": "getting comments widget form through GraphQL?"
+  },
+  {
+   "idx": 48,
+   "speaker": "C",
+   "start_ms": 405680,
+   "end_ms": 409037,
+   "text": "You don't have to if you don't want to, because again, I'm putting you on the spot. It's the first time I'm mentioning it to you."
+  },
+  {
+   "idx": 49,
+   "speaker": "I",
+   "start_ms": 411387,
+   "end_ms": 412723,
+   "text": "It was for me, right?"
+  },
+  {
+   "idx": 50,
+   "speaker": "C",
+   "start_ms": 413351,
+   "end_ms": 414849,
+   "text": "Yeah."
+  },
+  {
+   "idx": 51,
+   "speaker": "F",
+   "start_ms": 415412,
+   "end_ms": 416491,
+   "text": "Okay."
+  },
+  {
+   "idx": 52,
+   "speaker": "I",
+   "start_ms": 416700,
+   "end_ms": 421370,
+   "text": "We can move that down to the later on and I'll prepare something."
+  },
+  {
+   "idx": 53,
+   "speaker": "I",
+   "start_ms": 423758,
+   "end_ms": 429833,
+   "text": "Because I don't have anything ready. Yeah, I didn't know we'd want to demo that."
+  },
+  {
+   "idx": 54,
+   "speaker": "C",
+   "start_ms": 430785,
+   "end_ms": 439780,
+   "text": "Okay, yeah, let's move on to the next one. And then if, like I said, we don't have to demo it, it's just showing it in— well, here, actually,"
+  },
+  {
+   "idx": 55,
+   "speaker": "C",
+   "start_ms": 442771,
+   "end_ms": 446839,
+   "text": "I can do it together right now. Let's see how quickly I can—"
+  },
+  {
+   "idx": 56,
+   "speaker": "C",
+   "start_ms": 450544,
+   "end_ms": 452396,
+   "text": "do you remember the URI?"
+  },
+  {
+   "idx": 57,
+   "speaker": "C",
+   "start_ms": 460233,
+   "end_ms": 463175,
+   "text": "Um, what would it be under? Project."
+  },
+  {
+   "idx": 58,
+   "speaker": "C",
+   "start_ms": 468044,
+   "end_ms": 468449,
+   "text": "And, um,"
+  },
+  {
+   "idx": 59,
+   "speaker": "C",
+   "start_ms": 470128,
+   "end_ms": 477694,
+   "text": "I don't want to make you all watch me type, so yeah, we'll, we'll skip to— Kishore's is read-only."
+  },
+  {
+   "idx": 60,
+   "speaker": "C",
+   "start_ms": 479278,
+   "end_ms": 481523,
+   "text": "Or do you want to voice that?"
+  },
+  {
+   "idx": 61,
+   "speaker": "G",
+   "start_ms": 481732,
+   "end_ms": 509219,
+   "text": "Yeah, so I'll verbalize. So there isn't any significant progress as far as TreeView frontend is concerned, although last time I did share that we have a couple of backend MRs as a dependency for frontend to move ahead. So all the backend MRs got merged. So in terms of dependencies, we are unblocked for the TreeView. But I plan to have next week's plan weekly to demo basically showing off other attributes within TreeView."
+  },
+  {
+   "idx": 62,
+   "speaker": "G",
+   "start_ms": 509572,
+   "end_ms": 518578,
+   "text": "Which includes label, milestone, and assignees. So yeah, nothing to demo for hierarchy widget as of now."
+  },
+  {
+   "idx": 63,
+   "speaker": "G",
+   "start_ms": 521119,
+   "end_ms": 523837,
+   "text": "Next one would be Abhilash, progress widget."
+  },
+  {
+   "idx": 64,
+   "speaker": "J",
+   "start_ms": 527060,
+   "end_ms": 535654,
+   "text": "Yeah, I think— I mean, I can give a demo on UI side on my local instance. But they are not— demos are not ready for review yet."
+  },
+  {
+   "idx": 65,
+   "speaker": "J",
+   "start_ms": 537371,
+   "end_ms": 540643,
+   "text": "Um, yeah, Donald, if you want me to take over, I can take over."
+  },
+  {
+   "idx": 66,
+   "speaker": "J",
+   "start_ms": 544269,
+   "end_ms": 545212,
+   "text": "Can I replace your screen?"
+  },
+  {
+   "idx": 67,
+   "speaker": "E",
+   "start_ms": 545278,
+   "end_ms": 545907,
+   "text": "Yeah, great."
+  },
+  {
+   "idx": 68,
+   "speaker": "J",
+   "start_ms": 563117,
+   "end_ms": 566714,
+   "text": "Are you guys able to see my screen which has an MR?"
+  },
+  {
+   "idx": 69,
+   "speaker": "H",
+   "start_ms": 567758,
+   "end_ms": 568047,
+   "text": "Yes."
+  },
+  {
+   "idx": 70,
+   "speaker": "J",
+   "start_ms": 568657,
+   "end_ms": 589194,
+   "text": "Yeah, so this milestone I've been working on adding progress widget for work items. As part of that, the initial step was to add a separate table for progress widget. That has been done in this MR, and it got merged today. I was out for a couple of days this week, early this week, so there was some delay. So in this MR, we have added a table. We have added a widget class."
+  },
+  {
+   "idx": 71,
+   "speaker": "J",
+   "start_ms": 590415,
+   "end_ms": 610532,
+   "text": "To be an EE-only widget. And then I also made the GraphQL query also available to fetch progress widgets. And then I picked up this small piece of item today, which was raised by Melissa, where from the dashboard issues, if you click on an objective, user is being navigated to issues new page."
+  },
+  {
+   "idx": 72,
+   "speaker": "J",
+   "start_ms": 611222,
+   "end_ms": 633062,
+   "text": "So I fixed this. I've raised an MR waiting for the review. And then lastly, coming to the demo part. So inside objective, here is how progress widget is going to look like. We currently have a backend validation for this value to be between 0 and 100. So I can actually go ahead and change this to some 59 and just leave it."
+  },
+  {
+   "idx": 73,
+   "speaker": "J",
+   "start_ms": 633415,
+   "end_ms": 662839,
+   "text": "It gets saved. I've introduced a mutation as well. Let's verify this by reloading the page. Yeah, it's staying at 59. However, there is some minor bug in this which I am working on. So hence the, the MR of this is still in draft mode. I still need to write a couple of test cases as well. Once I test it end-to-end completely by end of this week, I'll split this MR into frontend exclusive as well as backend exclusive so that the GraphQL changes can go first and then we can push the frontend widgets."
+  },
+  {
+   "idx": 74,
+   "speaker": "J",
+   "start_ms": 664050,
+   "end_ms": 668228,
+   "text": "So once this is done, the only piece that will be pending as part of progress widget is"
+  },
+  {
+   "idx": 75,
+   "speaker": "J",
+   "start_ms": 669931,
+   "end_ms": 688904,
+   "text": "handling the rollups. So we need to write logic to support rollups. Yeah. I'll open up a discussion thread to finalize how I want to take it forward. But high level, I just want to go forward with after update or after update hooks at database level. But yeah, we can take it async once I open up the discussion, Semar."
+  },
+  {
+   "idx": 76,
+   "speaker": "J",
+   "start_ms": 691243,
+   "end_ms": 691938,
+   "text": "Any questions?"
+  },
+  {
+   "idx": 77,
+   "speaker": "H",
+   "start_ms": 694397,
+   "end_ms": 711590,
+   "text": "You said there is backend validation, but on the frontend, do we limit it with maximum of 100? Because I see that it's type number, right? So we can set maximum 100, and it won't allow us to go above 100 on frontend too. So we have double validation in this particular case."
+  },
+  {
+   "idx": 78,
+   "speaker": "J",
+   "start_ms": 712575,
+   "end_ms": 715822,
+   "text": "Oh, that's great. I did not know that. Thanks for letting me know."
+  },
+  {
+   "idx": 79,
+   "speaker": "H",
+   "start_ms": 715984,
+   "end_ms": 717818,
+   "text": "No problem. Just a little suggestion."
+  },
+  {
+   "idx": 80,
+   "speaker": "D",
+   "start_ms": 721760,
+   "end_ms": 733450,
+   "text": "Out of curiosity, backend error issues are displayed when you now update this to some invalid value. For example, to 200 or something like that."
+  },
+  {
+   "idx": 81,
+   "speaker": "J",
+   "start_ms": 733880,
+   "end_ms": 751820,
+   "text": "Hi, yeah, so if I update it to 200, backend is not currently raising any error. The value still stays here, but if I refresh this page, it goes back to the previous value. I just raised a comment to Marius asking if I'm doing something— maybe I messed up something in the mutation. Yeah, so this is the bug that I was talking about. So it's not completely implemented."
+  },
+  {
+   "idx": 82,
+   "speaker": "D",
+   "start_ms": 754120,
+   "end_ms": 760220,
+   "text": "Okay, cool, thanks. There should be a list of errors returned from backend with validation errors, so it should be possible to"
+  },
+  {
+   "idx": 83,
+   "speaker": "D",
+   "start_ms": 762020,
+   "end_ms": 763940,
+   "text": "just display them. I hope."
+  },
+  {
+   "idx": 84,
+   "speaker": "C",
+   "start_ms": 765291,
+   "end_ms": 765714,
+   "text": "All right."
+  },
+  {
+   "idx": 85,
+   "speaker": "J",
+   "start_ms": 766039,
+   "end_ms": 767748,
+   "text": "Yeah, here is a question that I've raised just now."
+  },
+  {
+   "idx": 86,
+   "speaker": "E",
+   "start_ms": 771351,
+   "end_ms": 771415,
+   "text": "Yeah."
+  },
+  {
+   "idx": 87,
+   "speaker": "K",
+   "start_ms": 771463,
+   "end_ms": 786411,
+   "text": "A bit of an unrelated question, but in general for these work item widgets, we don't have any loading indicator or saving indicator right now. I mean, while trying this demo, you were unsure if this got saved, although you implemented it. How is it even for our users?"
+  },
+  {
+   "idx": 88,
+   "speaker": "K",
+   "start_ms": 788192,
+   "end_ms": 793329,
+   "text": "Should we add some notification or something that indicates that this got saved to the server?"
+  },
+  {
+   "idx": 89,
+   "speaker": "J",
+   "start_ms": 798977,
+   "end_ms": 802706,
+   "text": "Good one. I'll leave it for if anyone wants to give it."
+  },
+  {
+   "idx": 90,
+   "speaker": "K",
+   "start_ms": 803095,
+   "end_ms": 806126,
+   "text": "It's not about OKRs only, so it's a general question."
+  },
+  {
+   "idx": 91,
+   "speaker": "J",
+   "start_ms": 807020,
+   "end_ms": 826100,
+   "text": "So if I'm just playing with status here, if I just click closed here, dropdown is going into blurred phase for a fraction of second and then it is coming back alive. Which is a slight indicator of the value got updated in the backend. It might not be that straightforward, but yeah, for progress and labels, there is nothing of that sort at this moment."
+  },
+  {
+   "idx": 92,
+   "speaker": "K",
+   "start_ms": 827288,
+   "end_ms": 829342,
+   "text": "Yeah, in the sidebar right now— sorry, go ahead."
+  },
+  {
+   "idx": 93,
+   "speaker": "H",
+   "start_ms": 830016,
+   "end_ms": 851034,
+   "text": "It was an intention that we don't have any loading indicator on assignees or labels, and it's as smooth as possible. So we don't block users from changing. And I think it was also agreed with UX team to have a really smooth user interface without multiple loading states that block user from different interactions."
+  },
+  {
+   "idx": 94,
+   "speaker": "C",
+   "start_ms": 854892,
+   "end_ms": 867939,
+   "text": "Yeah, we should indicate if it fails, probably, but like, we can probably take the assumption that it's like, you know, kind of optimistically exceed, you know, succeeds, but we do need to indicate if it's not actually true."
+  },
+  {
+   "idx": 95,
+   "speaker": "J",
+   "start_ms": 877953,
+   "end_ms": 878420,
+   "text": "All right then."
+  },
+  {
+   "idx": 96,
+   "speaker": "C",
+   "start_ms": 884383,
+   "end_ms": 890310,
+   "text": "Just one thing, when you create the discussion issue for rollups,"
+  },
+  {
+   "idx": 97,
+   "speaker": "C",
+   "start_ms": 891972,
+   "end_ms": 904361,
+   "text": "if you could link it in the agenda or in Slack, because I think there's going to be other implications around rollups. Because we're in the process of trying to figure that out with other things like weights and"
+  },
+  {
+   "idx": 98,
+   "speaker": "C",
+   "start_ms": 906469,
+   "end_ms": 910218,
+   "text": "weights for iterations and milestones, etc."
+  },
+  {
+   "idx": 99,
+   "speaker": "D",
+   "start_ms": 910381,
+   "end_ms": 911014,
+   "text": "Sure, sure."
+  },
+  {
+   "idx": 100,
+   "speaker": "J",
+   "start_ms": 911339,
+   "end_ms": 914391,
+   "text": "Once I have that ready, I'll ping in the channel."
+  },
+  {
+   "idx": 101,
+   "speaker": "C",
+   "start_ms": 915623,
+   "end_ms": 916011,
+   "text": "Thank you."
+  },
+  {
+   "idx": 102,
+   "speaker": "C",
+   "start_ms": 923529,
+   "end_ms": 940007,
+   "text": "Okay, awesome demos. Let's go ahead and let's not show the comment stuff yet. We'll wait till next week to show it on the UI. So we can go ahead and move to Brett's demo."
+  },
+  {
+   "idx": 103,
+   "speaker": "E",
+   "start_ms": 943800,
+   "end_ms": 944675,
+   "text": "Okay, thank you."
+  },
+  {
+   "idx": 104,
+   "speaker": "E",
+   "start_ms": 949766,
+   "end_ms": 950595,
+   "text": "Yeah, I think it's this one."
+  },
+  {
+   "idx": 105,
+   "speaker": "E",
+   "start_ms": 954430,
+   "end_ms": 970673,
+   "text": "So what we— what I've implemented is the ability to specify attributes for an image so that it can be resized. So for the example here, this is pulling an image from our, our press kit, and this is what we get typically."
+  },
+  {
+   "idx": 106,
+   "speaker": "E",
+   "start_ms": 972237,
+   "end_ms": 974542,
+   "text": "But if I come here and add"
+  },
+  {
+   "idx": 107,
+   "speaker": "E",
+   "start_ms": 976090,
+   "end_ms": 977863,
+   "text": "width equals 100%,"
+  },
+  {
+   "idx": 108,
+   "speaker": "E",
+   "start_ms": 980491,
+   "end_ms": 982722,
+   "text": "Well, let's put the right bracket in there."
+  },
+  {
+   "idx": 109,
+   "speaker": "E",
+   "start_ms": 985170,
+   "end_ms": 995589,
+   "text": "Preview, and there we go, full size. Or if I remove the percent and it'll default to pixel size, then he gets really small."
+  },
+  {
+   "idx": 110,
+   "speaker": "E",
+   "start_ms": 997538,
+   "end_ms": 1001339,
+   "text": "So this is actually available in, in production on our group,"
+  },
+  {
+   "idx": 111,
+   "speaker": "E",
+   "start_ms": 1003125,
+   "end_ms": 1013627,
+   "text": "but we can't enable it product-wide yet because the content editor doesn't understand the widths and heights yet. They don't understand the syntax or—"
+  },
+  {
+   "idx": 112,
+   "speaker": "C",
+   "start_ms": 1014559,
+   "end_ms": 1016884,
+   "text": "so there's a bug there and a little bit of work that needs to get done there."
+  },
+  {
+   "idx": 113,
+   "speaker": "E",
+   "start_ms": 1020565,
+   "end_ms": 1021307,
+   "text": "Any questions?"
+  },
+  {
+   "idx": 114,
+   "speaker": "A",
+   "start_ms": 1025228,
+   "end_ms": 1026712,
+   "text": "You're going to make people very happy with that, Brent."
+  },
+  {
+   "idx": 115,
+   "speaker": "L",
+   "start_ms": 1027664,
+   "end_ms": 1029665,
+   "text": "I think you just changed my life right there."
+  },
+  {
+   "idx": 116,
+   "speaker": "B",
+   "start_ms": 1034065,
+   "end_ms": 1034164,
+   "text": "Cool."
+  },
+  {
+   "idx": 117,
+   "speaker": "E",
+   "start_ms": 1034459,
+   "end_ms": 1035130,
+   "text": "Yeah, it's nice."
+  },
+  {
+   "idx": 118,
+   "speaker": "B",
+   "start_ms": 1035229,
+   "end_ms": 1036015,
+   "text": "It's—"
+  },
+  {
+   "idx": 119,
+   "speaker": "E",
+   "start_ms": 1036015,
+   "end_ms": 1042376,
+   "text": "it was much easier, at least at this small level, than I expected previously."
+  },
+  {
+   "idx": 120,
+   "speaker": "E",
+   "start_ms": 1044107,
+   "end_ms": 1044640,
+   "text": "So cool."
+  },
+  {
+   "idx": 121,
+   "speaker": "E",
+   "start_ms": 1049790,
+   "end_ms": 1052324,
+   "text": "Okay, I'm done if there's— unless there's other questions."
+  },
+  {
+   "idx": 122,
+   "speaker": "C",
+   "start_ms": 1070237,
+   "end_ms": 1071012,
+   "text": "Talia, you're up."
+  },
+  {
+   "idx": 123,
+   "speaker": "H",
+   "start_ms": 1073499,
+   "end_ms": 1094223,
+   "text": "Yes, so this demo won't be new for those of you who attended the application performance session, but for the rest of us, Let's have it shared. So this is a quick update on our frontend caching OKR that we have. And here you can see the list of issues."
+  },
+  {
+   "idx": 124,
+   "speaker": "H",
+   "start_ms": 1094351,
+   "end_ms": 1116038,
+   "text": "On the previous demo, you've probably seen how they were cached, but caching is easy, caching validation is complicated. So currently what happens here, first of all, we cache per query now, not per application like it was previously. So we cache only the issue list query and labels for that. How does it work right now again?"
+  },
+  {
+   "idx": 125,
+   "speaker": "H",
+   "start_ms": 1116732,
+   "end_ms": 1138017,
+   "text": "First, we display the cached version of the list. And after this, there is a request in the background that brings us the actual version of the issue list. So let's make a quick test here. Let's create a new issue. New issue. Now, as you can see, I have problems with the second part of development challenge, which is naming. So I just name them with numbers."
+  },
+  {
+   "idx": 126,
+   "speaker": "H",
+   "start_ms": 1139188,
+   "end_ms": 1160815,
+   "text": "Let's create this issue and go to the issue list. So you can see there will be new issue 8 for brief moment when my application is making the request to the server. It shows new issue 8 and then new issue 9 appears without any kind of loading things. And it's really fast. So this part is cached."
+  },
+  {
+   "idx": 127,
+   "speaker": "H",
+   "start_ms": 1161104,
+   "end_ms": 1170527,
+   "text": "Labels are also cached, but for example, I don't cache assignees. We are really selective about it. You can see that we are fetching signees in the list. But if I go to labels,"
+  },
+  {
+   "idx": 128,
+   "speaker": "H",
+   "start_ms": 1172903,
+   "end_ms": 1195871,
+   "text": "there is still a little pause. It's not a loading, it's just some amount of time when we are rendering labels. But there is a little bug and I already created an issue, not even a bug, that's a limitation of our filtered search. The problem here is in the filtered search, it's really hard to update the list of the labels after we return them first time from the cache."
+  },
+  {
+   "idx": 129,
+   "speaker": "H",
+   "start_ms": 1196592,
+   "end_ms": 1197558,
+   "text": "What does it mean for us?"
+  },
+  {
+   "idx": 130,
+   "speaker": "H",
+   "start_ms": 1199619,
+   "end_ms": 1201296,
+   "text": "Let's go again, create a new label."
+  },
+  {
+   "idx": 131,
+   "speaker": "H",
+   "start_ms": 1203320,
+   "end_ms": 1218325,
+   "text": "So let's create A2. So it's also in the top of the list with some greenish color. And come back to our issue list. The first time when I show the labels list, there won't be A2 here."
+  },
+  {
+   "idx": 132,
+   "speaker": "H",
+   "start_ms": 1220394,
+   "end_ms": 1250115,
+   "text": "Because in the background I'm still sending the request, but due again to the limitations of the filtered search that uses promise-based queries, for the first time it's not displayed here. It will be only displayed when user opens the dropdown the second time. And that's why I created this issue by recommendation from John to discuss it with UX team until we find a proper solution to this problem on the technical level."
+  },
+  {
+   "idx": 133,
+   "speaker": "H",
+   "start_ms": 1251582,
+   "end_ms": 1254848,
+   "text": "That was basically it. Any questions?"
+  },
+  {
+   "idx": 134,
+   "speaker": "A",
+   "start_ms": 1261388,
+   "end_ms": 1281948,
+   "text": "Yeah, it's worth noting as well that like it is a trade-off. So the current experience, for example, if you load this list of labels on the GitLab org group issues list, it can take 8 seconds sometimes, which is like completely frustrating and really interrupts people's workloads. So I think it is a balance anyway."
+  },
+  {
+   "idx": 135,
+   "speaker": "A",
+   "start_ms": 1282028,
+   "end_ms": 1299297,
+   "text": "We have to like consider like which is the greater evil, right? That like, how often do you add labels really, like new labels, that this would be frustrating for people? And then since it's fixed anyway, that when you open a new list, like maybe it's not such a big deal. But yeah, any feedback."
+  },
+  {
+   "idx": 136,
+   "speaker": "L",
+   "start_ms": 1300871,
+   "end_ms": 1309499,
+   "text": "Yeah, that was my— that was— if we were to go into this, Natalia, I saw your issue this morning in sort of researching,"
+  },
+  {
+   "idx": 137,
+   "speaker": "L",
+   "start_ms": 1311781,
+   "end_ms": 1317375,
+   "text": "doing an actual research effort on this, it would be probably centered around"
+  },
+  {
+   "idx": 138,
+   "speaker": "L",
+   "start_ms": 1319017,
+   "end_ms": 1335326,
+   "text": "standard workflow and inserting new labels. Is that a common thing? Is it worth the trade-off for us to get the performance back versus having that new label visible the very first time."
+  },
+  {
+   "idx": 139,
+   "speaker": "L",
+   "start_ms": 1336893,
+   "end_ms": 1341057,
+   "text": "I personally have no inkling right now about that."
+  },
+  {
+   "idx": 140,
+   "speaker": "E",
+   "start_ms": 1344779,
+   "end_ms": 1360393,
+   "text": "Quick question, is it that that will appear, that problem will appear for everybody when a label is added, is that correct? Yes, because when you add it to organization, each person across the organization will experience that. Because they're—"
+  },
+  {
+   "idx": 141,
+   "speaker": "H",
+   "start_ms": 1360457,
+   "end_ms": 1373720,
+   "text": "because that's correct. Yes, for the first time they open the dropdown, they will see the cached version, and only for the second time they will see the proper version. So yeah, it for every single person because it's front-end caching. So it happens on the client."
+  },
+  {
+   "idx": 142,
+   "speaker": "E",
+   "start_ms": 1374908,
+   "end_ms": 1394465,
+   "text": "I mean, we just to play devil's advocate, we play, we change labels quite often in our organization. So as soon as that's that's mentioned on the Slack forum and we're supposed to add some new type, something label to our issues, we're not gonna see that the first time we jump in to try to do that."
+  },
+  {
+   "idx": 143,
+   "speaker": "H",
+   "start_ms": 1395621,
+   "end_ms": 1395781,
+   "text": "Okay."
+  },
+  {
+   "idx": 144,
+   "speaker": "F",
+   "start_ms": 1396247,
+   "end_ms": 1417279,
+   "text": "Yeah, but it just devil's advocate to that statement. If you think about the workflow, you're not typically going to create a new label and then immediately going to a filtered list. You're creating a label, you're applying it to stuff, Meanwhile, if we're talking about GitLab users, they're in the list doing other work and they've already loaded the list."
+  },
+  {
+   "idx": 145,
+   "speaker": "F",
+   "start_ms": 1417520,
+   "end_ms": 1440251,
+   "text": "So they've already hit it without, you know, before you've even got there to actually use it. So in my opinion, this is a very easy price to pay for an improvement in performance because at least for GitLab, for other customers to Blair's point, we need to know more about how their workflow works. But at least for us, I don't expect it being an issue."
+  },
+  {
+   "idx": 146,
+   "speaker": "E",
+   "start_ms": 1440860,
+   "end_ms": 1447092,
+   "text": "Internally. Is it, is it just the filtered list dropdown or is it the,"
+  },
+  {
+   "idx": 147,
+   "speaker": "E",
+   "start_ms": 1448687,
+   "end_ms": 1456354,
+   "text": "when I'm in an issue and hit the, the edit label widget? No, this is going to appear in that case too."
+  },
+  {
+   "idx": 148,
+   "speaker": "H",
+   "start_ms": 1457061,
+   "end_ms": 1477302,
+   "text": "This is only for issues list for now and probably will stay there because we try to figure it out for issues list because this particular query is super slow. Because database query goes through all the groups and projects for a certain user trying to get all the labels they have access to. On the issue itself, it's quite fast, so we don't plan to cache there."
+  },
+  {
+   "idx": 149,
+   "speaker": "H",
+   "start_ms": 1477783,
+   "end_ms": 1500889,
+   "text": "And to Amanda's point, also, if you add a new label, especially on GitLab.com, and you go, even if you go to the issue, but it will probably try to search for this label, not expect to be, not expected to be immediately on the list because I rarely see people that open the list and scroll down trying to find their label, especially in our 1,500 labels for GitLab."
+  },
+  {
+   "idx": 150,
+   "speaker": "H",
+   "start_ms": 1501868,
+   "end_ms": 1523067,
+   "text": "So most likely you will search, and if you're searching, this search is not cached. For the first time you search, it's not cached. It will be searched only after the first attempt of the search. That's also answering Amanda's question. So this aids the performance when you do type a value, but only after you type it at least once. So if you type Workflow."
+  },
+  {
+   "idx": 151,
+   "speaker": "H",
+   "start_ms": 1523646,
+   "end_ms": 1534402,
+   "text": "There is a set of labels with workflow. You see, this is cached now. Next time you type workflow, you will have them instantly, but for the first time it's not because it requires some value to cache first."
+  },
+  {
+   "idx": 152,
+   "speaker": "F",
+   "start_ms": 1536175,
+   "end_ms": 1557549,
+   "text": "I legitimately do a— I type a letter and then I'm like, one Mississippi, two Mississippi, three Mississippi, letter number two, one Mississippi, two Mississippi. I, I count to three between each letter. If this allows me to count to 2 or to 1 or no counting, I will find you, Natalia, and hug you, like, personally."
+  },
+  {
+   "idx": 153,
+   "speaker": "E",
+   "start_ms": 1561303,
+   "end_ms": 1563542,
+   "text": "No, that's a great improvement. It's a great improvement. Thanks."
+  },
+  {
+   "idx": 154,
+   "speaker": "A",
+   "start_ms": 1567418,
+   "end_ms": 1578397,
+   "text": "I think, though, to run— sorry, just to run into it, though, like, just to address Brett's concern again, just so I have it straight, to run into this, you would need to, like, create a new label and then go immediately to an issue list and try to"
+  },
+  {
+   "idx": 155,
+   "speaker": "A",
+   "start_ms": 1580277,
+   "end_ms": 1588426,
+   "text": "filter and try to filter the list by that label, right? That, that's the time you'd run into it. If you would first filter the list by anything else,"
+  },
+  {
+   "idx": 156,
+   "speaker": "A",
+   "start_ms": 1590473,
+   "end_ms": 1616516,
+   "text": "you'll have refreshed the cache of labels. So say we added like type, I don't know, this is a terrible example, like say type maintenance didn't exist and we had to add type maintenance, right? You would need to go and filter the list by type maintenance first. If you went to the issue list and filtered by DevOps plan, first, then the next time when you went to pick the type label, it would be there, right?"
+  },
+  {
+   "idx": 157,
+   "speaker": "E",
+   "start_ms": 1620180,
+   "end_ms": 1641456,
+   "text": "It's, it's just that the person adding the label, their workflow, at least my workflow typically is to go use it and verify that it works somehow. And so that may be the one instance where they might see the hiccup. But, but you're right, in terms of the performance, it's a—"
+  },
+  {
+   "idx": 158,
+   "speaker": "C",
+   "start_ms": 1641636,
+   "end_ms": 1642369,
+   "text": "it should be a big one."
+  },
+  {
+   "idx": 159,
+   "speaker": "K",
+   "start_ms": 1645790,
+   "end_ms": 1657002,
+   "text": "I want to ask, is there any, is there any cheap way how we can get the latest label got— that got created, like a date, and then do the network query instead of caching so you don't deal with the promise stuff that you mentioned?"
+  },
+  {
+   "idx": 160,
+   "speaker": "H",
+   "start_ms": 1659723,
+   "end_ms": 1687973,
+   "text": "Technically, we can try to get the last label with a creation timestamp and compare it to the timestamp where when the cache was created because we can get the timestamp of the cache, compare and perform the cache invalidation. I'm not sure that there is a partial invalidation in this tool. It's not the one I chose, the one I was asked to work with, but I believe even dropping the cache altogether, we will still need to do this at some point."
+  },
+  {
+   "idx": 161,
+   "speaker": "H",
+   "start_ms": 1688615,
+   "end_ms": 1713416,
+   "text": "So at least invalidation is doable and we can get timestamp, so we can think about that. Also partly answering Gabe's question, unfortunately, updating the cache that is in the local storage is not possible. It's updated when we write with Apollo Cache. So when we are fetching with the query or we are writing to the cache, so this will be already after application is instantiated."
+  },
+  {
+   "idx": 162,
+   "speaker": "H",
+   "start_ms": 1713657,
+   "end_ms": 1736568,
+   "text": "So queries are probably fired at this point. But we can think about it and maybe there will be more crazy ideas about how to fix this particular problem of filtered search because we have a few ideas of how to work on this from the frontend side, refactoring the filtered search itself. Maybe, maybe it will be possible to switch it to so-called smart queries, the same ones that we have for issues list."
+  },
+  {
+   "idx": 163,
+   "speaker": "H",
+   "start_ms": 1736616,
+   "end_ms": 1746009,
+   "text": "You can see issues list is updating pretty fine. So yeah, but for now, this is the first iteration that is far from perfect, but at least we have something to cache."
+  },
+  {
+   "idx": 164,
+   "speaker": "I",
+   "start_ms": 1748415,
+   "end_ms": 1763226,
+   "text": "I wonder if we can use subscriptions, like subscribe to projects and groups that will give you all the labels, and then we can fire the events. Like if a new label is added or anything, you get that data and populate the cache."
+  },
+  {
+   "idx": 165,
+   "speaker": "H",
+   "start_ms": 1763867,
+   "end_ms": 1786954,
+   "text": "The main problem is not with the cache here. The main problem is— I will dive just a little bit into frontend implementation. It's quite complex, but Apollo has two types of queries. One of them is observable. That's what most likely you see that updates with subscriptions, updates with mutations, being pretty reactive. So whatever you change in the cache, it displays on your screen. And the second one that is on the filter, it's just a promise."
+  },
+  {
+   "idx": 166,
+   "speaker": "H",
+   "start_ms": 1787067,
+   "end_ms": 1806595,
+   "text": "It's just like a REST API. Whatever you have in the response for the first time stays there forever. If you can update cache like 10 times and it will ignore it because it's a simple query. It does not care about what's in the cache. Cache. It cares about what's returned for the first time, and that's the main problem with filtered search, unfortunately."
+  },
+  {
+   "idx": 167,
+   "speaker": "I",
+   "start_ms": 1810684,
+   "end_ms": 1812769,
+   "text": "Got it, thanks for the clarifications."
+  },
+  {
+   "idx": 168,
+   "speaker": "H",
+   "start_ms": 1815740,
+   "end_ms": 1825739,
+   "text": "Okay, let's probably save some meeting time. It was a pretty interesting discussion, but we can skip and make it to sync. And on to Kushal."
+  },
+  {
+   "idx": 169,
+   "speaker": "G",
+   "start_ms": 1825788,
+   "end_ms": 1846807,
+   "text": "Yeah, so this is just for the awareness that We currently do not support updating issues and epics in bulk via GraphQL. Right now you can edit issues in bulk from issues list, but it uses a legacy REST API. It's not even a public API. I think it's a private API."
+  },
+  {
+   "idx": 170,
+   "speaker": "G",
+   "start_ms": 1847465,
+   "end_ms": 1867847,
+   "text": "So we basically did a workaround when we rewrote the issues list in Vue. Originally, we were supposed to have bulk editing via GraphQL as well when we implemented issues list in Vue because rest of the page is already in GraphQL. But right now we don't have any mutation available when it comes to bulk editing."
+  },
+  {
+   "idx": 171,
+   "speaker": "G",
+   "start_ms": 1868457,
+   "end_ms": 1898691,
+   "text": "And currently on the Epic side, we have some feature requests coming in both from users and customers that they are looking for more attributes to be updatable in bulk for list of Epics. Currently only labels are supported when it comes to bulk editing Epics. We can add support for more attributes as long as there's a private API available, but then we are basically introducing technical debt because Pages GraphQL and we are using REST for new features."
+  },
+  {
+   "idx": 172,
+   "speaker": "G",
+   "start_ms": 1899446,
+   "end_ms": 1921350,
+   "text": "So we, we had this conversation over a year ago when we rewrote issues list in GraphQL. So I have linked the epic where it was proposed first, like lack of mutations available. We have also created a similar epic for work items, which is here. And it basically tracks the same effort for work item."
+  },
+  {
+   "idx": 173,
+   "speaker": "G",
+   "start_ms": 1922009,
+   "end_ms": 1930650,
+   "text": "So in case we want to support bulk editing of attributes, then you would need to start thinking about having the mutations first in GraphiQL."
+  },
+  {
+   "idx": 174,
+   "speaker": "G",
+   "start_ms": 1934040,
+   "end_ms": 1936527,
+   "text": "Ian, you want to verbalize your point there?"
+  },
+  {
+   "idx": 175,
+   "speaker": "D",
+   "start_ms": 1939729,
+   "end_ms": 1966036,
+   "text": "Yeah, just a minor thought that when we add bulk editing of work items, we will need to think about how to bulk edit work items of different types because each type may not have all the attributes you need to update. So this is something to clarify, but It depends on priorities."
+  },
+  {
+   "idx": 176,
+   "speaker": "D",
+   "start_ms": 1966213,
+   "end_ms": 1973913,
+   "text": "If we need GraphQL API endpoint for epic and issues sooner, we might need to add"
+  },
+  {
+   "idx": 177,
+   "speaker": "D",
+   "start_ms": 1975701,
+   "end_ms": 1986098,
+   "text": "endpoint for bulk editing epics and issues now before we support work items. So it might be two different things."
+  },
+  {
+   "idx": 178,
+   "speaker": "G",
+   "start_ms": 1992956,
+   "end_ms": 2013402,
+   "text": "Yeah, so Marcin, regarding your question that does this influence, uh, the UI, so for now, as, uh, until we add the backend first, as far as like creating mutations are required, there isn't any, uh, UI update that is going to take place. First we need to have mutations that support bulk editing."
+  },
+  {
+   "idx": 179,
+   "speaker": "G",
+   "start_ms": 2013531,
+   "end_ms": 2034912,
+   "text": "Once the mutations are in, then we can add UI on top of it. I, I believe that if we add mutations to update issues list in bulk, uh, then we can keep the existing UI as it is. It would be a behind-the-scenes change where we remove the REST API usage and replace it with GraphQL. The sidebar behavior for bulk editing will remain unchanged. Same thing goes for epics as well."
+  },
+  {
+   "idx": 180,
+   "speaker": "G",
+   "start_ms": 2035682,
+   "end_ms": 2041318,
+   "text": "UI updates will only take place when we start adding new attribute types to that bulk edit sidebar."
+  },
+  {
+   "idx": 181,
+   "speaker": "C",
+   "start_ms": 2043468,
+   "end_ms": 2043597,
+   "text": "Cool."
+  },
+  {
+   "idx": 182,
+   "speaker": "B",
+   "start_ms": 2043807,
+   "end_ms": 2043984,
+   "text": "Thanks."
+  },
+  {
+   "idx": 183,
+   "speaker": "G",
+   "start_ms": 2048551,
+   "end_ms": 2066288,
+   "text": "Yeah, so the last item. So feel free to start the discussion in both the epics that I've linked there if you have any thoughts. And the second item was already answered by Brett, so we can skip it. It was around DB schema determining items for work items. Next one is John."
+  },
+  {
+   "idx": 184,
+   "speaker": "A",
+   "start_ms": 2068473,
+   "end_ms": 2069069,
+   "text": "Yeah, quick one."
+  },
+  {
+   "idx": 185,
+   "speaker": "A",
+   "start_ms": 2070872,
+   "end_ms": 2086570,
+   "text": "Last chance to vote on what time this meeting should be moved to. Please check out the issue. There are multiple options. All the context is in the issue. You probably know it by now. So yeah, please take a look and vote if you haven't already. I'll probably try and wrap it up today so that everyone has 2 weeks to adjust to the new time."
+  },
+  {
+   "idx": 186,
+   "speaker": "A",
+   "start_ms": 2093358,
+   "end_ms": 2095642,
+   "text": "Nicholas, really?"
+  },
+  {
+   "idx": 187,
+   "speaker": "K",
+   "start_ms": 2095980,
+   "end_ms": 2100934,
+   "text": "Just a fun comment because Donald needs to wake up at 5:30 AM. I'm not sure"
+  },
+  {
+   "idx": 188,
+   "speaker": "K",
+   "start_ms": 2102606,
+   "end_ms": 2108742,
+   "text": "if this is the move. If you move it to 13:30 UTC, this will be very early for you."
+  },
+  {
+   "idx": 189,
+   "speaker": "C",
+   "start_ms": 2112269,
+   "end_ms": 2134752,
+   "text": "That's okay. I can— I won't have camera on and I'll probably take it from home if that's the case. But the— I normally go to the APAC, uh, one anyway, so there's no need for me to be active in both, I don't think. So don't keep it at the current time on for my sake, essentially."
+  },
+  {
+   "idx": 190,
+   "speaker": "A",
+   "start_ms": 2136362,
+   "end_ms": 2160835,
+   "text": "Yeah, it's a good point. I think that's reasonable, right? Like, we should try to make it so that everyone can at least attend one of the two meetings. Um, and so if I'm looking at the votes and it's a tiebreak, um, if everyone thinks that's Thanks, that's fair. I'll use that to break the tie, basically. Like, if somebody's able to make both, right? I'll bias towards the one where it includes more people in at least one of the meetings."
+  },
+  {
+   "idx": 191,
+   "speaker": "A",
+   "start_ms": 2167862,
+   "end_ms": 2186778,
+   "text": "That said, there is an option to like veto anytime. So if you definitely absolutely do not want, there's a third emoji for that. Reaction. If you just really, really detest a particular time of day, you can express your opinion on the issue. Anyway, this is going on too long. It's just a vote. Like, feel free to take a look."
+  },
+  {
+   "idx": 192,
+   "speaker": "A",
+   "start_ms": 2195249,
+   "end_ms": 2196486,
+   "text": "All right, Amanda, I think you're up."
+  },
+  {
+   "idx": 193,
+   "speaker": "F",
+   "start_ms": 2198440,
+   "end_ms": 2205819,
+   "text": "Yeah, I just want to say I've worked on a number of cross-team projects in the past, and I've never seen one executed— that's not the right word—"
+  },
+  {
+   "idx": 194,
+   "speaker": "F",
+   "start_ms": 2208478,
+   "end_ms": 2229191,
+   "text": "I haven't seen one delivered in such a really impressive way. The collaboration between the teams and the bias for delivery and the bias for demoing and just getting something usable out there so that we can keep pushing forward is really, really impressive. I'm like proud to be part of this team."
+  },
+  {
+   "idx": 195,
+   "speaker": "F",
+   "start_ms": 2229930,
+   "end_ms": 2233157,
+   "text": "Thanks so much to everybody who's working on the OKR project."
+  },
+  {
+   "idx": 196,
+   "speaker": "H",
+   "start_ms": 2242966,
+   "end_ms": 2250501,
+   "text": "If there are no other points, I see that Rudy joined the meeting, so maybe we can circle back to point 1."
+  },
+  {
+   "idx": 197,
+   "speaker": "A",
+   "start_ms": 2253768,
+   "end_ms": 2256745,
+   "text": "So he has. Rudy, are you there?"
+  },
+  {
+   "idx": 198,
+   "speaker": "B",
+   "start_ms": 2259074,
+   "end_ms": 2259703,
+   "text": "I am. How are you?"
+  },
+  {
+   "idx": 199,
+   "speaker": "A",
+   "start_ms": 2260591,
+   "end_ms": 2279378,
+   "text": "How's it going? So you're very welcome. Uh, we did a short introduction for you earlier, but you weren't here, but that's fine, it's not expected. Uh, so maybe you could tell us a bit about yourself, um, where you were before GitLab, and, uh, yeah, why you decided to join, where you're located, and what you like to do for fun outside work."
+  },
+  {
+   "idx": 200,
+   "speaker": "B",
+   "start_ms": 2281036,
+   "end_ms": 2302179,
+   "text": "Yes, I'm Rudy. I'm based in New York City. Uh, before GitLab, I was at RE/MAX I was the lead frontend developer on a tool called Megaphone, which is basically just a tool for— an internal marketing tool for Remax real estate agents. I joined GitLab just because I think it's the right place to view developers, period. And I wanted to be part of that."
+  },
+  {
+   "idx": 201,
+   "speaker": "B",
+   "start_ms": 2302404,
+   "end_ms": 2313604,
+   "text": "And yeah, outside of work, I enjoy spending time with my family, my young 2-year-old daughter. I watch sports all the time, working out, and Yeah, I'm glad to be here. Very excited to be here."
+  },
+  {
+   "idx": 202,
+   "speaker": "B",
+   "start_ms": 2317310,
+   "end_ms": 2317702,
+   "text": "Thank you to all."
+  },
+  {
+   "idx": 203,
+   "speaker": "A",
+   "start_ms": 2319808,
+   "end_ms": 2321041,
+   "text": "Awesome, you're very welcome."
+  },
+  {
+   "idx": 204,
+   "speaker": "A",
+   "start_ms": 2328142,
+   "end_ms": 2337445,
+   "text": "Okay, that was our last, uh, agenda item, so I'm going to stop recording. But, uh, I think we have some social time items, but this is not for the benefit of people on YouTube."
+  }
+ ],
+ "chapters": [
+  {
+   "idx": 0,
+   "title": "Introduction and Welcome",
+   "start_ms": 0,
+   "gist": "John introduces the team to Rudy Crespo, a new frontend engineer joining the Certify team.",
+   "line": 0,
+   "end_ms": 52579
+  },
+  {
+   "idx": 1,
+   "title": "Activity Notes Sorting Demo",
+   "start_ms": 52579,
+   "gist": "Donald demonstrates the new sorting functionality for activity and system notes within objectives.",
+   "line": 5,
+   "end_ms": 358542
+  },
+  {
+   "idx": 2,
+   "title": "Progress Widget Development",
+   "start_ms": 358542,
+   "gist": "Abhilash presents the progress widget for work items and discusses implementation details for rollup logic.",
+   "line": 44,
+   "end_ms": 923529
+  },
+  {
+   "idx": 3,
+   "title": "Image Resizing in Markdown",
+   "start_ms": 923529,
+   "gist": "Speaker E shows a new feature that allows users to resize images in markdown using width attributes.",
+   "line": 102,
+   "end_ms": 1070237
+  },
+  {
+   "idx": 4,
+   "title": "Frontend Caching and Performance",
+   "start_ms": 1070237,
+   "gist": "Natalia explains the performance benefits and current limitations of frontend caching for issue lists.",
+   "line": 122,
+   "end_ms": 1815740
+  },
+  {
+   "idx": 5,
+   "title": "Bulk Editing via GraphQL",
+   "start_ms": 1815740,
+   "gist": "Speaker G discusses the need to transition bulk editing for issues and epics from REST to GraphQL.",
+   "line": 168,
+   "end_ms": 2068473
+  },
+  {
+   "idx": 6,
+   "title": "Meeting Logistics and Feedback",
+   "start_ms": 2068473,
+   "gist": "The team discusses moving the meeting time and Amanda provides positive feedback on the team's collaboration.",
+   "line": 184,
+   "end_ms": 2338000
+  }
+ ],
+ "action_items": [
+  {
+   "idx": 0,
+   "text": "Attach the design with all objective widgets to the meeting agenda.",
+   "owner_name": "Natalia",
+   "speaker_label": "H",
+   "ts_ms": 333337,
+   "line": 39
+  },
+  {
+   "idx": 1,
+   "text": "Demo label, milestone, and assignee attributes in the TreeView next week.",
+   "owner_name": "Speaker G",
+   "speaker_label": "G",
+   "ts_ms": 481732,
+   "line": 61
+  },
+  {
+   "idx": 2,
+   "text": "Split the progress widget MR into separate frontend and backend MRs.",
+   "owner_name": "Abhilash",
+   "speaker_label": "J",
+   "ts_ms": 633415,
+   "line": 73
+  },
+  {
+   "idx": 3,
+   "text": "Open a discussion thread to finalize the strategy for progress rollups.",
+   "owner_name": "Abhilash",
+   "speaker_label": "J",
+   "ts_ms": 669931,
+   "line": 75
+  },
+  {
+   "idx": 4,
+   "text": "Link the rollup discussion thread in the agenda or Slack.",
+   "owner_name": "Abhilash",
+   "speaker_label": "J",
+   "ts_ms": 884383,
+   "line": 96
+  },
+  {
+   "idx": 5,
+   "text": "Vote on the new meeting time in the designated issue.",
+   "owner_name": null,
+   "speaker_label": null,
+   "ts_ms": 2070872,
+   "line": 185
+  }
+ ],
+ "summaries": [
+  {
+   "template": "general",
+   "content": {
+    "tldr": "The team met to review progress on various OKR-related features through live demos and technical discussions. Key updates included new sorting capabilities, progress widgets, and improvements to frontend caching for better performance.",
+    "sections": [
+     {
+      "heading": "Meeting purpose",
+      "bullets": [
+       {
+        "text": "The meeting served as a weekly sync to share project updates and demonstrate new features (0).",
+        "line": 4,
+        "ts_ms": 41790
+       }
+      ]
+     },
+     {
+      "heading": "Key takeaways",
+      "bullets": [
+       {
+        "text": "Sorting is now available for activity and system notes in objectives (27).",
+        "line": 27,
+        "ts_ms": 229232
+       },
+       {
+        "text": "A new progress widget for work items was demonstrated with backend validation (72).",
+        "line": 72,
+        "ts_ms": 611222
+       },
+       {
+        "text": "Frontend caching is significantly improving issue list loading times (126).",
+        "line": 126,
+        "ts_ms": 1139188
+       }
+      ]
+     },
+     {
+      "heading": "Topics",
+      "bullets": [
+       {
+        "text": "Demos were provided for activity sorting, progress widgets, image resizing, and caching (5).",
+        "line": 44,
+        "ts_ms": 358542
+       },
+       {
+        "text": "Kushal discussed the technical debt associated with using REST for bulk editing (171).",
+        "line": 171,
+        "ts_ms": 1868457
+       },
+       {
+        "text": "John led a discussion on moving the meeting time to better accommodate team members (185).",
+        "line": 185,
+        "ts_ms": 2070872
+       }
+      ]
+     },
+     {
+      "heading": "Next steps",
+      "bullets": [
+       {
+        "text": "Abhilash will open a discussion regarding implementation of rollup logic (75).",
+        "line": 75,
+        "ts_ms": 669931
+       },
+       {
+        "text": "Team members are encouraged to vote on the new meeting time (185).",
+        "line": 185,
+        "ts_ms": 2070872
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "template": "project_update",
+   "content": {
+    "tldr": "The team demonstrated significant progress on OKR management tools and markdown features. While several features are nearing completion, some UI refinements and content editor compatibility issues remain.",
+    "sections": [
+     {
+      "heading": "Progress",
+      "bullets": [
+       {
+        "text": "Deepika implemented sorting for system notes in her draft MR (8).",
+        "line": 8,
+        "ts_ms": 109581
+       },
+       {
+        "text": "The progress widget table was merged and GraphQL queries are available (70).",
+        "line": 70,
+        "ts_ms": 568657
+       },
+       {
+        "text": "Image resizing via width attributes is now available for the group in production (110).",
+        "line": 110,
+        "ts_ms": 997538
+       }
+      ]
+     },
+     {
+      "heading": "Blockers",
+      "bullets": [
+       {
+        "text": "The content editor does not yet understand the syntax for image resizing (111).",
+        "line": 111,
+        "ts_ms": 1003125
+       },
+       {
+        "text": "Filtered search limitations prevent immediate cache updates for new labels (132).",
+        "line": 132,
+        "ts_ms": 1220394
+       }
+      ]
+     },
+     {
+      "heading": "Decisions",
+      "bullets": [
+       {
+        "text": "The team decided to cache per query rather than per application for better performance (124).",
+        "line": 124,
+        "ts_ms": 1094351
+       },
+       {
+        "text": "Child items in the Tree widget will be placed below the description (35).",
+        "line": 35,
+        "ts_ms": 287524
+       }
+      ]
+     },
+     {
+      "heading": "Next steps",
+      "bullets": [
+       {
+        "text": "Abhilash will split his current MR into separate frontend and backend tasks (73).",
+        "line": 73,
+        "ts_ms": 633415
+       },
+       {
+        "text": "Kishore plans to demo additional TreeView attributes next week (61).",
+        "line": 61,
+        "ts_ms": 481732
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "template": "standup",
+   "content": {
+    "tldr": "Recent work focused on merging backend dependencies and implementing frontend widgets for OKR management. The team is now moving toward splitting MRs for review and finalizing rollup logic.",
+    "sections": [
+     {
+      "heading": "Yesterday / done",
+      "bullets": [
+       {
+        "text": "Backend MRs for the TreeView were successfully merged (61).",
+        "line": 61,
+        "ts_ms": 481732
+       },
+       {
+        "text": "The initial step of adding a separate table for the progress widget was completed (70).",
+        "line": 70,
+        "ts_ms": 568657
+       }
+      ]
+     },
+     {
+      "heading": "Today / planned",
+      "bullets": [
+       {
+        "text": "Abhilash is working on fixing a minor bug in the progress widget before review (73).",
+        "line": 73,
+        "ts_ms": 633415
+       },
+       {
+        "text": "John plans to finalize the new meeting time based on team votes (185).",
+        "line": 185,
+        "ts_ms": 2070872
+       }
+      ]
+     },
+     {
+      "heading": "Blockers",
+      "bullets": [
+       {
+        "text": "The team is addressing a bug where the progress widget doesn't display backend validation errors properly (81).",
+        "line": 81,
+        "ts_ms": 733880
+       },
+       {
+        "text": "A content editor bug prevents the full rollout of image resizing (112).",
+        "line": 112,
+        "ts_ms": 1014559
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "template": "retro",
+   "content": {
+    "tldr": "The team celebrated the successful collaboration and delivery bias during the OKR project. Some minor bugs and technical limitations with caching were identified as areas for further discussion.",
+    "sections": [
+     {
+      "heading": "What went well",
+      "bullets": [
+       {
+        "text": "Amanda praised the impressive collaboration and bias for delivery on the OKR project (194).",
+        "line": 194,
+        "ts_ms": 2208478
+       },
+       {
+        "text": "The image resizing implementation was easier to achieve than initially expected (119).",
+        "line": 119,
+        "ts_ms": 1036015
+       }
+      ]
+     },
+     {
+      "heading": "What didn't",
+      "bullets": [
+       {
+        "text": "A sorting bug was identified where new notes were not being sorted correctly (14).",
+        "line": 14,
+        "ts_ms": 176579
+       },
+       {
+        "text": "The filtered search dropdown has limitations with displaying newly created labels from cache (132).",
+        "line": 132,
+        "ts_ms": 1220394
+       }
+      ]
+     },
+     {
+      "heading": "Ideas to improve",
+      "bullets": [
+       {
+        "text": "Moving the meeting time to 13:30 UTC could better balance attendance across regions (188).",
+        "line": 190,
+        "ts_ms": 2136362
+       },
+       {
+        "text": "Refactoring the filtered search to use smart queries could resolve caching issues (162).",
+        "line": 162,
+        "ts_ms": 1713657
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "template": "sales",
+   "content": {
+    "tldr": "User and customer feedback has indicated a need for enhanced bulk editing capabilities for epics. The team is evaluating moving these features to GraphQL to avoid technical debt.",
+    "sections": [
+     {
+      "heading": "Prospect needs",
+      "bullets": [
+       {
+        "text": "Users and customers want to bulk edit more attributes for epics (171).",
+        "line": 171,
+        "ts_ms": 1868457
+       }
+      ]
+     },
+     {
+      "heading": "Objections",
+      "bullets": [
+       {
+        "text": "No specific objections were raised during the call.",
+        "line": null,
+        "ts_ms": null
+       }
+      ]
+     },
+     {
+      "heading": "Budget & timeline",
+      "bullets": [
+       {
+        "text": "No budget or specific project timelines were discussed.",
+        "line": null,
+        "ts_ms": null
+       }
+      ]
+     },
+     {
+      "heading": "Next steps",
+      "bullets": [
+       {
+        "text": "The team needs to prioritize the creation of GraphQL mutations for bulk editing (173).",
+        "line": 173,
+        "ts_ms": 1922009
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "template": "one_on_one",
+   "content": {
+    "tldr": "The team welcomed Rudy Crespo and discussed meeting schedule changes. Amanda shared positive feedback regarding team performance and collaboration.",
+    "sections": [
+     {
+      "heading": "Wins",
+      "bullets": [
+       {
+        "text": "Rudy Crespo joined as the first frontend engineer on the Certify team (3).",
+        "line": 3,
+        "ts_ms": 16482
+       },
+       {
+        "text": "Amanda expressed pride in being part of such a collaborative and delivery-focused team (194).",
+        "line": 194,
+        "ts_ms": 2208478
+       }
+      ]
+     },
+     {
+      "heading": "Concerns",
+      "bullets": [
+       {
+        "text": "Donald noted that certain proposed meeting times would require him to wake up very early (188).",
+        "line": 188,
+        "ts_ms": 2102606
+       }
+      ]
+     },
+     {
+      "heading": "Feedback",
+      "bullets": [
+       {
+        "text": "Natalia suggested adding frontend validation for the progress widget to match the backend (77).",
+        "line": 77,
+        "ts_ms": 694397
+       }
+      ]
+     },
+     {
+      "heading": "Follow-ups",
+      "bullets": [
+       {
+        "text": "John will follow up on the meeting time vote to give everyone two weeks to adjust (185).",
+        "line": 185,
+        "ts_ms": 2070872
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-3-flash-preview"
+  }
+ ]
+}

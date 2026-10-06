@@ -1,0 +1,4981 @@
+{
+ "meeting": {
+  "slug": "detailed-design-for-tv-remote",
+  "title": "Detailed Design for TV Remote",
+  "started_at": "2026-09-22T14:00:00+05:30",
+  "duration_ms": 2624170,
+  "media_type": "audio",
+  "media_path": "ami/ES2002d.mp3",
+  "youtube_id": null,
+  "source_name": "AMI Meeting Corpus",
+  "source_url": "https://groups.inf.ed.ac.uk/ami/corpus/",
+  "credit": "AMI Meeting Corpus, CC BY 4.0 (meeting ES2002d)",
+  "kind": "demo",
+  "status": "ready",
+  "meeting_type": "general",
+  "source_key": "ES2002d"
+ },
+ "speakers": [
+  {
+   "label": "C",
+   "name": "Marketing Expert",
+   "role": "Marketing Expert",
+   "talk_ms": 902810,
+   "turns": 168,
+   "color": 0
+  },
+  {
+   "label": "B",
+   "name": "Project Manager",
+   "role": "Project Manager",
+   "talk_ms": 854522,
+   "turns": 175,
+   "color": 1
+  },
+  {
+   "label": "A",
+   "name": "Industrial Designer",
+   "role": "Industrial Designer",
+   "talk_ms": 642910,
+   "turns": 109,
+   "color": 2
+  },
+  {
+   "label": "D",
+   "name": "User Interface Designer",
+   "role": "User Interface Designer",
+   "talk_ms": 190970,
+   "turns": 63,
+   "color": 3
+  }
+ ],
+ "utterances": [
+  {
+   "idx": 0,
+   "speaker": "B",
+   "start_ms": 2410,
+   "end_ms": 30510,
+   "text": "Okay we all all set? Right. Well this is the final detailed design meeting. we're gonna discuss the look and feel design, the user interface design, and we're gonna evaluate the product. And the end result of this meeting has to be a decision on the details of this remote control, like absolute final decision, and then I'm gonna have to specify the final design in the final report."
+  },
+  {
+   "idx": 1,
+   "speaker": "B",
+   "start_ms": 31000,
+   "end_ms": 58270,
+   "text": "So just from from last time to recap, we said we were gonna have a snowman shaped remote control with no L_C_D_ display, no need for talk-back, it was hopefully gonna be kinetic power and battery with rubber buttons, maybe backlighting the buttons with some internal L_E_D_s to shine through the casing, hopefully a jog-dial, and incorporating the slogan somewhere as well."
+  },
+  {
+   "idx": 2,
+   "speaker": "B",
+   "start_ms": 58270,
+   "end_ms": 68340,
+   "text": "Anything I've missed? Okay so if you want to present your prototype go ahead."
+  },
+  {
+   "idx": 3,
+   "speaker": "A",
+   "start_ms": 59260,
+   "end_ms": 59390,
+   "text": "No."
+  },
+  {
+   "idx": 4,
+   "speaker": "D",
+   "start_ms": 70110,
+   "end_ms": 98630,
+   "text": "Uh-oh. This is it? there are a few changes we've made. well look at the expense sheet, and it turned to be quite a lot expensive to have open up and have lots of buttons and stuff inside, so instead we've this is gonna be an L_C_D_ screen, just a a very very basic one, very small with access to the menu through the the scroll wheel and confirm button."
+  },
+  {
+   "idx": 5,
+   "speaker": "A",
+   "start_ms": 71750,
+   "end_ms": 73910,
+   "text": "Ninja Homer, made in Japan."
+  },
+  {
+   "idx": 6,
+   "speaker": "B",
+   "start_ms": 76930,
+   "end_ms": 77460,
+   "text": "Okay."
+  },
+  {
+   "idx": 7,
+   "speaker": "B",
+   "start_ms": 79570,
+   "end_ms": 80190,
+   "text": "Mm."
+  },
+  {
+   "idx": 8,
+   "speaker": "B",
+   "start_ms": 84930,
+   "end_ms": 85280,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 9,
+   "speaker": "C",
+   "start_ms": 98460,
+   "end_ms": 98750,
+   "text": "'kay."
+  },
+  {
+   "idx": 10,
+   "speaker": "D",
+   "start_ms": 98630,
+   "end_ms": 101710,
+   "text": "Apart from that, it's just pretty much the same as we discussed last time."
+  },
+  {
+   "idx": 11,
+   "speaker": "A",
+   "start_ms": 101920,
+   "end_ms": 116390,
+   "text": "And there isn't it doesn't open up to the advanced functions? So the advanced functions are still hidden from you, but they're hidden in the sense that they're not in use. they're in the L_C_D_ panel and the jog-dial? Okay 'cause."
+  },
+  {
+   "idx": 12,
+   "speaker": "C",
+   "start_ms": 111800,
+   "end_ms": 112250,
+   "text": "Where are they?"
+  },
+  {
+   "idx": 13,
+   "speaker": "C",
+   "start_ms": 114850,
+   "end_ms": 116180,
+   "text": "Ah, right. Great."
+  },
+  {
+   "idx": 14,
+   "speaker": "B",
+   "start_ms": 116080,
+   "end_ms": 118130,
+   "text": "So what kind of thing is gonna be."
+  },
+  {
+   "idx": 15,
+   "speaker": "A",
+   "start_ms": 118100,
+   "end_ms": 146650,
+   "text": "The L_C_D_ panel just displays functionally what you're doing. If you're using an advanced function right, like brightness, contrast, whatever, it will just say You know it's like it only has four columns, it's a very simple L_C_D_ like, whereas many the minimum amount we need that the user will automatically know like this is brightness or this is contrast. It might even be one, a bit more complex L_C_D_ panel with pictures like maybe the sun or the, you know, the the symbols of the various functions."
+  },
+  {
+   "idx": 16,
+   "speaker": "C",
+   "start_ms": 121540,
+   "end_ms": 121770,
+   "text": "Right."
+  },
+  {
+   "idx": 17,
+   "speaker": "C",
+   "start_ms": 125940,
+   "end_ms": 126230,
+   "text": "Okay."
+  },
+  {
+   "idx": 18,
+   "speaker": "C",
+   "start_ms": 131400,
+   "end_ms": 131670,
+   "text": "Right."
+  },
+  {
+   "idx": 19,
+   "speaker": "B",
+   "start_ms": 136580,
+   "end_ms": 138220,
+   "text": "Okay cool."
+  },
+  {
+   "idx": 20,
+   "speaker": "C",
+   "start_ms": 136760,
+   "end_ms": 138600,
+   "text": "Right, 'kay."
+  },
+  {
+   "idx": 21,
+   "speaker": "C",
+   "start_ms": 140720,
+   "end_ms": 141110,
+   "text": "Okay."
+  },
+  {
+   "idx": 22,
+   "speaker": "C",
+   "start_ms": 145770,
+   "end_ms": 148120,
+   "text": "And what is this here?"
+  },
+  {
+   "idx": 23,
+   "speaker": "B",
+   "start_ms": 146110,
+   "end_ms": 147820,
+   "text": "Oh right okay. Cool."
+  },
+  {
+   "idx": 24,
+   "speaker": "A",
+   "start_ms": 148820,
+   "end_ms": 149720,
+   "text": "That's a number pad."
+  },
+  {
+   "idx": 25,
+   "speaker": "C",
+   "start_ms": 149700,
+   "end_ms": 152420,
+   "text": "Okay so the number pad is 'Kay, great."
+  },
+  {
+   "idx": 26,
+   "speaker": "B",
+   "start_ms": 151600,
+   "end_ms": 153450,
+   "text": "Where are we gonna have the slogan?"
+  },
+  {
+   "idx": 27,
+   "speaker": "A",
+   "start_ms": 154180,
+   "end_ms": 156790,
+   "text": "They're along this Yeah."
+  },
+  {
+   "idx": 28,
+   "speaker": "D",
+   "start_ms": 154790,
+   "end_ms": 156650,
+   "text": "You know, just like right inside there."
+  },
+  {
+   "idx": 29,
+   "speaker": "B",
+   "start_ms": 157490,
+   "end_ms": 158430,
+   "text": "Okay cool."
+  },
+  {
+   "idx": 30,
+   "speaker": "A",
+   "start_ms": 158400,
+   "end_ms": 168200,
+   "text": "You have this space here, and then you have this thing on the side as well, or at the bottom. 'Cause slogans are usually quite small, right, they're not like huge so they're."
+  },
+  {
+   "idx": 31,
+   "speaker": "B",
+   "start_ms": 164100,
+   "end_ms": 164750,
+   "text": "Okay."
+  },
+  {
+   "idx": 32,
+   "speaker": "C",
+   "start_ms": 166390,
+   "end_ms": 166530,
+   "text": "Mm."
+  },
+  {
+   "idx": 33,
+   "speaker": "C",
+   "start_ms": 168790,
+   "end_ms": 168970,
+   "text": "Yep."
+  },
+  {
+   "idx": 34,
+   "speaker": "A",
+   "start_ms": 170710,
+   "end_ms": 176850,
+   "text": "Say a button's about say a button's about this size, right, so you would still have plenty of space for a slogan, say even for that."
+  },
+  {
+   "idx": 35,
+   "speaker": "B",
+   "start_ms": 170930,
+   "end_ms": 171710,
+   "text": "Okay."
+  },
+  {
+   "idx": 36,
+   "speaker": "C",
+   "start_ms": 171020,
+   "end_ms": 171740,
+   "text": "Looks good."
+  },
+  {
+   "idx": 37,
+   "speaker": "C",
+   "start_ms": 173650,
+   "end_ms": 176540,
+   "text": "Yep."
+  },
+  {
+   "idx": 38,
+   "speaker": "B",
+   "start_ms": 176440,
+   "end_ms": 181760,
+   "text": "So if this isn't to scale, what kind of dimensions are you thinking about here?"
+  },
+  {
+   "idx": 39,
+   "speaker": "D",
+   "start_ms": 182850,
+   "end_ms": 190840,
+   "text": "Well we want the other buttons to be big enough to push easily with a finger so we reckon maybe that'll be about the same size as the palm of your hand."
+  },
+  {
+   "idx": 40,
+   "speaker": "B",
+   "start_ms": 185420,
+   "end_ms": 186120,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 41,
+   "speaker": "C",
+   "start_ms": 189400,
+   "end_ms": 189770,
+   "text": "Okay."
+  },
+  {
+   "idx": 42,
+   "speaker": "A",
+   "start_ms": 190390,
+   "end_ms": 195090,
+   "text": "Yep so that would be about a centimetre for a button, so one two three."
+  },
+  {
+   "idx": 43,
+   "speaker": "A",
+   "start_ms": 197420,
+   "end_ms": 206430,
+   "text": "Four centimetres. Plus maybe half five six seven eight, about yeah nine total."
+  },
+  {
+   "idx": 44,
+   "speaker": "C",
+   "start_ms": 200850,
+   "end_ms": 203520,
+   "text": "About nine in total."
+  },
+  {
+   "idx": 45,
+   "speaker": "B",
+   "start_ms": 203120,
+   "end_ms": 215010,
+   "text": "Six, seven, eight, nine, ten. So we're talking about ten centimetres. That would be good. So ten centimetres in height. Okay."
+  },
+  {
+   "idx": 46,
+   "speaker": "C",
+   "start_ms": 205990,
+   "end_ms": 208890,
+   "text": "That sounds good. Yeah. Yep."
+  },
+  {
+   "idx": 47,
+   "speaker": "A",
+   "start_ms": 209730,
+   "end_ms": 211710,
+   "text": "Nine, ten. Yep."
+  },
+  {
+   "idx": 48,
+   "speaker": "C",
+   "start_ms": 215190,
+   "end_ms": 222090,
+   "text": "That'd be good, in fact a pen is about ten centimetres usually, so that would be that sounds like a really good size, if you see it there."
+  },
+  {
+   "idx": 49,
+   "speaker": "B",
+   "start_ms": 220610,
+   "end_ms": 226350,
+   "text": "Yeah. That's great and it's very bright as well. So okay."
+  },
+  {
+   "idx": 50,
+   "speaker": "C",
+   "start_ms": 224240,
+   "end_ms": 224450,
+   "text": "Mm."
+  },
+  {
+   "idx": 51,
+   "speaker": "C",
+   "start_ms": 225980,
+   "end_ms": 234300,
+   "text": "Is it possible I'm just gonna bring up the idea of colours. Is these are these the colours that of production, or is this just what we had available?"
+  },
+  {
+   "idx": 52,
+   "speaker": "D",
+   "start_ms": 232430,
+   "end_ms": 242600,
+   "text": "Well I'm We're gonna have again the the sort of the foggy yellow from last time that lit up when you pushed the button."
+  },
+  {
+   "idx": 53,
+   "speaker": "C",
+   "start_ms": 240240,
+   "end_ms": 240470,
+   "text": "Right."
+  },
+  {
+   "idx": 54,
+   "speaker": "B",
+   "start_ms": 240910,
+   "end_ms": 246400,
+   "text": "Okay so just could you just list all the things that it does so I can write them in the report."
+  },
+  {
+   "idx": 55,
+   "speaker": "D",
+   "start_ms": 245880,
+   "end_ms": 264130,
+   "text": "But this button because it's red it's sort of very prominent, we're gonna use it as it can be the power button if you hold it for maybe two seconds it'll send a stand-by signal. apart from that it's gonna be used as a confirm button for the L_C_D_ screen and you use this as a jog-dial."
+  },
+  {
+   "idx": 56,
+   "speaker": "B",
+   "start_ms": 256260,
+   "end_ms": 256620,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 57,
+   "speaker": "A",
+   "start_ms": 259320,
+   "end_ms": 260120,
+   "text": "Excuse me. Sure."
+  },
+  {
+   "idx": 58,
+   "speaker": "B",
+   "start_ms": 262000,
+   "end_ms": 262320,
+   "text": "Okay."
+  },
+  {
+   "idx": 59,
+   "speaker": "B",
+   "start_ms": 264300,
+   "end_ms": 267020,
+   "text": "Okay so that's like an okay button, right."
+  },
+  {
+   "idx": 60,
+   "speaker": "C",
+   "start_ms": 267490,
+   "end_ms": 267750,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 61,
+   "speaker": "A",
+   "start_ms": 268090,
+   "end_ms": 270920,
+   "text": "Oh we've discussed how high it is, but how wide is it?"
+  },
+  {
+   "idx": 62,
+   "speaker": "D",
+   "start_ms": 268670,
+   "end_ms": 269260,
+   "text": "I don't know."
+  },
+  {
+   "idx": 63,
+   "speaker": "B",
+   "start_ms": 272680,
+   "end_ms": 273960,
+   "text": "Okay."
+  },
+  {
+   "idx": 64,
+   "speaker": "C",
+   "start_ms": 273120,
+   "end_ms": 275540,
+   "text": "How high is it? Yeah."
+  },
+  {
+   "idx": 65,
+   "speaker": "A",
+   "start_ms": 274020,
+   "end_ms": 276910,
+   "text": "No as in the height, but what about the width?"
+  },
+  {
+   "idx": 66,
+   "speaker": "D",
+   "start_ms": 277250,
+   "end_ms": 278720,
+   "text": "Didn't put five centimetres."
+  },
+  {
+   "idx": 67,
+   "speaker": "B",
+   "start_ms": 277350,
+   "end_ms": 279610,
+   "text": "Oh oh like depth of the actual thing."
+  },
+  {
+   "idx": 68,
+   "speaker": "A",
+   "start_ms": 279140,
+   "end_ms": 282330,
+   "text": "Do we need five? I don't think five is be about three and a half."
+  },
+  {
+   "idx": 69,
+   "speaker": "D",
+   "start_ms": 280240,
+   "end_ms": 280870,
+   "text": "Um."
+  },
+  {
+   "idx": 70,
+   "speaker": "C",
+   "start_ms": 283110,
+   "end_ms": 283450,
+   "text": "Okay."
+  },
+  {
+   "idx": 71,
+   "speaker": "D",
+   "start_ms": 284260,
+   "end_ms": 284830,
+   "text": "Something by there."
+  },
+  {
+   "idx": 72,
+   "speaker": "B",
+   "start_ms": 284280,
+   "end_ms": 291490,
+   "text": "Oh is this to get an idea of scale from your from your thing there okay. So you can power on and off, what else can you do?"
+  },
+  {
+   "idx": 73,
+   "speaker": "A",
+   "start_ms": 285930,
+   "end_ms": 287920,
+   "text": "Yeah, yeah."
+  },
+  {
+   "idx": 74,
+   "speaker": "C",
+   "start_ms": 286770,
+   "end_ms": 287170,
+   "text": "Sure."
+  },
+  {
+   "idx": 75,
+   "speaker": "C",
+   "start_ms": 290570,
+   "end_ms": 291090,
+   "text": "Three and a half."
+  },
+  {
+   "idx": 76,
+   "speaker": "D",
+   "start_ms": 291940,
+   "end_ms": 294510,
+   "text": "You can skip straight to a channel using these buttons."
+  },
+  {
+   "idx": 77,
+   "speaker": "B",
+   "start_ms": 294340,
+   "end_ms": 295190,
+   "text": "Okay."
+  },
+  {
+   "idx": 78,
+   "speaker": "D",
+   "start_ms": 300990,
+   "end_ms": 307610,
+   "text": "Were gonna have the volume control here, but because we've got the the L_C_D_ and the jog-dial we just thought we'd use that as the volume."
+  },
+  {
+   "idx": 79,
+   "speaker": "B",
+   "start_ms": 308080,
+   "end_ms": 309760,
+   "text": "Okay jog-dial for volume."
+  },
+  {
+   "idx": 80,
+   "speaker": "B",
+   "start_ms": 312010,
+   "end_ms": 313570,
+   "text": "And what else do you do with the jog-dial?"
+  },
+  {
+   "idx": 81,
+   "speaker": "C",
+   "start_ms": 312120,
+   "end_ms": 312690,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 82,
+   "speaker": "D",
+   "start_ms": 314200,
+   "end_ms": 318230,
+   "text": "You can use it for more advanced functions like contrast, colour and."
+  },
+  {
+   "idx": 83,
+   "speaker": "B",
+   "start_ms": 318840,
+   "end_ms": 324190,
+   "text": "Contrast, brightness, yeah, and anything else?"
+  },
+  {
+   "idx": 84,
+   "speaker": "D",
+   "start_ms": 320890,
+   "end_ms": 321850,
+   "text": "Yeah."
+  },
+  {
+   "idx": 85,
+   "speaker": "D",
+   "start_ms": 324790,
+   "end_ms": 329950,
+   "text": "Just whatever else we wanted to include as the advanced functions, we didn't actually go through and specify the."
+  },
+  {
+   "idx": 86,
+   "speaker": "B",
+   "start_ms": 330570,
+   "end_ms": 332890,
+   "text": "Well of the designers what are they?"
+  },
+  {
+   "idx": 87,
+   "speaker": "D",
+   "start_ms": 332960,
+   "end_ms": 334970,
+   "text": "What can a T_V_ do?"
+  },
+  {
+   "idx": 88,
+   "speaker": "A",
+   "start_ms": 335830,
+   "end_ms": 349360,
+   "text": "Okay things like brightness, contrast, maybe tuning the channels. What else? the various inputs. Are you having a V_C_R_, are you having you know which input do you have?"
+  },
+  {
+   "idx": 89,
+   "speaker": "B",
+   "start_ms": 338310,
+   "end_ms": 338660,
+   "text": "Uh-huh."
+  },
+  {
+   "idx": 90,
+   "speaker": "B",
+   "start_ms": 342180,
+   "end_ms": 344400,
+   "text": "Okay channel tuning. That's a good one."
+  },
+  {
+   "idx": 91,
+   "speaker": "C",
+   "start_ms": 347410,
+   "end_ms": 348290,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 92,
+   "speaker": "B",
+   "start_ms": 349430,
+   "end_ms": 351430,
+   "text": "Okay auxiliary inputs."
+  },
+  {
+   "idx": 93,
+   "speaker": "C",
+   "start_ms": 350260,
+   "end_ms": 352130,
+   "text": "Probably colour or sharpness."
+  },
+  {
+   "idx": 94,
+   "speaker": "A",
+   "start_ms": 350880,
+   "end_ms": 351330,
+   "text": "Um."
+  },
+  {
+   "idx": 95,
+   "speaker": "A",
+   "start_ms": 353060,
+   "end_ms": 359870,
+   "text": "Yep, colour, sharpness. a lot of these things will have to be free and open for users to define them."
+  },
+  {
+   "idx": 96,
+   "speaker": "B",
+   "start_ms": 354570,
+   "end_ms": 355660,
+   "text": "Sharpness."
+  },
+  {
+   "idx": 97,
+   "speaker": "C",
+   "start_ms": 360060,
+   "end_ms": 360300,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 98,
+   "speaker": "B",
+   "start_ms": 360150,
+   "end_ms": 364650,
+   "text": "Okay what about sound settings? can you change any of those at all?"
+  },
+  {
+   "idx": 99,
+   "speaker": "C",
+   "start_ms": 364630,
+   "end_ms": 365020,
+   "text": "Audio."
+  },
+  {
+   "idx": 100,
+   "speaker": "A",
+   "start_ms": 365190,
+   "end_ms": 388330,
+   "text": "Audio, we have like your basic your base, your mid-range, your high range. Yep, left-right balance, maybe even pre-programmed sound modes, like the user could determine like a series of sound modes, and then what could happen would be when you click on that then it would go to that setting."
+  },
+  {
+   "idx": 101,
+   "speaker": "D",
+   "start_ms": 366830,
+   "end_ms": 367560,
+   "text": "Um."
+  },
+  {
+   "idx": 102,
+   "speaker": "D",
+   "start_ms": 371920,
+   "end_ms": 373220,
+   "text": "The the balance."
+  },
+  {
+   "idx": 103,
+   "speaker": "B",
+   "start_ms": 378480,
+   "end_ms": 379080,
+   "text": "Okay."
+  },
+  {
+   "idx": 104,
+   "speaker": "C",
+   "start_ms": 383860,
+   "end_ms": 384110,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 105,
+   "speaker": "B",
+   "start_ms": 388790,
+   "end_ms": 391750,
+   "text": "Okay, is there anything else at all it can do?"
+  },
+  {
+   "idx": 106,
+   "speaker": "C",
+   "start_ms": 388950,
+   "end_ms": 389270,
+   "text": "'kay."
+  },
+  {
+   "idx": 107,
+   "speaker": "A",
+   "start_ms": 389740,
+   "end_ms": 389960,
+   "text": "Yeah."
+  },
+  {
+   "idx": 108,
+   "speaker": "B",
+   "start_ms": 393440,
+   "end_ms": 412350,
+   "text": "That 'cause that's that's fine. Just need to know so I can write it down. Okay right I I guess that's it, so we can now We can now have a little look at the the Excel sheet and price listing, and see if we need to."
+  },
+  {
+   "idx": 109,
+   "speaker": "D",
+   "start_ms": 413420,
+   "end_ms": 413820,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 110,
+   "speaker": "B",
+   "start_ms": 413890,
+   "end_ms": 427910,
+   "text": "If we need to rethink anything at all. So for this first part here power-wise, have we got battery? Do we have kinetic as well? No. Okay, just battery."
+  },
+  {
+   "idx": 111,
+   "speaker": "A",
+   "start_ms": 421580,
+   "end_ms": 422140,
+   "text": "The battery."
+  },
+  {
+   "idx": 112,
+   "speaker": "A",
+   "start_ms": 424420,
+   "end_ms": 424780,
+   "text": "No."
+  },
+  {
+   "idx": 113,
+   "speaker": "A",
+   "start_ms": 426390,
+   "end_ms": 426870,
+   "text": "Um."
+  },
+  {
+   "idx": 114,
+   "speaker": "A",
+   "start_ms": 430480,
+   "end_ms": 440480,
+   "text": "We need an Yep. Yeah advanced chip. We need an advanced chip I think, yep. Let me just confirm that. Yes I think so."
+  },
+  {
+   "idx": 115,
+   "speaker": "B",
+   "start_ms": 431020,
+   "end_ms": 436740,
+   "text": "And that's because of cost restraints is it? Okay what about the electronics here? Advanced chip."
+  },
+  {
+   "idx": 116,
+   "speaker": "D",
+   "start_ms": 432690,
+   "end_ms": 433070,
+   "text": "Yeah."
+  },
+  {
+   "idx": 117,
+   "speaker": "A",
+   "start_ms": 446550,
+   "end_ms": 446860,
+   "text": "Yep."
+  },
+  {
+   "idx": 118,
+   "speaker": "B",
+   "start_ms": 449080,
+   "end_ms": 452310,
+   "text": "Okay the case, what does it mean by single and double, do you know?"
+  },
+  {
+   "idx": 119,
+   "speaker": "D",
+   "start_ms": 452960,
+   "end_ms": 456680,
+   "text": "I think single would just be sort of one sort of oval whereas double is this sort of thing."
+  },
+  {
+   "idx": 120,
+   "speaker": "A",
+   "start_ms": 456850,
+   "end_ms": 458320,
+   "text": "Yeah. Yep."
+  },
+  {
+   "idx": 121,
+   "speaker": "B",
+   "start_ms": 456850,
+   "end_ms": 459050,
+   "text": "So we want double-curved? Okay."
+  },
+  {
+   "idx": 122,
+   "speaker": "B",
+   "start_ms": 460870,
+   "end_ms": 475200,
+   "text": "Is there any rubber at all in the buttons or Okay, and we wanted special colours didn't we? So I'll have to put that Oh no wait we how many colours have we got there?"
+  },
+  {
+   "idx": 123,
+   "speaker": "A",
+   "start_ms": 461720,
+   "end_ms": 462320,
+   "text": "Plastic."
+  },
+  {
+   "idx": 124,
+   "speaker": "A",
+   "start_ms": 466190,
+   "end_ms": 469780,
+   "text": "I think we're gonna have to skip the rubber."
+  },
+  {
+   "idx": 125,
+   "speaker": "A",
+   "start_ms": 471530,
+   "end_ms": 471750,
+   "text": "Yep."
+  },
+  {
+   "idx": 126,
+   "speaker": "A",
+   "start_ms": 475970,
+   "end_ms": 483120,
+   "text": "For the case itself, one colour. It's one special colour. 'Cause the case unit itself, the rest of our components go on top of it."
+  },
+  {
+   "idx": 127,
+   "speaker": "B",
+   "start_ms": 479250,
+   "end_ms": 480320,
+   "text": "Just one colour, okay."
+  },
+  {
+   "idx": 128,
+   "speaker": "B",
+   "start_ms": 482400,
+   "end_ms": 486960,
+   "text": "Okay so interface-wise, is it this third option we have, the two of them there?"
+  },
+  {
+   "idx": 129,
+   "speaker": "C",
+   "start_ms": 482760,
+   "end_ms": 483030,
+   "text": "Mm."
+  },
+  {
+   "idx": 130,
+   "speaker": "A",
+   "start_ms": 485650,
+   "end_ms": 489590,
+   "text": "Yes. One and the L_C_ display."
+  },
+  {
+   "idx": 131,
+   "speaker": "B",
+   "start_ms": 490150,
+   "end_ms": 496280,
+   "text": "Okay and then buttons, we have what, two colours?"
+  },
+  {
+   "idx": 132,
+   "speaker": "A",
+   "start_ms": 493680,
+   "end_ms": 494300,
+   "text": "How many."
+  },
+  {
+   "idx": 133,
+   "speaker": "D",
+   "start_ms": 494840,
+   "end_ms": 498380,
+   "text": "We have got some push buttons as well."
+  },
+  {
+   "idx": 134,
+   "speaker": "C",
+   "start_ms": 497150,
+   "end_ms": 497870,
+   "text": "Or even clear."
+  },
+  {
+   "idx": 135,
+   "speaker": "A",
+   "start_ms": 498690,
+   "end_ms": 499900,
+   "text": "We've got push buttons as well."
+  },
+  {
+   "idx": 136,
+   "speaker": "B",
+   "start_ms": 503040,
+   "end_ms": 506510,
+   "text": "Like oh wait so push button and integrated scroll wheel okay."
+  },
+  {
+   "idx": 137,
+   "speaker": "D",
+   "start_ms": 503470,
+   "end_ms": 503670,
+   "text": "'Kay."
+  },
+  {
+   "idx": 138,
+   "speaker": "D",
+   "start_ms": 506600,
+   "end_ms": 512429,
+   "text": "So I reckon we've got one button for this thing 'cause it's just one big sheet of rubber. I'm not sure if that counts but."
+  },
+  {
+   "idx": 139,
+   "speaker": "B",
+   "start_ms": 509590,
+   "end_ms": 509930,
+   "text": "Uh-huh."
+  },
+  {
+   "idx": 140,
+   "speaker": "B",
+   "start_ms": 512870,
+   "end_ms": 513260,
+   "text": "Okay."
+  },
+  {
+   "idx": 141,
+   "speaker": "A",
+   "start_ms": 513030,
+   "end_ms": 516020,
+   "text": "Okay let's just be safe and put like say four buttons for that one."
+  },
+  {
+   "idx": 142,
+   "speaker": "B",
+   "start_ms": 516740,
+   "end_ms": 517320,
+   "text": "Okay."
+  },
+  {
+   "idx": 143,
+   "speaker": "A",
+   "start_ms": 517760,
+   "end_ms": 522750,
+   "text": "Okay and maybe a special colour for the buttons, so maybe four again."
+  },
+  {
+   "idx": 144,
+   "speaker": "B",
+   "start_ms": 523590,
+   "end_ms": 528690,
+   "text": "Four. So why are we arriving at the number four? Where does the number four come from?"
+  },
+  {
+   "idx": 145,
+   "speaker": "D",
+   "start_ms": 523659,
+   "end_ms": 525530,
+   "text": "You can see we're we're all very far beyond the."
+  },
+  {
+   "idx": 146,
+   "speaker": "A",
+   "start_ms": 528820,
+   "end_ms": 532140,
+   "text": "'Cause that's one button by the complexity of twelve buttons."
+  },
+  {
+   "idx": 147,
+   "speaker": "B",
+   "start_ms": 532530,
+   "end_ms": 535210,
+   "text": "Okay right, so we're writing down four."
+  },
+  {
+   "idx": 148,
+   "speaker": "A",
+   "start_ms": 534090,
+   "end_ms": 536650,
+   "text": "So we're just estimating that yeah it would be less."
+  },
+  {
+   "idx": 149,
+   "speaker": "B",
+   "start_ms": 536760,
+   "end_ms": 537220,
+   "text": "Okay."
+  },
+  {
+   "idx": 150,
+   "speaker": "B",
+   "start_ms": 539580,
+   "end_ms": 555060,
+   "text": "How about these? Are we wanting them in no they're just is everything gonna be plastic? Okay. So we're quite far over. Now we're gonna something's gonna have to go. we're at sixteen point eight and."
+  },
+  {
+   "idx": 151,
+   "speaker": "A",
+   "start_ms": 541330,
+   "end_ms": 541770,
+   "text": "No."
+  },
+  {
+   "idx": 152,
+   "speaker": "A",
+   "start_ms": 543480,
+   "end_ms": 544590,
+   "text": "Yep. Yep."
+  },
+  {
+   "idx": 153,
+   "speaker": "C",
+   "start_ms": 554170,
+   "end_ms": 558840,
+   "text": "How how are we going to achieve this high-end product if."
+  },
+  {
+   "idx": 154,
+   "speaker": "B",
+   "start_ms": 560010,
+   "end_ms": 573770,
+   "text": "Well we something has to go to the tune of two point three Euro, so let me see, what are we I mean oh yes sorry, four point three. My maths is all out."
+  },
+  {
+   "idx": 155,
+   "speaker": "C",
+   "start_ms": 561030,
+   "end_ms": 562890,
+   "text": "We only have very sparse."
+  },
+  {
+   "idx": 156,
+   "speaker": "C",
+   "start_ms": 568960,
+   "end_ms": 570640,
+   "text": "Two point three? Four point three no?"
+  },
+  {
+   "idx": 157,
+   "speaker": "D",
+   "start_ms": 573890,
+   "end_ms": 577360,
+   "text": "Well we could take out ones by making it single curved, just fill in those bits."
+  },
+  {
+   "idx": 158,
+   "speaker": "B",
+   "start_ms": 578660,
+   "end_ms": 583020,
+   "text": "Yeah. How much would that save us? One."
+  },
+  {
+   "idx": 159,
+   "speaker": "C",
+   "start_ms": 579330,
+   "end_ms": 580050,
+   "text": "And then where is the."
+  },
+  {
+   "idx": 160,
+   "speaker": "A",
+   "start_ms": 579670,
+   "end_ms": 605360,
+   "text": "How much would that save us? That will only save you one. The other thing could be that you could take away the L_C_D_ panel and the advanced chip together, because when you do something on the T_V_, the T_V_ responds and reacts as well, so the user could be looking at the T_V_ and pushing his thing so we may not need to so when we scroll we need just some way to get the T_V_ to respond, which I think is a technically doable thing so."
+  },
+  {
+   "idx": 161,
+   "speaker": "D",
+   "start_ms": 581750,
+   "end_ms": 582630,
+   "text": "That is one."
+  },
+  {
+   "idx": 162,
+   "speaker": "C",
+   "start_ms": 591970,
+   "end_ms": 592290,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 163,
+   "speaker": "D",
+   "start_ms": 597140,
+   "end_ms": 598110,
+   "text": "That's fair enough, yeah."
+  },
+  {
+   "idx": 164,
+   "speaker": "C",
+   "start_ms": 599150,
+   "end_ms": 599430,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 165,
+   "speaker": "C",
+   "start_ms": 601340,
+   "end_ms": 603400,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 166,
+   "speaker": "B",
+   "start_ms": 602970,
+   "end_ms": 603740,
+   "text": "Okay so."
+  },
+  {
+   "idx": 167,
+   "speaker": "C",
+   "start_ms": 605220,
+   "end_ms": 605500,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 168,
+   "speaker": "B",
+   "start_ms": 605560,
+   "end_ms": 610560,
+   "text": "So what's our reviewed suggestion? take away the L_C_ display?"
+  },
+  {
+   "idx": 169,
+   "speaker": "A",
+   "start_ms": 610500,
+   "end_ms": 610690,
+   "text": "Yep."
+  },
+  {
+   "idx": 170,
+   "speaker": "A",
+   "start_ms": 612690,
+   "end_ms": 614310,
+   "text": "And the advanced chip goes away as well."
+  },
+  {
+   "idx": 171,
+   "speaker": "C",
+   "start_ms": 612810,
+   "end_ms": 613060,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 172,
+   "speaker": "B",
+   "start_ms": 614740,
+   "end_ms": 617930,
+   "text": "To be replaced with a regular chip."
+  },
+  {
+   "idx": 173,
+   "speaker": "A",
+   "start_ms": 616600,
+   "end_ms": 618750,
+   "text": "Regular chip. Yep."
+  },
+  {
+   "idx": 174,
+   "speaker": "C",
+   "start_ms": 621840,
+   "end_ms": 622140,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 175,
+   "speaker": "B",
+   "start_ms": 621850,
+   "end_ms": 631480,
+   "text": "Okay. And so we've got point three to get rid of. and we where are the four the four push buttons are where exactly now?"
+  },
+  {
+   "idx": 176,
+   "speaker": "A",
+   "start_ms": 622120,
+   "end_ms": 624080,
+   "text": "So what that means is that."
+  },
+  {
+   "idx": 177,
+   "speaker": "A",
+   "start_ms": 631760,
+   "end_ms": 634740,
+   "text": "The twelve buttons that you see there."
+  },
+  {
+   "idx": 178,
+   "speaker": "B",
+   "start_ms": 633870,
+   "end_ms": 634730,
+   "text": "Twelve buttons."
+  },
+  {
+   "idx": 179,
+   "speaker": "D",
+   "start_ms": 635300,
+   "end_ms": 638920,
+   "text": "That's one piece of rubber but it's gonna have twelve button things underneath so."
+  },
+  {
+   "idx": 180,
+   "speaker": "B",
+   "start_ms": 637600,
+   "end_ms": 638280,
+   "text": "Yeah."
+  },
+  {
+   "idx": 181,
+   "speaker": "A",
+   "start_ms": 638200,
+   "end_ms": 641400,
+   "text": "Functionally you're gonna have to intercept So four is a good estimate for."
+  },
+  {
+   "idx": 182,
+   "speaker": "B",
+   "start_ms": 641840,
+   "end_ms": 642350,
+   "text": "Do you think?"
+  },
+  {
+   "idx": 183,
+   "speaker": "A",
+   "start_ms": 642980,
+   "end_ms": 648930,
+   "text": "Yeah, so you can't actually cut It's like three times the number of buttons, four, eight, twelve."
+  },
+  {
+   "idx": 184,
+   "speaker": "B",
+   "start_ms": 647710,
+   "end_ms": 654390,
+   "text": "Like is is that one big button or is it twelve buttons, how can it be something in between?"
+  },
+  {
+   "idx": 185,
+   "speaker": "A",
+   "start_ms": 653070,
+   "end_ms": 663490,
+   "text": "It It needs to be more than one big button because if you open up your phone, underneath there's actually one button underneath, it's just that the panel itself is a single panel."
+  },
+  {
+   "idx": 186,
+   "speaker": "C",
+   "start_ms": 658820,
+   "end_ms": 659130,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 187,
+   "speaker": "B",
+   "start_ms": 659540,
+   "end_ms": 660120,
+   "text": "Mm."
+  },
+  {
+   "idx": 188,
+   "speaker": "C",
+   "start_ms": 663670,
+   "end_ms": 664030,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 189,
+   "speaker": "B",
+   "start_ms": 663860,
+   "end_ms": 668780,
+   "text": "Okay well we have point three to get rid of somewhere."
+  },
+  {
+   "idx": 190,
+   "speaker": "A",
+   "start_ms": 668080,
+   "end_ms": 674570,
+   "text": "We just report that it has to be over budget, or the colours, you could take away colours for for the buttons."
+  },
+  {
+   "idx": 191,
+   "speaker": "B",
+   "start_ms": 672260,
+   "end_ms": 673130,
+   "text": "No can do."
+  },
+  {
+   "idx": 192,
+   "speaker": "C",
+   "start_ms": 674830,
+   "end_ms": 676630,
+   "text": "Yeah we could just go with."
+  },
+  {
+   "idx": 193,
+   "speaker": "D",
+   "start_ms": 675730,
+   "end_ms": 675970,
+   "text": "Yeah."
+  },
+  {
+   "idx": 194,
+   "speaker": "A",
+   "start_ms": 676450,
+   "end_ms": 677760,
+   "text": "Normal coloured buttons."
+  },
+  {
+   "idx": 195,
+   "speaker": "B",
+   "start_ms": 679460,
+   "end_ms": 684140,
+   "text": "Well do you want colour differentiation here? Oh yeah sorry yeah then."
+  },
+  {
+   "idx": 196,
+   "speaker": "A",
+   "start_ms": 682200,
+   "end_ms": 686050,
+   "text": "No that's not the button we're talking about. That's the buttons only refer to the pad so."
+  },
+  {
+   "idx": 197,
+   "speaker": "D",
+   "start_ms": 682240,
+   "end_ms": 682850,
+   "text": "Um."
+  },
+  {
+   "idx": 198,
+   "speaker": "B",
+   "start_ms": 686650,
+   "end_ms": 687770,
+   "text": "Right so."
+  },
+  {
+   "idx": 199,
+   "speaker": "A",
+   "start_ms": 688130,
+   "end_ms": 689790,
+   "text": "Should we take that off."
+  },
+  {
+   "idx": 200,
+   "speaker": "B",
+   "start_ms": 690060,
+   "end_ms": 690740,
+   "text": "Ah."
+  },
+  {
+   "idx": 201,
+   "speaker": "A",
+   "start_ms": 692390,
+   "end_ms": 700160,
+   "text": "Hey it's back to the original. so then these just become normal coloured buttons, so that might be some some way of cutting the cost."
+  },
+  {
+   "idx": 202,
+   "speaker": "B",
+   "start_ms": 692440,
+   "end_ms": 692850,
+   "text": "That's it."
+  },
+  {
+   "idx": 203,
+   "speaker": "C",
+   "start_ms": 693610,
+   "end_ms": 693780,
+   "text": "Hmm."
+  },
+  {
+   "idx": 204,
+   "speaker": "C",
+   "start_ms": 697360,
+   "end_ms": 697600,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 205,
+   "speaker": "C",
+   "start_ms": 700480,
+   "end_ms": 700750,
+   "text": "Mm."
+  },
+  {
+   "idx": 206,
+   "speaker": "B",
+   "start_ms": 701560,
+   "end_ms": 716270,
+   "text": "Okay, ach that's a shame. right, so take away that completely? Ah. And now we're under budget. So we do have point five Euro to play with if we wanted."
+  },
+  {
+   "idx": 207,
+   "speaker": "D",
+   "start_ms": 716100,
+   "end_ms": 716590,
+   "text": "So I reckon."
+  },
+  {
+   "idx": 208,
+   "speaker": "C",
+   "start_ms": 716260,
+   "end_ms": 719380,
+   "text": "How about with embossing the logo, isn't that going to cost us some money?"
+  },
+  {
+   "idx": 209,
+   "speaker": "B",
+   "start_ms": 719990,
+   "end_ms": 721440,
+   "text": "Doesn't say so."
+  },
+  {
+   "idx": 210,
+   "speaker": "C",
+   "start_ms": 721060,
+   "end_ms": 722380,
+   "text": "Yeah. That's a freebie."
+  },
+  {
+   "idx": 211,
+   "speaker": "D",
+   "start_ms": 721670,
+   "end_ms": 724140,
+   "text": "Reckon that probably counts as a special form for the buttons."
+  },
+  {
+   "idx": 212,
+   "speaker": "A",
+   "start_ms": 724360,
+   "end_ms": 724620,
+   "text": "Yeah."
+  },
+  {
+   "idx": 213,
+   "speaker": "B",
+   "start_ms": 724660,
+   "end_ms": 725830,
+   "text": "Yeah that's a good idea."
+  },
+  {
+   "idx": 214,
+   "speaker": "B",
+   "start_ms": 727430,
+   "end_ms": 728120,
+   "text": "Just one?"
+  },
+  {
+   "idx": 215,
+   "speaker": "B",
+   "start_ms": 730580,
+   "end_ms": 733120,
+   "text": "Does that mean that one button has a special form or."
+  },
+  {
+   "idx": 216,
+   "speaker": "D",
+   "start_ms": 734000,
+   "end_ms": 737800,
+   "text": "I think there's just one button so handy."
+  },
+  {
+   "idx": 217,
+   "speaker": "B",
+   "start_ms": 735520,
+   "end_ms": 750510,
+   "text": "Yeah okay. Well well there we go. So I'm just gonna have to redraw this now. So we're not gonna have the L_C_D_ anymore, and we'll just gonna have an on on the T_V_ it'll show you what you're doing, which I think is fair enough, and so this is gonna be one big thing here."
+  },
+  {
+   "idx": 218,
+   "speaker": "B",
+   "start_ms": 753010,
+   "end_ms": 754670,
+   "text": "Um."
+  },
+  {
+   "idx": 219,
+   "speaker": "C",
+   "start_ms": 755560,
+   "end_ms": 761430,
+   "text": "Was the goal in your in your prototype design that it be as low profile as possible?"
+  },
+  {
+   "idx": 220,
+   "speaker": "A",
+   "start_ms": 762260,
+   "end_ms": 763450,
+   "text": "What do you mean by profile?"
+  },
+  {
+   "idx": 221,
+   "speaker": "D",
+   "start_ms": 762650,
+   "end_ms": 763200,
+   "text": "Yeah."
+  },
+  {
+   "idx": 222,
+   "speaker": "C",
+   "start_ms": 763620,
+   "end_ms": 765140,
+   "text": "Sort of flat as possible."
+  },
+  {
+   "idx": 223,
+   "speaker": "A",
+   "start_ms": 765620,
+   "end_ms": 765870,
+   "text": "No."
+  },
+  {
+   "idx": 224,
+   "speaker": "D",
+   "start_ms": 766170,
+   "end_ms": 772070,
+   "text": "You see I envision it as being quite deep sort of deep enough to be comfy to hold in your hands rather than being wide and flat."
+  },
+  {
+   "idx": 225,
+   "speaker": "C",
+   "start_ms": 768840,
+   "end_ms": 777050,
+   "text": "Yeah. Yeah that's what I was thinking, Sure, okay. Yeah alright yeah fair enough. Okay, just thought I'd ask."
+  },
+  {
+   "idx": 226,
+   "speaker": "A",
+   "start_ms": 772420,
+   "end_ms": 783500,
+   "text": "We didn't have enough Play-Doh to make it three D_. So there's one more dimension to the thing which we need to to add, and you might want to add in the report, length, width, and height."
+  },
+  {
+   "idx": 227,
+   "speaker": "C",
+   "start_ms": 779700,
+   "end_ms": 779950,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 228,
+   "speaker": "B",
+   "start_ms": 784010,
+   "end_ms": 796640,
+   "text": "Right okay. So just to well to be thorough then, width-wise we're looking at about what three centimetres or something? Okay and then so height-wise."
+  },
+  {
+   "idx": 229,
+   "speaker": "A",
+   "start_ms": 785240,
+   "end_ms": 785440,
+   "text": "Yeah."
+  },
+  {
+   "idx": 230,
+   "speaker": "A",
+   "start_ms": 792360,
+   "end_ms": 792620,
+   "text": "Yeah."
+  },
+  {
+   "idx": 231,
+   "speaker": "C",
+   "start_ms": 794830,
+   "end_ms": 795360,
+   "text": "Hmm."
+  },
+  {
+   "idx": 232,
+   "speaker": "B",
+   "start_ms": 801250,
+   "end_ms": 806870,
+   "text": "How how tall do you envisage it being? About that big? About two centimetres, okay."
+  },
+  {
+   "idx": 233,
+   "speaker": "D",
+   "start_ms": 804050,
+   "end_ms": 805000,
+   "text": "Yeah it works, yeah."
+  },
+  {
+   "idx": 234,
+   "speaker": "A",
+   "start_ms": 804400,
+   "end_ms": 804570,
+   "text": "Two."
+  },
+  {
+   "idx": 235,
+   "speaker": "C",
+   "start_ms": 807140,
+   "end_ms": 810030,
+   "text": "Two's not very high at all though. Maybe a bit higher?"
+  },
+  {
+   "idx": 236,
+   "speaker": "A",
+   "start_ms": 809380,
+   "end_ms": 810860,
+   "text": "This is about this is about two."
+  },
+  {
+   "idx": 237,
+   "speaker": "A",
+   "start_ms": 812920,
+   "end_ms": 814390,
+   "text": "Slightly more than two, so."
+  },
+  {
+   "idx": 238,
+   "speaker": "D",
+   "start_ms": 813630,
+   "end_ms": 815400,
+   "text": "See, about that thick."
+  },
+  {
+   "idx": 239,
+   "speaker": "C",
+   "start_ms": 813930,
+   "end_ms": 817920,
+   "text": "Yeah. Maybe closer to three even or two and a half."
+  },
+  {
+   "idx": 240,
+   "speaker": "B",
+   "start_ms": 815370,
+   "end_ms": 824110,
+   "text": "Okay. Ach, that is Yeah. Okay we'll we'll say two point five. Okay so we have it within cost anyway."
+  },
+  {
+   "idx": 241,
+   "speaker": "A",
+   "start_ms": 816920,
+   "end_ms": 817400,
+   "text": "Okay."
+  },
+  {
+   "idx": 242,
+   "speaker": "B",
+   "start_ms": 825650,
+   "end_ms": 830730,
+   "text": "So yeah project evaluation is this point."
+  },
+  {
+   "idx": 243,
+   "speaker": "C",
+   "start_ms": 831550,
+   "end_ms": 831810,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 244,
+   "speaker": "B",
+   "start_ms": 832830,
+   "end_ms": 834780,
+   "text": "Right."
+  },
+  {
+   "idx": 245,
+   "speaker": "B",
+   "start_ms": 836720,
+   "end_ms": 845160,
+   "text": "Okay so can we close that? This is what it's the final spec that it's gonna be. Someone is gonna have to yeah that's fine that's fine."
+  },
+  {
+   "idx": 246,
+   "speaker": "C",
+   "start_ms": 841480,
+   "end_ms": 841760,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 247,
+   "speaker": "C",
+   "start_ms": 845120,
+   "end_ms": 867020,
+   "text": "It's probably just I dunno if it's worth getting into, but just in in that we want this to be stylish, should we think a little bit more out of the box in terms of a button grid, because I've seen there's lots of devices out there that that instead of taking your standard nine nine square grid, and they have it sort of stylized or in different concept that that."
+  },
+  {
+   "idx": 248,
+   "speaker": "A",
+   "start_ms": 866320,
+   "end_ms": 893520,
+   "text": "I think that's something that's very hard to catch, so you you restrict the number of people who wanna try something. The the look and the colour is something which is cool, but I think that there's also that factor of if it's too unfamiliar then because when you put it on the shelf Yeah button shape might be a good idea to change, rather than rather than positioning, 'cause I think positioning is we're kinda engrained into the the telephone kind of."
+  },
+  {
+   "idx": 249,
+   "speaker": "C",
+   "start_ms": 868950,
+   "end_ms": 869400,
+   "text": "Yeah."
+  },
+  {
+   "idx": 250,
+   "speaker": "C",
+   "start_ms": 872380,
+   "end_ms": 873130,
+   "text": "Sure, okay."
+  },
+  {
+   "idx": 251,
+   "speaker": "C",
+   "start_ms": 875400,
+   "end_ms": 876130,
+   "text": "Yeah, alright."
+  },
+  {
+   "idx": 252,
+   "speaker": "C",
+   "start_ms": 878950,
+   "end_ms": 883290,
+   "text": "Okay, sure. What about button shape? Square buttons?"
+  },
+  {
+   "idx": 253,
+   "speaker": "C",
+   "start_ms": 885650,
+   "end_ms": 885990,
+   "text": "Okay."
+  },
+  {
+   "idx": 254,
+   "speaker": "C",
+   "start_ms": 888030,
+   "end_ms": 888340,
+   "text": "Yeah."
+  },
+  {
+   "idx": 255,
+   "speaker": "C",
+   "start_ms": 889910,
+   "end_ms": 890310,
+   "text": "Sure."
+  },
+  {
+   "idx": 256,
+   "speaker": "D",
+   "start_ms": 892250,
+   "end_ms": 892590,
+   "text": "Yeah."
+  },
+  {
+   "idx": 257,
+   "speaker": "C",
+   "start_ms": 893230,
+   "end_ms": 893510,
+   "text": "Yeah."
+  },
+  {
+   "idx": 258,
+   "speaker": "B",
+   "start_ms": 894680,
+   "end_ms": 907360,
+   "text": "Okay. Right So at this point we let me see, discuss how satisfied we all are with."
+  },
+  {
+   "idx": 259,
+   "speaker": "A",
+   "start_ms": 895120,
+   "end_ms": 895660,
+   "text": "Pad."
+  },
+  {
+   "idx": 260,
+   "speaker": "B",
+   "start_ms": 908930,
+   "end_ms": 921940,
+   "text": "With these four points, with the room for creativity in the project, and leadership and teamwork, and the stuff we had around us I guess. let me see."
+  },
+  {
+   "idx": 261,
+   "speaker": "C",
+   "start_ms": 917010,
+   "end_ms": 917260,
+   "text": "'kay."
+  },
+  {
+   "idx": 262,
+   "speaker": "C",
+   "start_ms": 923410,
+   "end_ms": 924810,
+   "text": "Do you want me to."
+  },
+  {
+   "idx": 263,
+   "speaker": "C",
+   "start_ms": 927830,
+   "end_ms": 932690,
+   "text": "Do you want me to do my design evaluation last? Or."
+  },
+  {
+   "idx": 264,
+   "speaker": "A",
+   "start_ms": 932130,
+   "end_ms": 934470,
+   "text": "Maybe we should do the design evaluation first."
+  },
+  {
+   "idx": 265,
+   "speaker": "B",
+   "start_ms": 932130,
+   "end_ms": 942650,
+   "text": "Yeah I wasn't really sure what that was Yeah, yeah go for that first. I wasn't entirely sure what who was supposed to be doing that, but you go for it."
+  },
+  {
+   "idx": 266,
+   "speaker": "C",
+   "start_ms": 935910,
+   "end_ms": 936590,
+   "text": "Evaluation."
+  },
+  {
+   "idx": 267,
+   "speaker": "C",
+   "start_ms": 939930,
+   "end_ms": 953800,
+   "text": "Okay. Sure. alright so the way this works, I'm gonna need to plug into PowerPoint, I'll try and do it as quick as possible. this is I'll just go over your head if that's okay."
+  },
+  {
+   "idx": 268,
+   "speaker": "B",
+   "start_ms": 946320,
+   "end_ms": 946760,
+   "text": "Okay."
+  },
+  {
+   "idx": 269,
+   "speaker": "B",
+   "start_ms": 948490,
+   "end_ms": 949040,
+   "text": "Okay."
+  },
+  {
+   "idx": 270,
+   "speaker": "B",
+   "start_ms": 953610,
+   "end_ms": 953810,
+   "text": "Yeah."
+  },
+  {
+   "idx": 271,
+   "speaker": "A",
+   "start_ms": 954850,
+   "end_ms": 964930,
+   "text": "I don't think you need the power, so No, that's okay that's okay. No, the power cord itself. Yeah, so then you have a bit more freedom to."
+  },
+  {
+   "idx": 272,
+   "speaker": "C",
+   "start_ms": 956750,
+   "end_ms": 957210,
+   "text": "What's that?"
+  },
+  {
+   "idx": 273,
+   "speaker": "C",
+   "start_ms": 958950,
+   "end_ms": 959770,
+   "text": "I don't need the PowerPoint?"
+  },
+  {
+   "idx": 274,
+   "speaker": "C",
+   "start_ms": 961800,
+   "end_ms": 965720,
+   "text": "Oh course, yeah that's true. Let me get that. A bit more."
+  },
+  {
+   "idx": 275,
+   "speaker": "C",
+   "start_ms": 970370,
+   "end_ms": 996190,
+   "text": "Okay, so what this is is a set-up for us to use a kind of a like a The idea is that I've set up I've reviewed all of the the points of discussion from the beginning, and used that as a criteria of evaluation for the for the current design or the plan, and so we can review that."
+  },
+  {
+   "idx": 276,
+   "speaker": "A",
+   "start_ms": 970960,
+   "end_ms": 972290,
+   "text": "You you still have your blue fingers."
+  },
+  {
+   "idx": 277,
+   "speaker": "D",
+   "start_ms": 974770,
+   "end_ms": 975260,
+   "text": "Is it?"
+  },
+  {
+   "idx": 278,
+   "speaker": "A",
+   "start_ms": 976060,
+   "end_ms": 977700,
+   "text": "You killed a monster."
+  },
+  {
+   "idx": 279,
+   "speaker": "C",
+   "start_ms": 996190,
+   "end_ms": 1002950,
+   "text": "I think it's gonna end up being sort of elementary because we're we're we're not gonna probably use it to change anything but."
+  },
+  {
+   "idx": 280,
+   "speaker": "C",
+   "start_ms": 1005480,
+   "end_ms": 1015790,
+   "text": "Doesn't seem like it's going, does it? Yeah, okay great. and I'm gonna write up our results on the board, so this'll be a way for us to go through and decide if we're sort of review where we stand with it."
+  },
+  {
+   "idx": 281,
+   "speaker": "B",
+   "start_ms": 1007530,
+   "end_ms": 1008500,
+   "text": "Oh there it is."
+  },
+  {
+   "idx": 282,
+   "speaker": "C",
+   "start_ms": 1017490,
+   "end_ms": 1020330,
+   "text": "Okay, so."
+  },
+  {
+   "idx": 283,
+   "speaker": "C",
+   "start_ms": 1021990,
+   "end_ms": 1047270,
+   "text": "So to sort of bring together two things, sort of design goals and also the market research that we had, when we rate this, one is high in in succeeding or fitting to our original aim and seven is low, okay. So these these are the and we've been asked to to collectively rate this, so what we can do is try and just work on a consensus system so we just come to an agreement."
+  },
+  {
+   "idx": 284,
+   "speaker": "B",
+   "start_ms": 1034119,
+   "end_ms": 1034980,
+   "text": "'kay."
+  },
+  {
+   "idx": 285,
+   "speaker": "B",
+   "start_ms": 1046700,
+   "end_ms": 1047160,
+   "text": "Okay."
+  },
+  {
+   "idx": 286,
+   "speaker": "C",
+   "start_ms": 1047270,
+   "end_ms": 1051930,
+   "text": "Okay? So the first one stylish look and feel."
+  },
+  {
+   "idx": 287,
+   "speaker": "A",
+   "start_ms": 1052710,
+   "end_ms": 1053720,
+   "text": "I rate that pretty highly."
+  },
+  {
+   "idx": 288,
+   "speaker": "B",
+   "start_ms": 1053810,
+   "end_ms": 1061170,
+   "text": "Well yeah, I mean compared to most remote controls you see that's pretty good. I dunno like a six or something. What does anybody else think?"
+  },
+  {
+   "idx": 289,
+   "speaker": "D",
+   "start_ms": 1053910,
+   "end_ms": 1054430,
+   "text": "Yeah."
+  },
+  {
+   "idx": 290,
+   "speaker": "C",
+   "start_ms": 1055150,
+   "end_ms": 1055400,
+   "text": "Yeah."
+  },
+  {
+   "idx": 291,
+   "speaker": "C",
+   "start_ms": 1057730,
+   "end_ms": 1057960,
+   "text": "Yeah."
+  },
+  {
+   "idx": 292,
+   "speaker": "C",
+   "start_ms": 1059880,
+   "end_ms": 1070260,
+   "text": "Yeah my only reservation with it was that we basically went with yellow because it's the company's colour, and I don't know if yellow's gonna really be a hit. But."
+  },
+  {
+   "idx": 293,
+   "speaker": "B",
+   "start_ms": 1065470,
+   "end_ms": 1066000,
+   "text": "Mm."
+  },
+  {
+   "idx": 294,
+   "speaker": "B",
+   "start_ms": 1068530,
+   "end_ms": 1071290,
+   "text": "Okay."
+  },
+  {
+   "idx": 295,
+   "speaker": "D",
+   "start_ms": 1071490,
+   "end_ms": 1073080,
+   "text": "I'm seeing five then."
+  },
+  {
+   "idx": 296,
+   "speaker": "C",
+   "start_ms": 1073140,
+   "end_ms": 1073850,
+   "text": "What do you guys think?"
+  },
+  {
+   "idx": 297,
+   "speaker": "B",
+   "start_ms": 1074030,
+   "end_ms": 1077080,
+   "text": "I would say five or six. David?"
+  },
+  {
+   "idx": 298,
+   "speaker": "C",
+   "start_ms": 1075750,
+   "end_ms": 1076070,
+   "text": "Okay."
+  },
+  {
+   "idx": 299,
+   "speaker": "A",
+   "start_ms": 1077060,
+   "end_ms": 1078090,
+   "text": "Yep I'm fine with that."
+  },
+  {
+   "idx": 300,
+   "speaker": "C",
+   "start_ms": 1078110,
+   "end_ms": 1079220,
+   "text": "Okay let's go with five then."
+  },
+  {
+   "idx": 301,
+   "speaker": "B",
+   "start_ms": 1079860,
+   "end_ms": 1080410,
+   "text": "Okay."
+  },
+  {
+   "idx": 302,
+   "speaker": "C",
+   "start_ms": 1080790,
+   "end_ms": 1086490,
+   "text": "Oh just actually the opposite. The So it meant three, okay."
+  },
+  {
+   "idx": 303,
+   "speaker": "A",
+   "start_ms": 1081560,
+   "end_ms": 1083060,
+   "text": "It's one to seven, right?"
+  },
+  {
+   "idx": 304,
+   "speaker": "B",
+   "start_ms": 1083400,
+   "end_ms": 1086130,
+   "text": "Oh yes sorry then, then I would say two or three."
+  },
+  {
+   "idx": 305,
+   "speaker": "A",
+   "start_ms": 1088360,
+   "end_ms": 1090150,
+   "text": "Wait, what's the scale, one to seven, right?"
+  },
+  {
+   "idx": 306,
+   "speaker": "D",
+   "start_ms": 1089810,
+   "end_ms": 1094930,
+   "text": "One's high-ish isn't it? Ah, okay so yeah, two or three."
+  },
+  {
+   "idx": 307,
+   "speaker": "B",
+   "start_ms": 1090050,
+   "end_ms": 1090310,
+   "text": "Yeah."
+  },
+  {
+   "idx": 308,
+   "speaker": "C",
+   "start_ms": 1090290,
+   "end_ms": 1091820,
+   "text": "Yeah, one is high."
+  },
+  {
+   "idx": 309,
+   "speaker": "C",
+   "start_ms": 1095010,
+   "end_ms": 1111840,
+   "text": "'Kay Let's go with two point five then. Okay, control high tech innovation. We had to remove Yeah, so we've had to remove a few of our features we wanted, but jog-dial 's good."
+  },
+  {
+   "idx": 310,
+   "speaker": "A",
+   "start_ms": 1095650,
+   "end_ms": 1096690,
+   "text": "Okay, it's upside-down."
+  },
+  {
+   "idx": 311,
+   "speaker": "B",
+   "start_ms": 1103100,
+   "end_ms": 1104900,
+   "text": "Well it has the wee jog-dial but."
+  },
+  {
+   "idx": 312,
+   "speaker": "B",
+   "start_ms": 1108070,
+   "end_ms": 1108620,
+   "text": "Mm."
+  },
+  {
+   "idx": 313,
+   "speaker": "B",
+   "start_ms": 1111030,
+   "end_ms": 1113870,
+   "text": "I'd go with three or four, maybe three."
+  },
+  {
+   "idx": 314,
+   "speaker": "A",
+   "start_ms": 1111140,
+   "end_ms": 1118050,
+   "text": "Say it's more medium, but going towards a little bit higher than medium kind of thing. Yep."
+  },
+  {
+   "idx": 315,
+   "speaker": "D",
+   "start_ms": 1112050,
+   "end_ms": 1113010,
+   "text": "Eight three."
+  },
+  {
+   "idx": 316,
+   "speaker": "C",
+   "start_ms": 1116230,
+   "end_ms": 1119900,
+   "text": "Okay, three? Okay."
+  },
+  {
+   "idx": 317,
+   "speaker": "B",
+   "start_ms": 1116900,
+   "end_ms": 1118110,
+   "text": "Yeah about three, okay."
+  },
+  {
+   "idx": 318,
+   "speaker": "C",
+   "start_ms": 1122310,
+   "end_ms": 1127190,
+   "text": "Style reflects a fruit inspired colour, design. I shouldn't have said colour, but just."
+  },
+  {
+   "idx": 319,
+   "speaker": "A",
+   "start_ms": 1126030,
+   "end_ms": 1134770,
+   "text": "Lemon. Okay, the blue the blue colours and don't don't actually represent the colour, except for the the the red button, they because for want of a."
+  },
+  {
+   "idx": 320,
+   "speaker": "B",
+   "start_ms": 1127490,
+   "end_ms": 1128190,
+   "text": "Well that's kind of."
+  },
+  {
+   "idx": 321,
+   "speaker": "D",
+   "start_ms": 1128520,
+   "end_ms": 1129110,
+   "text": "Yeah."
+  },
+  {
+   "idx": 322,
+   "speaker": "C",
+   "start_ms": 1128730,
+   "end_ms": 1129120,
+   "text": "Sorta."
+  },
+  {
+   "idx": 323,
+   "speaker": "C",
+   "start_ms": 1131620,
+   "end_ms": 1131850,
+   "text": "Yeah."
+  },
+  {
+   "idx": 324,
+   "speaker": "C",
+   "start_ms": 1133570,
+   "end_ms": 1137510,
+   "text": "Okay. Right. Yeah, could be. Yeah."
+  },
+  {
+   "idx": 325,
+   "speaker": "B",
+   "start_ms": 1135130,
+   "end_ms": 1138250,
+   "text": "But the yellow, I mean it could be a lemon yellow colour, couldn't it?"
+  },
+  {
+   "idx": 326,
+   "speaker": "A",
+   "start_ms": 1137410,
+   "end_ms": 1141940,
+   "text": "Yeah, the the yellow is more representative of the colour, but the button itself, the blue can be anything else."
+  },
+  {
+   "idx": 327,
+   "speaker": "C",
+   "start_ms": 1139890,
+   "end_ms": 1140240,
+   "text": "Okay."
+  },
+  {
+   "idx": 328,
+   "speaker": "B",
+   "start_ms": 1140240,
+   "end_ms": 1140570,
+   "text": "Yeah."
+  },
+  {
+   "idx": 329,
+   "speaker": "C",
+   "start_ms": 1142070,
+   "end_ms": 1143530,
+   "text": "Okay so we'll go two."
+  },
+  {
+   "idx": 330,
+   "speaker": "B",
+   "start_ms": 1144930,
+   "end_ms": 1145390,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 331,
+   "speaker": "C",
+   "start_ms": 1145460,
+   "end_ms": 1151500,
+   "text": "Yeah? Okay, and design is simple to use, simple in features."
+  },
+  {
+   "idx": 332,
+   "speaker": "B",
+   "start_ms": 1151950,
+   "end_ms": 1155610,
+   "text": "Well yeah, I mean it's really basic looking isn't it? I mean I'd give that nearly a one."
+  },
+  {
+   "idx": 333,
+   "speaker": "C",
+   "start_ms": 1154160,
+   "end_ms": 1172450,
+   "text": "Yeah fairly basic, you guys think? Yeah, one? Okay. soft and spongy, have we achieved that? We've used mostly plastic in the end so it's going to be quite a bit of a compromise for price. Five?"
+  },
+  {
+   "idx": 334,
+   "speaker": "D",
+   "start_ms": 1157860,
+   "end_ms": 1158730,
+   "text": "Yeah one."
+  },
+  {
+   "idx": 335,
+   "speaker": "A",
+   "start_ms": 1158520,
+   "end_ms": 1159690,
+   "text": "Yep, that's fine."
+  },
+  {
+   "idx": 336,
+   "speaker": "D",
+   "start_ms": 1169410,
+   "end_ms": 1170740,
+   "text": "Yeah I think it's about five."
+  },
+  {
+   "idx": 337,
+   "speaker": "B",
+   "start_ms": 1174070,
+   "end_ms": 1179520,
+   "text": "Five? That's really low. Well Yeah I suppose 'kay."
+  },
+  {
+   "idx": 338,
+   "speaker": "D",
+   "start_ms": 1175220,
+   "end_ms": 1178330,
+   "text": "Yeah well we have to use plastic so it's probably gonna be."
+  },
+  {
+   "idx": 339,
+   "speaker": "C",
+   "start_ms": 1177910,
+   "end_ms": 1178400,
+   "text": "That's."
+  },
+  {
+   "idx": 340,
+   "speaker": "C",
+   "start_ms": 1180050,
+   "end_ms": 1185850,
+   "text": "Could we have used an entirely rubber frame to it? Was that an option?"
+  },
+  {
+   "idx": 341,
+   "speaker": "A",
+   "start_ms": 1181600,
+   "end_ms": 1182730,
+   "text": "Yeah, company logo."
+  },
+  {
+   "idx": 342,
+   "speaker": "D",
+   "start_ms": 1186450,
+   "end_ms": 1191170,
+   "text": "I think I'd probably increase the cost. We've only got like what, ten cents left so."
+  },
+  {
+   "idx": 343,
+   "speaker": "A",
+   "start_ms": 1186780,
+   "end_ms": 1190000,
+   "text": "I think it'll be cost prohibitive, yeah."
+  },
+  {
+   "idx": 344,
+   "speaker": "C",
+   "start_ms": 1187900,
+   "end_ms": 1192280,
+   "text": "It would cost more than plastic. Okay, logo, we've got it in there, haven't we?"
+  },
+  {
+   "idx": 345,
+   "speaker": "A",
+   "start_ms": 1192470,
+   "end_ms": 1192850,
+   "text": "Yep."
+  },
+  {
+   "idx": 346,
+   "speaker": "B",
+   "start_ms": 1192830,
+   "end_ms": 1196160,
+   "text": "Yep. Gonna have that on the side, aren't we, like there or something?"
+  },
+  {
+   "idx": 347,
+   "speaker": "C",
+   "start_ms": 1198090,
+   "end_ms": 1210320,
+   "text": "Huh. And it's within budget, yep. It is, isn't it? Okay, so we can say then that out of a possible or what would be our goal here?"
+  },
+  {
+   "idx": 348,
+   "speaker": "D",
+   "start_ms": 1202020,
+   "end_ms": 1202300,
+   "text": "Yeah."
+  },
+  {
+   "idx": 349,
+   "speaker": "B",
+   "start_ms": 1210670,
+   "end_ms": 1212120,
+   "text": "Out of forty nine, I guess."
+  },
+  {
+   "idx": 350,
+   "speaker": "C",
+   "start_ms": 1212100,
+   "end_ms": 1215230,
+   "text": "Yeah, out of forty nine with with zero being the highest."
+  },
+  {
+   "idx": 351,
+   "speaker": "C",
+   "start_ms": 1217750,
+   "end_ms": 1223320,
+   "text": "We are at two, seven, eight, ten, fifteen point five."
+  },
+  {
+   "idx": 352,
+   "speaker": "B",
+   "start_ms": 1226680,
+   "end_ms": 1227470,
+   "text": "'S pretty good."
+  },
+  {
+   "idx": 353,
+   "speaker": "C",
+   "start_ms": 1227030,
+   "end_ms": 1228290,
+   "text": "So it's pretty good."
+  },
+  {
+   "idx": 354,
+   "speaker": "C",
+   "start_ms": 1230310,
+   "end_ms": 1241190,
+   "text": "Translates to something like about approximately seventy two percent efficacy of our original goal. Right?"
+  },
+  {
+   "idx": 355,
+   "speaker": "B",
+   "start_ms": 1242240,
+   "end_ms": 1243310,
+   "text": "Yeah."
+  },
+  {
+   "idx": 356,
+   "speaker": "C",
+   "start_ms": 1242820,
+   "end_ms": 1254290,
+   "text": "I think 'cause if you turn that into a hundred it would be about about thirty one, and then invert that, it's."
+  },
+  {
+   "idx": 357,
+   "speaker": "B",
+   "start_ms": 1248960,
+   "end_ms": 1251490,
+   "text": "Twice that, about thirty one."
+  },
+  {
+   "idx": 358,
+   "speaker": "B",
+   "start_ms": 1254040,
+   "end_ms": 1256690,
+   "text": "So yeah well yeah about sixty nine, seventy percent yeah."
+  },
+  {
+   "idx": 359,
+   "speaker": "C",
+   "start_ms": 1256120,
+   "end_ms": 1258560,
+   "text": "Oh right, about seventy, yeah seventy percent."
+  },
+  {
+   "idx": 360,
+   "speaker": "B",
+   "start_ms": 1259280,
+   "end_ms": 1260100,
+   "text": "It's pretty good."
+  },
+  {
+   "idx": 361,
+   "speaker": "C",
+   "start_ms": 1260770,
+   "end_ms": 1277730,
+   "text": "Okay, good. That was just a little formality for us to go through. Yep, oh hundred pound pen. Sorry alright. No."
+  },
+  {
+   "idx": 362,
+   "speaker": "B",
+   "start_ms": 1264890,
+   "end_ms": 1265360,
+   "text": "Okay."
+  },
+  {
+   "idx": 363,
+   "speaker": "B",
+   "start_ms": 1272880,
+   "end_ms": 1275500,
+   "text": "Nobody saw it, honestly."
+  },
+  {
+   "idx": 364,
+   "speaker": "A",
+   "start_ms": 1275900,
+   "end_ms": 1276910,
+   "text": "The cameras did."
+  },
+  {
+   "idx": 365,
+   "speaker": "B",
+   "start_ms": 1277960,
+   "end_ms": 1279520,
+   "text": "Is that you all have all finished, or."
+  },
+  {
+   "idx": 366,
+   "speaker": "C",
+   "start_ms": 1279480,
+   "end_ms": 1314670,
+   "text": "Yeah that's that's me. I did have one other one other frame I thought, I mean I I not knowing how we would deal with this information, I thought okay in theory this kind of a process would be about refining our design, revisiting our original goals. It's not something I need to push through, but I thought should we thinking more about the dimensions, sort of like more of a three dimensional shapes as well as opposed to just that flat Could our design involve a series of colours so that it's more of like a line where we have like sort of the, I don't know like the harvest line or the vibrant, I dunno the Whatever just some theme and then we have different."
+  },
+  {
+   "idx": 367,
+   "speaker": "B",
+   "start_ms": 1291520,
+   "end_ms": 1292150,
+   "text": "Uh-huh."
+  },
+  {
+   "idx": 368,
+   "speaker": "B",
+   "start_ms": 1303670,
+   "end_ms": 1304050,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 369,
+   "speaker": "A",
+   "start_ms": 1308210,
+   "end_ms": 1308350,
+   "text": "Yep."
+  },
+  {
+   "idx": 370,
+   "speaker": "C",
+   "start_ms": 1314670,
+   "end_ms": 1327470,
+   "text": "Tones, lime green, lemon. It's just discussion. I mean obviously we can just abandon this, it's fine. I'm just thinking about what we originally set out to do. yep so there. That's all."
+  },
+  {
+   "idx": 371,
+   "speaker": "B",
+   "start_ms": 1317830,
+   "end_ms": 1318310,
+   "text": "Okay."
+  },
+  {
+   "idx": 372,
+   "speaker": "B",
+   "start_ms": 1325120,
+   "end_ms": 1325450,
+   "text": "Right."
+  },
+  {
+   "idx": 373,
+   "speaker": "B",
+   "start_ms": 1327590,
+   "end_ms": 1337220,
+   "text": "Okay, great are you submitting the the evaluation criteria or am I? I don't know what your instructions have been."
+  },
+  {
+   "idx": 374,
+   "speaker": "C",
+   "start_ms": 1337200,
+   "end_ms": 1343300,
+   "text": "I think to record it and I haven't been asked to submit it yet. Yeah."
+  },
+  {
+   "idx": 375,
+   "speaker": "B",
+   "start_ms": 1343410,
+   "end_ms": 1359090,
+   "text": "Okay, just wondering if I need to include it in the minutes, because if you're submitting it anyway then Okay great. Cool. right, well next up then, because we've done finance, is the project evaluation."
+  },
+  {
+   "idx": 376,
+   "speaker": "C",
+   "start_ms": 1348560,
+   "end_ms": 1349030,
+   "text": "I will, yeah."
+  },
+  {
+   "idx": 377,
+   "speaker": "A",
+   "start_ms": 1349830,
+   "end_ms": 1350750,
+   "text": "It keeps getting too big."
+  },
+  {
+   "idx": 378,
+   "speaker": "A",
+   "start_ms": 1360780,
+   "end_ms": 1370300,
+   "text": "'Kay I'm I'm listening I'm just trying to incorporate the logo into the the thing, so I'm playing with the Play-Doh as well. Just in case you're wondering, why is he still playing with the Play-Doh?"
+  },
+  {
+   "idx": 379,
+   "speaker": "B",
+   "start_ms": 1363830,
+   "end_ms": 1364640,
+   "text": "Oh right, okay."
+  },
+  {
+   "idx": 380,
+   "speaker": "C",
+   "start_ms": 1368760,
+   "end_ms": 1368920,
+   "text": "Huh."
+  },
+  {
+   "idx": 381,
+   "speaker": "A",
+   "start_ms": 1387480,
+   "end_ms": 1394510,
+   "text": "Just about right L_E_G_O_ Lego."
+  },
+  {
+   "idx": 382,
+   "speaker": "D",
+   "start_ms": 1390630,
+   "end_ms": 1392200,
+   "text": "My leg."
+  },
+  {
+   "idx": 383,
+   "speaker": "B",
+   "start_ms": 1400520,
+   "end_ms": 1414300,
+   "text": "Right, okay. well do you wanna just individually say what you think about about these four points and or not those four points, my four points, sorry, forgotten that."
+  },
+  {
+   "idx": 384,
+   "speaker": "B",
+   "start_ms": 1416990,
+   "end_ms": 1417990,
+   "text": "You got a different."
+  },
+  {
+   "idx": 385,
+   "speaker": "C",
+   "start_ms": 1430120,
+   "end_ms": 1430250,
+   "text": "Yep."
+  },
+  {
+   "idx": 386,
+   "speaker": "C",
+   "start_ms": 1434580,
+   "end_ms": 1441150,
+   "text": "I like those printer cables that just have the two little butterfly clips like that. It's really quick. To use."
+  },
+  {
+   "idx": 387,
+   "speaker": "B",
+   "start_ms": 1437480,
+   "end_ms": 1450990,
+   "text": "Oh yeah, they're good aren't they, yeah. Right okay, yeah here we are. as a note we'll do this alphabetically. do you wanna start Andrew?"
+  },
+  {
+   "idx": 388,
+   "speaker": "C",
+   "start_ms": 1449800,
+   "end_ms": 1453340,
+   "text": "Sure, so what is it you're asking of me now?"
+  },
+  {
+   "idx": 389,
+   "speaker": "B",
+   "start_ms": 1453370,
+   "end_ms": 1460320,
+   "text": "I don't know, just your opinion on those four those four points really and how we used them. Yeah."
+  },
+  {
+   "idx": 390,
+   "speaker": "C",
+   "start_ms": 1457970,
+   "end_ms": 1493100,
+   "text": "Or sort of our work on setting this up. Yeah. Well, is it okay I'll just go through your system then. The the room is fairly institutional, but the main thing is, I think our use of this space is more just to report on things as opposed to be creative and constructive and it would probably help to have sort of a cumulative effect of we have ideas and we come back and then the ideas are still in discussion, you know, as in other words this this room is sort of a centre point of creativity, whereas in."
+  },
+  {
+   "idx": 391,
+   "speaker": "B",
+   "start_ms": 1489300,
+   "end_ms": 1489660,
+   "text": "Uh-huh."
+  },
+  {
+   "idx": 392,
+   "speaker": "C",
+   "start_ms": 1493100,
+   "end_ms": 1498360,
+   "text": "Reality as we've gone through this, it's not really the centre point of creativity, it's more just a debating."
+  },
+  {
+   "idx": 393,
+   "speaker": "B",
+   "start_ms": 1497140,
+   "end_ms": 1502860,
+   "text": "Well do you feel though that that you were able to have quite a lot of creative input into the thing?"
+  },
+  {
+   "idx": 394,
+   "speaker": "C",
+   "start_ms": 1502370,
+   "end_ms": 1513120,
+   "text": "Yeah, yeah but that's just the thing is the in terms of the the first point there, the room, it feels as though the creativity goes on when we leave, and then we come here and then we kind of put out our ideas and then, you know."
+  },
+  {
+   "idx": 395,
+   "speaker": "B",
+   "start_ms": 1512880,
+   "end_ms": 1519060,
+   "text": "But I don't I don't think it means the room as in this room. I think it means like you know Yeah."
+  },
+  {
+   "idx": 396,
+   "speaker": "C",
+   "start_ms": 1515960,
+   "end_ms": 1551980,
+   "text": "Oh, oh right right, oh right okay room for Oh right I just looked up and saw okay whiteboard, digital pens, the room. No, of course, yeah. Sorry. Huh. Yeah. Yeah I okay on yeah answering the question in those terms I'd say that actually there's sort of a tease of creativity because we're asked to work through this, but actually the guidelines are fairly contrived in terms of okay fashion trends, say fruit and vegetable colour scheme, but then then we're told okay use the company."
+  },
+  {
+   "idx": 397,
+   "speaker": "B",
+   "start_ms": 1521040,
+   "end_ms": 1529570,
+   "text": "Room. Oh yeah. Well I dunno do you I think it means I think it means did you feel you were able to give creative input so."
+  },
+  {
+   "idx": 398,
+   "speaker": "B",
+   "start_ms": 1544910,
+   "end_ms": 1545450,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 399,
+   "speaker": "B",
+   "start_ms": 1551940,
+   "end_ms": 1552260,
+   "text": "Mm."
+  },
+  {
+   "idx": 400,
+   "speaker": "C",
+   "start_ms": 1551980,
+   "end_ms": 1568900,
+   "text": "Company colours. So what do we do. We're told okay think in terms of style and look and feel and technology, but build something for twelve and a half pounds, so actually the creativity was more more of like a a sort of a formality then an actual."
+  },
+  {
+   "idx": 401,
+   "speaker": "B",
+   "start_ms": 1560790,
+   "end_ms": 1561210,
+   "text": "Okay."
+  },
+  {
+   "idx": 402,
+   "speaker": "A",
+   "start_ms": 1568640,
+   "end_ms": 1576250,
+   "text": "You feel like you're caged within whatever It's like a balloon in a cage, it can only go so big and not hit the side. The constraints do come in very fast."
+  },
+  {
+   "idx": 403,
+   "speaker": "B",
+   "start_ms": 1568680,
+   "end_ms": 1569140,
+   "text": "Okay."
+  },
+  {
+   "idx": 404,
+   "speaker": "C",
+   "start_ms": 1570540,
+   "end_ms": 1573280,
+   "text": "Yeah within the constraints the Yeah."
+  },
+  {
+   "idx": 405,
+   "speaker": "C",
+   "start_ms": 1574870,
+   "end_ms": 1575900,
+   "text": "Yeah, yeah. So."
+  },
+  {
+   "idx": 406,
+   "speaker": "B",
+   "start_ms": 1574940,
+   "end_ms": 1583920,
+   "text": "Okay do you know what, actually let's take each point and everybody discuss it, I think. Yeah. So still on the topic of room for creativity next up is Craig."
+  },
+  {
+   "idx": 407,
+   "speaker": "C",
+   "start_ms": 1578930,
+   "end_ms": 1579120,
+   "text": "Yeah."
+  },
+  {
+   "idx": 408,
+   "speaker": "D",
+   "start_ms": 1584550,
+   "end_ms": 1592870,
+   "text": "I agree with his point it's it is quite a lot of fun to go and then you have sort of hit the end then go right, gotta cut everything out 'cause we don't have enough money."
+  },
+  {
+   "idx": 409,
+   "speaker": "B",
+   "start_ms": 1593160,
+   "end_ms": 1593730,
+   "text": "Yeah."
+  },
+  {
+   "idx": 410,
+   "speaker": "A",
+   "start_ms": 1593790,
+   "end_ms": 1594010,
+   "text": "Yeah."
+  },
+  {
+   "idx": 411,
+   "speaker": "C",
+   "start_ms": 1595430,
+   "end_ms": 1595700,
+   "text": "Yep."
+  },
+  {
+   "idx": 412,
+   "speaker": "A",
+   "start_ms": 1596280,
+   "end_ms": 1631470,
+   "text": "I think another point is that the meetings are more brainstorming sessions than meetings, so time is also a very strong factor, and structure. Because for a brainstorming meeting you want a structure that allows you to allows ideas to get tossed, to be evaluated, and to be reviewed, and to get feedback and come back. And I guess that point about the room not being very friendly to that, I think that's a very big thing, and I think the fact that we're wearing these things restricts I feel it 'cause I wear my glasses, right, and that but that irritates me right it it it does actually."
+  },
+  {
+   "idx": 413,
+   "speaker": "C",
+   "start_ms": 1600430,
+   "end_ms": 1600730,
+   "text": "Yeah."
+  },
+  {
+   "idx": 414,
+   "speaker": "B",
+   "start_ms": 1605330,
+   "end_ms": 1605680,
+   "text": "Yeah."
+  },
+  {
+   "idx": 415,
+   "speaker": "C",
+   "start_ms": 1605670,
+   "end_ms": 1606090,
+   "text": "Yeah."
+  },
+  {
+   "idx": 416,
+   "speaker": "C",
+   "start_ms": 1611560,
+   "end_ms": 1612830,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 417,
+   "speaker": "B",
+   "start_ms": 1611800,
+   "end_ms": 1612240,
+   "text": "Mm."
+  },
+  {
+   "idx": 418,
+   "speaker": "C",
+   "start_ms": 1615130,
+   "end_ms": 1616380,
+   "text": "Yeah, yeah."
+  },
+  {
+   "idx": 419,
+   "speaker": "C",
+   "start_ms": 1620680,
+   "end_ms": 1620930,
+   "text": "Yeah."
+  },
+  {
+   "idx": 420,
+   "speaker": "C",
+   "start_ms": 1624160,
+   "end_ms": 1625340,
+   "text": "Yeah, sure."
+  },
+  {
+   "idx": 421,
+   "speaker": "B",
+   "start_ms": 1626170,
+   "end_ms": 1626540,
+   "text": "Yeah."
+  },
+  {
+   "idx": 422,
+   "speaker": "C",
+   "start_ms": 1629530,
+   "end_ms": 1629710,
+   "text": "Yeah."
+  },
+  {
+   "idx": 423,
+   "speaker": "A",
+   "start_ms": 1631470,
+   "end_ms": 1640590,
+   "text": "You know affect how, whether you feel comfortable to communicate. I feel like I'm hiding behind the equipment, rather than the equipment is helping me, and you know."
+  },
+  {
+   "idx": 424,
+   "speaker": "C",
+   "start_ms": 1632520,
+   "end_ms": 1633220,
+   "text": "New creativity."
+  },
+  {
+   "idx": 425,
+   "speaker": "C",
+   "start_ms": 1637320,
+   "end_ms": 1637490,
+   "text": "Yep."
+  },
+  {
+   "idx": 426,
+   "speaker": "C",
+   "start_ms": 1639750,
+   "end_ms": 1640010,
+   "text": "Right."
+  },
+  {
+   "idx": 427,
+   "speaker": "B",
+   "start_ms": 1640020,
+   "end_ms": 1646440,
+   "text": "So you think a more relaxed atmosphere would be more kind of conducive to creative thought or Yeah, but actual environment?"
+  },
+  {
+   "idx": 428,
+   "speaker": "A",
+   "start_ms": 1642630,
+   "end_ms": 1653230,
+   "text": "Not not so much an atmosphere, the atmosphere is very relaxed, but the the gear yeah you know that creates boundaries to that and and the time the time given also restricts."
+  },
+  {
+   "idx": 429,
+   "speaker": "C",
+   "start_ms": 1647530,
+   "end_ms": 1647690,
+   "text": "Mm."
+  },
+  {
+   "idx": 430,
+   "speaker": "C",
+   "start_ms": 1649590,
+   "end_ms": 1649880,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 431,
+   "speaker": "B",
+   "start_ms": 1649990,
+   "end_ms": 1650310,
+   "text": "Okay."
+  },
+  {
+   "idx": 432,
+   "speaker": "C",
+   "start_ms": 1652010,
+   "end_ms": 1652350,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 433,
+   "speaker": "B",
+   "start_ms": 1652340,
+   "end_ms": 1652830,
+   "text": "Okay."
+  },
+  {
+   "idx": 434,
+   "speaker": "B",
+   "start_ms": 1654520,
+   "end_ms": 1657550,
+   "text": "Very good. what about leadership?"
+  },
+  {
+   "idx": 435,
+   "speaker": "B",
+   "start_ms": 1659140,
+   "end_ms": 1663320,
+   "text": "I don't know if that means like, if I did a good job or something. I don't really know."
+  },
+  {
+   "idx": 436,
+   "speaker": "C",
+   "start_ms": 1663030,
+   "end_ms": 1670080,
+   "text": "Yeah, well well I mean my sense on that is sort of what kind of guidance and direction, encouragement."
+  },
+  {
+   "idx": 437,
+   "speaker": "B",
+   "start_ms": 1669600,
+   "end_ms": 1673330,
+   "text": "From like your personal coach person and stuff like that, do you think maybe?"
+  },
+  {
+   "idx": 438,
+   "speaker": "C",
+   "start_ms": 1673080,
+   "end_ms": 1694670,
+   "text": "Yeah from and you as well I think, just sort of acting as team leader. yeah I think I think it's I think it's good. I mean my personal views on on leadership is that effective effective leadership sort of gives people a certain room for freedom and delegation, but then to come back with something that they take great ownership and you know, innovative thought with."
+  },
+  {
+   "idx": 439,
+   "speaker": "B",
+   "start_ms": 1677160,
+   "end_ms": 1677690,
+   "text": "Okay."
+  },
+  {
+   "idx": 440,
+   "speaker": "A",
+   "start_ms": 1680150,
+   "end_ms": 1680520,
+   "text": "Excuse me."
+  },
+  {
+   "idx": 441,
+   "speaker": "B",
+   "start_ms": 1692120,
+   "end_ms": 1692620,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 442,
+   "speaker": "C",
+   "start_ms": 1694670,
+   "end_ms": 1723790,
+   "text": "In in reality I think here the the different elements of leadership such as the the original briefing and then the personal coach and the and then you know having having you with your the meeting agenda is actually quite a quite a quite a confining framework to work within. And so it is leadership almost to the point of sort of disempowering the the the team member, so But it's not bad leadership, it's just sort of fairly strong, you know."
+  },
+  {
+   "idx": 443,
+   "speaker": "B",
+   "start_ms": 1717760,
+   "end_ms": 1719640,
+   "text": "Okay."
+  },
+  {
+   "idx": 444,
+   "speaker": "C",
+   "start_ms": 1723790,
+   "end_ms": 1731400,
+   "text": "It turns it turns the individual into more of like a sort of a predetermined mechanism, as opposed to a sort of a free."
+  },
+  {
+   "idx": 445,
+   "speaker": "B",
+   "start_ms": 1730320,
+   "end_ms": 1733300,
+   "text": "So you think maybe a little too controlling or."
+  },
+  {
+   "idx": 446,
+   "speaker": "C",
+   "start_ms": 1733440,
+   "end_ms": 1740860,
+   "text": "Yeah, oh yeah, without without a doubt. Yeah maybe not confining. Yeah. Yeah, yeah."
+  },
+  {
+   "idx": 447,
+   "speaker": "A",
+   "start_ms": 1734720,
+   "end_ms": 1757610,
+   "text": "I think controlling is not the right word, I think the interactions are very structured. I think structure is probably what you're saying that, each individual is structured to one particular task, and one rather than controlling. I don't think there's a sense of control 'cause all the decisions have been made in terms of a, like a consensus right, we go around and we think about it, but that you know process actually says you have to do it in a certain way."
+  },
+  {
+   "idx": 448,
+   "speaker": "C",
+   "start_ms": 1743380,
+   "end_ms": 1744460,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 449,
+   "speaker": "B",
+   "start_ms": 1744240,
+   "end_ms": 1744830,
+   "text": "Okay."
+  },
+  {
+   "idx": 450,
+   "speaker": "C",
+   "start_ms": 1746310,
+   "end_ms": 1747830,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 451,
+   "speaker": "C",
+   "start_ms": 1750120,
+   "end_ms": 1751070,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 452,
+   "speaker": "B",
+   "start_ms": 1752430,
+   "end_ms": 1753120,
+   "text": "Uh-huh."
+  },
+  {
+   "idx": 453,
+   "speaker": "C",
+   "start_ms": 1753780,
+   "end_ms": 1754990,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 454,
+   "speaker": "C",
+   "start_ms": 1757090,
+   "end_ms": 1757470,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 455,
+   "speaker": "B",
+   "start_ms": 1757330,
+   "end_ms": 1757810,
+   "text": "Okay."
+  },
+  {
+   "idx": 456,
+   "speaker": "A",
+   "start_ms": 1757610,
+   "end_ms": 1763590,
+   "text": "It doesn't tell you, you know, some ways that you might wanna be a bit more creative in terms of the process you know, not the."
+  },
+  {
+   "idx": 457,
+   "speaker": "C",
+   "start_ms": 1760550,
+   "end_ms": 1763600,
+   "text": "Yeah."
+  },
+  {
+   "idx": 458,
+   "speaker": "B",
+   "start_ms": 1764070,
+   "end_ms": 1766980,
+   "text": "Okay, what about teamwork?"
+  },
+  {
+   "idx": 459,
+   "speaker": "C",
+   "start_ms": 1769620,
+   "end_ms": 1771940,
+   "text": "Did, you wanna comment Craig?"
+  },
+  {
+   "idx": 460,
+   "speaker": "D",
+   "start_ms": 1770930,
+   "end_ms": 1779100,
+   "text": "Reckon that was a bit hard because we could only discuss things in the meeting. If we could just go up to somebody outside the meeting and have a quick talk with them, that would've been a lot easier."
+  },
+  {
+   "idx": 461,
+   "speaker": "C",
+   "start_ms": 1774700,
+   "end_ms": 1774990,
+   "text": "Yeah."
+  },
+  {
+   "idx": 462,
+   "speaker": "B",
+   "start_ms": 1774820,
+   "end_ms": 1775640,
+   "text": "Yeah."
+  },
+  {
+   "idx": 463,
+   "speaker": "C",
+   "start_ms": 1779330,
+   "end_ms": 1779560,
+   "text": "Yeah."
+  },
+  {
+   "idx": 464,
+   "speaker": "B",
+   "start_ms": 1781160,
+   "end_ms": 1781910,
+   "text": "Okay."
+  },
+  {
+   "idx": 465,
+   "speaker": "C",
+   "start_ms": 1781900,
+   "end_ms": 1782470,
+   "text": "Fully agree."
+  },
+  {
+   "idx": 466,
+   "speaker": "A",
+   "start_ms": 1781910,
+   "end_ms": 1795700,
+   "text": "I think you tried to use the common share folder to to to to communicate, but it just comes back to us so slow in the email it it doesn't have a, you know, a messenger will go."
+  },
+  {
+   "idx": 467,
+   "speaker": "B",
+   "start_ms": 1791020,
+   "end_ms": 1791760,
+   "text": "Mm."
+  },
+  {
+   "idx": 468,
+   "speaker": "C",
+   "start_ms": 1791190,
+   "end_ms": 1791550,
+   "text": "Yeah."
+  },
+  {
+   "idx": 469,
+   "speaker": "B",
+   "start_ms": 1796070,
+   "end_ms": 1814580,
+   "text": "Did did you guys get the email I sent you? Oh that's alright. I was wondering if that got there okay. Okay, so to to to summarize the teamwork issue, saying that if we could communicate outside the meeting, you know just like quick questions, quick thoughts, whatever, it probably would be bit easier."
+  },
+  {
+   "idx": 470,
+   "speaker": "C",
+   "start_ms": 1796100,
+   "end_ms": 1796320,
+   "text": "Yeah."
+  },
+  {
+   "idx": 471,
+   "speaker": "D",
+   "start_ms": 1797910,
+   "end_ms": 1798260,
+   "text": "Not just yet."
+  },
+  {
+   "idx": 472,
+   "speaker": "A",
+   "start_ms": 1798190,
+   "end_ms": 1800080,
+   "text": "Yeah. Okay."
+  },
+  {
+   "idx": 473,
+   "speaker": "C",
+   "start_ms": 1798530,
+   "end_ms": 1799560,
+   "text": "Yeah, got the email."
+  },
+  {
+   "idx": 474,
+   "speaker": "C",
+   "start_ms": 1812340,
+   "end_ms": 1814790,
+   "text": "Yeah. Yeah, in it."
+  },
+  {
+   "idx": 475,
+   "speaker": "A",
+   "start_ms": 1813990,
+   "end_ms": 1825080,
+   "text": "I think the tools that they were given, the tool set that were given to us are fancy but they don't support collaboration, I think that's the word. They don't support the team working together, you know, they're still very individual tools."
+  },
+  {
+   "idx": 476,
+   "speaker": "C",
+   "start_ms": 1819290,
+   "end_ms": 1854310,
+   "text": "Exactly. Yeah, I mean if you Yeah, I mean sort of taking upon that idea, the way I see this is that it's the the the structure in which we've we've approached this whole task is quite contrary to the principle of teamwork because the the tasks were sort of divided, and then the work went on in isolation I I don't know what you guys did while you were together, maybe that was a bit different, but yeah, but but actually if you."
+  },
+  {
+   "idx": 477,
+   "speaker": "B",
+   "start_ms": 1821150,
+   "end_ms": 1822040,
+   "text": "Oh right, okay."
+  },
+  {
+   "idx": 478,
+   "speaker": "B",
+   "start_ms": 1846670,
+   "end_ms": 1847290,
+   "text": "Mm."
+  },
+  {
+   "idx": 479,
+   "speaker": "A",
+   "start_ms": 1850510,
+   "end_ms": 1852260,
+   "text": "We had Play-Doh fun."
+  },
+  {
+   "idx": 480,
+   "speaker": "C",
+   "start_ms": 1854310,
+   "end_ms": 1877620,
+   "text": "If you imagine not the completely same task given to us but us said okay, first thing we have to do is come up with let's say a design concept, and we sit here together and do it, well that's what teamwork is. To to say okay go off and don't talk to each other, it's actually sort of predisposes you to quite the contrary of teamwork."
+  },
+  {
+   "idx": 481,
+   "speaker": "B",
+   "start_ms": 1867240,
+   "end_ms": 1867780,
+   "text": "Yeah."
+  },
+  {
+   "idx": 482,
+   "speaker": "B",
+   "start_ms": 1871900,
+   "end_ms": 1872410,
+   "text": "Yeah."
+  },
+  {
+   "idx": 483,
+   "speaker": "B",
+   "start_ms": 1877460,
+   "end_ms": 1878170,
+   "text": "Okay."
+  },
+  {
+   "idx": 484,
+   "speaker": "C",
+   "start_ms": 1877620,
+   "end_ms": 1882130,
+   "text": "Not that we haven't done I think the best we could have done. I'm not dissatisfied with it."
+  },
+  {
+   "idx": 485,
+   "speaker": "B",
+   "start_ms": 1880460,
+   "end_ms": 1880990,
+   "text": "Okay."
+  },
+  {
+   "idx": 486,
+   "speaker": "B",
+   "start_ms": 1882740,
+   "end_ms": 1899270,
+   "text": "Right, anything else to say on teamwork at all? Okay, what about the you know how we used the whiteboard, the digital pens, the projector, stuff like that? did anybody think anything was like really useful, anything was pretty."
+  },
+  {
+   "idx": 487,
+   "speaker": "A",
+   "start_ms": 1886500,
+   "end_ms": 1887200,
+   "text": "No, not really."
+  },
+  {
+   "idx": 488,
+   "speaker": "C",
+   "start_ms": 1896570,
+   "end_ms": 1896970,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 489,
+   "speaker": "B",
+   "start_ms": 1901890,
+   "end_ms": 1902480,
+   "text": "Unsupportive?"
+  },
+  {
+   "idx": 490,
+   "speaker": "C",
+   "start_ms": 1902410,
+   "end_ms": 1924090,
+   "text": "I think the whiteboard, for me, is the kind of thing I would use all the time, but it's not quite as useful as to us as it could have been, maybe just in the way that we we use it, in the sense that once we have an idea out there or while work was going on in between meetings, that could have been up on a board you know as opposed to in like in text."
+  },
+  {
+   "idx": 491,
+   "speaker": "B",
+   "start_ms": 1920910,
+   "end_ms": 1921580,
+   "text": "Mm."
+  },
+  {
+   "idx": 492,
+   "speaker": "C",
+   "start_ms": 1924590,
+   "end_ms": 1953600,
+   "text": "And then we could then keep our ideas sort of building on that. I know that people who design cars and you know in aviation they quite often just have a simple like fibreglass prototype and it's completely you know abstract from the final product, but they use it as a kind of a context to sort of walk around and puzzle and and point and discuss and and and in a way everybody's as we discuss things in the in theoretically and out of our notebooks, we're just we're actually just each of us discussing something that's in each of our own minds."
+  },
+  {
+   "idx": 493,
+   "speaker": "B",
+   "start_ms": 1938550,
+   "end_ms": 1938900,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 494,
+   "speaker": "B",
+   "start_ms": 1941110,
+   "end_ms": 1944260,
+   "text": "Yeah. And point at? Yeah."
+  },
+  {
+   "idx": 495,
+   "speaker": "C",
+   "start_ms": 1953600,
+   "end_ms": 1966540,
+   "text": "It wasn't until we had this here, you know, like at one point I peeked across and looked at Craig's paper and I'm like, now I know what he's thinking 'cause I saw his book. But the the whiteboard could've actually been this kind of continuing."
+  },
+  {
+   "idx": 496,
+   "speaker": "B",
+   "start_ms": 1955020,
+   "end_ms": 1955450,
+   "text": "Yeah."
+  },
+  {
+   "idx": 497,
+   "speaker": "B",
+   "start_ms": 1960700,
+   "end_ms": 1961830,
+   "text": "Ah."
+  },
+  {
+   "idx": 498,
+   "speaker": "B",
+   "start_ms": 1966710,
+   "end_ms": 1970590,
+   "text": "So do you think producing a prototype earlier in the process woulda been a good idea?"
+  },
+  {
+   "idx": 499,
+   "speaker": "C",
+   "start_ms": 1971220,
+   "end_ms": 1971940,
+   "text": "Think could be, yeah."
+  },
+  {
+   "idx": 500,
+   "speaker": "A",
+   "start_ms": 1972110,
+   "end_ms": 1992350,
+   "text": "I think the the focus of it a lot was the PowerPoint as opposed to the to the whiteboard, and I think that is also does you know hinder us and things I think. It will be cooler to have the whiteboard rather than the the PowerPoint, or maybe the whiteboard and the PowerPoint in the same place, you know in the centre of the."
+  },
+  {
+   "idx": 501,
+   "speaker": "B",
+   "start_ms": 1975810,
+   "end_ms": 1976270,
+   "text": "Yeah."
+  },
+  {
+   "idx": 502,
+   "speaker": "C",
+   "start_ms": 1976650,
+   "end_ms": 1983130,
+   "text": "Yeah, yeah. Yeah. Yeah, yeah."
+  },
+  {
+   "idx": 503,
+   "speaker": "C",
+   "start_ms": 1985110,
+   "end_ms": 1985480,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 504,
+   "speaker": "C",
+   "start_ms": 1987940,
+   "end_ms": 1988330,
+   "text": "Yeah."
+  },
+  {
+   "idx": 505,
+   "speaker": "C",
+   "start_ms": 1990100,
+   "end_ms": 2009600,
+   "text": "Yeah, yeah. Yeah, because the PowerPoint was provided to us while we had time to prepare, whereas I can imagine if I'd been encouraged to use Paintbrush, for example, or whatever, I would've actually used it, you know, just 'cause that's sorta how we what we were set up to to use while we had our time."
+  },
+  {
+   "idx": 506,
+   "speaker": "B",
+   "start_ms": 1990730,
+   "end_ms": 1991130,
+   "text": "Okay."
+  },
+  {
+   "idx": 507,
+   "speaker": "B",
+   "start_ms": 2001240,
+   "end_ms": 2001500,
+   "text": "Alright."
+  },
+  {
+   "idx": 508,
+   "speaker": "B",
+   "start_ms": 2009750,
+   "end_ms": 2012270,
+   "text": "Okay."
+  },
+  {
+   "idx": 509,
+   "speaker": "A",
+   "start_ms": 2011380,
+   "end_ms": 2028190,
+   "text": "I think that there were too many PowerPoints in the meetings. 'Cause the plug-in and the plugging spent we spent a lot of time doing that. And a lot of the information on the PowerPoints, I don't think, you know, we needed to actually it could have, we could have gone through it verbally, especially my slides, I felt that they just you know as opposed to having to present them."
+  },
+  {
+   "idx": 510,
+   "speaker": "C",
+   "start_ms": 2014100,
+   "end_ms": 2014420,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 511,
+   "speaker": "D",
+   "start_ms": 2014110,
+   "end_ms": 2014460,
+   "text": "Yeah."
+  },
+  {
+   "idx": 512,
+   "speaker": "B",
+   "start_ms": 2014590,
+   "end_ms": 2015170,
+   "text": "Yeah."
+  },
+  {
+   "idx": 513,
+   "speaker": "C",
+   "start_ms": 2016050,
+   "end_ms": 2016490,
+   "text": "Yeah."
+  },
+  {
+   "idx": 514,
+   "speaker": "B",
+   "start_ms": 2017150,
+   "end_ms": 2017620,
+   "text": "Yeah."
+  },
+  {
+   "idx": 515,
+   "speaker": "C",
+   "start_ms": 2021660,
+   "end_ms": 2025480,
+   "text": "No, not quite. Yeah. Yeah."
+  },
+  {
+   "idx": 516,
+   "speaker": "B",
+   "start_ms": 2025830,
+   "end_ms": 2026270,
+   "text": "Okay."
+  },
+  {
+   "idx": 517,
+   "speaker": "C",
+   "start_ms": 2027330,
+   "end_ms": 2027620,
+   "text": "Yeah."
+  },
+  {
+   "idx": 518,
+   "speaker": "B",
+   "start_ms": 2028230,
+   "end_ms": 2031960,
+   "text": "What about the digital pens, did you find them easy enough to use?"
+  },
+  {
+   "idx": 519,
+   "speaker": "D",
+   "start_ms": 2032680,
+   "end_ms": 2033630,
+   "text": "Oh they're a bit clunky."
+  },
+  {
+   "idx": 520,
+   "speaker": "C",
+   "start_ms": 2033070,
+   "end_ms": 2033900,
+   "text": "Sure, yeah."
+  },
+  {
+   "idx": 521,
+   "speaker": "A",
+   "start_ms": 2035210,
+   "end_ms": 2038660,
+   "text": "Yep clunky. Agreed."
+  },
+  {
+   "idx": 522,
+   "speaker": "B",
+   "start_ms": 2037650,
+   "end_ms": 2037800,
+   "text": "Yeah."
+  },
+  {
+   "idx": 523,
+   "speaker": "C",
+   "start_ms": 2037930,
+   "end_ms": 2039620,
+   "text": "Yeah. Yep."
+  },
+  {
+   "idx": 524,
+   "speaker": "B",
+   "start_ms": 2039880,
+   "end_ms": 2043580,
+   "text": "Clunky, okay."
+  },
+  {
+   "idx": 525,
+   "speaker": "C",
+   "start_ms": 2041210,
+   "end_ms": 2041470,
+   "text": "Mm."
+  },
+  {
+   "idx": 526,
+   "speaker": "A",
+   "start_ms": 2043480,
+   "end_ms": 2049620,
+   "text": "Having to tick it before you go off was a bit hindering as well, 'cause you're half way through a thought, and then you run out of paper and then you have to jump."
+  },
+  {
+   "idx": 527,
+   "speaker": "C",
+   "start_ms": 2046450,
+   "end_ms": 2046890,
+   "text": "Mm."
+  },
+  {
+   "idx": 528,
+   "speaker": "B",
+   "start_ms": 2046800,
+   "end_ms": 2047300,
+   "text": "Yeah."
+  },
+  {
+   "idx": 529,
+   "speaker": "B",
+   "start_ms": 2049730,
+   "end_ms": 2067290,
+   "text": "I know, I think at the very start of today I like wrote a whole load of stuff, didn't click note on one, then went back and wrote one tiny wee thing on the another page, but then did click note, and so I'm quite worried that I've just written over the top of it or something, but they'll have my paper anyway and haven't done that since."
+  },
+  {
+   "idx": 530,
+   "speaker": "C",
+   "start_ms": 2050080,
+   "end_ms": 2050409,
+   "text": "Yeah."
+  },
+  {
+   "idx": 531,
+   "speaker": "C",
+   "start_ms": 2060690,
+   "end_ms": 2060870,
+   "text": "Hmm."
+  },
+  {
+   "idx": 532,
+   "speaker": "C",
+   "start_ms": 2062900,
+   "end_ms": 2066770,
+   "text": "Hmm."
+  },
+  {
+   "idx": 533,
+   "speaker": "A",
+   "start_ms": 2066760,
+   "end_ms": 2075130,
+   "text": "But I think the pen is is very intuitive, everybody knows how to use it, we don't have to worry. So I think the pen's good. It's about the best thing."
+  },
+  {
+   "idx": 534,
+   "speaker": "C",
+   "start_ms": 2069940,
+   "end_ms": 2072880,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 535,
+   "speaker": "B",
+   "start_ms": 2070260,
+   "end_ms": 2071530,
+   "text": "Yeah, yeah."
+  },
+  {
+   "idx": 536,
+   "speaker": "C",
+   "start_ms": 2074389,
+   "end_ms": 2090300,
+   "text": "And on the topic of the technology, it just occurred to me that we actually didn't need to move our computers because each computer has all of the files. It just occurred to me that they all We only actually needed one computer. If there had been a fifth, that coulda just been sitting there ready to go the whole time."
+  },
+  {
+   "idx": 537,
+   "speaker": "B",
+   "start_ms": 2082210,
+   "end_ms": 2082760,
+   "text": "Yeah."
+  },
+  {
+   "idx": 538,
+   "speaker": "A",
+   "start_ms": 2083510,
+   "end_ms": 2085420,
+   "text": "Yeah we only needed one computer and."
+  },
+  {
+   "idx": 539,
+   "speaker": "B",
+   "start_ms": 2086159,
+   "end_ms": 2088230,
+   "text": "Yeah, that's true."
+  },
+  {
+   "idx": 540,
+   "speaker": "D",
+   "start_ms": 2088370,
+   "end_ms": 2088750,
+   "text": "Good point."
+  },
+  {
+   "idx": 541,
+   "speaker": "A",
+   "start_ms": 2090040,
+   "end_ms": 2101500,
+   "text": "And the computer may not be conducive to a meeting because you tend to look at your computer and wanna have the urge to check something, you know, it's useful but."
+  },
+  {
+   "idx": 542,
+   "speaker": "C",
+   "start_ms": 2093330,
+   "end_ms": 2093550,
+   "text": "Yeah."
+  },
+  {
+   "idx": 543,
+   "speaker": "C",
+   "start_ms": 2096840,
+   "end_ms": 2097150,
+   "text": "Yeah."
+  },
+  {
+   "idx": 544,
+   "speaker": "C",
+   "start_ms": 2099380,
+   "end_ms": 2099710,
+   "text": "Yeah."
+  },
+  {
+   "idx": 545,
+   "speaker": "B",
+   "start_ms": 2099970,
+   "end_ms": 2104500,
+   "text": "Yeah. Do you think the computers just provide distraction in a meeting?"
+  },
+  {
+   "idx": 546,
+   "speaker": "A",
+   "start_ms": 2104520,
+   "end_ms": 2108190,
+   "text": "I think too many computers are just distracting."
+  },
+  {
+   "idx": 547,
+   "speaker": "D",
+   "start_ms": 2106320,
+   "end_ms": 2106660,
+   "text": "Yeah."
+  },
+  {
+   "idx": 548,
+   "speaker": "B",
+   "start_ms": 2107280,
+   "end_ms": 2107850,
+   "text": "Okay."
+  },
+  {
+   "idx": 549,
+   "speaker": "B",
+   "start_ms": 2109880,
+   "end_ms": 2133300,
+   "text": "I know I I like to have things written down in front of me actually, like a lot of the stuff that was emailed to me I ended up you know like writing down there or something so I could look at it really quickly and not have the distraction of all of that, I don't know about anybody else. what else any I I'm not really sure what they're looking for when they say new ideas found."
+  },
+  {
+   "idx": 550,
+   "speaker": "C",
+   "start_ms": 2112530,
+   "end_ms": 2114530,
+   "text": "Yep."
+  },
+  {
+   "idx": 551,
+   "speaker": "C",
+   "start_ms": 2116090,
+   "end_ms": 2116460,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 552,
+   "speaker": "A",
+   "start_ms": 2116800,
+   "end_ms": 2117150,
+   "text": "Yep."
+  },
+  {
+   "idx": 553,
+   "speaker": "C",
+   "start_ms": 2118160,
+   "end_ms": 2118750,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 554,
+   "speaker": "C",
+   "start_ms": 2122390,
+   "end_ms": 2122760,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 555,
+   "speaker": "B",
+   "start_ms": 2133300,
+   "end_ms": 2140360,
+   "text": "I don't know is could you think of like anything else that would have been helpful today at all?"
+  },
+  {
+   "idx": 556,
+   "speaker": "D",
+   "start_ms": 2134920,
+   "end_ms": 2136580,
+   "text": "Is this for the project or."
+  },
+  {
+   "idx": 557,
+   "speaker": "C",
+   "start_ms": 2143980,
+   "end_ms": 2175150,
+   "text": "Well, the main one for me is that the process in a natural context would not have been interrupted by this necessity to discommunicate ourselves from each other. So, that's kind of a new idea for me is like just sort of that idea, well you know it's kind of hard to keep working forward on a team a team based project when when you're told you must now work away from your team."
+  },
+  {
+   "idx": 558,
+   "speaker": "B",
+   "start_ms": 2158990,
+   "end_ms": 2161430,
+   "text": "Yeah if we just had."
+  },
+  {
+   "idx": 559,
+   "speaker": "B",
+   "start_ms": 2170220,
+   "end_ms": 2171110,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 560,
+   "speaker": "B",
+   "start_ms": 2175100,
+   "end_ms": 2197360,
+   "text": "Yeah I I dunno I think it was quite good that we had time limits on the meetings because they really could have run on and like my experience with meetings is that they really do, and you can spend a lot of time talking about The only thing is though like when we had our meeting about the conceptual design, I thought there maybe another fifteen minutes would have been useful there but yeah."
+  },
+  {
+   "idx": 561,
+   "speaker": "C",
+   "start_ms": 2182230,
+   "end_ms": 2185260,
+   "text": "Oh yeah. Yeah, yeah."
+  },
+  {
+   "idx": 562,
+   "speaker": "C",
+   "start_ms": 2192690,
+   "end_ms": 2195370,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 563,
+   "speaker": "B",
+   "start_ms": 2197640,
+   "end_ms": 2219120,
+   "text": "I really I think maybe if we'd like all been working in the one room, and they just said you know like every hour or something everybody make sure you know just have a have a short meeting and then just just to have like something written down, just like you know a a milestone if you like rather than having meetings, but There you go."
+  },
+  {
+   "idx": 564,
+   "speaker": "C",
+   "start_ms": 2206210,
+   "end_ms": 2206560,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 565,
+   "speaker": "C",
+   "start_ms": 2208690,
+   "end_ms": 2209100,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 566,
+   "speaker": "C",
+   "start_ms": 2211360,
+   "end_ms": 2211820,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 567,
+   "speaker": "C",
+   "start_ms": 2218780,
+   "end_ms": 2219070,
+   "text": "Hmm."
+  },
+  {
+   "idx": 568,
+   "speaker": "B",
+   "start_ms": 2219120,
+   "end_ms": 2234280,
+   "text": "So in closing, I haven't got my five minutes to go. Oh there it Five minutes to go. Wonderful. Okay are the costs within the budget, yes they are. And is the project evaluated, yes it is. So now celebrate."
+  },
+  {
+   "idx": 569,
+   "speaker": "C",
+   "start_ms": 2234590,
+   "end_ms": 2237910,
+   "text": "Great. So it So now we."
+  },
+  {
+   "idx": 570,
+   "speaker": "A",
+   "start_ms": 2235620,
+   "end_ms": 2236810,
+   "text": "And we have Ninja Homer."
+  },
+  {
+   "idx": 571,
+   "speaker": "D",
+   "start_ms": 2237590,
+   "end_ms": 2237950,
+   "text": "Oh yeah."
+  },
+  {
+   "idx": 572,
+   "speaker": "B",
+   "start_ms": 2238850,
+   "end_ms": 2243560,
+   "text": "Well apparently now I write the final report. What are you guys doing now? You dunno?"
+  },
+  {
+   "idx": 573,
+   "speaker": "D",
+   "start_ms": 2240590,
+   "end_ms": 2241450,
+   "text": "Do we know what the other ones are?"
+  },
+  {
+   "idx": 574,
+   "speaker": "C",
+   "start_ms": 2242370,
+   "end_ms": 2242880,
+   "text": "I don't know."
+  },
+  {
+   "idx": 575,
+   "speaker": "D",
+   "start_ms": 2243240,
+   "end_ms": 2245220,
+   "text": "Oh wow."
+  },
+  {
+   "idx": 576,
+   "speaker": "C",
+   "start_ms": 2244670,
+   "end_ms": 2244840,
+   "text": "Hmm."
+  },
+  {
+   "idx": 577,
+   "speaker": "B",
+   "start_ms": 2245720,
+   "end_ms": 2247730,
+   "text": "That is lovely."
+  },
+  {
+   "idx": 578,
+   "speaker": "D",
+   "start_ms": 2247220,
+   "end_ms": 2250110,
+   "text": "Hey yeah, I said Ninja Homer."
+  },
+  {
+   "idx": 579,
+   "speaker": "C",
+   "start_ms": 2249940,
+   "end_ms": 2250620,
+   "text": "What did you call it?"
+  },
+  {
+   "idx": 580,
+   "speaker": "A",
+   "start_ms": 2251020,
+   "end_ms": 2259890,
+   "text": "Ninja Homer. See it looks like Homer Simpson but it's electronic so it's made in Japan. Yeah it's just a logo."
+  },
+  {
+   "idx": 581,
+   "speaker": "C",
+   "start_ms": 2254260,
+   "end_ms": 2256870,
+   "text": "Huh, huh. Logo."
+  },
+  {
+   "idx": 582,
+   "speaker": "B",
+   "start_ms": 2255130,
+   "end_ms": 2265440,
+   "text": "So is that is that just is that just a logo or does it do anything? Just a logo and then like Ninja Homer, right okay."
+  },
+  {
+   "idx": 583,
+   "speaker": "C",
+   "start_ms": 2260670,
+   "end_ms": 2260900,
+   "text": "Huh."
+  },
+  {
+   "idx": 584,
+   "speaker": "A",
+   "start_ms": 2261580,
+   "end_ms": 2263730,
+   "text": "Ninja Homer."
+  },
+  {
+   "idx": 585,
+   "speaker": "C",
+   "start_ms": 2264160,
+   "end_ms": 2264320,
+   "text": "Mm."
+  },
+  {
+   "idx": 586,
+   "speaker": "A",
+   "start_ms": 2265600,
+   "end_ms": 2269680,
+   "text": "The the red is supposed to represent the whatever else you wanna print on the side of it."
+  },
+  {
+   "idx": 587,
+   "speaker": "C",
+   "start_ms": 2270090,
+   "end_ms": 2273230,
+   "text": "Fashion technology or something."
+  },
+  {
+   "idx": 588,
+   "speaker": "B",
+   "start_ms": 2271190,
+   "end_ms": 2272220,
+   "text": "I think it's quite nice."
+  },
+  {
+   "idx": 589,
+   "speaker": "A",
+   "start_ms": 2274040,
+   "end_ms": 2278700,
+   "text": "You can wear Homer, you can throw Homer when you're frustrated, doh."
+  },
+  {
+   "idx": 590,
+   "speaker": "C",
+   "start_ms": 2276860,
+   "end_ms": 2278650,
+   "text": "Hmm."
+  },
+  {
+   "idx": 591,
+   "speaker": "B",
+   "start_ms": 2279570,
+   "end_ms": 2290240,
+   "text": "Oh no, that's cool, it's got I'm kind of I'm slightly gutted that we couldn't get plastic and rubber, I think that would have been nice. Ah well, maybe from now on real reaction should give us more money."
+  },
+  {
+   "idx": 592,
+   "speaker": "C",
+   "start_ms": 2280870,
+   "end_ms": 2281350,
+   "text": "Hmm."
+  },
+  {
+   "idx": 593,
+   "speaker": "A",
+   "start_ms": 2281320,
+   "end_ms": 2282050,
+   "text": "It's clunky."
+  },
+  {
+   "idx": 594,
+   "speaker": "C",
+   "start_ms": 2284920,
+   "end_ms": 2285740,
+   "text": "Yeah, yeah."
+  },
+  {
+   "idx": 595,
+   "speaker": "C",
+   "start_ms": 2289040,
+   "end_ms": 2290660,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 596,
+   "speaker": "A",
+   "start_ms": 2290320,
+   "end_ms": 2310440,
+   "text": "Oh, I did learn something new, Play-Doh is useful. No it is it is. It is useful and in in in in in in in conceptualizing, in being creative. 'Cause like you say, it's something you can put your hands on and feel and touch and get a sense for. Like we were playing with the Play-Doh and the ideas came with the Play-Doh rather than with everything else. You might wanna write that down."
+  },
+  {
+   "idx": 597,
+   "speaker": "B",
+   "start_ms": 2293640,
+   "end_ms": 2294010,
+   "text": "Play-Doh."
+  },
+  {
+   "idx": 598,
+   "speaker": "C",
+   "start_ms": 2295480,
+   "end_ms": 2295860,
+   "text": "Huh."
+  },
+  {
+   "idx": 599,
+   "speaker": "C",
+   "start_ms": 2298070,
+   "end_ms": 2298370,
+   "text": "Huh."
+  },
+  {
+   "idx": 600,
+   "speaker": "B",
+   "start_ms": 2300100,
+   "end_ms": 2300700,
+   "text": "Really?"
+  },
+  {
+   "idx": 601,
+   "speaker": "C",
+   "start_ms": 2303120,
+   "end_ms": 2303490,
+   "text": "Yeah."
+  },
+  {
+   "idx": 602,
+   "speaker": "B",
+   "start_ms": 2303460,
+   "end_ms": 2303890,
+   "text": "Yeah."
+  },
+  {
+   "idx": 603,
+   "speaker": "B",
+   "start_ms": 2307590,
+   "end_ms": 2308070,
+   "text": "Did they?"
+  },
+  {
+   "idx": 604,
+   "speaker": "C",
+   "start_ms": 2309960,
+   "end_ms": 2310380,
+   "text": "Yeah."
+  },
+  {
+   "idx": 605,
+   "speaker": "A",
+   "start_ms": 2310440,
+   "end_ms": 2313370,
+   "text": "It's just, I'm just fiddling with the Play-Doh, and I'm going yeah yeah it's kinda cool."
+  },
+  {
+   "idx": 606,
+   "speaker": "B",
+   "start_ms": 2310690,
+   "end_ms": 2314430,
+   "text": "Okay. Play-Doh."
+  },
+  {
+   "idx": 607,
+   "speaker": "C",
+   "start_ms": 2313080,
+   "end_ms": 2314030,
+   "text": "No, it's true, yeah."
+  },
+  {
+   "idx": 608,
+   "speaker": "D",
+   "start_ms": 2314660,
+   "end_ms": 2316240,
+   "text": "Guess I'd forgot how good Play-Doh smells."
+  },
+  {
+   "idx": 609,
+   "speaker": "C",
+   "start_ms": 2316820,
+   "end_ms": 2316960,
+   "text": "Hmm."
+  },
+  {
+   "idx": 610,
+   "speaker": "B",
+   "start_ms": 2316910,
+   "end_ms": 2323680,
+   "text": "Yeah, it smells funny doesn't it. Yeah like the stuff for I think it has to be, yeah."
+  },
+  {
+   "idx": 611,
+   "speaker": "C",
+   "start_ms": 2318560,
+   "end_ms": 2320500,
+   "text": "And some Play-Dohs are actually I think edible aren't they?"
+  },
+  {
+   "idx": 612,
+   "speaker": "A",
+   "start_ms": 2320960,
+   "end_ms": 2326390,
+   "text": "No, all Play-Doh is edible. It's just wheat, it's the stuff that your mom could make with preservatives and."
+  },
+  {
+   "idx": 613,
+   "speaker": "D",
+   "start_ms": 2321710,
+   "end_ms": 2323830,
+   "text": "I think they're all non-toxic 'cause it's aimed for like two-year-olds."
+  },
+  {
+   "idx": 614,
+   "speaker": "C",
+   "start_ms": 2326470,
+   "end_ms": 2327100,
+   "text": "Wow."
+  },
+  {
+   "idx": 615,
+   "speaker": "B",
+   "start_ms": 2326580,
+   "end_ms": 2330070,
+   "text": "Yeah so to what are your summarising words about Play-Doh?"
+  },
+  {
+   "idx": 616,
+   "speaker": "A",
+   "start_ms": 2331350,
+   "end_ms": 2355940,
+   "text": "It's helpful to the creative process. it engages all your senses not just your sight, but your sense of feel your sense of touch. And it helps you to understand dimension as well. I think that that's very helpful because it it starts to pop up, whereas on a piece of paper, on a computer, on a board, even with a three D_ graphic thing it still, it requires a lot of yeah tangible, that's a nice word."
+  },
+  {
+   "idx": 617,
+   "speaker": "C",
+   "start_ms": 2332170,
+   "end_ms": 2332290,
+   "text": "Huh."
+  },
+  {
+   "idx": 618,
+   "speaker": "B",
+   "start_ms": 2333490,
+   "end_ms": 2334110,
+   "text": "Okay."
+  },
+  {
+   "idx": 619,
+   "speaker": "C",
+   "start_ms": 2337320,
+   "end_ms": 2341650,
+   "text": "Yep. Taste."
+  },
+  {
+   "idx": 620,
+   "speaker": "B",
+   "start_ms": 2343250,
+   "end_ms": 2343660,
+   "text": "Yeah."
+  },
+  {
+   "idx": 621,
+   "speaker": "C",
+   "start_ms": 2344150,
+   "end_ms": 2344370,
+   "text": "Yeah."
+  },
+  {
+   "idx": 622,
+   "speaker": "B",
+   "start_ms": 2347760,
+   "end_ms": 2348300,
+   "text": "Yeah."
+  },
+  {
+   "idx": 623,
+   "speaker": "C",
+   "start_ms": 2347770,
+   "end_ms": 2349740,
+   "text": "Yep. Yeah."
+  },
+  {
+   "idx": 624,
+   "speaker": "D",
+   "start_ms": 2352260,
+   "end_ms": 2353260,
+   "text": "Yeah it's not very tangible."
+  },
+  {
+   "idx": 625,
+   "speaker": "C",
+   "start_ms": 2352760,
+   "end_ms": 2355950,
+   "text": "Yeah."
+  },
+  {
+   "idx": 626,
+   "speaker": "B",
+   "start_ms": 2354050,
+   "end_ms": 2354800,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 627,
+   "speaker": "A",
+   "start_ms": 2355940,
+   "end_ms": 2357150,
+   "text": "It becomes tangible."
+  },
+  {
+   "idx": 628,
+   "speaker": "C",
+   "start_ms": 2357610,
+   "end_ms": 2357940,
+   "text": "Mm-hmm."
+  },
+  {
+   "idx": 629,
+   "speaker": "B",
+   "start_ms": 2358760,
+   "end_ms": 2360010,
+   "text": "Tangible."
+  },
+  {
+   "idx": 630,
+   "speaker": "B",
+   "start_ms": 2362670,
+   "end_ms": 2365020,
+   "text": "Okay."
+  },
+  {
+   "idx": 631,
+   "speaker": "B",
+   "start_ms": 2370260,
+   "end_ms": 2378410,
+   "text": "I don't know if there's anything else we needed to discuss. That that's about it really."
+  },
+  {
+   "idx": 632,
+   "speaker": "A",
+   "start_ms": 2373560,
+   "end_ms": 2373710,
+   "text": "Nope."
+  },
+  {
+   "idx": 633,
+   "speaker": "B",
+   "start_ms": 2381590,
+   "end_ms": 2383440,
+   "text": "Just sit still I guess for a little while."
+  },
+  {
+   "idx": 634,
+   "speaker": "C",
+   "start_ms": 2383590,
+   "end_ms": 2386670,
+   "text": "Do we retreat to our, to continue our."
+  },
+  {
+   "idx": 635,
+   "speaker": "A",
+   "start_ms": 2387120,
+   "end_ms": 2390640,
+   "text": "I think we could probably do it here as long as we don't collaborate."
+  },
+  {
+   "idx": 636,
+   "speaker": "B",
+   "start_ms": 2387520,
+   "end_ms": 2387800,
+   "text": "Um."
+  },
+  {
+   "idx": 637,
+   "speaker": "C",
+   "start_ms": 2388700,
+   "end_ms": 2389590,
+   "text": "Reporting or what."
+  },
+  {
+   "idx": 638,
+   "speaker": "B",
+   "start_ms": 2389810,
+   "end_ms": 2395280,
+   "text": "Well I dunno. I'm sure the little the little thing'll pop up any minute now."
+  },
+  {
+   "idx": 639,
+   "speaker": "A",
+   "start_ms": 2395860,
+   "end_ms": 2397040,
+   "text": "Can we turn off the microphones?"
+  },
+  {
+   "idx": 640,
+   "speaker": "B",
+   "start_ms": 2398300,
+   "end_ms": 2400860,
+   "text": "Yeah, yeah if the meeting's over then yeah I guess so."
+  }
+ ],
+ "chapters": [
+  {
+   "idx": 0,
+   "title": "Meeting overview and recap",
+   "start_ms": 0,
+   "gist": "The Project Manager introduces the final meeting and summarizes previous design decisions.",
+   "line": 0,
+   "end_ms": 70110
+  },
+  {
+   "idx": 1,
+   "title": "Prototype and UI presentation",
+   "start_ms": 70110,
+   "gist": "The User Interface Designer and Industrial Designer present the physical model and its interface features.",
+   "line": 4,
+   "end_ms": 393440
+  },
+  {
+   "idx": 2,
+   "title": "Budget review and adjustments",
+   "start_ms": 393440,
+   "gist": "The team evaluates costs and decides to remove the LCD screen to stay under budget.",
+   "line": 108,
+   "end_ms": 825650
+  },
+  {
+   "idx": 3,
+   "title": "Design evaluation session",
+   "start_ms": 825650,
+   "gist": "The Marketing Expert leads a scoring exercise to see how well the design meets original project goals.",
+   "line": 242,
+   "end_ms": 1400520
+  },
+  {
+   "idx": 4,
+   "title": "Process and teamwork feedback",
+   "start_ms": 1400520,
+   "gist": "Team members share their opinions on project leadership, communication, and creative constraints.",
+   "line": 383,
+   "end_ms": 2290320
+  },
+  {
+   "idx": 5,
+   "title": "Discussion on modeling tools",
+   "start_ms": 2290320,
+   "gist": "The Industrial Designer explains how using Play-Doh helped the tangible creative process.",
+   "line": 596,
+   "end_ms": 2370260
+  },
+  {
+   "idx": 6,
+   "title": "Meeting conclusion",
+   "start_ms": 2370260,
+   "gist": "The Project Manager confirms all items are addressed and concludes the meeting.",
+   "line": 631,
+   "end_ms": 2624170
+  }
+ ],
+ "action_items": [
+  {
+   "idx": 0,
+   "text": "Specify the final design details in the final report.",
+   "owner_name": "Project Manager",
+   "speaker_label": "B",
+   "ts_ms": 2410,
+   "line": 0
+  },
+  {
+   "idx": 1,
+   "text": "Submit the results of the design evaluation criteria.",
+   "owner_name": "Marketing Expert",
+   "speaker_label": "C",
+   "ts_ms": 1348560,
+   "line": 376
+  },
+  {
+   "idx": 2,
+   "text": "Complete and write the final project report.",
+   "owner_name": "Project Manager",
+   "speaker_label": "B",
+   "ts_ms": 2238850,
+   "line": 572
+  }
+ ],
+ "summaries": [
+  {
+   "template": "general",
+   "content": {
+    "tldr": "The project team met to finalize the detailed design of a TV remote and evaluate the overall project success. They adjusted the design to meet budget constraints and provided feedback on the collaboration process.",
+    "sections": [
+     {
+      "heading": "Meeting purpose",
+      "bullets": [
+       {
+        "text": "Finalize the look and feel and user interface design for the remote control.",
+        "line": 0,
+        "ts_ms": 2410
+       },
+       {
+        "text": "Evaluate the final product against the original project requirements.",
+        "line": 0,
+        "ts_ms": 2410
+       }
+      ]
+     },
+     {
+      "heading": "Key takeaways",
+      "bullets": [
+       {
+        "text": "The team removed the LCD screen and advanced chip to save four point three Euro.",
+        "line": 160,
+        "ts_ms": 579670
+       },
+       {
+        "text": "The final design scored approximately seventy percent efficacy against original goals.",
+        "line": 354,
+        "ts_ms": 1230310
+       },
+       {
+        "text": "Modeling materials like Play-Doh were highly valued for their tangible help in design.",
+        "line": 596,
+        "ts_ms": 2290320
+       }
+      ]
+     },
+     {
+      "heading": "Topics",
+      "bullets": [
+       {
+        "text": "Final physical dimensions and component colors.",
+        "line": 45,
+        "ts_ms": 203120
+       },
+       {
+        "text": "Detailed cost breakdown using an Excel budget sheet.",
+        "line": 108,
+        "ts_ms": 393440
+       },
+       {
+        "text": "Critique of leadership and the institutional nature of the meeting room.",
+        "line": 390,
+        "ts_ms": 1457970
+       }
+      ]
+     },
+     {
+      "heading": "Next steps",
+      "bullets": [
+       {
+        "text": "The Project Manager will write the final specification report.",
+        "line": 572,
+        "ts_ms": 2238850
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "template": "project_update",
+   "content": {
+    "tldr": "The team successfully finalized the remote design and ensured it stays within the sixteen Euro budget. The project reached about seventy-two percent of its original design goals.",
+    "sections": [
+     {
+      "heading": "Progress",
+      "bullets": [
+       {
+        "text": "The team presented a ten-centimeter tall snowman-shaped prototype.",
+        "line": 45,
+        "ts_ms": 203120
+       },
+       {
+        "text": "A jog-dial and number pad were integrated into the final interface.",
+        "line": 80,
+        "ts_ms": 312010
+       }
+      ]
+     },
+     {
+      "heading": "Blockers",
+      "bullets": [
+       {
+        "text": "The project was initially four point three Euro over the target budget.",
+        "line": 154,
+        "ts_ms": 560010
+       },
+       {
+        "text": "Technological gear in the meeting room felt restrictive to creative communication.",
+        "line": 423,
+        "ts_ms": 1631470
+       }
+      ]
+     },
+     {
+      "heading": "Decisions",
+      "bullets": [
+       {
+        "text": "The team removed the LCD screen and the advanced chip to reduce costs.",
+        "line": 168,
+        "ts_ms": 605560
+       },
+       {
+        "text": "The remote will use plastic buttons instead of rubber to save money.",
+        "line": 124,
+        "ts_ms": 466190
+       },
+       {
+        "text": "The device will be powered by batteries rather than kinetic power.",
+        "line": 110,
+        "ts_ms": 413890
+       }
+      ]
+     },
+     {
+      "heading": "Next steps",
+      "bullets": [
+       {
+        "text": "The Project Manager must document all final specs in the final project report.",
+        "line": 0,
+        "ts_ms": 2410
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "template": "standup",
+   "content": {
+    "tldr": "The team has finished the prototype and is now performing a final evaluation to close the project. Budget adjustments were completed to ensure financial compliance.",
+    "sections": [
+     {
+      "heading": "Yesterday / done",
+      "bullets": [
+       {
+        "text": "The designers created a physical prototype nicknamed Ninja Homer.",
+        "line": 5,
+        "ts_ms": 71750
+       },
+       {
+        "text": "The team finalized the set of advanced functions like brightness and contrast.",
+        "line": 88,
+        "ts_ms": 335830
+       }
+      ]
+     },
+     {
+      "heading": "Today / planned",
+      "bullets": [
+       {
+        "text": "Finalize the cost list to stay under the budget limit.",
+        "line": 108,
+        "ts_ms": 393440
+       },
+       {
+        "text": "Evaluate team leadership, creativity, and collaboration effectiveness.",
+        "line": 260,
+        "ts_ms": 908930
+       }
+      ]
+     },
+     {
+      "heading": "Blockers",
+      "bullets": [
+       {
+        "text": "Costs for special colors and components were too high for the original design.",
+        "line": 190,
+        "ts_ms": 668080
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "template": "retro",
+   "content": {
+    "tldr": "While the project successfully produced a budget-compliant design, the team felt that rigid structures and technical equipment hindered their creative potential. They suggested more informal communication in the future.",
+    "sections": [
+     {
+      "heading": "What went well",
+      "bullets": [
+       {
+        "text": "Using Play-Doh helped the team understand dimensions and engage their senses.",
+        "line": 616,
+        "ts_ms": 2331350
+       },
+       {
+        "text": "Decisions were made through a consensus system that everyone accepted.",
+        "line": 283,
+        "ts_ms": 1021990
+       }
+      ]
+     },
+     {
+      "heading": "What didn't",
+      "bullets": [
+       {
+        "text": "The digital pens and technical gear felt clunky and distracting.",
+        "line": 521,
+        "ts_ms": 2035210
+       },
+       {
+        "text": "Strict time limits and meeting structures felt disempowering to team members.",
+        "line": 442,
+        "ts_ms": 1694670
+       },
+       {
+        "text": "Restricting communication to only formal meetings slowed down progress.",
+        "line": 460,
+        "ts_ms": 1770930
+       }
+      ]
+     },
+     {
+      "heading": "Ideas to improve",
+      "bullets": [
+       {
+        "text": "Allow team members to communicate and collaborate outside of scheduled meetings.",
+        "line": 469,
+        "ts_ms": 1796070
+       },
+       {
+        "text": "Use a shared fifth computer in the room to avoid constant cable switching.",
+        "line": 536,
+        "ts_ms": 2074389
+       },
+       {
+        "text": "Introduce prototypes earlier in the design process to align mental models.",
+        "line": 498,
+        "ts_ms": 1966710
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "template": "sales",
+   "content": {
+    "tldr": "This meeting focused on internal design and project evaluation; no sales to external clients or prospects occurred.",
+    "sections": [
+     {
+      "heading": "Prospect needs",
+      "bullets": [
+       {
+        "text": "No prospect needs were discussed.",
+        "line": null,
+        "ts_ms": null
+       }
+      ]
+     },
+     {
+      "heading": "Objections",
+      "bullets": [
+       {
+        "text": "No sales objections were raised.",
+        "line": null,
+        "ts_ms": null
+       }
+      ]
+     },
+     {
+      "heading": "Budget & timeline",
+      "bullets": [
+       {
+        "text": "The internal production budget was limited to twelve and a half Euro.",
+        "line": 400,
+        "ts_ms": 1551980
+       }
+      ]
+     },
+     {
+      "heading": "Next steps",
+      "bullets": [
+       {
+        "text": "No sales-related next steps were identified.",
+        "line": null,
+        "ts_ms": null
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "template": "one_on_one",
+   "content": {
+    "tldr": "The meeting was a group project wrap-up rather than a one-on-one session. Team-wide feedback was gathered regarding leadership and process.",
+    "sections": [
+     {
+      "heading": "Wins",
+      "bullets": [
+       {
+        "text": "The group felt the atmosphere during meetings was generally relaxed.",
+        "line": 428,
+        "ts_ms": 1642630
+       }
+      ]
+     },
+     {
+      "heading": "Concerns",
+      "bullets": [
+       {
+        "text": "The Marketing Expert felt the room and gear created boundaries to creativity.",
+        "line": 428,
+        "ts_ms": 1642630
+       }
+      ]
+     },
+     {
+      "heading": "Feedback",
+      "bullets": [
+       {
+        "text": "The Project Manager's leadership was described as strong but potentially confining.",
+        "line": 442,
+        "ts_ms": 1694670
+       }
+      ]
+     },
+     {
+      "heading": "Follow-ups",
+      "bullets": [
+       {
+        "text": "No individual performance follow-ups were assigned.",
+        "line": null,
+        "ts_ms": null
+       }
+      ]
+     }
+    ]
+   },
+   "model": "gemini-3-flash-preview"
+  }
+ ]
+}
