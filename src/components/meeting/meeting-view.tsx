@@ -8,6 +8,7 @@ import { Faces } from "@/components/faces";
 import { PlayerProvider, usePlayer } from "@/components/player/context";
 import { useActiveIndex } from "@/components/player/hooks";
 import { clock, minutes, shortDate, speakerColor, timeOfDay } from "@/lib/format";
+import { useStored } from "@/lib/use-stored";
 import { TEMPLATES, type ActionItem, type Highlight, type MeetingDetail, type Speaker } from "@/lib/types";
 import { PlayerBox, Timeline } from "./side";
 import { ToastProvider, copyText, useToast } from "./toast";
@@ -339,23 +340,10 @@ function ActionItems({
   const store = usePlayer();
   const key = `fanthom:done:${meetingId}`;
   // Ticks are kept in this browser only, so one visitor cannot change the demo for the next.
-  const [done, setDone] = useState<Set<string>>(new Set());
-  useEffect(() => {
-    try {
-      setDone(new Set(JSON.parse(localStorage.getItem(key) ?? "[]")));
-    } catch {}
-  }, [key]);
-  const toggle = (id: string) => {
-    setDone((prev) => {
-      const next = new Set(prev);
-      if (next.has(id)) next.delete(id);
-      else next.add(id);
-      try {
-        localStorage.setItem(key, JSON.stringify([...next]));
-      } catch {}
-      return next;
-    });
-  };
+  const [doneIds, setDoneIds] = useStored<string[]>(key, []);
+  const done = useMemo(() => new Set(doneIds), [doneIds]);
+  const toggle = (id: string) =>
+    setDoneIds(done.has(id) ? doneIds.filter((x) => x !== id) : [...doneIds, id]);
 
   return (
     <section className="sec">

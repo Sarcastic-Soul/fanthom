@@ -1347,6 +1347,27 @@ mark {
   color: var(--ink-2);
 }
 
+.sec-h {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 24px;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+.sec-h .muted {
+  font-family: var(--sans);
+  font-size: 14px;
+  letter-spacing: 0;
+}
+.spin {
+  animation: spin 0.9s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 /* ---------- share clip page ---------- */
 .share {
   max-width: 760px;

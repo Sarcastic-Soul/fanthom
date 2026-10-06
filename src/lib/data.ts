@@ -108,3 +108,13 @@ export async function searchAll(q: string): Promise<SearchHit[]> {
   if (error) throw error;
   return (data ?? []) as SearchHit[];
 }
+
+export async function listClips() {
+  const { data, error } = await db
+    .from("highlights")
+    .select("*, meetings(slug, title, started_at)")
+    .order("created_at", { ascending: false })
+    .limit(200);
+  if (error) throw error;
+  return data as (Highlight & { meetings: Pick<Meeting, "slug" | "title" | "started_at"> })[];
+}
