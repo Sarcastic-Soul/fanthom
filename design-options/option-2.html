@@ -1,0 +1,609 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fanthom: Edit suite</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<style>
+:root{
+  --bg:#F3F4F2; --raise:#F9FAF8; --sunk:#EAECE8; --line:#DADDD8; --line-2:#E5E7E3;
+  --ink:#151816; --ink-2:#464C48; --ink-3:#626864; --ink-4:#A3A8A4;
+  --accent:#1F8A5B; --accent-ink:#17714A; --accent-soft:#DDEDE4;
+  --hl:#F1E9C9;
+  --s-priya:#C2643C; --s-marcus:#3D6E9C; --s-elena:#7E62A6; --s-tomas:#AD872A;
+  --s-aiko:#B44F7B; --s-dev:#2E8790; --s-sam:#7C6A58; --s-grace:#86973A;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+  --sans:"IBM Plex Sans",system-ui,sans-serif;
+  --display:"Space Grotesk","IBM Plex Sans",sans-serif;
+  --nav:188px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{background:var(--bg);color:var(--ink);font:14px/1.5 var(--sans);-webkit-font-smoothing:antialiased;font-variant-numeric:tabular-nums}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+input{font:inherit;color:inherit}
+.mono{font-family:var(--mono);font-size:12px;letter-spacing:-.01em}
+.ph{font-size:16px;line-height:1}
+a{color:var(--accent-ink);text-decoration:none}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:3px}
+
+/* ---------- frame ---------- */
+.app{display:grid;grid-template-columns:var(--nav) 1fr;height:100vh}
+.nav{border-right:1px solid var(--line);display:flex;flex-direction:column;padding:14px 10px;gap:2px;background:var(--bg)}
+.ws{display:flex;align-items:center;gap:9px;padding:4px 6px 16px}
+.ws-mark{width:22px;height:22px;border-radius:5px;background:var(--ink);color:var(--bg);display:grid;place-items:center;font:600 12px var(--display)}
+.ws-name{font-weight:600;font-size:13px;line-height:1.2}
+.ws-sub{font-size:11.5px;color:var(--ink-3)}
+.nav a{display:flex;align-items:center;gap:10px;padding:6px 8px;border-radius:5px;color:var(--ink-2);font-size:13.5px}
+.nav a:hover{background:var(--sunk)}
+.nav a.on{background:var(--raise);color:var(--ink);box-shadow:inset 0 0 0 1px var(--line)}
+.nav a.on .ph{color:var(--accent)}
+.nav .count{margin-left:auto;font:11px var(--mono);color:var(--ink-3)}
+.nav-foot{margin-top:auto;padding:10px 8px 2px;border-top:1px solid var(--line);font-size:12px;color:var(--ink-3);line-height:1.45}
+.nav-foot b{display:flex;align-items:center;gap:6px;color:var(--ink-2);font-weight:500;margin-bottom:3px}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--accent);display:inline-block}
+
+.main{display:grid;grid-template-rows:auto auto 1fr;min-width:0;min-height:0}
+
+/* ---------- header ---------- */
+.head{display:flex;align-items:flex-end;gap:24px;padding:16px 24px 14px;border-bottom:1px solid var(--line)}
+.crumb{font-size:12px;color:var(--ink-3);display:flex;gap:6px;align-items:center;margin-bottom:4px}
+h1{font:500 40px/1 var(--display);letter-spacing:-.035em}
+.meta{display:flex;gap:14px;align-items:center;margin-top:7px;color:var(--ink-2);font-size:13px;flex-wrap:wrap}
+.meta span{display:inline-flex;gap:5px;align-items:center}
+.meta .ph{color:var(--ink-3);font-size:14px}
+.head-right{margin-left:auto;display:flex;align-items:center;gap:14px}
+.faces{display:flex}
+.face{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font:600 10.5px var(--sans);color:#F6F7F5;border:2px solid var(--bg);margin-left:-6px}
+.face:first-child{margin-left:0}
+.btn{display:inline-flex;align-items:center;gap:6px;height:32px;padding:0 12px;border-radius:6px;border:1px solid var(--line);background:var(--raise);font-size:13px;font-weight:500;white-space:nowrap}
+.btn:hover{border-color:var(--ink-4)}
+.btn.dark{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.btn.dark:hover{background:#2A2F2C}
+
+/* ---------- edit band: player + timeline ---------- */
+.band{display:grid;grid-template-columns:392px 1fr;border-bottom:1px solid var(--line);min-width:0}
+.player{border-right:1px solid var(--line);padding:14px 16px 12px 24px;display:flex;flex-direction:column;gap:10px}
+.poster{aspect-ratio:16/9;background:#1C201E;border-radius:6px;display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(2,1fr);gap:3px;padding:3px;position:relative;overflow:hidden}
+.tile{background:#262B28;border-radius:3px;position:relative;display:grid;place-items:center}
+.tile .ini{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font:600 11px var(--sans);color:#ECEEEA;opacity:.85}
+.tile .nm{position:absolute;left:5px;bottom:3px;font-size:10px;color:#B9BEBA}
+.tile.talking{box-shadow:inset 0 0 0 2px var(--tc)}
+.tile.talking .nm{color:#ECEEEA}
+.stub{position:absolute;right:6px;top:6px;font:10.5px var(--mono);color:#B9BEBA;background:rgba(21,24,22,.7);padding:2px 6px;border-radius:3px}
+.ctrls{display:flex;align-items:center;gap:6px}
+.play{width:32px;height:32px;border-radius:50%;background:var(--ink);color:var(--bg);display:grid;place-items:center}
+.play .ph{font-size:15px}
+.ib{width:30px;height:30px;border-radius:5px;display:grid;place-items:center;color:var(--ink-2)}
+.ib:hover{background:var(--sunk)}
+.tc{font:500 13px var(--mono);margin-left:4px}
+.tc .of{color:var(--ink-3);font-weight:400}
+.ctrls .sp{margin-left:auto;font:12px var(--mono);color:var(--ink-2);border:1px solid var(--line);border-radius:4px;padding:2px 6px}
+
+.tl{padding:12px 24px 12px 0;min-width:0;display:flex;flex-direction:column}
+.tl-top{display:flex;align-items:baseline;gap:12px;padding-left:16px;margin-bottom:6px}
+.tl-top h2{font:500 13px var(--display);letter-spacing:-.005em}
+.tl-top .hint{font-size:12px;color:var(--ink-3)}
+.tl-top .legend{margin-left:auto;font-size:12px;color:var(--ink-3);display:flex;gap:12px}
+.grid{display:grid;grid-template-columns:150px 1fr;position:relative}
+.lab{padding-left:16px}
+.track-col{position:relative;min-width:0}
+.chap-row{height:24px;position:relative;border-bottom:1px solid var(--line)}
+.chap{position:absolute;top:0;bottom:0;border-left:1px solid var(--ink-4);padding:3px 6px 0;font-size:11.5px;color:var(--ink-2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:pointer}
+.chap:nth-child(odd){background:var(--sunk)}
+.chap:hover{color:var(--ink)}
+.chap.cur{background:var(--accent-soft);color:var(--accent-ink);font-weight:500}
+.ruler{height:18px;position:relative;border-bottom:1px solid var(--line)}
+.tick{position:absolute;top:0;height:100%;border-left:1px solid var(--line);font:10.5px var(--mono);color:var(--ink-3);padding-left:3px;line-height:18px}
+.lane-l{height:25px;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--line-2);font-size:12.5px;cursor:pointer}
+.lane-l .sw{width:8px;height:8px;border-radius:2px;flex:none}
+.lane-l .pc{margin-left:auto;margin-right:12px;font:11.5px var(--mono);color:var(--ink-3)}
+.lane-l .bar{width:34px;height:3px;background:var(--line);border-radius:2px;position:relative;margin-right:10px}
+.lane-l .bar i{position:absolute;left:0;top:0;bottom:0;border-radius:2px}
+.lane{height:25px;position:relative;border-bottom:1px solid var(--line-2);cursor:crosshair}
+.lane .seg{position:absolute;top:6px;bottom:6px;border-radius:2px;opacity:.88}
+.lane:hover{background:rgba(21,24,22,.025)}
+.bounds{position:absolute;inset:0;pointer-events:none}
+.bounds i{position:absolute;top:0;bottom:0;border-left:1px dashed var(--line)}
+.ph-line{position:absolute;top:0;bottom:0;width:0;border-left:1.5px solid var(--accent);pointer-events:none;z-index:3}
+.ph-line::before{content:attr(data-t);position:absolute;top:-1px;left:-1px;transform:translateX(-50%);background:var(--accent);color:#F3F7F4;font:500 10.5px var(--mono);padding:1px 5px;border-radius:3px;white-space:nowrap}
+.ph-line.flip::before{transform:translateX(-100%)}
+.mark{position:absolute;bottom:-1px;width:7px;height:7px;transform:translateX(-50%) rotate(45deg);background:var(--hl);border:1px solid #C9B76A;z-index:2}
+.lane-l.dim,.lane.dim{opacity:.3}
+
+/* ---------- three columns ---------- */
+.cols{display:grid;grid-template-columns:372px minmax(0,1fr) 300px;min-height:0}
+.col{min-height:0;display:flex;flex-direction:column;border-right:1px solid var(--line)}
+.col:last-child{border-right:0}
+.col-h{display:flex;align-items:center;gap:10px;padding:12px 18px 10px;border-bottom:1px solid var(--line);min-height:46px}
+.col-h h3{font:500 15px var(--display);letter-spacing:-.01em}
+.col-h .sub{font-size:12px;color:var(--ink-3)}
+.scroll{overflow:auto;min-height:0;flex:1;position:relative}
+.scroll::-webkit-scrollbar{width:8px}.scroll::-webkit-scrollbar-thumb{background:var(--line);border-radius:4px}
+
+/* summary */
+.seg-ctl{display:flex;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;gap:0;margin:12px 16px 4px;border:1px solid var(--line);border-radius:6px;padding:2px;background:var(--sunk)}
+.seg-ctl button{flex:1 0 auto;padding:4px 6px;font-size:12px;white-space:nowrap;border-radius:4px;color:var(--ink-2)}
+.seg-ctl button[aria-selected=true]{background:var(--raise);color:var(--ink);box-shadow:0 0 0 1px var(--line);font-weight:500}
+.sum{padding:6px 18px 24px}
+.sum h4{font:600 11.5px var(--sans);color:var(--ink-3);margin:14px 0 6px;letter-spacing:.01em}
+.sum ul{list-style:none}
+.sum li{display:grid;grid-template-columns:1fr auto;gap:10px;padding:6px 0;border-bottom:1px solid var(--line-2);font-size:13.5px;line-height:1.45;color:var(--ink)}
+.sum li:last-child{border-bottom:0}
+.ts{font:12px var(--mono);color:var(--accent-ink);cursor:pointer;white-space:nowrap;padding-top:1px}
+.ts:hover{text-decoration:underline}
+.sum .note{font-size:12.5px;color:var(--ink-3);padding:8px 10px;border:1px dashed var(--line);border-radius:5px;margin-top:10px}
+code{font:12px var(--mono);background:var(--sunk);padding:0 4px;border-radius:3px}
+
+/* transcript */
+.tools{display:flex;gap:8px;align-items:center;padding:8px 18px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.search{display:flex;align-items:center;gap:6px;height:30px;border:1px solid var(--line);border-radius:6px;padding:0 8px;background:var(--raise);flex:1;min-width:180px;max-width:280px}
+.search input{border:0;outline:0;background:transparent;width:100%;font-size:13px}
+.search .ph{color:var(--ink-3)}
+.search kbd{font:10.5px var(--mono);color:var(--ink-3);border:1px solid var(--line);border-radius:3px;padding:0 4px}
+.chips{display:flex;gap:4px;flex-wrap:wrap}
+.chip{display:inline-flex;align-items:center;gap:5px;height:26px;padding:0 8px;border:1px solid var(--line);border-radius:13px;font-size:12px;color:var(--ink-2);background:var(--raise)}
+.chip i{width:7px;height:7px;border-radius:50%}
+.chip[aria-pressed=true]{border-color:var(--ink);color:var(--ink)}
+.chip.all[aria-pressed=true]{background:var(--ink);color:var(--bg)}
+.tr{padding:4px 0 40px}
+.divider{display:flex;align-items:center;gap:10px;padding:14px 18px 6px;font:500 12px var(--display);color:var(--ink-2)}
+.divider::after{content:"";flex:1;height:1px;background:var(--line)}
+.divider .mono{color:var(--ink-3)}
+.line{display:grid;grid-template-columns:62px 1fr;gap:12px;padding:7px 18px 7px 16px;border-left:2px solid transparent;cursor:pointer;position:relative}
+.line:hover{background:rgba(21,24,22,.03)}
+.line .t{font:12px var(--mono);color:var(--ink-3);padding-top:2px}
+.line .who{font-weight:600;font-size:12.5px;display:flex;align-items:center;gap:6px}
+.line .who i{width:7px;height:7px;border-radius:2px}
+.line .tx{font-size:14px;line-height:1.55;color:var(--ink-2);max-width:68ch}
+.line.cur{background:var(--accent-soft);border-left-color:var(--accent)}
+.line.cur .t{color:var(--accent-ink);font-weight:500}
+.line.cur .tx{color:var(--ink)}
+.line.saved .tx mark{background:var(--hl);color:var(--ink);padding:1px 0;box-shadow:0 2px 0 #D8C67A}
+.saved-tag{display:inline-flex;gap:4px;align-items:center;font-size:11.5px;color:#7A6A24;margin-left:6px;font-weight:400}
+.sel{background:#CFE3D7;color:var(--ink)}
+.pop{position:absolute;z-index:5;left:150px;top:-34px;display:flex;align-items:center;background:var(--ink);color:var(--bg);border-radius:6px;font-size:12.5px;overflow:hidden;box-shadow:0 4px 14px rgba(21,24,22,.18)}
+.pop button{display:flex;align-items:center;gap:6px;padding:6px 10px;color:var(--bg)}
+.pop button+button{border-left:1px solid #3A403C}
+.pop .mono{color:#AEB4AF}
+.line.hidden{display:none}
+.line.faded{opacity:.35}
+.hit{background:var(--hl);border-radius:2px}
+
+/* right column */
+.ai{list-style:none}
+.ai li{display:grid;grid-template-columns:18px 1fr;gap:10px;padding:9px 18px;border-bottom:1px solid var(--line-2)}
+.cb{width:16px;height:16px;border:1.5px solid var(--ink-4);border-radius:4px;margin-top:2px;display:grid;place-items:center;cursor:pointer}
+.cb.on{background:var(--accent);border-color:var(--accent);color:#F3F7F4}
+.cb .ph{font-size:11px}
+.ai .txt{font-size:13.5px;line-height:1.4}
+.ai .done .txt{color:var(--ink-3);text-decoration:line-through;text-decoration-color:var(--ink-4)}
+.ai .row2{display:flex;gap:8px;align-items:center;margin-top:3px;font-size:12px;color:var(--ink-3)}
+.owner{display:inline-flex;gap:5px;align-items:center;color:var(--ink-2)}
+.owner i{width:7px;height:7px;border-radius:50%}
+.sec-h{display:flex;align-items:center;gap:8px;padding:16px 18px 8px;border-bottom:1px solid var(--line)}
+.sec-h h3{font:500 15px var(--display)}
+.sec-h .sub{font-size:12px;color:var(--ink-3);margin-left:auto}
+.ch{list-style:none}
+.ch li{display:grid;grid-template-columns:52px 1fr;gap:8px;padding:9px 18px;border-bottom:1px solid var(--line-2);cursor:pointer}
+.ch li:hover{background:rgba(21,24,22,.03)}
+.ch li.cur{background:var(--accent-soft)}
+.ch li.cur .ts{font-weight:500}
+.ch .name{font-size:13.5px;font-weight:500;line-height:1.3}
+.ch .len{font:11.5px var(--mono);color:var(--ink-3);margin-left:6px;font-weight:400}
+.mix{display:flex;height:4px;border-radius:2px;overflow:hidden;margin-top:6px;gap:1px}
+.mix span{height:100%}
+
+/* phone tabs */
+.tabs{display:none}
+
+/* ---------- phone ---------- */
+@media (max-width:900px){
+  .app{display:block;height:auto}
+  .nav{flex-direction:row;align-items:center;border-right:0;border-bottom:1px solid var(--line);padding:8px 16px;gap:0;position:sticky;top:0;z-index:10}
+  .ws{padding:0;margin-right:auto}
+  .nav a{padding:6px 7px}
+  .nav a span.lbl,.nav .count,.nav-foot{display:none}
+  .main{display:block}
+  .head{flex-direction:column;align-items:stretch;gap:12px;padding:14px 16px}
+  h1{font-size:26px}
+  .meta{gap:10px;font-size:12.5px}
+  .head-right{margin-left:0;flex-wrap:wrap;gap:10px}
+  .faces{flex-basis:100%}
+  .tl-top .hint{display:none}
+  .band{grid-template-columns:1fr}
+  .player{border-right:0;border-bottom:1px solid var(--line);padding:12px 16px}
+  .tl{padding:12px 16px 12px 0}
+  .tl-top .legend{display:none}
+  .grid{grid-template-columns:96px 1fr}
+  .lab{padding-left:16px}
+  .lane-l .bar{display:none}
+  .lane-l .pc{margin-right:8px}
+  .chap{font-size:0;padding:0}
+  .chap.cur{font-size:0}
+  .tick:nth-child(even){color:transparent}
+  .tabs{display:flex;position:sticky;top:47px;z-index:9;background:var(--bg);border-bottom:1px solid var(--line);padding:0 16px}
+  .tabs button{flex:1;padding:11px 0 9px;font-size:13.5px;color:var(--ink-3);border-bottom:2px solid transparent}
+  .tabs button[aria-selected=true]{color:var(--ink);border-bottom-color:var(--accent);font-weight:500}
+  .cols{display:block}
+  .col{display:none;border-right:0}
+  .col.show{display:flex}
+  .col > .col-h{display:none}
+  .scroll{overflow:visible}
+  .line{grid-template-columns:1fr;gap:2px;padding:8px 16px}
+  .line .t{padding:0;order:0}
+  .pop{left:16px;top:-30px}
+  .search{max-width:none}
+  .seg-ctl{margin:12px 16px 4px}
+  .sum{padding:6px 16px 24px}
+}
+@media (prefers-reduced-motion:no-preference){
+  .ph-line{transition:left .2s ease-out}
+}
+</style>
+</head>
+<body>
+<div class="app">
+  <nav class="nav" aria-label="Main">
+    <div class="ws">
+      <div class="ws-mark">F</div>
+      <div><div class="ws-name">Demo workspace</div><div class="ws-sub">Fanthom</div></div>
+    </div>
+    <a href="#" class="on"><i class="ph ph-video-camera"></i><span class="lbl">Meetings</span><span class="count">42</span></a>
+    <a href="#"><i class="ph ph-magnifying-glass"></i><span class="lbl">Search</span></a>
+    <a href="#"><i class="ph ph-scissors"></i><span class="lbl">Clips</span><span class="count">7</span></a>
+    <a href="#"><i class="ph ph-calendar-blank"></i><span class="lbl">Calendar</span></a>
+    <div class="nav-foot">
+      <b><span class="dot"></span>Public demo, no sign-in</b>
+      Recordings here are seeded. The recording bot and calendar sync are not connected.
+    </div>
+  </nav>
+
+  <div class="main">
+    <header class="head">
+      <div>
+        <div class="crumb"><span>Meetings</span><i class="ph ph-caret-right" style="font-size:11px"></i><span>Plan stage</span></div>
+        <h1>Plan stage weekly sync</h1>
+        <div class="meta">
+          <span><i class="ph ph-calendar-blank"></i>Tue 29 Sep 2026, 10:00</span>
+          <span><i class="ph ph-clock"></i>52 min</span>
+          <span><i class="ph ph-users"></i>8 people</span>
+          <span><i class="ph ph-list-checks"></i>8 action items</span>
+        </div>
+      </div>
+      <div class="head-right">
+        <div class="faces" id="faces"></div>
+        <button class="btn"><i class="ph ph-copy"></i>Copy summary</button>
+        <button class="btn dark"><i class="ph ph-share-network"></i>Share</button>
+      </div>
+    </header>
+
+    <section class="band" aria-label="Player and speaker timeline">
+      <div class="player">
+        <div class="poster" id="poster"><span class="stub">seeded recording</span></div>
+        <div class="ctrls">
+          <button class="play" aria-label="Play"><i class="ph ph-play"></i></button>
+          <button class="ib" aria-label="Back 10 seconds"><i class="ph ph-arrow-counter-clockwise"></i></button>
+          <button class="ib" aria-label="Forward 10 seconds"><i class="ph ph-arrow-clockwise"></i></button>
+          <span class="tc"><span id="tcNow">29:14</span> <span class="of">/ 52:00</span></span>
+          <span class="sp">1.5x</span>
+          <button class="ib" aria-label="Captions"><i class="ph ph-closed-captioning"></i></button>
+        </div>
+      </div>
+
+      <div class="tl">
+        <div class="tl-top">
+          <h2>Speaker timeline</h2>
+          <span class="hint">Click any lane to jump. Click a name to show only that person.</span>
+          <span class="legend"><span><span class="mark" style="position:relative;display:inline-block;bottom:0;transform:rotate(45deg);margin-right:6px"></span>Highlights</span></span>
+        </div>
+        <div class="grid">
+          <div class="lab">
+            <div class="chap-row" style="border-bottom:1px solid var(--line);font-size:11.5px;color:var(--ink-3);padding-top:3px">Chapters</div>
+            <div class="ruler" style="font-size:11px;color:var(--ink-3);line-height:18px">Talk time</div>
+            <div id="labels"></div>
+          </div>
+          <div class="track-col" id="trackCol">
+            <div class="chap-row" id="chapRow"></div>
+            <div class="ruler" id="ruler"></div>
+            <div id="lanes" style="position:relative"></div>
+            <div class="ph-line" id="playhead" data-t="29:14"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="tabs" role="tablist">
+      <button role="tab" data-col="c-sum" aria-selected="true">Summary</button>
+      <button role="tab" data-col="c-tr" aria-selected="false">Transcript</button>
+      <button role="tab" data-col="c-ai" aria-selected="false">Actions</button>
+    </div>
+
+    <section class="cols">
+      <!-- Summary -->
+      <div class="col show" id="c-sum">
+        <div class="col-h"><h3>Summary</h3><span class="sub">AI, from transcript</span></div>
+        <div class="scroll">
+          <div class="seg-ctl" role="tablist" id="tpl"></div>
+          <div class="sum" id="sum"></div>
+        </div>
+      </div>
+
+      <!-- Transcript -->
+      <div class="col" id="c-tr">
+        <div class="col-h"><h3>Transcript</h3><span class="sub">9,412 words, English</span><button class="btn" style="margin-left:auto;height:28px"><i class="ph ph-arrow-line-down"></i>Follow playhead</button></div>
+        <div class="tools">
+          <label class="search"><i class="ph ph-magnifying-glass"></i><input id="q" placeholder="Search this meeting"><kbd>/</kbd></label>
+          <div class="chips" id="chips"></div>
+        </div>
+        <div class="scroll" id="trScroll"><div class="tr" id="tr"></div></div>
+      </div>
+
+      <!-- Actions + chapters -->
+      <div class="col" id="c-ai">
+        <div class="col-h"><h3>Action items</h3><span class="sub" id="aiCount"></span></div>
+        <div class="scroll">
+          <ul class="ai" id="ai"></ul>
+          <div class="sec-h"><h3>Chapters</h3><span class="sub">6, auto-detected</span></div>
+          <ul class="ch" id="ch"></ul>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<script>
+const DUR = 3120;
+const S = {
+  priya:{n:"Priya",r:"PM",c:"var(--s-priya)"}, marcus:{n:"Marcus",r:"Eng manager",c:"var(--s-marcus)"},
+  elena:{n:"Elena",r:"Backend",c:"var(--s-elena)"}, tomas:{n:"Tomás",r:"Frontend",c:"var(--s-tomas)"},
+  aiko:{n:"Aiko",r:"Design",c:"var(--s-aiko)"}, dev:{n:"Dev",r:"QA",c:"var(--s-dev)"},
+  sam:{n:"Sam",r:"Data",c:"var(--s-sam)"}, grace:{n:"Grace",r:"Support",c:"var(--s-grace)"}
+};
+const ORDER = Object.keys(S);
+const CH = [
+  {s:0,e:250,n:"Kickoff and agenda",w:{priya:8,marcus:3,grace:1,sam:1}},
+  {s:250,e:1050,n:"Release 17.5 scope",w:{priya:7,marcus:4,elena:3,tomas:4,aiko:1,sam:2,dev:1}},
+  {s:1050,e:1665,n:"Flaky CI pipeline",w:{elena:6,dev:6,marcus:3,tomas:2,priya:2}},
+  {s:1665,e:2300,n:"Escalation: MR approvals",w:{grace:6,elena:5,priya:4,sam:3,marcus:3,tomas:2,dev:1,aiko:1}},
+  {s:2300,e:2830,n:"Approvals sidebar review",w:{aiko:8,tomas:5,priya:3,grace:1,marcus:1}},
+  {s:2830,e:3120,n:"On-call rota",w:{marcus:6,dev:3,sam:3,grace:2,priya:2}}
+];
+const fmt = s => { s=Math.round(s); const m=Math.floor(s/60), r=s%60; return (m<10?"0":"")+m+":"+(r<10?"0":"")+r; };
+const parse = t => { const [m,s]=t.split(":").map(Number); return m*60+s; };
+
+// deterministic speaker turns
+let seed = 17;
+const rnd = () => (seed = (seed*16807) % 2147483647) / 2147483647;
+const turns = [];
+CH.forEach(ch=>{
+  let t = ch.s, prev=null;
+  const keys = Object.keys(ch.w), tot = keys.reduce((a,k)=>a+ch.w[k],0);
+  while(t < ch.e){
+    let who; do { let x=rnd()*tot; who=keys.find(k=>(x-=ch.w[k])<0)||keys[0]; } while(who===prev && keys.length>1);
+    const len = Math.min(ch.e - t, 6 + rnd()*(ch.w[who]>4?52:26));
+    turns.push({who,s:t,e:t+len}); t += len + 1 + rnd()*3; prev=who;
+  }
+});
+// make the lanes match the transcript shown below (27:31 to 31:25)
+const TRW = "27:31 priya,27:46 grace,28:02 marcus,28:06 grace,28:19 elena,28:34 priya,28:37 elena,28:49 sam,29:05 marcus,29:09 elena,29:14 priya,29:27 grace,29:38 sam,29:46 dev,29:55 marcus,30:01 priya,30:10 grace,30:18 tomas,30:31 elena,30:38 tomas,30:44 aiko,30:53 priya,30:58 marcus,31:04 priya,31:12 elena,31:18 dev,31:25 x".split(",").map(x=>{const [t,k]=x.split(" ");return {t:parse(t),k};});
+const w0 = TRW[0].t, w1 = TRW.at(-1).t;
+for (let i=turns.length-1;i>=0;i--){ const x=turns[i]; if(x.e>w0 && x.s<w1){ if(x.s<w0) x.e=w0-1; else if(x.e>w1) x.s=w1+1; else turns.splice(i,1);} }
+TRW.slice(0,-1).forEach((x,i)=>turns.push({who:x.k,s:x.t,e:TRW[i+1].t-0.6}));
+const talk = {}; ORDER.forEach(k=>talk[k]=0);
+turns.forEach(x=>talk[x.who]+=x.e-x.s);
+const talkTot = Object.values(talk).reduce((a,b)=>a+b,0);
+const pct = k => Math.round(talk[k]/talkTot*100);
+
+// faces + poster
+document.getElementById("faces").innerHTML = ORDER.map(k=>`<span class="face" title="${S[k].n}" style="background:${S[k].c}">${S[k].n[0]}${k==="tomas"?"":""}</span>`).join("");
+document.getElementById("poster").insertAdjacentHTML("afterbegin", ORDER.map(k=>`<div class="tile" data-k="${k}" style="--tc:${S[k].c}"><span class="ini" style="background:${S[k].c}">${S[k].n.slice(0,2)}</span><span class="nm">${S[k].n}</span></div>`).join(""));
+
+// timeline
+const P = s => (s/DUR*100)+"%";
+document.getElementById("chapRow").innerHTML = CH.map((c,i)=>`<div class="chap" data-i="${i}" data-t="${c.s}" style="left:${P(c.s)};width:${P(c.e-c.s)}" title="${c.n}">${c.n}</div>`).join("");
+let ticks=""; for(let m=0;m<=50;m+=5) ticks+=`<span class="tick" style="left:${P(m*60)}">${m}m</span>`;
+document.getElementById("ruler").innerHTML = ticks;
+document.getElementById("labels").innerHTML = ORDER.map(k=>`<div class="lane-l" data-k="${k}"><span class="sw" style="background:${S[k].c}"></span>${S[k].n}<span class="pc">${pct(k)}%</span><span class="bar"><i style="width:${pct(k)*3}%;background:${S[k].c}"></i></span></div>`).join("");
+const HL = [{k:"sam",t:"28:49"},{k:"elena",t:"18:05"},{k:"aiko",t:"39:02"}];
+document.getElementById("lanes").innerHTML =
+  `<div class="bounds">${CH.slice(1).map(c=>`<i style="left:${P(c.s)}"></i>`).join("")}</div>` +
+  ORDER.map(k=>`<div class="lane" data-k="${k}">${turns.filter(x=>x.who===k).map(x=>`<span class="seg" style="left:${P(x.s)};width:${P(x.e-x.s)};background:${S[k].c}"></span>`).join("")}${HL.filter(h=>h.k===k).map(h=>`<span class="mark" style="left:${P(parse(h.t))}" title="Highlight ${h.t}"></span>`).join("")}</div>`).join("");
+
+// summary templates
+const T = (t,txt)=>`<li><span>${txt}</span><span class="ts" data-t="${t}">${t}</span></li>`;
+const TPL = {
+  "General": `<h4>Key points</h4><ul>
+    ${T("06:42","Release 17.5 scope cut to 6 issues. Bulk-edit approvers moves to 17.6 so the approvals sidebar can ship on time.")}
+    ${T("18:05","14 specs in <code>ee/spec/features/merge_requests</code> fail about 1 run in 9. Elena quarantines them by Wednesday.")}
+    ${T("28:19","Rebasing from the UI drops the code owner rule when CODEOWNERS moved in the same push.")}
+    ${T("28:49","37 merged MRs across 9 customers had fewer approvals than required. Northwind Logistics has 21 of them.")}
+    ${T("39:02","Sidebar keeps the collapsed state. \"Approved\" becomes \"Approvals met\" in both places.")}
+    ${T("47:30","Dev and Sam swap on-call weeks 41 and 42. Grace joins the rota in November.")}
+  </ul><h4>Decisions</h4><ul>
+    ${T("29:14","Approvals fix is a 17.5 blocker, with a 17.4 patch release.")}
+    ${T("31:04","Elena writes the postmortem, due a week after the fix ships. Marcus reviews.")}
+  </ul><h4>Open questions</h4><ul>
+    ${T("16:50","Does the merge train change need a feature flag, or can it go out default-on?")}
+  </ul>`,
+  "Project update": `<h4>Done</h4><ul>
+    ${T("05:12","Approvals sidebar API merged (!148220).")}
+    ${T("08:30","Scope for 17.5 agreed: 6 issues, 41 weight.")}
+  </ul><h4>In progress</h4><ul>
+    ${T("19:40","CI quarantine list, 14 specs, owner Elena.")}
+    ${T("40:15","Sidebar final mocks, owner Aiko, due Friday.")}
+  </ul><h4>At risk</h4><ul>
+    ${T("29:14","17.5 now blocked on the approvals rebase fix. Fix MR expected Thu 1 Oct.")}
+    ${T("12:05","Bulk-edit approvers slips to 17.6.")}
+  </ul>`,
+  "Standup": `<h4>Blockers</h4><ul>
+    ${T("18:05","Flaky CI blocks 2 frontend MRs (Tomás).")}
+    ${T("28:19","Approvals bug needs a fix before 17.5 freeze (Elena).")}
+  </ul><h4>Today</h4><ul>
+    ${T("29:38","Sam: export the 21 Northwind MRs.")}
+    ${T("30:38","Tomás and Elena: pair on the widget state, Wednesday afternoon.")}
+    ${T("41:20","Aiko: update sidebar copy to \"Approvals met\".")}
+  </ul>`,
+  "Retro": `<h4>Went well</h4><ul>
+    ${T("05:12","Sidebar API landed a week early.")}
+  </ul><h4>Did not go well</h4><ul>
+    ${T("28:19","A 17.3 change broke approvals and nothing caught it for two releases.")}
+    ${T("18:05","Flaky specs train people to hit retry.")}
+  </ul><h4>Try next</h4><ul>
+    ${T("29:46","Regression test for rebase plus CODEOWNERS move.")}
+    ${T("23:10","Weekly flaky-spec report posted in #g_plan.")}
+  </ul>`,
+  "Sales": `<h4>Customer signals</h4><ul>
+    ${T("27:46","Northwind Logistics, Premium, 1,400 seats, opened ZD-48213 on Friday.")}
+    ${T("29:27","Their security team wants the list of 21 affected MRs to review by hand.")}
+    ${T("30:18","Trust issue: the widget said 2 approvals required while the merge check passed.")}
+  </ul><div class="note">This was an internal call. The Sales template only found customer mentions.</div>`,
+  "1:1": `<div class="note">The 1:1 template is built for two-person calls. For this meeting it lists what each person said they would do.</div><h4>Commitments</h4><ul>
+    ${T("29:09","Elena: fix MR up by Thursday.")}
+    ${T("29:38","Sam: export by end of day.")}
+    ${T("30:01","Grace: draft customer note, Priya reviews.")}
+  </ul>`
+};
+const tplEl = document.getElementById("tpl"), sumEl = document.getElementById("sum");
+tplEl.innerHTML = Object.keys(TPL).map((k,i)=>`<button role="tab" aria-selected="${i===0}">${k}</button>`).join("");
+const showTpl = k => { sumEl.innerHTML = TPL[k]; tplEl.querySelectorAll("button").forEach(b=>b.setAttribute("aria-selected", b.textContent===k)); };
+tplEl.addEventListener("click", e=>{ if(e.target.matches("button")) showTpl(e.target.textContent); });
+showTpl("General");
+
+// transcript
+const L = [
+  ["27:31","priya","Okay, CI is parked until Elena's quarantine list lands. Next is the escalation. Grace, do you want to walk us through it?"],
+  ["div","Escalation: MR approvals","27:45"],
+  ["27:46","grace","Sure. Northwind Logistics opened ZD-48213 on Friday. They're on Premium, 1,400 seats. Merge requests are getting merged with one approval when their rule says two."],
+  ["28:02","marcus","Is that every project, or one group?"],
+  ["28:06","grace","Only projects under their platform group. And only after someone rebases from the UI. I reproduced it twice on staging this morning."],
+  ["28:19","elena","That lines up with the 17.3 change. On rebase we recompute approval state, and we drop the code owner rule if the CODEOWNERS file moved in the same push."],
+  ["28:34","priya","So the rule just disappears?"],
+  ["28:37","elena","For that one MR, yes. The widget still shows two required, but the merge check reads the recomputed state, which is one."],
+  ["28:49","sam","<mark>I ran the query on production. 37 merged MRs across 9 customers in the last 30 days had fewer approvals than their rules required. Northwind is 21 of them.</mark>","saved"],
+  ["29:05","marcus","That's bad enough to jump the queue. Elena, can you own the fix?"],
+  ["29:09","elena","Yes. I think it's a two-line fix plus a regression test. I can have an MR up by Thursday."],
+  ["29:14","priya","Let's make it a 17.5 blocker and backport to 17.4 as a patch release. Grace, what do we tell Northwind today?"],
+  ["29:27","grace","I'd send them the list of the 21 MRs so their security team can review them by hand. They asked for that."],
+  ["29:38","sam","I can export that by end of day. Project, MR id, merged by, approvals given versus required."],
+  ["29:46","dev","I'll add a case to the approvals suite for rebase plus a CODEOWNERS move. Nothing covers that path today."],
+  ["29:55","marcus","Good. And the other eight customers, do we contact them before they find it?"],
+  ["30:01","priya","Yes, but after the fix is merged, so we can give them a date. Grace, draft the note and I'll review it."],
+  ["30:10","grace","Will do. I'll keep the Northwind thread separate since it's already escalated."],
+  ["30:18","tomas","One frontend thing. The widget saying two required while the check passes is what made them lose trust. Can we <span class=\"sel\">make the widget read the same state as the merge check</span>?","pop"],
+  ["30:31","elena","Agreed. If you take the widget, I'll expose the recomputed state on the same endpoint."],
+  ["30:38","tomas","Fine. I'll pair with you Wednesday afternoon."],
+  ["30:44","aiko","That touches the new sidebar too, so tell me before you change the copy. We say \"Approved\" in two places now."],
+  ["30:53","priya","Noted. Hold that for the design review, it's next."],
+  ["30:58","marcus","Before we move on: postmortem? 37 MRs is enough to write one."],
+  ["31:04","priya","Yes. Elena writes it, due a week after the fix ships. Marcus reviews."],
+  ["31:12","elena","Okay. I'll link it from issue 412881."],
+  ["31:18","dev","And I'll check the 17.4 patch on staging before it goes out."]
+];
+const trEl = document.getElementById("tr");
+trEl.innerHTML = L.map(x=>{
+  if(x[0]==="div") return `<div class="divider">${x[1]} <span class="mono">${x[2]}</span></div>`;
+  const [t,k,txt,flag] = x;
+  return `<div class="line${flag==="saved"?" saved":""}${t==="29:14"?" cur":""}" data-t="${t}" data-k="${k}">
+    <span class="t">${t}</span>
+    <div><div class="who"><i style="background:${S[k].c}"></i>${S[k].n}${flag==="saved"?`<span class="saved-tag"><i class="ph ph-bookmark-simple" style="width:auto;height:auto;background:none;font-size:13px"></i>Highlight by Priya</span>`:""}</div>
+    <div class="tx">${txt}</div></div>
+    ${flag==="pop"?`<div class="pop"><button><i class="ph ph-scissors"></i>Create clip <span class="mono">30:18 to 30:31</span></button><button><i class="ph ph-bookmark-simple"></i>Highlight</button></div>`:""}
+  </div>`;
+}).join("");
+
+// chips
+const chipsEl = document.getElementById("chips");
+chipsEl.innerHTML = `<button class="chip all" aria-pressed="true">All</button>` + ORDER.map(k=>`<button class="chip" data-k="${k}" aria-pressed="false"><i style="background:${S[k].c}"></i>${S[k].n}</button>`).join("");
+let only = null;
+function applyFilter(){
+  chipsEl.querySelectorAll(".chip").forEach(c=>c.setAttribute("aria-pressed", only ? c.dataset.k===only : c.classList.contains("all")));
+  trEl.querySelectorAll(".line").forEach(l=>l.classList.toggle("faded", !!only && l.dataset.k!==only));
+  document.querySelectorAll(".lane-l,.lane").forEach(l=>l.classList.toggle("dim", !!only && l.dataset.k!==only));
+}
+chipsEl.addEventListener("click", e=>{ const c=e.target.closest(".chip"); if(!c) return; only = c.classList.contains("all")||only===c.dataset.k ? null : c.dataset.k; applyFilter(); });
+document.getElementById("labels").addEventListener("click", e=>{ const l=e.target.closest(".lane-l"); if(!l) return; only = only===l.dataset.k?null:l.dataset.k; applyFilter(); });
+
+// search
+const orig = new Map(); trEl.querySelectorAll(".line .tx").forEach(t=>orig.set(t,t.innerHTML));
+document.getElementById("q").addEventListener("input", e=>{
+  const q = e.target.value.trim();
+  orig.forEach((h,el)=>{
+    if(!q){ el.innerHTML=h; el.closest(".line").classList.remove("hidden"); return; }
+    const plain = el.textContent; const i = plain.toLowerCase().indexOf(q.toLowerCase());
+    el.closest(".line").classList.toggle("hidden", i<0);
+    if(i>=0){ const re = new RegExp("("+q.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+")","gi"); el.innerHTML = plain.replace(re,'<span class="hit">$1</span>'); }
+  });
+});
+document.addEventListener("keydown", e=>{ if(e.key==="/" && document.activeElement.tagName!=="INPUT"){ e.preventDefault(); document.getElementById("q").focus(); }});
+
+// action items
+const AI = [
+  ["elena","Fix approval recompute on rebase when CODEOWNERS moved. MR up by Thu 1 Oct.","29:09",0],
+  ["sam","Export the 21 affected Northwind MRs for Grace, end of day.","29:38",0],
+  ["dev","Add regression test: UI rebase plus CODEOWNERS move.","29:46",1],
+  ["grace","Draft note to the other 8 customers. Priya reviews.","30:01",0],
+  ["tomas","Make the approvals widget read the merge check state.","30:31",0],
+  ["elena","Write the postmortem, due a week after the fix ships.","31:04",0],
+  ["aiko","Final sidebar mocks with \"Approvals met\" copy, Friday.","41:20",0],
+  ["elena","Quarantine 14 flaky merge request specs by Wednesday.","18:05",1]
+];
+const aiEl = document.getElementById("ai");
+const renderAI = () => {
+  aiEl.innerHTML = AI.map((a,i)=>`<li class="${a[3]?"done":""}"><span class="cb ${a[3]?"on":""}" role="checkbox" tabindex="0" aria-checked="${!!a[3]}" data-i="${i}">${a[3]?'<i class="ph ph-check"></i>':""}</span>
+    <div><div class="txt">${a[1]}</div><div class="row2"><span class="owner"><i style="background:${S[a[0]].c}"></i>${S[a[0]].n}</span><span class="ts" data-t="${a[2]}">${a[2]}</span></div></div></li>`).join("");
+  document.getElementById("aiCount").textContent = `${AI.filter(a=>a[3]).length} of ${AI.length} done`;
+};
+aiEl.addEventListener("click", e=>{ const c=e.target.closest(".cb"); if(!c) return; AI[c.dataset.i][3]^=1; renderAI(); });
+renderAI();
+
+// chapters with speaker mix
+document.getElementById("ch").innerHTML = CH.map((c,i)=>{
+  const m={}; turns.filter(x=>x.s>=c.s&&x.s<c.e).forEach(x=>m[x.who]=(m[x.who]||0)+x.e-x.s);
+  const tot = Object.values(m).reduce((a,b)=>a+b,0);
+  const mix = ORDER.filter(k=>m[k]).sort((a,b)=>m[b]-m[a]).map(k=>`<span style="flex:${m[k]/tot};background:${S[k].c}" title="${S[k].n}"></span>`).join("");
+  return `<li data-i="${i}" data-t="${fmt(c.s)}"><span class="ts" data-t="${fmt(c.s)}">${fmt(c.s)}</span><div><div class="name">${c.n}<span class="len">${Math.round((c.e-c.s)/60)} min</span></div><div class="mix">${mix}</div></div></li>`;
+}).join("");
+
+// playhead
+const ph = document.getElementById("playhead"), trackCol = document.getElementById("trackCol");
+function seek(sec, fromLine){
+  sec = Math.max(0, Math.min(DUR, sec));
+  ph.style.left = P(sec); ph.dataset.t = fmt(sec); ph.classList.toggle("flip", sec > DUR*0.93);
+  document.getElementById("tcNow").textContent = fmt(sec);
+  const ci = CH.findIndex(c=>sec>=c.s&&sec<c.e);
+  document.querySelectorAll(".chap").forEach((c,i)=>c.classList.toggle("cur", i===ci));
+  document.querySelectorAll(".ch li").forEach((c,i)=>c.classList.toggle("cur", i===ci));
+  const lines = [...trEl.querySelectorAll(".line")];
+  let cur = null; lines.forEach(l=>{ if(parse(l.dataset.t)<=sec) cur=l; });
+  const inTr = sec>=parse(lines[0].dataset.t)-5 && sec<=parse(lines.at(-1).dataset.t)+20;
+  const tn = turns.find(x=>sec>=x.s&&sec<=x.e+2);
+  const now = inTr && cur ? {who:cur.dataset.k} : tn;
+  document.querySelectorAll(".tile").forEach(t=>t.classList.toggle("talking", !!now && t.dataset.k===now.who));
+  lines.forEach(l=>l.classList.toggle("cur", l===cur && inTr));
+}
+document.getElementById("lanes").addEventListener("click", e=>{
+  const r = e.currentTarget.getBoundingClientRect(); seek((e.clientX-r.left)/r.width*DUR);
+});
+document.addEventListener("click", e=>{
+  const ts = e.target.closest(".ts,[data-t].chap,.ch li"); if(ts){ seek(ts.classList.contains("chap")?+ts.dataset.t:parse(ts.dataset.t)); return; }
+  const ln = e.target.closest(".line"); if(ln && !e.target.closest(".pop")) seek(parse(ln.dataset.t), true);
+});
+seek(parse("29:14"));
+
+// phone tabs
+document.querySelector(".tabs").addEventListener("click", e=>{
+  const b = e.target.closest("button"); if(!b) return;
+  document.querySelectorAll(".tabs button").forEach(x=>x.setAttribute("aria-selected", x===b));
+  document.querySelectorAll(".col").forEach(c=>c.classList.toggle("show", c.id===b.dataset.col));
+});
+// scroll transcript so the current line sits near the top third
+const curLine = trEl.querySelector(".line.cur"), sc = document.getElementById("trScroll");
+if (curLine && getComputedStyle(sc).overflowY!=="visible") sc.scrollTop = curLine.offsetTop - 250;
+</script>
+</body>
+</html>

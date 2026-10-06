@@ -22,3 +22,6 @@ npm-debug.log*
 
 # supabase cli local state
 supabase/.temp/
+
+# playwright mcp logs
+.playwright-mcp/

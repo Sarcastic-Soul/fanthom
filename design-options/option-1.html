@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fanthom · Minutes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter+Tight:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<style>
+:root{
+  --paper:#F6F3EE; --paper-2:#EFEAE2; --paper-3:#E7E1D7;
+  --ink:#1F1B16; --ink-2:#4F483F; --ink-3:#736A5F;
+  --rule:#DCD4C8; --rule-2:#C9BFB1;
+  --accent:#B4441F; --accent-ink:#8F3214; --accent-soft:#F0DDD2;
+  --screen:#2A251F; --screen-2:#332D26;
+  --s-priya:#B8862F; --s-marcus:#5F7385; --s-elena:#7E9471; --s-tomas:#7D5470;
+  --s-aiko:#A87C5F; --s-dev:#5E8580; --s-sam:#8A8740; --s-grace:#9C6B66;
+  --serif:"Newsreader", Georgia, serif;
+  --sans:"Inter Tight", system-ui, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+a{color:inherit}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.ph{font-size:16px;line-height:1}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* ---------- app frame ---------- */
+.app{display:grid;grid-template-columns:200px minmax(0,1fr);min-height:100vh}
+.nav{position:sticky;top:0;height:100vh;border-right:1px solid var(--rule);padding:20px 14px;display:flex;flex-direction:column;gap:22px;background:var(--paper)}
+.brand{font-family:var(--serif);font-size:22px;font-weight:500;letter-spacing:-.01em;padding:0 8px}
+.brand i{font-style:italic;color:var(--accent)}
+.ws{padding:0 8px}
+.ws-name{font-weight:600;font-size:13px;display:flex;align-items:center;justify-content:space-between}
+.ws-note{color:var(--ink-3);font-size:12px;margin-top:2px}
+.nav ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:1px}
+.nav a{display:flex;align-items:center;gap:10px;padding:7px 8px;border-radius:4px;text-decoration:none;color:var(--ink-2);font-size:13.5px}
+.nav a:hover{background:var(--paper-2);color:var(--ink)}
+.nav a.on{color:var(--ink);background:var(--paper-3);font-weight:500}
+.nav .count{margin-left:auto;font-size:11px;color:var(--ink-3)}
+.nav-foot{margin-top:auto;padding:12px 8px 0;border-top:1px solid var(--rule);font-size:12px;color:var(--ink-3);line-height:1.45}
+.nav-foot b{color:var(--ink-2);font-weight:500}
+
+/* ---------- page grid ---------- */
+.cols{display:grid;grid-template-columns:minmax(0,1fr) 548px;grid-template-areas:"head side" "doc side";grid-template-rows:auto 1fr}
+.head{grid-area:head;padding:36px 56px 0 64px}
+.doc{grid-area:doc;padding:0 56px 96px 64px}
+.side{grid-area:side;position:sticky;top:0;height:100vh;align-self:start;border-left:1px solid var(--rule);display:flex;flex-direction:column;background:var(--paper)}
+.mtabs{display:none}
+
+/* ---------- header ---------- */
+.crumb{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--ink-3)}
+.crumb a{text-decoration:none}.crumb a:hover{color:var(--ink)}
+.title{font-family:var(--serif);font-weight:400;font-size:60px;line-height:1.02;letter-spacing:-.025em;margin:22px 0 18px;max-width:14ch}
+.meta{display:flex;flex-wrap:wrap;align-items:center;gap:6px 18px;color:var(--ink-2);font-size:13px}
+.meta .sep{width:1px;height:12px;background:var(--rule-2)}
+.faces{display:flex}
+.face{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:10.5px;font-weight:600;color:#FBF8F3;border:2px solid var(--paper);margin-left:-6px}
+.face:first-child{margin-left:0}
+.actions{display:flex;gap:8px;margin-top:24px;align-items:center}
+.btn{white-space:nowrap;display:inline-flex;align-items:center;gap:7px;height:32px;padding:0 12px;border:1px solid var(--rule-2);border-radius:4px;font-size:13px;font-weight:500;background:var(--paper)}
+.btn:hover{border-color:var(--ink-3)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#FBF6F1}
+.btn.primary:hover{background:var(--accent-ink)}
+.btn.ghost{border-color:transparent;color:var(--ink-2)}
+.stubnote{margin-left:auto;font-size:12px;color:var(--ink-3);display:flex;gap:6px;align-items:center}
+
+/* ---------- minutes document ---------- */
+.tpl{display:flex;flex-wrap:wrap;gap:4px 20px;margin:44px 0 0;padding-bottom:10px;border-bottom:1px solid var(--ink);font-size:13px}
+.tpl .lbl{color:var(--ink-3);margin-right:-6px}
+.tpl button{color:var(--ink-3);padding:2px 0;position:relative}
+.tpl button:hover{color:var(--ink)}
+.tpl button.on{color:var(--ink);font-weight:500}
+.tpl button.on::after{content:"";position:absolute;left:0;right:0;bottom:-11px;height:2px;background:var(--accent)}
+.lede{font-family:var(--serif);font-size:23px;line-height:1.4;letter-spacing:-.005em;margin:28px 0 8px;max-width:36em;color:var(--ink)}
+.lede em{color:var(--accent-ink)}
+.byline{font-size:12px;color:var(--ink-3);margin-bottom:8px}
+.sec{display:grid;grid-template-columns:44px minmax(0,1fr);margin-top:36px}
+.sec-n{font-family:var(--serif);font-size:15px;color:var(--ink-3);padding-top:6px;font-variant-numeric:tabular-nums}
+.sec h2{font-family:var(--serif);font-weight:500;font-size:26px;letter-spacing:-.015em;margin:0 0 6px;line-height:1.2}
+.pts{list-style:none;margin:0;padding:0}
+.pts li{display:grid;grid-template-columns:minmax(0,1fr) 64px;gap:16px;padding:9px 0;border-bottom:1px solid var(--rule);font-size:14.5px;line-height:1.55;color:var(--ink-2)}
+.pts li:last-child{border-bottom:0}
+.pts li b{color:var(--ink);font-weight:600}
+.ts{font-family:var(--mono);font-size:12px;color:var(--accent);text-decoration:none;text-align:right;padding-top:2px;font-variant-numeric:tabular-nums;white-space:nowrap;cursor:pointer}
+.ts:hover{text-decoration:underline;text-underline-offset:3px}
+.decision{color:var(--ink)!important}
+.decision::before{content:"Decided";display:inline-block;font-size:10.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-right:8px;vertical-align:1px}
+
+/* action items */
+.items{margin:0;padding:0;list-style:none}
+.item{display:grid;grid-template-columns:22px minmax(0,1fr) 120px 58px 54px;gap:12px;align-items:start;padding:10px 0;border-bottom:1px solid var(--rule);font-size:14px}
+.item:last-child{border-bottom:0}
+.check{width:15px;height:15px;border:1.5px solid var(--ink-3);border-radius:3px;margin-top:3px;display:grid;place-items:center}
+.item.done .check{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.item.done .check::after{content:"";width:7px;height:4px;border-left:1.5px solid var(--paper);border-bottom:1.5px solid var(--paper);transform:rotate(-45deg) translate(1px,-1px)}
+.item.done .txt{color:var(--ink-3);text-decoration:line-through;text-decoration-color:var(--rule-2)}
+.owner{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--ink-2)}
+.dot{width:8px;height:8px;border-radius:50%;flex:none}
+.due{font-size:12px;color:var(--ink-3)}
+.items-head{display:grid;grid-template-columns:22px minmax(0,1fr) 120px 58px 54px;gap:12px;font-size:11.5px;color:var(--ink-3);padding:6px 0;border-bottom:1px solid var(--rule-2)}
+
+/* chapters */
+.chaps{list-style:none;margin:0;padding:0}
+.chap{display:grid;grid-template-columns:58px minmax(0,1fr) 80px;gap:14px;padding:11px 0;border-bottom:1px solid var(--rule);align-items:baseline;cursor:pointer}
+.chap:last-child{border-bottom:0}
+.chap:hover .ct{color:var(--accent-ink)}
+.chap .ct{font-family:var(--serif);font-size:18px;color:var(--ink)}
+.chap .cd{font-size:13px;color:var(--ink-3);margin-top:2px}
+.chap .len{display:flex;align-items:center;gap:8px;justify-content:flex-end;font-size:11.5px;color:var(--ink-3)}
+.chap .len i{display:block;height:3px;background:var(--rule-2)}
+.colophon{margin-top:56px;padding-top:14px;border-top:1px solid var(--rule);font-size:12px;color:var(--ink-3);max-width:60ch}
+
+/* ---------- side: player ---------- */
+.player{padding:16px 20px 0}
+.screen{background:var(--screen);border-radius:5px;padding:6px;display:grid;grid-template-columns:repeat(4,1fr);gap:4px;aspect-ratio:16/6.6;position:relative}
+.tile{background:var(--screen-2);border-radius:3px;position:relative;display:grid;place-items:center;outline:2px solid transparent;outline-offset:-2px;transition:outline-color .2s ease-out}
+.tile .av{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;color:#F4EEE6;font-size:12.5px;font-weight:600;opacity:.85}
+.tile .nm{position:absolute;left:6px;bottom:4px;font-size:10px;color:#CFC5B8;display:flex;gap:4px;align-items:center}
+.tile .nm .ph{font-size:10px;color:#8E8478}
+.tile.talking{outline-color:var(--c)}
+.tile.talking .av{opacity:1}
+.ctl{display:flex;align-items:center;gap:14px;padding:10px 2px 12px}
+.play{width:30px;height:30px;border-radius:50%;background:var(--ink);color:var(--paper);display:grid;place-items:center}
+.play .ph{font-size:13px}
+.clock{font-size:12.5px;color:var(--ink-2)}
+.clock b{color:var(--ink);font-weight:500}
+.ctl .r{margin-left:auto;display:flex;gap:14px;color:var(--ink-2);align-items:center;font-size:12px}
+.ctl .r button:hover{color:var(--ink)}
+
+/* ---------- side: timeline ---------- */
+.tl{padding:12px 20px 14px;border-top:1px solid var(--rule)}
+.tl-top{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:6px}
+.tl-top h3{font-family:var(--serif);font-weight:500;font-size:17px;margin:0;letter-spacing:-.01em}
+.tl-top span{font-size:11.5px;color:var(--ink-3)}
+.tl-grid{display:grid;grid-template-columns:62px minmax(0,1fr) 34px;column-gap:10px;row-gap:0;position:relative}
+.tl-name{font-size:12px;color:var(--ink-2);height:17px;line-height:17px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:pointer}
+.tl-name.off{color:var(--ink-3);text-decoration:line-through}
+.tl-pct{font-size:11px;color:var(--ink-3);height:17px;line-height:17px;text-align:right}
+.lane{height:17px;position:relative;cursor:pointer}
+.lane::before{content:"";position:absolute;left:0;right:0;top:8px;height:1px;background:var(--rule)}
+.seg{position:absolute;top:4px;height:9px;border-radius:1px;background:var(--c)}
+.lane.off .seg{opacity:.18}
+.chaprow{height:20px;position:relative;grid-column:2}
+.chaptick{position:absolute;top:2px;font-size:10px;color:var(--ink-3);transform:translateX(-1px);font-family:var(--mono);padding-left:3px;border-left:1px solid var(--ink-3);line-height:12px;cursor:pointer}
+.chaptick:hover{color:var(--accent)}
+.tl-lanes{grid-column:2;grid-row:2 / span 8;position:relative;pointer-events:none}
+.vline{position:absolute;top:-2px;bottom:0;width:1px;background:var(--rule)}
+.playhead{position:absolute;top:-22px;bottom:-2px;width:2px;background:var(--accent);margin-left:-1px;z-index:2;transition:left .25s ease-out}
+.playhead span{position:absolute;top:-1px;left:4px;font-family:var(--mono);font-size:10.5px;color:var(--accent);background:var(--paper);padding:0 6px 0 3px;font-variant-numeric:tabular-nums}
+.axis{grid-column:2;display:flex;justify-content:space-between;font-size:10px;color:var(--ink-3);padding-top:4px}
+
+/* ---------- side: transcript ---------- */
+.tx{flex:1;min-height:0;display:flex;flex-direction:column;border-top:1px solid var(--rule)}
+.tx-tools{padding:10px 20px 8px;display:flex;flex-direction:column;gap:8px}
+.search{display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--rule-2);padding:4px 0}
+.search input{flex:1;border:0;background:transparent;font:inherit;font-size:13.5px;color:var(--ink);outline:none;min-width:0}
+.search input::placeholder{color:var(--ink-3)}
+.search .hits{font-size:11.5px;color:var(--ink-3)}
+.chips{display:flex;gap:4px 12px;flex-wrap:wrap;font-size:12px}
+.chip{display:inline-flex;align-items:center;gap:5px;color:var(--ink-2);padding:1px 0}
+.chip.off{color:var(--ink-3);text-decoration:line-through;text-decoration-color:var(--rule-2)}
+.chip.off .dot{opacity:.25}
+.chips .lbl{color:var(--ink-3)}
+.tx-list{flex:1;overflow:auto;padding:4px 0 40px;scroll-behavior:smooth}
+.line{display:grid;grid-template-columns:50px minmax(0,1fr);gap:10px;padding:8px 20px 8px 17px;border-left:3px solid transparent;cursor:pointer;position:relative}
+.line:hover{background:var(--paper-2)}
+.line .t{font-family:var(--mono);font-size:11.5px;color:var(--ink-3);padding-top:2px;font-variant-numeric:tabular-nums}
+.line .who{font-size:12.5px;font-weight:600;display:flex;align-items:center;gap:6px;margin-bottom:1px}
+.line .who .dot{width:7px;height:7px}
+.line .say{font-size:13.5px;line-height:1.5;color:var(--ink-2)}
+.line.now{background:var(--accent-soft);border-left-color:var(--accent)}
+.line.now .t{color:var(--accent-ink)}
+.line.now .say{color:var(--ink)}
+.line.saved .say{background:linear-gradient(transparent 55%, #EBD9A8 55%);}
+.line .tag{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:500;color:#8A6A1C;margin-left:auto}
+.line.hide{display:none}
+.sel{background:#D9C4B6;color:var(--ink);border-radius:1px}
+.pop{position:absolute;right:22px;top:-26px;background:var(--ink);color:var(--paper);border-radius:4px;padding:5px 10px 5px 8px;font-size:12px;display:flex;align-items:center;gap:10px;z-index:3;white-space:nowrap}
+.pop b{font-weight:500;display:flex;align-items:center;gap:6px}
+.pop span{color:#B9AEA0;font-family:var(--mono);font-size:11px}
+.pop::after{content:"";position:absolute;bottom:-4px;right:46px;width:8px;height:8px;background:var(--ink);transform:rotate(45deg)}
+mark{background:#EBD9A8;color:inherit;border-radius:1px}
+
+/* ---------- phone ---------- */
+@media (max-width: 1100px){
+  .cols{grid-template-columns:minmax(0,1fr) 460px}
+  .head,.doc{padding-left:36px;padding-right:32px}
+}
+@media (max-width: 860px){
+  .app{grid-template-columns:1fr}
+  .nav{position:static;height:auto;flex-direction:row;align-items:center;padding:10px 16px;border-right:0;border-bottom:1px solid var(--rule);gap:12px}
+  .nav ul,.nav-foot{display:none}
+  .ws{padding:0;margin-left:auto;text-align:right}
+  .ws-name{justify-content:flex-end;font-size:12px}
+  .ws-note{font-size:11px}
+  .brand{padding:0;font-size:20px}
+  .cols{display:flex;flex-direction:column}
+  .side{display:contents}
+  .head{order:1;padding:18px 16px 0}
+  .player{order:2;padding:16px 16px 0}
+  .tl{order:3;padding:12px 16px 14px}
+  .mtabs{order:4;display:flex;position:sticky;top:0;z-index:5;background:var(--paper);border-top:1px solid var(--rule);border-bottom:1px solid var(--ink);padding:0 16px;gap:22px}
+  .mtabs button{padding:12px 0 10px;font-size:14px;color:var(--ink-3);position:relative}
+  .mtabs button.on{color:var(--ink);font-weight:500}
+  .mtabs button.on::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--accent)}
+  .doc{order:5;padding:0 16px 64px}
+  .tx{order:5;border-top:0}
+  .tx-list{overflow:visible;padding-bottom:64px}
+  body[data-tab="minutes"] .tx{display:none}
+  body[data-tab="transcript"] .doc{display:none}
+  .title{font-size:40px;margin:14px 0 12px}
+  .meta .sep{display:none}
+  .actions{margin-top:16px;flex-wrap:wrap}
+  .stubnote{margin-left:0;width:100%}
+  .tpl{margin-top:20px;gap:4px 14px;border-bottom-color:var(--rule-2)}
+  .tpl .lbl{display:none}
+  .tpl button.on::after{bottom:-11px}
+  .lede{font-size:20px}
+  .sec{grid-template-columns:28px minmax(0,1fr);margin-top:28px}
+  .sec h2{font-size:22px}
+  .pts li{grid-template-columns:minmax(0,1fr) 48px;gap:10px;font-size:14px}
+  .item,.items-head{grid-template-columns:20px minmax(0,1fr) 46px;gap:10px}
+  .item .owner{grid-column:2;grid-row:2;margin-top:-2px}
+  .item .due{display:none}
+  .item .ts{grid-column:3;grid-row:1}
+  .items-head span:nth-child(3),.items-head span:nth-child(4){display:none}
+  .chap{grid-template-columns:48px minmax(0,1fr);}
+  .chap .len{display:none}
+  .tile .nm{display:none}
+  .tile .av{width:26px;height:26px;font-size:10.5px}
+  .tl-grid{grid-template-columns:52px minmax(0,1fr) 30px}
+  .line{padding:8px 16px 8px 13px;grid-template-columns:44px minmax(0,1fr)}
+  .tx-tools{padding:12px 16px 8px}
+  .pop{right:12px}
+}
+@media (prefers-reduced-motion: reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body data-tab="minutes">
+<div class="app">
+
+  <nav class="nav" aria-label="Main">
+    <div class="brand">Fanth<i>o</i>m</div>
+    <div class="ws">
+      <div class="ws-name">Demo workspace <i class="ph ph-caret-up-down" style="font-size:13px;color:var(--ink-3)"></i></div>
+      <div class="ws-note">Public demo, no sign-in</div>
+    </div>
+    <ul>
+      <li><a href="#" class="on"><i class="ph ph-list-bullets"></i>Meetings<span class="count mono">14</span></a></li>
+      <li><a href="#"><i class="ph ph-magnifying-glass"></i>Search</a></li>
+      <li><a href="#"><i class="ph ph-scissors"></i>Clips<span class="count mono">6</span></a></li>
+      <li><a href="#"><i class="ph ph-calendar-blank"></i>Calendar</a></li>
+    </ul>
+    <div class="nav-foot">
+      <b>Recording is stubbed.</b> These meetings were transcribed and summarised ahead of time, so the demo works without a bot joining your calls.
+    </div>
+  </nav>
+
+  <main class="cols">
+
+    <header class="head">
+      <div class="crumb"><a href="#">Meetings</a><i class="ph ph-caret-right" style="font-size:11px"></i><span>Plan stage</span></div>
+      <h1 class="title">Plan stage weekly sync</h1>
+      <div class="meta">
+        <span>Tue 29 Sep 2026</span><span class="sep"></span>
+        <span class="mono">10:00–10:52</span><span class="sep"></span>
+        <span><span class="mono">52</span> min</span><span class="sep"></span>
+        <span class="faces" id="faces"></span><span><span class="mono">8</span> people</span>
+      </div>
+      <div class="actions">
+        <button class="btn primary"><i class="ph ph-share-network"></i>Share</button>
+        <button class="btn" id="copyBtn"><i class="ph ph-copy"></i><span>Copy summary</span></button>
+        <button class="btn ghost" aria-label="More"><i class="ph ph-dots-three"></i></button>
+        <span class="stubnote"><i class="ph ph-info"></i>Summary written by Gemini, checked against the transcript</span>
+      </div>
+    </header>
+
+    <nav class="mtabs" aria-label="View">
+      <button class="on" data-tab="minutes">Minutes</button>
+      <button data-tab="transcript">Transcript</button>
+    </nav>
+
+    <article class="doc">
+      <div class="tpl" role="tablist" id="tpl">
+        <span class="lbl">Template:</span>
+      </div>
+      <p class="lede" id="lede"></p>
+      <div class="byline" id="byline"></div>
+      <div id="summary"></div>
+
+      <section class="sec">
+        <div class="sec-n" id="nAct"></div>
+        <div>
+          <h2>Action items</h2>
+          <div class="items-head"><span></span><span>Task</span><span>Owner</span><span>Due</span><span></span></div>
+          <ul class="items" id="items"></ul>
+        </div>
+      </section>
+
+      <section class="sec">
+        <div class="sec-n" id="nChap"></div>
+        <div>
+          <h2>Chapters</h2>
+          <ol class="chaps" id="chaps"></ol>
+        </div>
+      </section>
+
+      <p class="colophon">Transcribed with Deepgram and summarised with Gemini when this demo was built. Click any time in the margin to jump the player and transcript to that moment.</p>
+    </article>
+
+    <aside class="side">
+      <div class="player">
+        <div class="screen" id="screen" aria-label="Video, paused"></div>
+        <div class="ctl">
+          <button class="play" aria-label="Play"><i class="ph ph-play"></i></button>
+          <span class="clock mono"><b id="clock">28:22</b> / 52:04</span>
+          <div class="r">
+            <button class="mono">1×</button>
+            <button aria-label="Captions"><i class="ph ph-closed-captioning"></i></button>
+            <button aria-label="Full screen"><i class="ph ph-corners-out"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <section class="tl" aria-label="Speaker timeline">
+        <div class="tl-top"><h3>Who spoke when</h3><span>Click a lane to jump</span></div>
+        <div class="tl-grid" id="tlgrid"></div>
+      </section>
+
+      <section class="tx" aria-label="Transcript">
+        <div class="tx-tools">
+          <label class="search"><i class="ph ph-magnifying-glass" style="color:var(--ink-3)"></i><input id="q" placeholder="Search this meeting" autocomplete="off"><span class="hits mono" id="hits"></span></label>
+          <div class="chips" id="chips"></div>
+        </div>
+        <div class="tx-list" id="txlist"></div>
+      </section>
+    </aside>
+  </main>
+</div>
+
+<script>
+const P = {
+  priya:{n:"Priya",r:"PM",c:"var(--s-priya)"},
+  marcus:{n:"Marcus",r:"Eng manager",c:"var(--s-marcus)"},
+  elena:{n:"Elena",r:"Backend",c:"var(--s-elena)"},
+  tomas:{n:"Tomás",r:"Frontend",c:"var(--s-tomas)"},
+  aiko:{n:"Aiko",r:"Design",c:"var(--s-aiko)"},
+  dev:{n:"Dev",r:"QA",c:"var(--s-dev)"},
+  sam:{n:"Sam",r:"Data",c:"var(--s-sam)"},
+  grace:{n:"Grace",r:"Support",c:"var(--s-grace)"},
+};
+const IDS = Object.keys(P);
+const DUR = 52*60+4;
+const fmt = s => { s=Math.round(s); const m=Math.floor(s/60), x=s%60; return String(m).padStart(2,"0")+":"+String(x).padStart(2,"0"); };
+const sec = t => { const [m,s]=t.split(":").map(Number); return m*60+s; };
+
+const CHAPTERS = [
+  {t:"00:00",h:"Opening and agenda",d:"Five topics, aim to finish in 50 minutes."},
+  {t:"03:40",h:"Release 17.5 scope",d:"Bulk-approve API moves to 17.6; sidebar ships behind a flag."},
+  {t:"14:20",h:"Flaky CI pipeline",d:"merge_request_spec.rb causes most of the 20% failure rate."},
+  {t:"24:55",h:"Northwind escalation",d:"Approvals reset on push, ticket ZD-48213. Patch in 17.4.3."},
+  {t:"33:10",h:"Approvals sidebar review",d:"Group approvers by rule, collapse satisfied rules."},
+  {t:"44:30",h:"On-call rota",d:"Two gaps in October, both now covered."},
+  {t:"49:40",h:"Wrap-up",d:"Priya sends notes."},
+];
+
+const LINES = [
+  ["00:12","priya","Morning all. Five things today: 17.5 scope, the CI flakes, the Northwind escalation, Aiko's sidebar review, and next month's on-call rota. Let's try to finish in 50."],
+  ["03:41","priya","17.5 code freeze is Wednesday the 7th. We have 23 issues on the board and I think we realistically land 18."],
+  ["04:30","marcus","18 is fine if we drop the bulk-approve API. Elena, where is that?"],
+  ["05:02","elena","Backend is about 70% done, but the permission checks on protected branches aren't written. I'd rather move it to 17.6 than rush it."],
+  ["06:15","tomas","Frontend for the sidebar is done apart from the empty state and the keyboard shortcuts. Two days, maybe three."],
+  ["08:48","priya","Okay, decision: bulk-approve API moves to 17.6. The sidebar ships in 17.5 behind the approvals_sidebar_v2 flag."],
+  ["14:22","dev","On CI: the e2e suite failed 41 of the last 200 runs. That's about one in five, and almost all of it is merge_request_spec.rb."],
+  ["15:10","elena","That spec waits on a Sidekiq job with a fixed five second sleep. On the shared runners it sometimes needs eight."],
+  ["16:34","sam","I pulled the numbers. Retries added 3 hours 40 minutes of runner time last week, and the median pipeline went from 22 to 31 minutes."],
+  ["18:05","marcus","Let's quarantine that spec today, and Elena replaces the sleep with a proper wait by Friday."],
+  ["21:47","dev","I'll put up a flake dashboard so we see this before it gets back to 20%."],
+  ["24:58","grace","Northwind opened ZD-48213 on Friday. Approvals they gave were reset when someone pushed a new commit, even though their rule says not to reset."],
+  ["26:02","elena","I'm fairly sure that's the regression from !8841. We changed when approval state gets recalculated."],
+  ["27:30","grace","They have about 600 engineers on that instance and a release on Thursday. They want a date from us today."],
+  ["28:15","marcus","We patch it in 17.4.3. Elena, can you have the fix in review by Wednesday?"],
+  ["28:40","elena","Yes, Wednesday. I'll add a regression test for the keep-approvals setting too."],
+  ["30:12","grace","Then I'll tell them Wednesday for the fix and Monday the 5th for the patch release."],
+  ["33:14","aiko","Sidebar review. The main change is that approvers are grouped by rule, and each rule shows how many approvals it still needs."],
+  ["35:02","tomas","Grouping by rule means one more query per rule on big merge requests. On the 40-rule monorepo that gets slow."],
+  ["36:20","aiko","Could we collapse rules that are already satisfied? Then we only load the open ones."],
+  ["37:48","priya","I like that. Collapse satisfied rules by default, and check the numbers with Sam after a week."],
+  ["40:31","sam","I'll add events for sidebar opens and rule expands, split by merge request size."],
+  ["44:33","marcus","Rota. October has two gaps, the 12th to the 14th and the 26th. Dev, Tomás, can either of you swap with me?"],
+  ["45:20","tomas","I can take the 12th to the 14th if someone covers my Friday, the 23rd."],
+  ["49:44","priya","Great. I'll send the notes this afternoon. Thanks, everyone."],
+];
+
+/* speaker segments: seeded, weighted by chapter, then the transcript lines placed on top */
+function rng(seed){return()=>{seed|=0;seed=seed+0x6D2B79F5|0;let t=Math.imul(seed^seed>>>15,1|seed);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+const R = rng(17);
+const W = [
+  {priya:9,marcus:3,elena:1,tomas:1,aiko:1,dev:1,sam:1,grace:1},
+  {priya:7,marcus:4,elena:4,tomas:3,aiko:1,dev:1,sam:1,grace:.5},
+  {priya:2,marcus:3,elena:4,tomas:1,aiko:.3,dev:5,sam:3,grace:.3},
+  {priya:2,marcus:3,elena:3,tomas:.5,aiko:.3,dev:1,sam:.5,grace:6},
+  {priya:4,marcus:1,elena:1,tomas:4,aiko:7,dev:1,sam:2,grace:1},
+  {priya:2,marcus:5,elena:1,tomas:3,aiko:1,dev:3,sam:1,grace:1},
+  {priya:8,marcus:2,elena:.5,tomas:.5,aiko:.5,dev:.5,sam:.5,grace:.5},
+];
+const SEGS = []; let t = 5, prev = null;
+const chapStart = CHAPTERS.map(c=>sec(c.t));
+while (t < DUR-6){
+  let ci = chapStart.filter(s=>s<=t).length-1;
+  let line = LINES.find(l=>Math.abs(sec(l[0])-t)<20 && sec(l[0])>=t-20);
+  let who;
+  if (line && !line.used){ who=line[1]; line.used=true; }
+  else {
+    const w = W[ci]; let tot=0; for(const k in w) if(k!==prev) tot+=w[k];
+    let x=R()*tot; for(const k in w){ if(k===prev) continue; x-=w[k]; if(x<=0){who=k;break;} }
+    who = who||"priya";
+  }
+  const len = who==="priya"? 12+R()*48 : 6+R()*36;
+  SEGS.push({who,a:t,b:Math.min(DUR,t+len)});
+  t += len + R()*3; prev = who;
+}
+const talk = {}; IDS.forEach(k=>talk[k]=0);
+SEGS.forEach(s=>talk[s.who]+=s.b-s.a);
+const total = Object.values(talk).reduce((a,b)=>a+b,0);
+const pct = {}; IDS.forEach(k=>pct[k]=Math.round(talk[k]/total*100));
+const ORDER = [...IDS].sort((a,b)=>talk[b]-talk[a]);
+
+/* summaries */
+const L = (txt,ts,dec)=>({txt,ts,dec});
+const TEMPLATES = {
+  "General":{
+    lede:"17.5 ships on <em>13 October</em> with the new approvals sidebar behind a flag. The flaky CI spec is quarantined today. Northwind's approval bug gets a patch in <em>17.4.3</em> on Monday.",
+    secs:[
+      ["Release 17.5 scope",[L("Code freeze is <b>Wed 7 Oct</b>. 23 issues on the board, team expects to land 18.","03:41"),L("Bulk-approve API moves to 17.6. Permission checks on protected branches are not written yet.","08:48",1),L("Sidebar frontend is done except the empty state and keyboard shortcuts, about 2–3 days left.","06:15")]],
+      ["Flaky CI pipeline",[L("e2e suite failed <b>41 of the last 200</b> runs. Almost all from <code>merge_request_spec.rb</code>, which uses a fixed 5 s sleep.","14:22"),L("Retries cost 3 h 40 min of runner time last week; median pipeline went from 22 to 31 min.","16:34"),L("Quarantine the spec today; Elena replaces the sleep with a real wait by Friday.","18:05",1)]],
+      ["Northwind escalation (ZD-48213)",[L("Approvals reset on new commits despite the keep-approvals rule. Likely caused by <b>!8841</b>.","26:02"),L("About 600 engineers affected, customer release on Thursday.","27:30"),L("Fix in review Wednesday, shipped in 17.4.3 on Mon 5 Oct.","28:15",1)]],
+      ["Approvals sidebar review",[L("Approvers grouped by rule, each rule shows approvals still needed.","33:14"),L("Grouping adds a query per rule; slow on the 40-rule monorepo.","35:02"),L("Collapse satisfied rules by default. Review usage with Sam after one week.","37:48",1)]],
+      ["On-call rota",[L("October gaps on 12–14 and 26. Tomás takes 12–14 if his Fri 23 is covered.","45:20")]],
+    ]},
+  "Project update":{
+    lede:"Release 17.5 is <em>on track</em> at 18 of 23 issues. One risk (CI flakes) and one customer issue (Northwind) need attention this week.",
+    secs:[
+      ["Status",[L("17.5: 18 of 23 issues expected by code freeze on Wed 7 Oct.","03:41"),L("Bulk-approve API slips to 17.6.","08:48",1),L("17.4.3 patch release planned for Mon 5 Oct.","30:12")]],
+      ["Risks",[L("CI failure rate near 20%, pipeline time up 41%.","16:34"),L("Sidebar may be slow on repos with many approval rules.","35:02")]],
+      ["Next week",[L("Spec quarantined, proper fix by Friday.","18:05"),L("Usage events on the sidebar, review after one week.","40:31")]],
+    ]},
+  "Standup":{
+    lede:"Short version, grouped by person.",
+    secs:[
+      ["Elena",[L("Bulk-approve API 70% done, moved to 17.6.","05:02"),L("Fix for ZD-48213 in review Wednesday.","28:40")]],
+      ["Tomás",[L("Sidebar frontend nearly done; empty state and shortcuts left.","06:15")]],
+      ["Dev",[L("Tracking CI flakes; building a flake dashboard.","21:47")]],
+      ["Sam",[L("Runner cost numbers shared; adding sidebar usage events.","40:31")]],
+      ["Blockers",[L("Shared runners too slow for fixed sleeps in specs.","15:10")]],
+    ]},
+  "Retro":{
+    lede:"No formal retro was run, so this is what went well and what didn't, taken from the discussion.",
+    secs:[
+      ["Went well",[L("Sidebar design landed early enough to review before freeze.","33:14"),L("Data on CI cost was ready before the meeting.","16:34")]],
+      ["Didn't go well",[L("A regression in !8841 reached a large customer.","26:02"),L("Flaky spec went unnoticed until it hit one in five runs.","14:22")]],
+      ["Try next",[L("Flake dashboard with an alert threshold.","21:47")]],
+    ]},
+  "Sales":{
+    lede:"This was an internal call, so there is no deal to report. The only customer topic was the Northwind escalation.",
+    secs:[
+      ["Customer",[L("Northwind, about 600 engineers, release on Thursday.","27:30")]],
+      ["Commitment made",[L("Fix Wednesday, patch release Monday 5 Oct.","30:12",1)]],
+    ]},
+  "1:1":{
+    lede:"The 1:1 template expects two people. This call had eight, so only the points about people and workload are kept.",
+    secs:[
+      ["Workload",[L("Elena owns both the CI fix and the Northwind fix this week.","28:40"),L("Marcus needs cover for two on-call gaps in October.","44:33")]],
+    ]},
+};
+
+const ACTIONS = [
+  ["Quarantine merge_request_spec.rb","marcus","Today","18:05",true],
+  ["Replace the fixed sleep with a proper wait","elena","Fri 2 Oct","18:05"],
+  ["Get the ZD-48213 fix into review","elena","Wed 30 Sep","28:15"],
+  ["Tell Northwind the fix and patch dates","grace","Today","30:12",true],
+  ["Collapse satisfied rules in the sidebar","tomas","Mon 5 Oct","37:48"],
+  ["Add sidebar open and expand events","sam","Fri 2 Oct","40:31"],
+  ["Build a CI flake dashboard","dev","Wed 7 Oct","21:47"],
+  ["Find cover for Tomás on Fri 23 Oct","marcus","Fri 9 Oct","45:20"],
+];
+
+/* ---------- render ---------- */
+const $ = s=>document.querySelector(s);
+$("#faces").innerHTML = ORDER.map(k=>`<span class="face" style="background:${P[k].c}" title="${P[k].n}">${P[k].n[0]}</span>`).join("");
+
+$("#screen").innerHTML = IDS.map(k=>`<div class="tile" data-k="${k}" style="--c:${P[k].c}"><div class="av" style="background:${P[k].c}">${P[k].n.slice(0,2)}</div><div class="nm"><i class="ph ph-microphone-slash"></i>${P[k].n}</div></div>`).join("");
+
+const tplBox = $("#tpl");
+Object.keys(TEMPLATES).forEach((name,i)=>{
+  const b=document.createElement("button"); b.textContent=name; b.setAttribute("role","tab");
+  if(!i) b.classList.add("on");
+  b.onclick=()=>{tplBox.querySelectorAll("button").forEach(x=>x.classList.toggle("on",x===b)); renderSummary(name)};
+  tplBox.appendChild(b);
+});
+function renderSummary(name){
+  const T = TEMPLATES[name];
+  $("#lede").innerHTML = T.lede;
+  $("#byline").textContent = name==="General" ? "Minutes · General template" : `Minutes · ${name} template, rewritten from the same transcript`;
+  $("#summary").innerHTML = T.secs.map(([h,pts],i)=>`
+    <section class="sec"><div class="sec-n">${i+1}.</div><div><h2>${h}</h2><ul class="pts">
+    ${pts.map(p=>`<li><span class="${p.dec?"decision":""}">${p.txt}</span><a class="ts" data-t="${p.ts}">${p.ts}</a></li>`).join("")}
+    </ul></div></section>`).join("");
+  $("#nAct").textContent = (T.secs.length+1)+".";
+  $("#nChap").textContent = (T.secs.length+2)+".";
+}
+renderSummary("General");
+
+$("#items").innerHTML = ACTIONS.map(([txt,o,due,ts,done])=>`
+  <li class="item${done?" done":""}"><button class="check" aria-label="Done"></button><span class="txt">${txt}</span>
+  <span class="owner"><span class="dot" style="background:${P[o].c}"></span>${P[o].n}</span><span class="due">${due}</span><a class="ts" data-t="${ts}">${ts}</a></li>`).join("");
+document.querySelectorAll(".item .check").forEach(c=>c.onclick=()=>c.parentElement.classList.toggle("done"));
+
+$("#chaps").innerHTML = CHAPTERS.map((c,i)=>{
+  const end = i<CHAPTERS.length-1? sec(CHAPTERS[i+1].t) : DUR; const len=end-sec(c.t);
+  return `<li class="chap" data-t="${c.t}"><span class="ts" style="text-align:left">${c.t}</span><div><div class="ct">${c.h}</div><div class="cd">${c.d}</div></div><span class="len mono"><i style="width:${Math.round(len/DUR*120)}px"></i>${Math.round(len/60)}m</span></li>`;
+}).join("");
+
+/* timeline */
+const g = $("#tlgrid");
+let html = `<div class="chaprow" style="grid-row:1">${CHAPTERS.map((c,i)=>`<span class="chaptick" data-t="${c.t}" style="left:${sec(c.t)/DUR*100}%" title="${c.h}">${i+1}</span>`).join("")}</div>`;
+ORDER.forEach((k,i)=>{
+  const r=i+2;
+  html += `<span class="tl-name" data-k="${k}" style="grid-row:${r};grid-column:1">${P[k].n}</span><div class="lane" data-k="${k}" style="--c:${P[k].c};grid-row:${r};grid-column:2">${SEGS.filter(s=>s.who===k).map(s=>`<span class="seg" style="left:${s.a/DUR*100}%;width:${Math.max(.25,(s.b-s.a)/DUR*100)}%"></span>`).join("")}</div><span class="tl-pct mono" style="grid-row:${r};grid-column:3">${pct[k]}%</span>`;
+});
+html += `<div class="tl-lanes">${CHAPTERS.slice(1).map(c=>`<span class="vline" style="left:${sec(c.t)/DUR*100}%"></span>`).join("")}<div class="playhead" id="ph"><span id="phl"></span></div></div>`;
+html += `<div class="axis mono" style="grid-row:10"><span>0:00</span><span>13:00</span><span>26:00</span><span>39:00</span><span>52:04</span></div>`;
+g.innerHTML = html;
+
+/* transcript */
+$("#txlist").innerHTML = LINES.map(([ts,k,say],i)=>{
+  let body = say, extra="", cls="";
+  if(ts==="27:30"){cls=" saved"; extra=`<span class="tag"><i class="ph ph-bookmark-simple" style="font-size:12px"></i>Saved by Marcus</span>`;}
+  if(ts==="35:02"){body = say.replace("On the 40-rule monorepo that gets slow.",`<span class="sel">On the 40-rule monorepo that gets slow.</span>`);}
+  const pop = ts==="35:02" ? `<div class="pop"><b><i class="ph ph-scissors" style="font-size:13px"></i>Create clip</b><span>35:06–35:12</span><i class="ph ph-x" style="font-size:12px;color:#B9AEA0"></i></div>` : "";
+  return `<div class="line${cls}" data-t="${ts}" data-k="${k}" data-raw="${say.replace(/"/g,"&quot;")}">${pop}<span class="t">${ts}</span><div><div class="who"><span class="dot" style="background:${P[k].c}"></span>${P[k].n}${extra}</div><div class="say">${body}</div></div></div>`;
+}).join("");
+
+/* chips */
+const off = new Set();
+$("#chips").innerHTML = `<span class="lbl">Speakers</span>` + ORDER.map(k=>`<button class="chip" data-k="${k}"><span class="dot" style="background:${P[k].c}"></span>${P[k].n}</button>`).join("");
+function applyFilter(){
+  document.querySelectorAll(".chip").forEach(c=>c.classList.toggle("off",off.has(c.dataset.k)));
+  document.querySelectorAll(".lane").forEach(c=>c.classList.toggle("off",off.has(c.dataset.k)));
+  document.querySelectorAll(".tl-name").forEach(c=>c.classList.toggle("off",off.has(c.dataset.k)));
+  search();
+}
+document.querySelectorAll(".chip,.tl-name").forEach(c=>c.onclick=()=>{const k=c.dataset.k; off.has(k)?off.delete(k):off.add(k); applyFilter();});
+
+function search(){
+  const q = $("#q").value.trim().toLowerCase(); let n=0;
+  document.querySelectorAll(".line").forEach(l=>{
+    const raw=l.dataset.raw, hit = !q || raw.toLowerCase().includes(q);
+    const hide = off.has(l.dataset.k) || !hit;
+    l.classList.toggle("hide",hide);
+    if(q && !hide){ n++; const re=new RegExp("("+q.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+")","gi"); l.querySelector(".say").innerHTML = raw.replace(re,"<mark>$1</mark>"); }
+    else if(!q && l.querySelector("mark")) l.querySelector(".say").textContent = raw;
+  });
+  $("#hits").textContent = q? `${n} found` : "";
+}
+$("#q").addEventListener("input",search);
+
+/* seek */
+function seek(s, scroll=true){
+  s=Math.max(0,Math.min(DUR,s));
+  $("#ph").style.left = (s/DUR*100)+"%"; $("#phl").textContent = fmt(s); $("#clock").textContent = fmt(s);
+  let cur=null; document.querySelectorAll(".line").forEach(l=>{ if(sec(l.dataset.t)<=s) cur=l; l.classList.remove("now"); });
+  document.querySelectorAll(".tile").forEach(t=>t.classList.toggle("talking", !!cur && t.dataset.k===cur.dataset.k));
+  if(cur){ cur.classList.add("now"); if(scroll){ const list=$("#txlist"); if(getComputedStyle(list).overflowY==="auto") list.scrollTop = cur.offsetTop - list.offsetTop - 60; } }
+}
+document.addEventListener("click",e=>{
+  const el = e.target.closest("[data-t]"); if(!el) return;
+  if(el.classList.contains("line") && e.target.closest(".pop")) return;
+  e.preventDefault(); seek(sec(el.dataset.t));
+});
+document.querySelectorAll(".lane").forEach(l=>l.addEventListener("click",e=>{const r=l.getBoundingClientRect(); seek((e.clientX-r.left)/r.width*DUR);}));
+
+/* mobile tabs + copy */
+document.querySelectorAll(".mtabs button").forEach(b=>b.onclick=()=>{document.body.dataset.tab=b.dataset.tab; document.querySelectorAll(".mtabs button").forEach(x=>x.classList.toggle("on",x===b));});
+$("#copyBtn").onclick=()=>{const s=$("#copyBtn span"); try{navigator.clipboard.writeText(document.querySelector(".doc").innerText)}catch(e){} s.textContent="Copied"; setTimeout(()=>s.textContent="Copy summary",1600);};
+
+$("#txlist").style.scrollBehavior="auto"; seek(sec("28:22")); $("#txlist").style.scrollBehavior="";
+</script>
+</body>
+</html>
